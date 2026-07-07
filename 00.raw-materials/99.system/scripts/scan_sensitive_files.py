@@ -51,7 +51,14 @@ SENSITIVE_CONTENT_PATTERNS = [
 
 
 def is_skipped(path: Path) -> bool:
-    return any(part in SKIP_PARTS for part in path.parts)
+    if any(part in SKIP_PARTS for part in path.parts):
+        return True
+    # Obsidian plugin bundles often contain words like token/secret in normal source code.
+    # Scan plugin data/manifest files, but skip large bundled code and styles to reduce noise.
+    parts = path.parts
+    if ".obsidian" in parts and "plugins" in parts and path.name not in {"data.json", "manifest.json"}:
+        return True
+    return False
 
 
 def is_text_candidate(path: Path) -> bool:
