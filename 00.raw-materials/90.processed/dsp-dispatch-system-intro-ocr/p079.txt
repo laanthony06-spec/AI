@@ -1,0 +1,18 @@
+In UseEnd RecycleCount<=1 NPW处理
+只能使用一次： 有RecycleFLow, 无RecycleFLOw
+INUSEEND 需求厂内Reclaim：
+INUSEEND
+RECYCLEFIOW RECYCLE END
+RECYCLEEND Reclaim Flow
+解决方式：MAXRecycle设定为1，上线lnuseendRecycle功能 解决方式：MAxRecycleCount设定为1，上线inuseend-Recycle
+RecycleEnd-Reclaim,ReclaimEnd-Reuse功能
+无RecycleFLOW, Flow中存在Dummy站点：
+需求厂外Reclaim： INUSEEND
+Dummy站点
+Downgrade
+IN USE start
+厂外
+解决方式：MAXRecycleCount设定为o，MAXReclaimCount设定为o, 解决方式：上线DummyAuto Skip功能
+上线inuseend-Downgrade功能 上海华力
+商密三级 HLMC
+Confidential I

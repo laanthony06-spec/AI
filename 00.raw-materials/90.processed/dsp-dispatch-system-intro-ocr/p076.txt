@@ -1,0 +1,21 @@
+In Use EndRecycle
+>Recycle逻辑
+InUseEnd站点可作业
+lot
+Recycle条件过
+是否有相关Lot
+（同product同 自己Recycle
+originalparentloti
+、是
+相关Lot筛选条
+件过滤
+Wait 都在inuseend 相关Lot是否 站点 是否在同 FOUP内 都在inuseend 相关Lot是否 站点 Wait
+MES
+子批Transport 至母批FOUP 符合Recycle 相关Lo是合 条件 符合Recycle 相关Lot是否 条件 子批与母批跳至Recycle FIOW第一站（HOLD）
+显个
+报错 报错 是香符合Merge 条件判定 不Hold 报错
+解HoldMerge回
+母批，发Recycle
+商密三级 上海华力
+HLMC
+Confidential I

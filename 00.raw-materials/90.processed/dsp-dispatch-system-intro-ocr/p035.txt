@@ -1,0 +1,19 @@
+QZone管控简介
+口相关术语
+Qtimeduration
+生产过程中在规定时间（QueueTime） step1
+内完成特殊工艺区间段的作业过程。
+>QZone EndRun step2 Tips:
+在Q-time区间外对区间内WIP限额 step3 Otime从startstep EndRun deteoStartRur
+保证区间内设备有足够WIP但不超时。 StartRUN Qtime结束站点不一 定为lo的安全装点
+step4 safetyvalue翔断
+EndRun
+>Qzone方式 lotOverQtime时由currentPE设定action忘是hoid
+QTime lot以及是否需要rewark/scan/WAT等
+Minqtime：某站点作业结束后，可 step5
+以继续下一站作业的最小等待时间 StartRun
+step5
+Maxqtime：规定时间内完成某段工
+艺的最大允许时间
+商密二级 上海华力
+Confidential I HLMC

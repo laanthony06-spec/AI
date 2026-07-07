@@ -1,0 +1,23 @@
+实时自动派工逻辑（RTD）
+应用调度参考的结果，检测实时限制和执行各区域派工规则，将产品派工到设备上。
+所有设备群通用逻辑，筛选掉不能派工的Lot，如：
+Global Lot /Foup/Machine/Port State
+RTD Filter Qtime ZoneControl/Run Path（进入Q-zone前判断下游是否断线）
+InhibitCheck，NPW时效性管控等
+各设备群专用逻辑，根据设备特性筛选掉不能派工Lot，如：
+Local Port绑定的 Capability/Recipe
+Filter Buffer空间
+Real-time R2R Result
+Dispatching Basic 以通用的规则定义Lot排序因素，如：
+Functions Global Remain Q-time Global Rank
+Sorter Breaking TargetLot等
+Request T/R 这些因素对各设备适用的规则相同（标准可能有所差异）
+各设备群根据设备特性单独定义的Lo排序因素，如：
+Local 源/膜种可连续性
+Sorter 制品温度调控
+可组批性，chamber利用等
+MES数据 Sorting 各设备根据Sorter的重要性，对Lot进行综合排序（部分精细到号机）
+Integrated
+Functions Where Next 根据Lot的下一站点信息和各stocker的存储状态，选择Lot的最佳存储位置
+商密三级
+Confidential I

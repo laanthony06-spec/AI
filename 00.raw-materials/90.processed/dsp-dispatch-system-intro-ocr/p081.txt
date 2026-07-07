@@ -1,0 +1,13 @@
+Recycle End Reuse
+口Reuse条件（Bywafer）
+Filter rule:
+Filter item Description
+Lot ProcessingStatus - "Active" Lot自身状态是active
+Lot Extrastatus="WaitForRecycleEnd" Lot自身必须在WaitForRecycleEnd站点
+Switch RecycleEnd ="T" 打开AMARecycleEnd功能
+Wafer Monitor State-Available Wafer处于available状态
+WaferRecycleCount<MaxRecycleCount Wafer未达到最大清洗次数
+Carrier CarrierKind-"FOup" 只判断在FOUP内的lot
+FOUP Location = InStockerorn OHB lot所在的carrier必须是InStocker或InOHB
+商密三级 上海华力
+Confidential I HLMC

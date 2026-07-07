@@ -1,0 +1,18 @@
+In Use End Recycle
+Recycle条件（Bylot）
+Filter rule:
+Filter item Description
+Lot ProcessingStatus=“Active" Lot状态是active
+Lot ExtraStatus ="WaitForlnUseEnd" or
+"WaitForlnUseStart Lot必频在WaitForinUseEnd或WaitForlnUseStart站点
+Switch InUseEnd="T" 打开AMAInUseEnd功能
+WaferUsedCount>=MaxUsedCount Wafer已达到最大使用次数
+WaferRecycleCount<MaxRecycleCount Wafer未达到最大清洗次数
+InUseStartLotQty<SettingQty 在InUseStart站点可用wafer小于设置提前发wafer
+Must Process=“F"or(Must Process= "T" and Wafer 无需保证作业主机台或
+UsedCount>=1) 对于配置的必须作业主机台的lot已作业过主机台
+Carrier CarrierKind=“FOUp" 只判断在FOUP内的lot
+FOUPLocation= InStockerorIn OHB lot所在的carrier必须是nStocker或lnQHB
+商密三级 上海华力
+105 HLMC
+Confidential I

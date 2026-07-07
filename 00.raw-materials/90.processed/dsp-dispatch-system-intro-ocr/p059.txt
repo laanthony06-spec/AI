@@ -1,0 +1,21 @@
+In Use Start 一复机NPW自动派工
+>前/后量派工：
+复机NPW优先：对于复机的NPW，派工时，RecoveryNPWFlag生效 Monitor group info:
+其他sorting指标相同时，会优先派工（新增功能区分复机优先级）：
+相关sorting:RecoveryNPWFlag及RecoveryNPWFlag1/2/3/4 1.SeasonA(PT:60min)
+前量时效性考量：会考虑复机monitor是否存在时效性，对于存在时效性 2.MonitorB
+的monitor，会根据机台的复机时间以及该monitor前面需要作业NPW的
+作业时长，卡控lot派工时间点，避免monitor超时效影响复机； 3.MonitorC
+相关RTDreason:Monitorqtimecontrol
+4.MonitorD
+后量时效性考量：会根据自身时效性（remainqtime）以及后量机台的
+processtime的比值来判定派工的紧急程度，比值越小越优先。
+MonitorBflow:
+PM
+前量
+60min
+8:00 12:00 13:00 14:00 主机台
+Reason卡控 可派工时间段 60min
+商密三级 后量
+上海华力
+ConfidentialI HLMC

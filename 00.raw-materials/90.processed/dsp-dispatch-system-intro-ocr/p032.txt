@@ -1,0 +1,19 @@
+搬送系统运行方式（AMA&RTD） G编辑
+RTD（自动派工系统）在搬送流程中的作用和考量因素：
+当站设备 ·Lot在当站设备上作业完毕，FOUP待搬走
+DSP系统 ·根据工艺需求、设备位置、OHB/Stocker空闲情况，决定Lot/FOUP存储位置
+·通过MES发送搬送指令CallMCS（物料搬送系统）执行搬送动作
+RTD决定存储位置的优先顺序
+需要PurgeFOUP 正常FOUP
+Purge OHB Purge STK OHB STK
+当站设备默认位置[-n，+n]范围
+下站设备默认位置[-n，+n]范围
+当站设备默认位置同区域范围
+下站设备默认位置同区域范围
+其他任意
+当OHB/Stocker存放率高于上限，则找寻下一优先级的OHB/Stocker
+Purge存储位供正常Lot使用的可利用率相对低
+·设备即将空闲时，AMA向RTD要货，RTD根据优先级、设备特性、存储情况
+商密三级 下站设备 ·设备LoadPor空闲时，向RTD要货，RTD根据优先级、设备特性、存储情 等因素选择Lot，AMA将Lot预搬送至机台OHB 上海华力
+况等因素，选择Lot对设备预约 HLMC
+Confidential I

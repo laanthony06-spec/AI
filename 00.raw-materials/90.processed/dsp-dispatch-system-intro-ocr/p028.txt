@@ -1,0 +1,22 @@
+Stoker
+口Foup储存柜（stocker）整体构造
+Stocker型号采用大福CLS-50型，本体构造主要分为四部分：
+棚位：shelf，存放FOUP的棚位
+堆栈机：机械手臂，抓取FOUP用
+搬送口：用于FOUP进出stocker.包括与OHT相连的自动口以及手动出入口
+SSS：stocker手动操作面板
+自动搬送口
+CLS-50仕梯
+搬送至量 MAX.10kg
+走行速度 MAX.120m/mln
+-加减速度· MAX.0.980mls2
+聚助方式 Ac Servo Motar
+LM-Gulde+FrictionDrive
+异降速度 MAX.80m/min
+-加减速度 MAX.0.980m/s2
+AC ServoMotar
+SSS Timing Belit
+堆栈机 手动搬送口 BrushType
+棚位 STK每小时可实现120个foup自动进出，全自动化运行
+商密三级 可确保数据安全及制品安全 上海华力
+Confidential I HLMC

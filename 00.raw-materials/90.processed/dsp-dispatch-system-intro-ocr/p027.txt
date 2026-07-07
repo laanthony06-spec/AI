@@ -1,0 +1,22 @@
+编辑
+华力AMHS
+口AMHS:
+AMHS:AutomaticMaterialHandling System中文译作自动物料搬送系统，也称为天车系统，是业界最灵活的
+集合储存（stocker），运输（搬送小车）和管控（MCS）制品在FAB设备之间搬运解决方案
+主要分为两种形式:interbay半自动和intrabay全自动。
+Bay1 Bay 3 Process Bay 5 Intrabaytransport 300 mm UNIFIEO AMHS
+tools Bay Bay3 Process Bay5
+Stocher Stocknl
+OHS
+SHO Interbaytransport
+Stocte Stocke
+OHT
+Undar
+Bay2 Bay4 storage
+Bay6
+采用interbay的半自动化AMHS intrabay全自动AMHS系统
+实现制品在不同制程区域之间的传送，需 1.实现设备对设备的传送
+要stocker与每条bay制程对应 2.具备ZFS(ZeroFootprintStorage)功能
+商密三级 上海华力
+HLMC
+Confidential I

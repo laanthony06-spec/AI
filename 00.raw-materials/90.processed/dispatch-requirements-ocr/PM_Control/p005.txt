@@ -1,0 +1,32 @@
+项目简介和必要性分析：
+目前MFGPrefer/断线场景判断对厂可作业机台时未考量PM管控，导致LOT去对厂后可能存在无法作
+业也不能回原厂的情况，或LOT在被判断到对厂作业后因机台PM管控而卡控Qzone无法作业，因此需在
+MFGPrefer/断线场景对厂可作业机台检查逻辑中增加PM管控的判定。
+项目投资方案比较及效果分析：
+改善方案：
+在MFGPrefer/断线场景对厂可作业机台检查逻辑中增加PM管控的判定。
+效果分析
+降低因对厂机台PM管控导致lot无法作业最终QverOtime的风险
+需求内容（可添加附件）：
+方案逻辑：#
+MFGPrefex/断线场景新增逻辑
+在MFGPrefer和断线场景的 TargetFabCondition判断中考量机台PM管控，可FollowQzone PM管控判
+断。先
+1.1ot到站时间计算
+MFGPrefer/DownTime场景LotFetchStep时计算Lot到每一站的AnriveTime(每一站CT/PT累加，Process
+站点用CycleTime，非Process站点用ProcessTime）.记作CumulatedcycleTimeToStep。
+2.获取机台PM管控信息+
+在Lot获取到对厂机台后，判断机台的PM管控信息
+2.1PreControlFlag获取+
+将Lot的对厂机台拆分，记为Machine整机或腔），取Machine前八位，记作MainTool。
+FabEgpEquipmentCaExt中串取PreControlFlag。 从表FabEapEquipmentCaExt获取PreControlFlag栏位，分别用Machine 和 MainTool从
+2.2IsPreControlException获取
+从Ul-PreControlException 中获取MachineName QOtimeDuration(h）、Operation、IsSafetyStepNeedFollow栏
+位分别用Machine和MainTool判断FlagIsPreControlException;
+3.机台PM管控判断
+判断机台是否处于PM/借机管控区间。
+3.1获取机台PM/借机时间
+By TargetFab从 STNPMTimeControllnfo 中获取 MachineID New Planstarttime Planendtime PMFlag
+StdMonPM、PirunStdTimePMOzoneControl栏位。
+筛选出机台状态良好的 MachineIDNew（StnstateFlag-T），即满足：elOstate=Standby or Productive，or
+EgpstateIN(MON-R,BACKUPTD LOTENG LOT,MON ROU,RECYCLE)。

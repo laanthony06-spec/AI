@@ -1,0 +1,18 @@
+In Use Start--ETCHDummy
+Dummy In Use StartETCH Dummy
+口 AMA流程图
+Watch dog scan every5min
+Get eqp list of need dummy Dummy触发判断
+End Eqp list is not
+nul?
+Get need to split dummy ID list
+Dummy list is
+not nul?
+Get dummy source lot Dummy准备：
+1.母批筛选
+2.Season分批
+Send alarm Exist dummy
+source lot?
+Split success
+商密三级 上海华力
+Confidential I End HLMC

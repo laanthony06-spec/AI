@@ -1,0 +1,20 @@
+预搬送功能
+背景
+对于堆货机台，产能紧张，搬送时间过长可能造成机台空机等待IDLE，导致产能LOSs，为使Lot能尽快上机台作业，对于LP
+都已满机台，提前搬送Lot至机台OHB，减少搬送时间。
+方法
+预搬送 当设备上剩余作业量小于水位时，AMA根据RTD给出的派工清单，将顺位1的Lot添加入MES的
+queue reservation list
+MES发送搬送指令给MCS将Lot搬送至该设备的DefaultOHB。
+Normal机台：机台名+LotCountWaterMark）
+Chamber类机台：机台名+Port名+WaferCount（WaterMark），考虑port上在作业产品所用腔的剩余wafer数总和
+例：CaseforMultiChamber (WaterMark:2pcs)
+2pcs 20pcs P1上剩余wafer符合设定水位，但不融发
+P3 P2 Lot. PPID Port 当P2剩余wafer数符合水位时，Lot1会 presend,
+Lot1 AB Pre-Send到P2，随后MES会将该FOUP传
+Lot3 AB P1 到EQPDefaultOHB
+EQP
+派工 设备LoadPort空闲时，RTD优先排货queuereservationlist中的Lot
+商密三不适用场景：1.机台状态：非Auto2/3，非可作业状态
+Confidern 2多个FOUP同时派工场景（如season+prod，sorter派工，batch设备派工等） 上海华力
+HLMC

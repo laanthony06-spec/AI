@@ -1,0 +1,21 @@
+一Virtual lot的计算方式：*
+A=QTlimit+连接站点的Process(by到recipe且不by片数的PT，
+连环QT才需要加连接站点的PT)+QTloop起始站点的PT（byLot
+片数，且bycapability不byrecipe
+LOT13 A=6H+1站点的PT+ LOT2+
+A=6H+6H+5站点的PT+1站
+6H 点的PTU
+LOT3+5+
+6H A=6H+5 站点的 PT+ LOT3
+LOT2.10
+B=Target站点至QZONE结束站点前一站的PT的累加和（Process
+均By到 Recipe 不By 到片数）
+LOT14 B=3站点的PT+4站点 LOT24 LOT24
+的PT B=7站点的 PT+8站点的
+6HuPT+0站点的PT
+LOT3%5元
+B=7站点的PT+8站点的 LOT34
+10 PT+D站点的PTH
+Qsort=A-B的值
+当站的PT均需要By到片数和CAPABILITY，其余站点均需
+要by到Recipe

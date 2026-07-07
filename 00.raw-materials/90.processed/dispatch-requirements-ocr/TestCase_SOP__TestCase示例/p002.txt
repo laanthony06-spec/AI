@@ -1,0 +1,38 @@
+(Local/central) 所属 Report/Rule/AMA) Area(功能模块 涉及Iacro/共通模块 逻辑变动内容 类别（正向/方 向/特殊符号处 理） 测试内容 1增加四列栏位：N2OHB临界值（N2OHBUseRatio）N2STK临界值 （N2STKUseRatio）SpecialN2OHB临界值（SpecialN2OHBRatio) 测试情景 特殊处理当不配置时给个默认值，不会出现无 预期结果 测试结 Pass/Fall 测试日 XXXX owner 测试
+特殊符号处理 UlWhereNext修改栏位 SpecialN2STK临界值（SpecialN2STKRatio）null值测试.从UI拿取配 法比较情况，可正确从UI中拿取配置信息 Pass/Fail Pass/Fail XXXX XXXX
+正向 存储位loading公式 1.利用率公式验证：储位loading公式 -(usedcapacity+used+USEDTargetFab/(availcapacity+usedcapacity) 1利用率loading公式更新！考虑到了 (systime-creattime）内的transfer数量 （USEDTargetFab）计算实时的loading Pass/Fall Pass/Fail Pass/Fail XXXX
+1.OHB/STKname以及位置与利用率ratio数据验证 Pass/ail XXXX
+2.存储位status（表mesprod.fweqpcurrentstate拿取status栏位） Pass/Fail XXXX
+3.OHB、STK存储位类型判断，获得机台附近STKOHB以及所在 location判断
+Pass/Fail XXXX
+4.判断capabilty状态：只取对应的开关打开的Capability（lsengenable CapabilityName Pass/Fail XXXX
+T"andisptenable) 1利用率loading公式更新，考虑到了
+5.区分STK为LOTSTK还是ReticleSTK (systime-creattime)内的transfer数量
+当EqptypeinOHBP lotOHB/STK判断逻辑验证 STKP则为XCDAIsXCDAPurgeOHB/ （USEDTargetFab）计算实时的loading
+EqptypeinCOHBPN' IsXCDAPurgeSTK) STKPN则为N20SN2PUrgeOHB 2.得到两厂所有OHB/STK的利用率，得到两厂 所有机台以及Defaulstk等信息，并能正确从 Pass/Fail XXXX
+正向 获取两厂所有的机台相关信息 Eqptypein OHBN IsN2PurgeSTK. STKN则为 reticle存储位以及是否overloading U中拿取各种存储位的位置信息，判断是否为
+Normal(isNormaloHB/IsNormalSTK) 3.成功拿到状态正带的capability
+6.overloading判定修改 4.overloading判断，可以计算report时间差
+无orderlimit则overloading-F 5min内自的地又接受指令的数量，
+USED+USEDTargetFab+CurDeviceCountOrderLimit-T 在原基础上增加了USEDTargetFabUESDTargetFab是又从fablotcaext UESDTargetFab是在report计算出后又在 Pass/Fail XXXX
+拿到参数requesteddeviceid然后去重计数得到的结果即report结果计算 Rule里重新计算的，可得到实时指令数量
+后还需要去对厂储位的数量个数） 5非Reticle储位状态判断，成功拿到符合条
+7.overloading判定修改 件的储位，并且标志位isAvailableCheck=T
+无orderlimit则overloading=F
+USED+USED TargetFab+CurDeviceCount-OrderLimit-T
+在原基础上塔加了USEDTargetFab(UESDTargetFab是又从fablotcaext 拿到参数requesteddeviceid然后去重计数得到的结果，即report结果计算 Pass/Fail XXXX
+后还需要去对厂储位的数量个数）
+正向 MES-RTD通讯测试 2与MES联调测试使用MESCallRTD得到回复 3.RTD传参检查，通讯栏位传参检查 1.打MES接口，看是否能正常通讯 可以正确接受MES传参，正常进行通讯 Pass/Fall Pass/Fail XXXX XXXX
+1.选择存储位时要考虑WereNextsTkConstrain中csn逻辑，按照Trackable Pass/Fall
+正向 和Non-Trackable优先选择配置非黑名单的存储位 成功从UI中拿取信息，根据U配置的黑名单 将黑名单的OHB和STK都加上对应的flag。选 Pass/Fail XXXX
+若未考虑CSN逻辑，那么可以选到黑名单的目的地 取目的地时去除黑名单目的地 不从UI拿取Csn配置，自的地选择可以选择到
+反向
+黑名单目的地
+成功从UIWhereNextXCDA基十FOUP身
+上配置栏位SPECIALPURGEFLAG
+SORTINGMODECARRIERTYPE
+CARRIERMODELNUMBERSTATE
+CREATETIME STARTCREATETIME END
+正向 空FOUP若符合Ul:wherenextXCDA配置，是否搬进XCDApurge储位 FUNCTIONMODE判断逻辑）确定空FOUP是 否满足配置，空FOUP类型满足UI配置时，代
+表有purge需求，根据eqptype确认搬送目的 Pass/Fail XXXX
+centralwherenextTestcase 地类型进行搬送

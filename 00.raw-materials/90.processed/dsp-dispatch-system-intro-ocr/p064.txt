@@ -1,0 +1,23 @@
+In Use Start--Season
+口母批筛选
+Filterrule
+Filter item
+Lot ProcessingStatus=Active Description
+Lot Extrastatus =WaitForlnUseStart Lot状态是active
+WaferUsedCount<MaxUsedCount Lot必须是WaitForinUseStart或者WaitForlnUseEnd
+Waferstatus=Normal Wafer使用次数小于最大使用次数
+Wafermonitorstatus =Available Wafer状态是normal
+Carrier_CarrierKind=FOUP Wafermonitorstatus必须为active
+Carrier ProcessingStatus =Created Sourcelot必须在carmer
+Sourcelot所在的carrier必须是created
+Carrier State-Enable Sourcelot所在的carrier必须是enable
+FOUPLocation=In StockerorInOHB Sourcelot所在的carrier必须是lnStocker或nOHB
+Filterthe lot which available wafer count<control id wafer count Sourcelot中可用wafer数不能小于controlid所需的wafer数
+Sorting rule
+Sorting item Description
+Lotowner=MFG lotowner=MFG的lot优先
+Minavailablewafers inFOUP 可使用wafer数少的lot优先
+Maxrecycle count byFOUP recycle次数多的lot优先
+商密Max waiting time Max used count of FOUP 已使用次数少的lot优先
+Confic Min used count ofwafer 等待时间长的lot优先
+LotSlot位置小的优先

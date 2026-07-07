@@ -1,0 +1,21 @@
+LOTI-
+A-3站点的PT（by到片数.Capability）-4站点的PT+5站点
+LOTI-3 的PT+6H+6H-10站点的PT-13站点的PT-14站点的PT-
+（byrecipe不by片数的PT）+
+6H B-3站点至12站点的PT累加+
+除3站点其余站点byrecipe不by片数的
+134 Osot-MAX(AB)
+②Lot未超QT时
+MAX「（QTloop的OTlimit的累加-已消耗的Qtime-Target
+站点至QZONE结束站点前站的PT的累加），（Target站点前一
+站至当前站点PT的累加
+LOTie
+A-6H-消耗的QT+6H-6H+5站点的PT+10站点的
+LOT1+3 PT-13站点的PT-14站点的PT+
+byrecipe不by片数的PT）+
+B-3站点至12站点的PT累加+
+10 （除3站点其余站点byrecipe不by片数的PT）+
+134 6H Osot-MAXAB)
+情况3：#
+同情况2的计算方式。
+当Lot作为ExisitingLot计算时，当前状态为

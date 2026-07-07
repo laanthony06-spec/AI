@@ -1,0 +1,18 @@
+In UseStart -Season
+Season InUse Start
+主要流程 机台派工
+Season 翔断 Season准备 主机台
+口 Season触发条件
+机台触发派工
+机台idle时间达到设定值
+机台本次作业产品的条件与上次作业产品条件发生改变
+机台作业前有换酸等
+口 Season类型
+Idleseason：机台或者chamberidle达到一定时间后需作业的season
+Recipechange season：机台本次作业产品条件与上一次作业产品条件发生改变时需作业的season
+Recipeidleseason：机台某一条件在一段时间内未作业过产品时需作业的season
+Chemical season：机台换酸后需作业的season
+PM&DOWNseason：机台down机或者PM后需作业的season
+商密三级
+Confidential I 上海华
+HLMC

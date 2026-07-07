@@ -1,0 +1,18 @@
+In Use End Recycle Must Process
+一目的：
+通过ByProduct配置禁止未过主机台的lotAutoRecycle
+内容：
+1.若lot对应Product的MustProcess列为F’/为空，则无需新增Recycle判断，仍按原AutoRecycle逻
+辑判断
+2.对于表ama_npwprodmanage的MustProcess列为 T的Product所对应lot在AutoInuse
+endRecycle时需新增Recycle判断：
+1）所有相关lot处于Inuseend站点
+2)Controlid为空或当有ControllD时Waferusecount>o;
+符合其他Recycle条件 Must
+Process-T
+等待其余相关lot 所有相关lot处于 Inuse end站点
+存在未作业过主机台lot无法 Null/Waferuse Controlid Is
+Recycle
+上海华力
+HLMC
+Recycle

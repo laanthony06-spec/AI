@@ -1,0 +1,15 @@
+自动化系统逻辑架构
+系统架构设计
+系统架构
+生产管理准备 NPW准备 生产监控
+淮备层 产能支持 投产规划 Season Dummy Outside Down grade Recycle
+数据分析和物
+料准备） 周期管理 产线调控 Monitor Inside 实时监控
+Dummy
+生产调度 全局 逻辑运算 执行派工 自动报警
+机制层 产品片 NPW 派工清单 设备状态 艺要求 NPW处理 协同型
+应急处置
+存储管控
+Bullet XCDA FOUP 存储平
+商密三级 Lot Purge 监控层
+Confidential I

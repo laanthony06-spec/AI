@@ -1,0 +1,14 @@
+Auto 2-Lot Reserve and Queue Consume
+With Queue WithoutQueue
+Lot Reserve
+Manual Lot Reserve and send FOUPto Load Port
+MES RTD
+Tool Efficiency MES RTD
+-Lot Sorting Load Balance Toal Efficiency
+Auto20 -Load Balance
+MCS -Lat Sorting
+ConsumeQueues
+.ToolisreadytogetaFouUP
+MCS
+商密三级 上海华力
+ConfidentialI HLMC

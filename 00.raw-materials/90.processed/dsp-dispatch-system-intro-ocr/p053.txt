@@ -1,0 +1,16 @@
+In Use Start--Routine monitor
+Monitor In Use Start
+口 流程图
+Watch dogscan every5min
+Check monitor Monitor触发判断
+Get control id list
+Get monitor lot list
+Exist monitor End
+lot?
+Getmonitor source lot
+Monitor准备
+Send alarm Exist monitor source lot? 2.Monitor分批 1.母批筛选
+In use start with split
+Split success
+商密三级 上海华力
+Confidential I Get monitor lot list HLMC

@@ -1,0 +1,21 @@
+甲请部门：利造部 系统名称（类别为3时必填）：CIM计算机集成制造系统Fab6
+（二科））
+申请人员：万艳艳 功能模块（类别为3时必填）：智能派工系统（RTD/DSP）
+申请日期：2024-05-15 希望交付期：2023-06-15
+项目简介和必要性分折：
+复合机台（如BMCUBA01-1234CDEF），每组腔的产能LOSS不同，如CUBA01-12LOSS：15%，CUBA01-
+34LoSS:25%，CUBA01-CDLOSS:50%，CUBA01-EFLOSS:50%，按目前的WPH设定，每个腔无法
+按实际的LOSS设定WPH。因此产线需求复合机台上线WPHLoss功能，按腔体/count设定Loss比例，因
+此QZone需要新增WPHLoss的判断。
+项目投资方案比较及效果分析：
+改善方案：
+QZone新增WPHLoss的判断逻辑，根据WPHLoss重新计算WPH值。
+效果分析：
+1.Metal设备WPH按实际产能维护，Q-timeLoop放货量管控，减少>OverQ-time5-6Lot/月：
+2.减少人为管控风险，节省人力18H/每月（60个腔每20天PM一次，人为管控0.2H一次）
+需求内容（可添加附件）：
+QZone拿取机台WPH时新增WPHLoss的逻辑：
+（一）.原QZone拿取机台WPH时Bycapability.machinename，recipe拿取表vwdspcapabilitywph
+对应的wph.isengcontrolengpriority信息，现需要多拿出ProcessGroup，WPHLossControl栏
+位。
+（）.在拿完WPH后新增逻辑判断LotWPHLoss逻辑：

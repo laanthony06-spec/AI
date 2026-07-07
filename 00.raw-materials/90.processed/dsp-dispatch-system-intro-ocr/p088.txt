@@ -1,0 +1,24 @@
+口编辑V
+DegasMonitor
+动画
+DegasMonitor分批逻辑
+Copper对于CUB机台MonitorDegas腔只需做同GroupName中任腔，当其中某一腔不可作业时需分批Group号一腔进行作业。MonitorAutolnUse上线自动Monitor只上线同 评论
+GroupName中任一即可。
+口涉及UI
+DegasMonitorGroup 与其他区域Routine
+Watch dog scan every 5 min Monitor分批时间计算
+方式无差别
+Check monitor
+Check腔是否 正常分批
+可作业
+是否设定有
+Degas Monitor End
+Group
+Check同
+GroupMonitor对
+应腔是否可作业
+同GroupMonitor
+分批同DegasMonitorGroup Last Monitor Time
+商密三级 Monitor 上海华力
+HLMC
+Confidential I

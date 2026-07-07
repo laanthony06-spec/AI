@@ -1,0 +1,23 @@
+常见问题查询
+产能/断线相关Case
+>卡控Capacityissue或Pathissue可以在FABScheduler→QzoneControl中查看原因
+使用方式：
+1.可输入LotName点击“Submit"按钮，ByLot查询下游
+Qzone整体元许放货量，及断线或堆货站点
+2.点击模块1的RemainWIP，可查询Qzone中各站点允许放货量
+3.点击模块2的RemainWIP.可查询Qzone中某站点各机台的可
+作业情况。机台Mark黄色时表示该机台不可作业。
+>常见卡控Capacitylssue情况：Lot在卓站点可作业机台IDLE，却卡控该站点的产能不足
+主要原因：由于Bullet/KeyLot需要提前预留产能，但Bullet/KeyLot还需要一定时间才能到达当站，故会造成机台IDLE
+Qtime Urgency
+用于判定Qtime紧急程度，在FABSchedulerQtimeUrgency中查看
+QU=RemainQT/Remain CT QT URGEY_O
+皖·A·0N358·10 0.311
+RemainCT=当前站点PT+中间站点CT+结束站点23CT QT URNBNOE 2 121
+存在多Qtime（大包小）时，QU取最小。
+针对QTUrgency 0的计算 QT_URGENCY_3 (23)
+@.当QTUrgency-RemainQT/RemainCycleTimes0.3时生效 QT URGENCY_4 (34)
+@.当RemainQT/RemainProcessTime1时QU0生效 QT_URGENCYS
+商密三级 上海华
+15 HLMO
+Confidential I

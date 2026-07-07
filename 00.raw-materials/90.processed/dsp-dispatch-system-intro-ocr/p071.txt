@@ -1,0 +1,16 @@
+In Use End Reuse
+Reuse条件（ByWafer）
+>Filter rule:
+Filter item Description
+Lot FULL Controlid Lot有Contrilid
+Lot ProcessingStatus ="Active" Lot状态是active
+Lot Extrastatus ="WaitForlnUseEnd" Lot必须在WaitForlnUseEnd站点
+Switch InUseEnd ="T" 打开AMAInUseEnd功能
+WaferUsedCount<MaxUsedCount Wafer未达到最大使用次数
+Wafer Monitor status -"Available" Wafermonitor status必须为Available
+Control status= "Used Controlstatus必领为Used
+Carrier CarrierKind="FOUp" 母批必须在FOUP内
+FOUPLocation= InStocker orIn OHB lot所在的carrier必须是lnStocker或inOHB
+商密三级 上海华力
+102 HLMC
+ConfidentialI

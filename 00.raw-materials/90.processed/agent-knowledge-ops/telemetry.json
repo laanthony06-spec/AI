@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "TaskName": "Obsidian Agent Knowledge Ops Refresh",
+      "State": 3
+    },
+    {
+      "TaskName": "Obsidian AI Agent Intel Daily",
+      "State": 3
+    },
+    {
+      "TaskName": "Obsidian Raw Materials Weekly Knowledge Distill",
+      "State": 3
+    },
+    {
+      "TaskName": "Obsidian Semiconductor Dispatch Intel Daily",
+      "State": 3
+    },
+    {
+      "TaskName": "Obsidian Sensitive Scan Weekly",
+      "State": 3
+    }
+  ]
+}

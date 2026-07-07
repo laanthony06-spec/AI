@@ -1,0 +1,26 @@
+TF派工规则
+口概述：结合TF区域Process机台作业特性，综合考量Recipe连续、Film连续、连续上限、同条件WIP量、累计膜厚Clean、瓶颈
+机台等因素设计一系列派工规则，判断Lot在机台上可作业性及紧急优先程度，并结合ALL-SGE排程等特定调度方式制定出符合
+TF区域设备特性的自动派工逻辑。
+Reason 功能名称 Chamber/FlowReaipe/Capability只能/不能在绑定机台的LoadPort上作业，未设量LoadPor绑定的LoadPort共通，支持正 功能描述 LotComment/RTD Info
+PORT绑定
+（管控LOt不自动派工） Film lean 对用户设定的并行模式机台不能司时作业两种不同的膜种 反同设定 ChamberNlame faitPlowrepe fai MachmeCaoability falil
+Dif Filen Type
+Recipe/Film Continue 未达到recipe/膜种连续上限时，与机台/chamber量近一次作业recipe/膜种是同一recipe/膜种的Lot优先作业 FilmConbinue:NotProcesedtCehars
+根据chamberloading打分loading低的得分高，得分越高的越优先 GroupQimeCountRecpeDount FilmGroupLount
+CHAMBER Sorting 可作业chamber教多的优先 PPIDScore
+chamber剩余作业时间小的优先派该chamber的lot ChambarCaunt
+Season Control 不需要作业recipe change season的lot优先作业 ChamberRamineTime
+LastFoupFinishTime（Lot在SGE站点最早上货时间Port先ldle的机台优先 NoNeedRenpaSaason
+LastFoupFinisnTime
+Sorting 判断o的穿插指标 InterfudeFiag
+（排序规则） 报据RemQTimeToSGE与QTimeGap?对应ratio判断RemQTimeToSGE的等级 若此lot可作业的chamber包含前一卡的idlechamber则该指标生效 RemQTimeTaSGE Categony ALLProcessChamoerHlag
+判断是否为SGE的Pinunlot SGEPinnLot
+ALL-SGE 判NPW生效指标 NPWFlag
+Lot的Controlid存在ToolRecoveryGroup，且对应PM item strigger为T，则Group中Lot的ControlidSequence判断为 其TRGsequence TRGsequence
+MFGControl设重的优先 RunPn Pnefen SGE
+少枚数lot不连续 SmallLotNePrefer
+Pri为1/2的高等级lot优先 N20CDPn12
+商密二岁 Lot的ProcessChamberList中各Chamber打分界计之和，分值趣高越优先 TotalChamberScere 上海华力
+22 HLMC
+Confidential I

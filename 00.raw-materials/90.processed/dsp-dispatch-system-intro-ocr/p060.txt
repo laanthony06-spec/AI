@@ -1,0 +1,21 @@
+口编辑
+In Use Start 一复机NPW自动派工
+主机台派工：
+考虑机台复机monitor的作业顺序要求： Monitorgroup info:
+相关RTDreason:Need sequencerun
+例：当seasonA派工后，下次派工只可以派monitorB，monitorCD 1.SeasonA
+卡控不可派，reason为need sequencerun； 60min
+考虑机台复机monitor相互之间的时间要求： 2MonitorB
+60min
+相关RTD reason:Interval time out 3.MonitorC
+例：在seasonA作业完成60min后，若monitorB派工，则卡控reason 60min
+为interval time out; 4.MonitorD
+考虑机台非复机lot派工：
+相关RTDreason:Need recovery
+例：若机台处于MONPM/DOWN状态，后续待派工为非复机monitor
+中的lot，其卡控reason为needrecovery：
+同机台复机chamber和正常chamber之间lot排序
+对于复机的NPW，派工时，RecoveryNPWFlag生效，其他sorting指标
+相同时，会优先派工，相关sorting：RecoveryNPWFlag
+商密三级 上海华力
+Confidential I HLMC

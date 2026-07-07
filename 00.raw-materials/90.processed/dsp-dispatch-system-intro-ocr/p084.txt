@@ -1,0 +1,12 @@
+Auto Reassign(Downgrade)
+口Reassign条件（Bylot）
+Filter rule:
+Filter item Description
+Lot ProcessingStatus ="Active" Lot自身状态是active
+Lot Extrastatus="WaitForDisposal" Lot自身必须在WaitForDisposal（即Downgrade）站点
+Switch Reassign ="T" 打开AMAReassign功能
+Mapping info in FabMaintainDownGrade fromproduct&fromstep符合Mapping配置表
+Carrier CarmierKind="FOUp" 只判断在FOUP内的lot
+FOUPLocation= InStockerorin OHB lot所在的carrier必须是InStocker或lnOHB
+商密三级 上海华力
+ConfidentialI HLMC

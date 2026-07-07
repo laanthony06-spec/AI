@@ -1,0 +1,18 @@
+In Use Start 一复机NPW
+口复机NPW分批逻辑介绍：
+>Season分批：splittime=机台切到WAIT MFG时间点
+WAIT EE triggerPM/DOWN item WAIT MFG WAIT PE Time
+PM&DOWN MONPM&MONDOWN
+Split time
+注：对于需要多卡season的设备类型，可设置按剩余片数分批。
+Monitor分批：
+WAIT EE triggerPM/DOWNitem ENG time WAIT PE Time
+Leading time MONPM&MONDOWN
+PM&DOWN
+Split time Split time
+注：Splittime计算：
+1)存在ENG Time时:split time=ENG Time-leading time
+2）不存在ENGTime，STD time不为空时：split time-PM时间点+STD time-leading time
+商密三级3）不存在ENGTime，STDtime为空时：splittime=PM时间点
+Confidential I 上海华力
+HLMC

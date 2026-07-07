@@ -1,0 +1,19 @@
+其他QZone相关附加管控功能
+口Loop内lotqtime管控
+1.Lot相互独立（QtimeUrgency）
+Lot5在S4站点的gtime派工等级？
+Lot2
+Lot3
+Lot4 Lot5 Lot6
+$2 $3 $4 $5
+QT
+计算QT紧急程度：用Lot当前位置至结束站点的剩余qtime时间与估算剩余作业时间的比值作为QT紧急程度指标
+QU= QTUrgency Level Description
+QTUrgency0
+QT Urgency_1 (0.3,1)
+针对QT_Urgency_O的计算 ①.当QT_Urgency=RemainQT/RemainCycleTime≤0.3时生效 QT.Urgency.2 (1,2)
+②.当RemainQT/RemainProcessTime≤1时，QU0生效 QTUrgency_3 (2.3)
+（防止因CT维护值不准确，计算出的QU值偏差较大） QT Urgency_4 (3.4)
+商密三级 上海华力
+56 HLMC
+Confidential I

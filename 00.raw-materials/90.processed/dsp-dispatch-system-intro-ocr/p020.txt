@@ -1,0 +1,17 @@
+常见问题查询
+Recipe连续作业相关Case
+>问题：LotBP2Z630QT小于4h触发强派，BEASHM09同Recipe连续作业，但LotBP2Z630仍OQT。
+原因：BEASHM09机台的Sorting为QTURGENCY0/1/2/3、RecipeGroupContinue、Rework、RunPri Prefer（MFGControl优先作业）、Q0Prefer等，
+由于在LotBP2Z630在还未触发强派之前，有MFGControl设置的2级优先作业，待QTURGENCY3生效时QT已不足顺序作业。
+解决方法：将QOPrefer指标调前可解决此问题。
+管控Port派工相关Case
+>问题：BP2V604/BP2V622/BP2Y101/BP2Y106到达E-ASHHD-F站点未优先派工，直至OQT。
+原因：由于BEASHM22/20设定有port管控，针对A，B腔分配的剩余作业枚数低于10Pcs。因该机台多个Qtime较急的Lot为单B腔作业，单B腔Lot上机台后，其余单
+腔作业Lot会卡控specialcountcontrol
+解决方法：1.修改port管控设置2.将QoPrefer指标调前
+SGE相关Case
+>问题：BP2R815.0010在E-SIPGE-F一直卡控SGECanNotRelease直至2025/1/1110:36才有排序派上机台来不及作业OQT0.1H。
+原因：产品下放后SGE机台的机况及可做业机台条件有问题导致QtimeLoop内产品无法及时消货导致。
+解决方法：1.增加Lot可作业Chamber的条件2.设置优先作业
+商密三级 上海华
+Confidential I 21 HLMC

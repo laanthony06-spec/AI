@@ -1,0 +1,24 @@
+In Use Start--Dummy
+触发条件
+(lot extract status is Wait For Dummy Out and exist any one waferused count -itself slot max spec)
+or (Batch wafer count +monitorwafer count +SD dummy wafer count +ED dummy wafer count <spec)
+no otheranylot extract status is WaitFor ReserveDummy
+口母批筛选
+Filter rule
+Filter item
+Description
+Lot ProcessingStatus=Active Lot状态是active
+Lot Extrastatus=WaitForlnUseStart Lot必须是WaitForinUseStart或者WaitForlnUseEnd
+Wafer status =Normal Wafer状态是normal
+Wafermonitorstatus=Available Wafermonitorstatus必须为active
+Carrier CamierKind=FOUP Source lot必须在carrier
+Carrier ProcessingStatus =Created Sourcelot所在的carier必须是created
+Carrier State=Enable Sourcelot所在的carier必须是enable
+FOUPLocation=InStockerorInOHB Sourcelot所在的carrier必须是InStocker或lnOHB
+sourcelotavailable qty>=dummyldneedwafercount 可用wafer数大于等于dummyid所需wafer数
+>Sorting rule
+Sorting item Description
+MinavailablewafersinFOUP 可使用wafer数少的lot优先
+商密 Max recycle count by FOUP recycle次数多的lot优先
+Max used count ofFOUP 已使用次数多的lot优先
+Conf Max waiting time 等待时间长的lot优先

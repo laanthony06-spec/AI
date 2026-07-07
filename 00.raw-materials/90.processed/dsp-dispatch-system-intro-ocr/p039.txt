@@ -1,0 +1,17 @@
+QZone管控简介
+口管控逻辑
+Constraint Qzone Exception
+Result
+Constraint Ozone Result Exception
+主要作用 判断每个prod在每个站点机台的 判断qzone中每个站点每个机台的产能情况 忽略草些设定站点的QZone管控结
+recipe可作业情况
+判断内容 机台是否建Recipe 1机台产能：capability开关，EQPstate 1.白名单：制造科/PE要求设定无
+2. Recipe是否被inhibit/Hold/ Communicate mode,WPH 视站点
+disable 2机台需求量：QZone中的每个lot分配在该机 2.Safetyvalue判断
+台上的wafer数总和
+运算频率 16mn Normal12min先进工艺11min 实时
+运算时间 约16min 12min 实时
+与实际差 最大约18min 最大约14min
+结果特别处理 Lot处于aZone起始站点，HQZone结果未计算
+商密三级 出来时，该Lot不派工 海华力
+Confidential I HLMC

@@ -1,0 +1,14 @@
+Auto Reassign(Downgrade)
+口 Reassign计算
+主要流程：
+Compute Method:
+A=to product currentwip wafer qty(Lot ProcessingStatus "Active"or“Hold")
+C-the sum of to product current wip all wafers remain available recycle count
+D=to productofmaxrecycle count
+Result=A/B
+>Result1=B*D-C
+Reassignlotpriorityfordowngrade:
+>Resultthe smallerthepriority
+Ifresultsame,thenresult1thebiggerthepriority
+商密三级 上海华力
+Confidential I HLMC

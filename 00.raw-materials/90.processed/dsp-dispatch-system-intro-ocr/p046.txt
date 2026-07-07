@@ -1,0 +1,18 @@
+Qzone异常处置机制
+"Safety Value"
+连环qzone下游出现断线或堆货时，根据各qzone的风险程度进行特殊管控。
+卡Q-zone
+QT1 QT2 Q-Zone exception 强派 >Issuestep存在Exception站点：
+白名单 Ozone不卡控孩lssuestep，非exception
+Step1 Step2 Step3 Y>设 Y,且<设定 step依次判断
+指定RQT放货 强派 指定remainqtime放货：
+Tooldown/堆货 RQt<设定值：强派（忽略所有断线/堆货站
+是否向下游放货？ 黑白名单
+Special target Loti设定不管控 强派 RQ>=设定值不底（卡控所有断线/堆货站
+QT1 QT2 QT3 >MPc设定Target：仅针对堆货
+黑名单 不派 限定不可放货站点 TargetLot.强派（略所有堆货站点）
+Step1 Step2 Step3 Step4 Issuestep存在限定不可放货站点：
+Safety Lot不派（卡控新有lssueStep）
+Tool down/堆货 Value 风险管控放货 强派
+是否向下游放货？ 管控
+不派

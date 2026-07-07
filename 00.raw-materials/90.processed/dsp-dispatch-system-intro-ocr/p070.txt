@@ -1,0 +1,13 @@
+In Use End
+主要流程
+Watchdog每5min扫描一次
+获取InUseEnd站点可作业lot表
+列表是否为空？ 判断可作业lot 结束
+获取InUseEnd站点可作业 判断是否可以 获取InUseEnd站点可作业
+reuselot信息 做reuse? recyclelot信息
+InUseEnd站点做reuse InUseEnd站点做recycle
+判断reuse是 发送报警 判断recycle
+否成功？ 是否成功？
+商密三级 结束 上海华力
+HLMC
+Confidential I

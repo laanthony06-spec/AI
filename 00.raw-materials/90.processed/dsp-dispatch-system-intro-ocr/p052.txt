@@ -1,0 +1,13 @@
+In Use Start--Routine monitor
+Bytimeweekly分批：split time =date(now)+ time(initial time)-leading time
+Monday Monday Monday
+Time
+Splittime
+1.当前日期为指定日期时：
+now>=date（now）+initialtime-leadingtime，则该monitor需要分批，否则不分批：
+2.当前日期不是指定日期时：
+计算当前时间所在的week，以及当前week指定的controlvalue所在的date1，以及date2（date1-7*control
+interval），拿取date1&date2中小于当前日期中最大的date，作为lastsplittime。
+datelastmonitortime）lastsplittime，则该monitor需要分批，否则不分批
+商密三级 上海华力
+Confidential I HLMC

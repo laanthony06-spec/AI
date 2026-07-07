@@ -1,0 +1,16 @@
+全自动化系统信息架构
+RTD（实时派工系统） AMA（自动派工管理系统）
+1.Sorting（排序功能） 1.派工触发和最终核对，支持LotPre-reserve
+2.WhereNext（FOUP暂存指定功能） 2.NPW管理
+FAB RTD AMA
+EAP MCS 派工结果
+APC PMS 厂信息 搬送存储 筛选排序
+派工果求
+RMS FDC 生成派工需求 NPW准备 派工核对
+可派工清单
+工厂信息 歡送需求 搬送结果 NPW需求 设备信息 派工结果 操作结果
+MES
+WIP FLOW MACHINE MONITOR
+商密三级 上海华1
+Confidential I
+HLMC

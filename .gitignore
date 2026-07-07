@@ -1,0 +1,36 @@
+# Local secrets
+.env
+**/.env
+*.env
+
+# Python/runtime artifacts
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Logs and caches
+*.log
+**/cache/*.log
+**/cache/*.tmp
+
+# Obsidian volatile workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Local agent/runtime state
+.claudian/
+.codex/
+.agents/
+.claude/
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Large temporary archives / exports
+*.tmp
+*.bak
+*.swp

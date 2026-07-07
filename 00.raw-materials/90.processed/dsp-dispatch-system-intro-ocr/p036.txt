@@ -1,0 +1,17 @@
+QZone管控简介
+口管控内容
+QZonecontrol Qtime urgency
+·要求
+-ot放入loop内后不会overqtime 要求
+-lot在放入loop内后不会造成其他 Loop外产 品作业管控 Loop内产 品作业管控 每个lot在gtime范围内作业出loop
+lotoverqtime -lot的作业不影响出货/瓶颈所需lot的作业
+口考量因素
+设备数量 QT时限 QT结束方式
+瓶颈站点
+设备状态 QT类型 Loop内WIP量
+设备作业能力
+设备维护计划
+设备作业方式
+工艺限定 Loop内WIPremainQT
+商密三级 上海华力
+Confidential I 48 HLMC

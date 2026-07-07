@@ -1,0 +1,31 @@
+需求内容（可添加附件 样式
+PMQzone管控优化
+现逻辑：PM机台状态为可做业状态，LotQSontPMStart则判定该Lot对应的此机台PMFlag为Y
+修改逻辑：对于PM机台新增判定指标PMOzoneControl，该指标力Y的情况下考量机台PM时间
+段和Buffer情况，基于该时间段评估产品可放货情况其中PMBuffer的考量参照原一刀切PM管控方式
+对于PM时间长度新增Bufer计算，重新预估PMStart&End时间
+1.1PMQzone 管控中PM Start&End 计算
+原逻辑中需可做业机台PM时间管控进行优化
+开关打开时LotSTNList，拿取符合其SINPMControllnfo报表中的MachineIDNew，并判定其机台/腔
+当前状态情况，如机台/腔为可做业状态（e1Ostate-Standby orProductive，orEgpstateIN(MON-R
+BACKUPTD LOTENG LOT,MON ROURECYCLE）只取MaChIneID NeW 对应的机台状态为可做业
+状态的进行后续判定。
+（）对于MachineIDNew的PMStartTime<-当前时间则对应的PMStartTIme取当前时间（此判定考量
+机台已在设定PM区间段内评估对应的PM周期相应进行延长
+（2）对借机/PM进行不同时间的者量，借机者量借机的时间段，PM考量PM开始时间之后的整个时间长
+度.Qzone中VItual&Existing）STN判定，（PMSTN=NAndPMStartTime-当前时间<-LotQsorn<-PM
+Start Time 当前时间+ActualPMTimeDuration And LotSTN-MachinelD New）or（PM STN- Y AndLot
+Qsort>-PM StartTime-当前时间And LotSIN-MachinelD New）则Is NewPMAuto Control=T反之
+Is NewPMAuto Control-"F 对于PM和借机的处理方式不一致）
+现修改逻辑：#
+开关打开时LotSTNList，拿取符合其STNPMTimeContrallnfo报表中的MachinelDNew，并判定其机
+台/腔当前状态情况，如机台/腔为可做业状态(e10state-StandbyorProductive，orEgpstateIN（MoN-R
+BACKUP.TDLOTENGLOT，MON ROU，RECYCLE，只取MachineIDNew对应的机台状态为可做业
+状态的进行后续判定。
+对借机/PM 进行不同时间的考量，借机或PM 且 PMzoneContro-Y考量时间段，PM且
+PMOzoneControl！二Y”考量PM开始时间之后的整个时间长度，
+Ozone 中(Virtual&Existing)STN判定，（(PMSTN-"N or(PM STN-AndPMOzoneContro-
+STN-Y  And Lot Osort>-PM Stan Time-当前时间 And LotSIN-MachinelDNew)则 Is New PM Auto
+Control"T反之 Is New Pm Auto ControlF CPM EndTime-PMStartTime 当前时间+
+ActualPMTimeDuration)
+其中新增PMSTN=Y机台同修工翔断

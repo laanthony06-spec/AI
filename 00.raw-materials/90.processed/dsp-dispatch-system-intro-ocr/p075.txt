@@ -1,0 +1,22 @@
+In Use End Recycle
+相关Lot筛选条件
+Filter item Description
+Carrier CarrierKind- "FOUp" 只判断在FOUP内的lot
+Subplan like%RECYCLE%' 相关lot去除在RecycleFow中的lot
+Subplanlike%DOWNGRADE% 相关lot去除在downgrade站点的lot
+Subplanlike%PRE%
+AND PROCESSINGSTATU='Hold 若lot在PreRule中切被Hold住，同时MaxHold
+AND Max HOLDTIME>RTD CONFIG.IgnoreHoldTime time≤配置值时才将其作为相关lot考虑
+>UI RTD CONFIG.IgnoreHoldTime
+RTD Congtiguration
+Critenia Selection Area
+RTD Configuration
+ID Parameter_Usage ParameterName Parametervalue ParameterValue Char ParameterValue I parameterValue Unit
+681 AMAPeriodic Ciean OHB Trigger Time 0000-23:59 Matcning Peniod
+682 AMAPenodic Clean OHB Tnigger Count 16 Number
+701 AdvanceRecycle PreTime Hours
+702 AdvanceRecycte
+805 AdvanceRecycle IgnoreHoldTime 12 Hours
+商密三级 106 上海华
+HLMC
+Confidential I

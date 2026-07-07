@@ -1,0 +1,22 @@
+QZone管控简介 口编车
+口QZoneControl应用实例（判断处于Q-timeloop起始站点的Lot能否派工）
+①获取各qzoneloop内所有要经过targetstep67对应capability的Lot，并计算每个lot的qsort值，从小至大排序；
+o-tmelo0e3
+Lotname qy queuesor Lotname Qty queuesor Lmeloop
+Lot1 20 10 排序 Lot3 20 Target stepe7
+Lot2 20 12 Lot4 20
+Lot3 20 Lot5 20
+Lot4 20 Lot1 20 10
+Lot5 20 Lot2 20
+②拿取targetcapability可作业机台/chamber及WPH，根据qsort依次计算 ③判断qzone起始站点的Lotv放入zone后是否会影响已在zone中的Lot：
+target_capability各机台在相应lot的qsort范围内的作业需求和产能， Lotv进入zone后不会超qtime
+WPH-15 正常lot：不会超qtime
+已经超qtime的Lot：超过时间不变
+Lotnam qty queuesor 作业需求 机台产能
+queuesort 作业需求 机台产能 剩余产能 可放货结果
+Lot3 20 20 30 10 20 30 10
+Lot4 20 40 45 2（lotv) 40 30 -10 不可放货
+Lot5 20 60 60 60 45 -15
+Lot1 20 10 80 150 80 60 -20
+Lot2 20 12 100 180 80 10 100 150 50
+120 180 60

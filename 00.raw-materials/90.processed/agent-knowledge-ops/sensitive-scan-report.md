@@ -1,0 +1,111 @@
+---
+type: security-scan
+updated: 2026-07-07 20:56:32
+tags: [安全, SensitiveScan, AgentKnowledgeOps]
+---
+
+# 敏感信息扫描报告
+
+- 扫描时间：2026-07-07 20:56:32
+- 可疑文件数量：2
+- 内容命中数量：84
+
+## 可疑文件路径
+
+- `30.areas/ai-agent-intel/.env`
+- `30.areas/semiconductor-dispatch-intel/.env`
+
+## 内容命中
+
+| 文件 | 行号 | 类型 | 已脱敏片段 |
+|---|---:|---|---|
+| `30.areas/ai-agent-intel/.env` | 4 | GitHub fine-grained token | `GITHUB_TOKEN=***MASKED***` |
+| `30.areas/ai-agent-intel/.env` | 4 | Generic secret assignment | `GITHUB_TOKEN=***MASKED***` |
+| `30.areas/ai-agent-intel/.env` | 7 | X bearer token | `X_BEARER_TOKEN=***MASKED***` |
+| `30.areas/ai-agent-intel/.env` | 7 | Generic secret assignment | `X_BEARER_TOKEN=***MASKED***` |
+| `30.areas/semiconductor-dispatch-intel/.env` | 3 | GitHub fine-grained token | `GITHUB_TOKEN=***MASKED***` |
+| `30.areas/semiconductor-dispatch-intel/.env` | 3 | Generic secret assignment | `GITHUB_TOKEN=***MASKED***` |
+| `30.areas/semiconductor-dispatch-intel/scripts/collect_intel.py` | 91 | Generic secret assignment | `    token = ***MASKED***"GITHUB_TOKEN", "").strip()` |
+| `30.areas/semiconductor-dispatch-intel/scripts/collect_intel.py` | 154 | Generic secret assignment | `    token = ***MASKED***"X_BEARER_TOKEN", "").strip()` |
+| `30.areas/semiconductor-dispatch-intel/scripts/collect_intel.py` | 270 | Generic secret assignment | `    api_key = ***MASKED***"SEMANTIC_SCHOLAR_API_KEY", "").strip()` |
+| `30.areas/ai-agent-intel/scripts/collect_ai_agent_intel.py` | 171 | Generic secret assignment | `    token = ***MASKED***"GITHUB_TOKEN", "").strip()` |
+| `30.areas/ai-agent-intel/scripts/collect_ai_agent_intel.py` | 259 | Generic secret assignment | `    token = ***MASKED***"X_BEARER_TOKEN", "").strip()` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 22 | Generic secret assignment | `\| `30.areas/ai-agent-intel/.env` \| 4 \| GitHub fine-grained token \| `GITHUB_TOKEN=***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 23 | Generic secret assignment | `\| `30.areas/ai-agent-intel/.env` \| 4 \| Generic secret assignment \| `GITHUB_TOKEN=***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 24 | Generic secret assignment | `\| `30.areas/ai-agent-intel/.env` \| 7 \| X bearer token \| `X_BEARER_TOKEN=***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 25 | Generic secret assignment | `\| `30.areas/ai-agent-intel/.env` \| 7 \| Generic secret assignment \| `X_BEARER_TOKEN=***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 26 | Generic secret assignment | `\| `30.areas/semiconductor-dispatch-intel/.env` \| 3 \| GitHub fine-grained token \| `GITHUB_TOKEN=***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 27 | Generic secret assignment | `\| `30.areas/semiconductor-dispatch-intel/.env` \| 3 \| Generic secret assignment \| `GITHUB_TOKEN=***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 28 | Generic secret assignment | `\| `30.areas/semiconductor-dispatch-intel/scripts/collect_intel.py` \| 91 \| Generic secret assignment \| `    token = ***MASKED***"GITHUB_TOKEN", "").strip()` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 29 | Generic secret assignment | `\| `30.areas/semiconductor-dispatch-intel/scripts/collect_intel.py` \| 154 \| Generic secret assignment \| `    token = ***MASKED***"X_BEARER_TOKEN", "").strip()` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 30 | Generic secret assignment | `\| `30.areas/semiconductor-dispatch-intel/scripts/collect_intel.py` \| 270 \| Generic secret assignment \| `    api_key = ***MASKED***"SEMANTIC_SCHOLAR_API_KEY", "").strip()` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 31 | Generic secret assignment | `\| `30.areas/ai-agent-intel/scripts/collect_ai_agent_intel.py` \| 171 \| Generic secret assignment \| `    token = ***MASKED***"GITHUB_TOKEN", "").strip()` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 32 | Generic secret assignment | `\| `30.areas/ai-agent-intel/scripts/collect_ai_agent_intel.py` \| 259 \| Generic secret assignment \| `    token = ***MASKED***"X_BEARER_TOKEN", "").strip()` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 33 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 14546 \| Generic secret assignment \| `      progressToken: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 34 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 14943 \| Generic secret assignment \| `      progressToken: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 35 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 23569 \| Generic secret assignment \| `      access_token: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 36 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 23570 \| Generic secret assignment \| `      id_token: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 37 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 23575 \| Generic secret assignment \| `      refresh_token: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 38 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 23603 \| Generic secret assignment \| `      client_secret: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 39 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 23613 \| Generic secret assignment \| `      token: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 40 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 23748 \| Generic secret assignment \| `  const hasClientSecret = ***MASKED*** !== void 0;` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 41 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 23915 \| Generic secret assignment \| `        refreshToken: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 42 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 24219 \| Generic secret assignment \| `    refresh_token: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 43 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 24229 \| Generic secret assignment \| `  return { refresh_token: ***MASKED*** ...tokens };` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 44 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 31595 \| Generic secret assignment \| `  if (!Y.access_token) throw new O$(`Token endpoint response missing access_token: ***MASKED*** $.status, Z6(Y), Q);` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 45 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 31914 \| Generic secret assignment \| `    return { token: ***MASKED*** expiresAt: Y4() + U };` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 46 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 31954 \| Generic secret assignment \| `    return await j5($.credentialsPath, { ...X, version: R5, type: "oauth_token", access_token: ***MASKED*** expires_at: w, refresh_token: ***MASKED*** }), { t` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 47 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 32022 \| Generic secret assignment \| `      await j5(Q, { ...G != null ? G : {}, version: R5, type: "oauth_token", access_token: ***MASKED*** expires_at: U.expiresAt });` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 49 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 44201 \| Generic secret assignment \| `var yV = K6({ progressToken: ***MASKED*** [C1]: ul.optional() });` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 50 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 45306 \| Generic secret assignment \| `var ye = b(() => K.object({ type: K.literal("ws-ide"), url: K.string(), ideName: K.string(), authToken: ***MASKED*** ideRunningInWindows: K.boolean().optional` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 51 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 58420 \| Generic secret assignment \| `      this._onerror(new Error(`Received a progress notification for an unknown token: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 52 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 58616 \| Generic secret assignment \| `            progressToken: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 53 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 58866 \| Generic secret assignment \| `    const progressToken = ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 54 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 60254 \| Generic secret assignment \| `            resumptionToken: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 55 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 60266 \| Generic secret assignment \| `              resumptionToken: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 56 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 60475 \| Generic secret assignment \| `      resumptionToken: ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 57 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 60841 \| Generic secret assignment \| `    envTextarea.placeholder = "API_key=***MASKED***";` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 58 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 63129 \| Generic secret assignment \| `      placeholder: "ANTHROPIC_API_KEY=***MASKED***",` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 59 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 66340 \| Generic secret assignment \| `  const lastToken = ***MASKED*** - 1];` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 60 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 66353 \| Generic secret assignment \| `      const previousToken = ***MASKED*** - 2];` \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 61 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 66393 \| Generic secret assignment \| `    const token = ***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 62 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 72497 \| Generic secret assignment \| `      placeholder: `OPENAI_API_KEY=***MASKED*** \|` |
+| `00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md` | 63 | Generic secret assignment | `\| `.obsidian/plugins/realclaudian/main.js` \| 88823 \| Generic secret assignment \| `        isSecret: ***MASKED*** === true` \|` |
+| `.obsidian/plugins/realclaudian/main.js` | 14546 | Generic secret assignment | `      progressToken: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 14943 | Generic secret assignment | `      progressToken: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 23569 | Generic secret assignment | `      access_token: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 23570 | Generic secret assignment | `      id_token: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 23575 | Generic secret assignment | `      refresh_token: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 23603 | Generic secret assignment | `      client_secret: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 23613 | Generic secret assignment | `      token: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 23748 | Generic secret assignment | `  const hasClientSecret = ***MASKED*** !== void 0;` |
+| `.obsidian/plugins/realclaudian/main.js` | 23915 | Generic secret assignment | `        refreshToken: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 24219 | Generic secret assignment | `    refresh_token: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 24229 | Generic secret assignment | `  return { refresh_token: ***MASKED*** ...tokens };` |
+| `.obsidian/plugins/realclaudian/main.js` | 31595 | Generic secret assignment | `  if (!Y.access_token) throw new O$(`Token endpoint response missing access_token: ***MASKED*** $.status, Z6(Y), Q);` |
+| `.obsidian/plugins/realclaudian/main.js` | 31914 | Generic secret assignment | `    return { token: ***MASKED*** expiresAt: Y4() + U };` |
+| `.obsidian/plugins/realclaudian/main.js` | 31954 | Generic secret assignment | `    return await j5($.credentialsPath, { ...X, version: R5, type: "oauth_token", access_token: ***MASKED*** expires_at: w, refresh_token: ***MASKED*** }), { token: ***MASKED*** expiresAt: w };` |
+| `.obsidian/plugins/realclaudian/main.js` | 32022 | Generic secret assignment | `      await j5(Q, { ...G != null ? G : {}, version: R5, type: "oauth_token", access_token: ***MASKED*** expires_at: U.expiresAt });` |
+| `.obsidian/plugins/realclaudian/main.js` | 34215 | Generic secret assignment | `    let Q = "credentials" in $ \|\| "config" in $ \|\| "profile" in $, J = "apiKey" in $ \|\| "authToken" in $ \|\| Q, Y = { ...this._options, ...this._baseURLIsExplicit ? { baseURL: this.baseURL } : {}, maxRetries: this.maxRetries, timeout: this.t` |
+| `.obsidian/plugins/realclaudian/main.js` | 44201 | Generic secret assignment | `var yV = K6({ progressToken: ***MASKED*** [C1]: ul.optional() });` |
+| `.obsidian/plugins/realclaudian/main.js` | 45306 | Generic secret assignment | `var ye = b(() => K.object({ type: K.literal("ws-ide"), url: K.string(), ideName: K.string(), authToken: ***MASKED*** ideRunningInWindows: K.boolean().optional(), timeout: d1().optional(), alwaysLoad: K.boolean().optional(), role: P9() }));` |
+| `.obsidian/plugins/realclaudian/main.js` | 58420 | Generic secret assignment | `      this._onerror(new Error(`Received a progress notification for an unknown token: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 58616 | Generic secret assignment | `            progressToken: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 58866 | Generic secret assignment | `    const progressToken = ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 60254 | Generic secret assignment | `            resumptionToken: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 60266 | Generic secret assignment | `              resumptionToken: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 60475 | Generic secret assignment | `      resumptionToken: ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 60841 | Generic secret assignment | `    envTextarea.placeholder = "API_key=***MASKED***";` |
+| `.obsidian/plugins/realclaudian/main.js` | 63129 | Generic secret assignment | `      placeholder: "ANTHROPIC_API_KEY=***MASKED***",` |
+| `.obsidian/plugins/realclaudian/main.js` | 66340 | Generic secret assignment | `  const lastToken = ***MASKED*** - 1];` |
+| `.obsidian/plugins/realclaudian/main.js` | 66353 | Generic secret assignment | `      const previousToken = ***MASKED*** - 2];` |
+| `.obsidian/plugins/realclaudian/main.js` | 66393 | Generic secret assignment | `    const token = ***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 72497 | Generic secret assignment | `      placeholder: `OPENAI_API_KEY=***MASKED***` |
+| `.obsidian/plugins/realclaudian/main.js` | 88823 | Generic secret assignment | `        isSecret: ***MASKED*** === true` |
+| `.obsidian/plugins/realclaudian/main.js` | 91714 | OpenAI-like API key | `      headerEl.createDiv({ text: approvalOptions.blockedPath, cls: "claudian-ask-***MASKED***" });` |
+
+## 处理建议
+
+1. `.env` 可以存在于本地，但必须被 `.gitignore` 排除。
+2. 如果报告中出现真实 token，请立即轮换对应密钥。
+3. 不要把 Cookie、API Key、AppSecret、Bearer Token 写入 Markdown 正文。

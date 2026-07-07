@@ -1,0 +1,17 @@
+OverQtime原因分析
+对当前站点长时间未派工的产品Log中直询是否被
+明确overqtime时间，站点和 Assign卡控不派工，并对Assign中未预排进行分
+flow信息，绘制qtimeloop 分析over原因 ，通过各个Assign报表中的Reason及预排的排
+序指标进行具体分析为Assign的原因
+qtime放货？
+进入loop后， over站点机台 是否不可作业？ 当站未按照 卡控下游断线？ 卡控下游产能？ 当站QZone 当站受其他 原因卡控不 加量加测？ Qtime内
+机台临时 Down 派工机台派工 顺序是否合理 起始站点下放 时是否卡控？ 时是香卡控？ 起始站点下放 起始站点下放 时是否卡控？ 是否善要做 Seasan 站点长时间作业？ Loop中美些量烫
+条件inhibit QTimeUrgencyit 算是否准确（PT的 维护是否合理） 符合强派？ 起始站点 下放到当站后 下游机台断线？ 符合强派？ 起始站点 不足？ 下游机台产能 下放到当站后 AllFoup作业模式？ SeqRun/SeqRun 确认机台
+分折卡控产能原因
+起始站点强派 原因是什么？ 当站不符合强 派的原因？ 原因是什么？ 起始站点强派 当站不符合强 派的原因？ 确认下家产能与实际产能是香匹配？
+分析断线原因 卡控站点机合产能损失！
+Prep时间，明确该时间点对应卡控贴点放货 童若LotHistory明确所在loop超站点lob constraint WPH是否维护 起始站点放货时，是香存在同时下敢？
+时的可作业机台，并对该卡控站点其可作业 机台状态 ENG CONTROL
+机台进行进一步童询 PM flag 机台持件影钢实际产出？
+N20PM控货是否生效 Capability开关 Loop内EkistingLot存在异常变化？
+Recipe/PPID状态OK

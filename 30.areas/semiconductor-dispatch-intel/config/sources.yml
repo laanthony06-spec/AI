@@ -1,0 +1,125 @@
+# 半导体制造 / 自动派工情报源配置
+
+output:
+  inbox_dir: inbox
+  cache_dir: cache
+  timezone: Asia/Shanghai
+  max_items_per_run: 120
+
+keywords:
+  core:
+    - semiconductor dispatching
+    - wafer fab dispatching
+    - fab scheduling
+    - lot dispatch
+    - dispatch rule
+    - real-time dispatching
+    - semiconductor manufacturing scheduling
+    - AMHS dispatching
+    - MES dispatching
+    - APC semiconductor
+    - WIP management semiconductor
+    - cycle time reduction fab
+    - bottleneck tool semiconductor
+    - wafer fab digital twin
+    - reinforcement learning dispatching semiconductor
+    - AI scheduling semiconductor
+    - 自动派工
+    - 半导体 派工
+    - 晶圆厂 调度
+    - 派工规则
+  vendors_and_systems:
+    - Applied Materials automation
+    - Siemens Opcenter semiconductor
+    - Camstar semiconductor MES
+    - Eyelit MES semiconductor
+    - Critical Manufacturing MES semiconductor
+    - PDF Solutions Exensio
+    - Onto Innovation fab automation
+    - fab automation software
+
+rss:
+  enabled: true
+  feeds:
+    - name: Google Scholar - wafer fab dispatching
+      url: https://scholar.google.com/scholar?q=wafer+fab+dispatching&hl=en&as_sdt=0,5&as_ylo=2024&output=rss
+      tags: [paper, dispatching]
+    - name: arXiv cs.AI semiconductor scheduling
+      url: https://export.arxiv.org/api/query?search_query=all:%22semiconductor%20scheduling%22%20OR%20all:%22wafer%20fab%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending
+      tags: [paper, ai]
+    - name: Semiconductor Engineering
+      url: https://semiengineering.com/feed/
+      tags: [industry]
+    - name: Semiconductor Digest
+      url: https://www.semiconductor-digest.com/feed/
+      tags: [industry]
+    - name: EE Times Semiconductor
+      url: https://www.eetimes.com/category/semiconductors/feed/
+      tags: [industry]
+
+github:
+  enabled: true
+  searches:
+    - name: GitHub repositories - wafer fab dispatching
+      type: repositories
+      query: '"wafer fab" dispatching in:name,description,readme'
+      sort: updated
+      order: desc
+    - name: GitHub repositories - semiconductor scheduling
+      type: repositories
+      query: '"semiconductor scheduling" in:name,description,readme'
+      sort: updated
+      order: desc
+    - name: GitHub issues - wafer fab scheduling
+      type: issues
+      query: '"wafer fab" "scheduling" is:issue'
+      sort: updated
+      order: desc
+
+reddit:
+  enabled: true
+  searches:
+    - name: Reddit search - semiconductor dispatching
+      url: https://www.reddit.com/search.rss?q=%22semiconductor%20dispatching%22%20OR%20%22wafer%20fab%20scheduling%22&sort=new
+      tags: [reddit]
+    - name: r/Semiconductors scheduling
+      url: https://www.reddit.com/r/Semiconductors/search.rss?q=scheduling%20OR%20automation%20OR%20MES&restrict_sr=on&sort=new
+      tags: [reddit]
+
+x:
+  enabled: false
+  # 填写 .env 中 X_BEARER_TOKEN 后，把这里改为 true。
+  searches:
+    - name: X recent - wafer fab dispatching
+      query: '"wafer fab" (dispatching OR scheduling OR MES OR AMHS) -is:retweet lang:en'
+      max_results: 10
+    - name: X recent - semiconductor automation
+      query: '"semiconductor automation" OR "fab automation" -is:retweet lang:en'
+      max_results: 10
+
+papers:
+  enabled: true
+  semantic_scholar:
+    - name: Semantic Scholar - wafer fab dispatching
+      query: wafer fab dispatching semiconductor scheduling
+      limit: 10
+    - name: Semantic Scholar - AI semiconductor scheduling
+      query: reinforcement learning semiconductor manufacturing scheduling wafer fab
+      limit: 10
+  europe_pmc:
+    - name: Europe PMC - semiconductor manufacturing scheduling
+      query: semiconductor manufacturing scheduling OR wafer fab dispatching
+      limit: 10
+
+patents:
+  enabled: true
+  search_links:
+    - name: Google Patents - wafer fab dispatching
+      url: https://patents.google.com/?q=%22wafer+fab%22+dispatching
+      note: 手动查看晶圆厂派工相关专利新结果。
+    - name: Google Patents - semiconductor scheduling
+      url: https://patents.google.com/?q=%22semiconductor%22+%22scheduling%22+%22manufacturing%22
+      note: 手动查看半导体制造调度相关专利新结果。
+    - name: Google Patents - AMHS dispatching semiconductor
+      url: https://patents.google.com/?q=AMHS+dispatching+semiconductor
+      note: 手动查看 AMHS / 搬送派工相关专利。

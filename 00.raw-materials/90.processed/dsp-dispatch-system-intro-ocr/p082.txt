@@ -1,0 +1,15 @@
+Recycle End Downgrade
+口Downgrade条件（ByFouP）
+Filter rule:
+Filter item Description
+Lot ProcessingStatus -"Active" 所有相关Lot状态是active
+Lot Extrastatus = "WaitForRecycleEnd" 所有相关Lot必须在WaitForRecycleEnd站点
+Switch RecycleEnd = "T" 打开AMARecycleEnd功能
+WaferRecycleCount>=Max RecycleCount 所有相关Wafer已达到最大清洗次数
+Downgrade Step Mapping info in Downgrade站点有对应的ReassignMapping配置
+FabMaintainDownGrade'is not Null
+Carrier CarrierKind-"FOUp" 只判断在FOUP内的lot
+FOUP Location= InStockeror In OHB lot所在的carrier必须是InStocker或lnOHB
+商密三级 上海华力
+HLMC
+Confidential I

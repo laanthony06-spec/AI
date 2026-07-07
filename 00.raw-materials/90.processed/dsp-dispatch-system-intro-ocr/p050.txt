@@ -1,0 +1,17 @@
+NPW自动化结构图
+动通
+口功能结构：涵盖所有NPW类型，并根据NPW使用流程，划分成四大功能模块
+功能模块：备片（AutolnUseStart）、派工（Dispatch）recycle（AutolnUseEnd）以及downgrade（AutoRecycleEnd）
+Monitor Routine PM DOWN
+NPW类型 Season Idle Recipechange Recipe idle Wafercount PM/Down
+Dummy eOutside Inside
+Lot Start 下片
+wafer下线
+Check Condition 已实现auto
+PreClean 自动派工 派工条件 派工等级 派工模式
+InUseStart 自动备片 准备时间 准备方式 准备数量 正在开展auto
+手动操作
+自动派工 派工条件 派工等级 派工模式
+InUseEndge 自动发recycle Reuse Recycle Downgrade 提前recycle
+Clean CheckCondition 自动派工 派工条件 派工等级 派工模式
+Recycle End Reassignorreclaim Downgrade 自动 Reuse Reclaim Downgrade 提前Downgrade

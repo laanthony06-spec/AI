@@ -1,0 +1,19 @@
+Auto Handle Fail
+前量Fail的lot会自动Hold给对应PE，通过AMA自动解前量Holdlot且CancelcontrolID，即可达成控片烂账Auto处理。 前量Fail自动处理
+具体逻辑
+找到前量Fail的Lot 该lot处于前量站点，即inusestart作为起始站点，Inuse start后的monitorProcess站点作为结束站点，lotsteplD为起始站点至结束站
+点间的任一量测Step对应的stepID（FumaceMonitorstepdescriptionLIKE%pre%，LOT即处于前量Step） Watchdogscan every5min
+Holdcount=1&fwholdrelease.HoldType=EDC
+Release前量Fail的Lot井卡控Lot不可派工 需求ALLReset的 Check前量Failmonitor Lot
+AMAWatchDog每5分钟扫一次，对于符合条件的Lot自动执行Release动作 FurnaceMonitor还需 卡控同Foup内其他Lot Release前量Fail的Lot并卡控
+符合以下卡控Lot卡控派工： Lot不可派工
+lot有monitorcontrolid(fabeqpmonitorprocess）
+对应controlid存在于MonitorAutolnUse表中且AutoHandleFail=T； 传给MESReset前量Fail
+lot上一站点的stephistory，若存在activity=hold，holdtype为EDC，并且存在activity=release,useridAMA，卡控不可派，RTD ReleaseLot
+reason为“MonitorStatusFail"
+三、Reset前量Fail的Lot
+口涉及UI
+MonitorAutolnuse AutoHandleFail
+上海华力
+商密三级 HLMC
+Confidential I

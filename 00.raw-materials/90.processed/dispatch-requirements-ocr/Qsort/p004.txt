@@ -1,0 +1,4 @@
+Waitforjobin/jobout,且为QTime的结束站带，则当前站点
+的EQsort置为O.
+2024/07/31说明（zsn）：existinglot当前站点的
+processtime已改为bycapability的waferPT/stepPT

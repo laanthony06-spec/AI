@@ -1,0 +1,13 @@
+Recycle End
+口主要流程
+Watchdog每2min扫描一次
+获取RecycleEnd站点可作业lot列表
+列表是否为空？ 判断可作业lot 结束
+获取RecycleEnd站点可作业 reuse lot信息 判断是否可以 做reuse? 获取RecycleEnd站点可作业
+downgrade/reclaimlot信息
+Recycle站点做reuse DOWNGRADE Next Step like Next Step like
+RECLAIM
+RecycleEnd站点做downgarde RecycleEnd站点做rectaim
+判断是否成功？ 发送报警 判断是否成功？
+商密三级 上海华力
+Confidentia HLMC

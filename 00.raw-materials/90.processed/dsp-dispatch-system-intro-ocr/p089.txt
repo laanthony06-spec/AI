@@ -1,0 +1,25 @@
+口编辑
+DIFFMonitor
+随炉Monitor
+作业产品时，需要伴随作业炉管Monitor，根据UI中水位提起分批，提前量测前值，待派工时直接调用
+涉及UI
+AMA.FMLAutolnuseStart Watch dog scan every 5min 无需计算分批时间 Enable即要分批
+老数名 描述 是否必填 是否支持 通配（*） 单位 Check monitor
+ControliD 对应的monitorcontrolID
+FMLNO 对应的controlID所需的片数 只计入无Batchid的数量
+CarrierWater Mark 对应的controlID的foup数量 END Monitor的Foup数量 Check满足片
+对应controlID是否需要自动分批 是够足够
+Enable T需要自动分批 的开关，F”
+F：不需要自动分批
+WaitingTime 可等待的最大时间 当wafer最少的母批在sorter时， 小时 已不使 Get control id list
+WEEKLY Monitor 与RoutineMonitor分
+按时分批，设定方式与计算方式都和RoutineMonitor相同 Watch dog scan every 5min 批时间计算方式无差别
+口涉及UI Check monitor
+AMA.Furnace Monitor
+Check满足片数 1.数量通过底层设定拿取
+END Monitor的Foup教数量 2.只拿取无Batchid的Monitor
+是够足够 3.对应机台上有正在作业的同
+ControlidMonitor，无需分批
+商密三级 Get control ld list 上海华力
+HLMC
+Confidential I

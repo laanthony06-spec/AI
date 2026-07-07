@@ -1,0 +1,31 @@
+(1)UINameSTNPMTimeControl
+MachineMin PM Time MaxPMTime FMStart Ratio. PM Ernd Reio Mon Ratio Tine Control Sonme Endtime
+Machine设定管控站点机台信息必填项，可模糊四配
+MinPMTime：最小PM时长限定（必填项，数值大于等于O）
+MaxPMTime：最大PM时长限定（必填项，数值大于等于O
+PMStartRatio需提前管控StatTime 占PM时长的比例Ce填项，-o）
+PMEndRatio:管控PMEnd占PM时长的比例（必填项，-O）
+MonRatio：管控Mon+Pirun 时长的比例（必填项，>=o）
+TimeControl：该条设定是否受时间的限定（选填项，下拉选择Y/N）
+StartTime：管控该条设定生效起始时间（选填项，时间格式）
+>EndTime：管控该条设定生效结时间（选填项，时间格式）+
+四配符合可做业机台设定中每个需PM机台及对应PM时间长度，拿取其设定Ratio并进行后续判定
+对于UI无符合PMTimeDuration设定PM StarRatio&PMEndRatio&MonRatio指标则通过设定默认值
+拿取RTDConfig 中QzoneLoop-Default EMCSPM Start/End Time ratio control.
+U STNPMimeControl 匹配 PM STN-Y的机台并计算机台 PM Time Duration PlanEndTime
+PlanStartTime。匹配关系排序：对于Mchine去掉通配后MAX(Machine）字符长度，MaxUpdatetime进行匹
+配各Ratio，取第条。如不满足UI中的匹配则按照默认Ratio。
+计算修正后的PMStartTime&PMEnd Time：
+IF Machine PMOzoneControl-Y"则 PM Start Time-PlanstartTime-PM Time DurationPM Time
+StartRatio 当前时i间,PM End Time-PlanEndTimetPM TimeDuration*PM Time End Ratio+(pirunstdtime
++stdmonpm）*（1+MonRatio）当前时间
+ElsePM StartTime-PlanStartTime-当前时间,PM End Time-PlanEndTime+pirunstatimetstdmonpm
+当前时间
+12PM机台站点前MergeLot子母批判定优化
+因现出现PM站点前/后分批作业产品存在Merge站点，对于此分批Lot存在部分流通、部分被管控无
+法作业，因PM机台影响Merge导致无法流通，造成Over风险。
+OzoneLot分10支跑结果，首先确保同子母批Lot在同一支分支，需在分支前对Lot进行排序尽量保
+证LO在同一分支进行后续运算。
+OzoneNewPMAuto Control模块新增MergeLot判断优化：判是Lot 是否存在Futune Merge 站点，
+对于存在FutureMerge 站点的多Lot 作为同一Group。针对此 Group 的Lot 判定Lot先后顺序：Existing
+以当前站点Vinual则以最近的Begin站点作大最优先到达PMMachne的Lot按照选择Lot评估同Group

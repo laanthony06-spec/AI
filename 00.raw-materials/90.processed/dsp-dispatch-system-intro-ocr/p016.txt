@@ -1,0 +1,24 @@
+LITHO派工规则 口编辑
+口概述：综合考量Reticle、R2R、DomaPath、高低能、垂直限定等因素限制Lot在机台上可作业性，并结合预排程制定出相应的
+符合LITHO区域设备特性的自动派工逻辑。
+功能名称 功能猫述
+R2R R2R控的Lot不留作业 LotComment/RTDInfo
+Doma DomaPath开启时保证整条DomaPath可以作业 R2ROVL/CDFail
+Reason 高低送 Litho机台连续作业高能产品后，内部单元温魔升高触发FDC，需限定高能连续作业 No Available Doma Path
+（管控Lot不自动派工） 垂古限定 限定该层与上一层作业相同机台 Too ManyHighEnergy Lot
+白名单 设备的白名单lot，只能作业XXX设备 Vertical Limit
+ReticleAssign Loop内的lot存在同一reticle对应多个机台的情下，连环最起始站点的lot只能assign在loop内的机台上 white list of XX机台
+LoopWIPLithoEQPContral
+同Reticle连续作业 Reticle相同的优先连续作业
+Reticle相同的Lot中的带Qtime的个数 ReticleContinue
+Reticle相同的Lot中的TargetLot的个效 GroupQTimeCount
+Recipe第5码相同的优先作业 GroupTargetCount
+IsSameLithoRecipe5
+Recipe第5码在同一Group的优先作业 IsSameLithoRecipeGroup5
+Sorting Recipe第5码相邻Group的优先作业 IsNeighbourRecipeGroups
+（排序规则 Recipe连续作业 Recipe第4码和第10码相同的优先作业 IsSameLithaRecipe410
+Recipe第4码和第10码在同一Group的优先作业 IsSamelithoRecipeGroup410
+输出待派工Lot中同RecipeGroup的Count数：Min(Count1设定的Continuelimit） RecipeGroupLotCount
+待派工lot与最近一次机台作业lot的RecipeGroup相司，且RecipeGroupCount小手对应的continuelimit值时，Recipe RacipeGroupContinue
+GroupContinue指标生效
+Conmuenual 1 高低能 当温度低于Lower线时高能产品优先派货、介于Lower&Upper之间正常派货、大于Upper线禁上派货 HighEnergyLat

@@ -1,0 +1,18 @@
+In UseStart 一复机NPW自动分批
+TRC分批逻辑：
+Season分批条件：
+机台存在trigger的PMitem：
+2. 机台trigger的PMitem已打开autotool recovery功能；
+3. 机台处于WAITMFG或MONPM/MONDOWN状态：
+4. 对应control存在可用sourcelot；
+注：对于需要多卡season的设备类型，可设置按剩余片数分批
+Monitor分批条件：
+机台存在trigger的PM item；
+2. 机台trigger的PMitem已打开autotool recovery功能
+3. 机台处于PM/DOWN或MONPM/MONDOWN状态：
+4. 对应control存在可用sourcelot：
+5.当前时间大于splittime;
+Splittime计算：
+1)存在ENG Time时： split time=ENG Time-leading time
+2）不存在ENG Time,STD time不为空时：splittime=PM时间点+STD time-leading time
+3）不存在ENGTime，STDtime为空时：splittime=PM时间点

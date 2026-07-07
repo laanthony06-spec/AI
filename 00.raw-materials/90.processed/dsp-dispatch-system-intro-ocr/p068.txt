@@ -1,0 +1,19 @@
+In Use Start--FurnaceDummy
+DummyIn Use Start-Furnace Dummy
+口AMA流程图
+Watch dog scan every 5 min or What
+Next trigger start
+Get ep list of need dummy Dummy触发判断
+End Eqp list is not null?
+Get need to split dummy ID list
+Dummy listis not
+null?
+Get dummy source lot Dummy准备：
+1.母批筛选
+2.Season分批
+Send alarm Exist dummy
+source lot?
+Split success
+商密三级
+Confidential I Pass end 上海华力
+HLMC

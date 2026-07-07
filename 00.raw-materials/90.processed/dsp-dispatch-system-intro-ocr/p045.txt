@@ -1,0 +1,18 @@
+Qzone异常处置机制
+断线：在Q-Time下游某个站点所有可作业机台无作业条件（Constraint/RecipeInhibit/机台不可作业/未维护WPH/Capability未打开）。
+堆货：在QZoneLoop中WiP量达到了QZone算法计算的wiPLimit，qzone起始站点无法向下游放货，造成卡QZoneCapacity。
+“一刀切”
+卡Q-zone
+QT2 Q-Zoneexception 强派
+Step1 Step2 Step3 且QT2(QT3)>4H QT1=4H 强派
+Tool down/堆货
+是否向下游放货？ R QT,小于设定值 强派
+N个
+QT: QT2 QT3 Special target Lot 强派
+Step1 Step2 Step3 step4
+STEP1为LITHO 不强派
+Tool down/堆货
+是否向下游放货？ QT2/3=4H 不强派
+WN
+指定站点 不强派
+强派 RQT1>-2H 不强派

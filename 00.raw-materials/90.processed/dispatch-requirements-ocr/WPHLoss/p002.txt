@@ -1,0 +1,20 @@
+1拿取Lot的以下信息Lotidcapability stepsegstn可作业的机台
+/chamben.recipe.wph.ProcessGroup,wPHLossControlppid.chamberflow取stn中
+前的部分作为主机台EQPID若stn中无则 EQPID=STN
+2.ByLotstepseg.EQPID分组，当同一组中的可作业机台 stn对应的ProcessGroup相同 不力
+空值），且WPHLossControl均-Y时需要对Lot的该主机台EQPID进行后WPHLoSs的计
+算，反之不需要。
+2.1判断WPHLOSS的具体逻辑如下
+根据lot在机台chamberflow中不同的chamber信息与机台总的chamber信息比较，拿
+取缺少的chamber个数及对应的Loss值，再重新计算机台的WPH信息。
+21.1拿取需要判断的Lot信息并进行数据处理：
+a 对需要判断WPHLoss 的Lot及机台拿取以下信息：Lot,stepseg，Capability
+EQPID，ProcessGroup，ChamberFlow并对数据进行去重
+b对Lot的chamberflow进行拆分，掌chamberflow中每一个chamber的信息：，
+ByLotstepseg EQPID分组，拿取机台可用的chamberflow，先按：拆分成多
+行，再按拆分成多行（原QZone中不同PPID间用：分隔，不同chamber
+间用，分隔，因此按该分隔符拆分），注意数据去重，使机台chamberlow中的
+每个不同的chamber为行信息（例：chamberilow为 STN1.STN2 STN1,STN3
+理后为三行信息：STN1STN2STN3）
+212判断Lot在机台的上缺少的chamber个数信息
+a掌取维护表tb dspwphloss中的维护信息：

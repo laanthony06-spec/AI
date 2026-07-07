@@ -1,0 +1,13 @@
+In Use End Reuse 编辑
+>Reuse逻辑
+InUseEnd站点可作业lot
+Reuse条件过
+是否有母批（同
+originalparentlotid product同 是否有多个 子批 子批条件过满
+母批条件过滤 不满足条件 Lot自己Reuse ReuseLotD 最小子批
+满足条件
+子批Reusemerge回母批 子母批是香在 同一FOUP 子批Transport至母批FOUP
+Reusemerge回母批
+商密三级 上海华力
+ConfidentialI 104
+HLMC

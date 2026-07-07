@@ -1,0 +1,22 @@
+QZone管控简介
+口模型架构
+获取各制程信息 获取机台List
+阶段 方法
+机况和作业能力 判断机台与制程关系 判断机台可作业状态
+数据准备 的状态、作业条件、限定信息和产能情况。 获取各制程的作业时间Process Time，各机台 获取各制程的作业时间 限定信息作业鉴件产能
+IDLERUN RECYCLE BACOUP ENG LOT
+MON ROU MONR BKUPTDLOE
+Flow信息 Qtime信息 联取Flow信惠
+获取Normal/Branch 获取Qtime信息： Norma Flow BranchFlaw
+信息整合 Flow信息，根据作业顺起始/结束站点
+序编码。 qtimetype. qtimelimit. 取Qtime 依据Step 获取开始站点和 获取Qtime
+行顺序编码 结束站点信息 顺序编码 信惠
+逻辑判断 依待定规，并按
+照stepsequence进行
+模型计算 根据各Lot真实QtimeflowInfo信息，按照 顺字编码
+定逻辑，判断处于Qtime起始站点的Lot 将Normal Step和Branch Step进行电联按照编码
+能否派工。 规则进行排序，得出Lot的真实Flow信息及滚Flow的
+Qtime信息
+商密三级 上海华力
+Confidential I 50
+HLMC

@@ -1,0 +1,20 @@
+In Use Start--Routine monitor
+口 Routine monitor分批逻辑介绍
+主要流程
+准备Monitor 测量前值 主机台 测量后值
+口逻辑介绍
+> By time分批:split time =date(last monitor time)+ interval + time(initial time)-leading time
+lastMonitortime Split time Schedule Monitor Time
+Interval Time
+Leaaing Time For Preparing
+Pre-Mea SCH-CTAOC-POSTMA
+Process Tool SCH-CTOSTMEA
+Post-Mea
+口相关参数说明
+Interval：monitor频度
+RemainCT：剩余各站点cycletime累加 >Monitorurgencylevel划份：
+Remaindue:monitor剩余失效时间（Remaindue=lastmonitor time+interval-now) Monitorurgency=0.7时，为level0;
+Monitor urgency-remain due/remain CT Monitorurgency<=1时，为level1;
+商密三级 Leadingtime需要多久提前准备monitor 1<monitorurgency≤=1.5时.为level2;
+Monitorurgency>1.5时.为level3.
+Confidential I

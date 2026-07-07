@@ -1,0 +1,11 @@
+In Use End Reuse
+母批筛选条件
+Filter item Description
+Lot ProcessingStatus ="Active" Lot状态是active
+WaferUsedCount<MaxUsedCount Wafer未达到最大使用次数，多片中取最大，若母批中有
+一片达到MaxUsedCount，将无法ReuseMerge回母批
+Carrier CarrierKind="FOUp" LOt必须在FOUP内
+FOUPLocation=inStockerorInOHB lot所在的carrier必须是InStocker或InOHB
+Lot Extrastatus = "WaitForlnUseStart"/“WaitForinUseEndLot必须在WaitForlnUseStart/WaitForlnUseEnd站点
+商密三级 上海华力
+Confidential I HLMC

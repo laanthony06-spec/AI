@@ -1,0 +1,16 @@
+（1）已知此机台每个Chamber或机台的TotalSTNWPH，即Lot在该机台实际维护WPH之
+则为该机台腔WPH之和，注：细化到Capability&Recipe层面）
+(2）对应该产品在该机台实际WPH，即ActualSTNWPH=TotalSTNWPH（1-WPHLOsS）。
+（3）通过计算出的ActualSTNWPH，对产品每个可作业腔计算实际WPH占比，并计算该腔
+或整机的WPH。
+①若WPH维护整机，则WPH=ActualSTNWPH
+②若WPH维护腔，产品在实际每个可作业腔占比Chamber Ratio=该腔
+WPH/Z该产品可作业腔WPH，每个腔WPH即ChamberWPH=ChamberRatio*ActualSTN
+WPH
+申请部门意见： 申请部门分管领导意见：
+日期：4 日期：3
+相关部门意见： 相关部门分管领导意见：
+日期：3 日期：2
+信息技术部意见： 信息技术部分管领导意见：
+日期：# 日期：3
+附件名称：#

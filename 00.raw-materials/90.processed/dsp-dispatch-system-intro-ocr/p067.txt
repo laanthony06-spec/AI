@@ -1,0 +1,25 @@
+In Use Start--ETCHDummy
+口角 触发条件
+lot extract status is Wait ForDummy Out
+exist any one wafer used count>-itself slot max spec
+no other any lot extract status is Wait For Reserve Dummy
+母批筛选
+Filter rule
+Filter item Description
+Lot_ProcessingStatus =Active Lot状态是active
+Lot Extrastatus =WaitForinUseStant Lot必须是WaitForinUsestart者WaitForlnUseEnd
+Wafer status - Nomal Wafer状态是nomal
+Wafermonitorstatus=Available Wafermonitorstatus必须为active
+Carnier CarnerKind-FOUP Sourcelot必须在camer
+Camier_ProcessingStatus-Created Sourcelot所在的carmier必须是created
+Carrier_State-Enable Sourcelot所在的camer必须是enable
+FOUPLocation=ln StockerorInOHB Sourcelot所在的camier必须是InStocker或lnOHB
+source lot available qty =dummyld need wafer count 可用wafer教大于等于dummyid所需wafer数
+Sorting rule
+Sorting item Description
+Lotowner=MFG lotowner=MFG的lot优先
+Minavailable wafers inFOUP 可使用wafer数少的lot优先
+Max recycle count byFOUP recycle次数多的lot优先
+Max used count of FOUP 已使用次数少的lot优先
+商密 Max waiting time 等待时间长的lot优先
+Conf Min used count of wafer LotSlot位置小的优先

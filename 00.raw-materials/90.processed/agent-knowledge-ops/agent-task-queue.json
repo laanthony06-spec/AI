@@ -1,0 +1,247 @@
+[
+  {
+    "task": "### [MCP server for IDE integration (Model Context Protocol)](https://github.com/xodapi/vimit/issues/12)",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "### [[EPIC] CORE/DX — Author ADR + implementation plan for exposing OpenLinker as an MCP server](https://github.com/openlinker-project/openlinker/issues/1350)",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 中文导读：关注 API、SDK、平台能力变化，以及是否会影响你的工具链选择。 关键词信号：工具调用 / MCP。 相关度较高，建议优先阅读。",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP、自动化 / Coding Agent。 相关度较高，建议优先阅读。",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP。 相关度中等，可快速浏览。",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 分类：工具调用 / MCP",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 原文摘要：## Problem / Context We researched whether OpenLinker should expose itself as an **MCP (Model Context Protocol) server** so AI agents (Claude/ChatGPT, etc.) can drive and query OL's capabilities — optimising for t",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 原文摘要：## Problem Modern IDE agents (Cursor, Windsurf, Roo Code) use the Model Context Protocol (MCP) to discover tools and resources. Currently vimit has no MCP interface, so IDE integration requires manual plugin setup",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 本简报聚焦 AI Agent、LLM Agent、多智能体、工具调用、MCP、Coding Agent、RAG / Memory、评测与安全。",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "- 来源：GitHub issues - MCP agents",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口"
+  },
+  {
+    "task": "![[00.raw-materials/10.sources/images/TestCase_SOP/TestCase示例/case1.jpg]]",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "![[00.raw-materials/10.sources/images/TestCase_SOP/TestCase示例/case2.jpg]]",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "![[00.raw-materials/10.sources/images/TestCase_SOP/TestCase示例/case3.jpg]]",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "![[00.raw-materials/10.sources/images/TestCase_SOP/TestCase示例/case4.jpg]]",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "![[00.raw-materials/10.sources/images/TestCase_SOP/TestCase示例/case5.jpg]]",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "# TestCase_SOP/TestCase示例 - 需求单整理",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "- OCR 输出目录：[[00.raw-materials/90.processed/dispatch-requirements-ocr/TestCase_SOP__TestCase示例]]",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "- 初步主题：TestCase / SOP / 验证规范",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "- 功能步及清单模版 lotcsnattribute维度功能步及清单 测试模板 lotcsnattribute维度TestCase",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "- 原始图片目录：[[00.raw-materials/10.sources/images/TestCase_SOP/TestCase示例]]",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "centralwherenextTestcase 地类型进行搬送",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "source_folder: TestCase_SOP/TestCase示例",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "topic: TestCase / SOP / 验证规范",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "功能步及清单模版 lotcsnattribute维度功能步及清单 测试模板 lotcsnattribute维度TestCase",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "TestCase"
+  },
+  {
+    "task": "需求目标是什么：提升产能、降低 Cycle Time、减少 OverQtime、降低 WPH Loss，还是提升自动化率？",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P1",
+    "category": "知识整理"
+  },
+  {
+    "task": "## 待澄清问题",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P2",
+    "category": "知识整理"
+  },
+  {
+    "task": "- 原文摘要：# AutoLinker 二次开发授权申请 生成时间：2026-07-04 本地当前版本：`4.4.0` 本地仓库：`https://github.com/Y-BinX/AutoLinker.git` 原项目仓库：`https://github.com/aiqinxuancai/AutoLinker.git` 原项目当前对比基准：`upstream/master @ aeef94d`（解包镜像基准模式标注为测试性质） 共同",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "TestCase"
+  },
+  {
+    "task": "验收标准是什么：测试 Case、前后对比指标、上线影响范围？",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "TestCase"
+  },
+  {
+    "task": "优先阅读相关度高且分类为“派工规则 / WIP / AMHS / MES / AI 调度”的条目",
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理"
+  },
+  {
+    "task": "对明显无关的条目记录噪声来源，并更新关键词 / 来源配置",
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理"
+  },
+  {
+    "task": "对涉及公司内部派工逻辑的启发，单独沉淀到内部专题笔记",
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理"
+  },
+  {
+    "task": "将高价值条目移动到专题笔记或建立 wiki-link",
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-04.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理"
+  },
+  {
+    "task": "规则属于 Global Rule、Local Rule，还是排序 / Prefer 逻辑？",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理"
+  },
+  {
+    "task": "输入数据来自哪些系统：MES、RTD、AMA、EAP、MCS、APC、PMS？",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理"
+  },
+  {
+    "task": "需要新增哪些异常原因码或查询页面？",
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理"
+  }
+]

@@ -1,0 +1,17 @@
+In Use Start- 一复机NPW自动派工
+TRC分批逻辑：
+考虑RemonMonitor指定Lot分批（已上线）
+对于SpecialDownGroup，可以添加RemonMonitor，指定不能选用的
+sourceLot，再进行分批
+主机台派工：
+考虑机台需求多Monitor一起派工（已上线）：
+同Group内可设定多个Controlid为同一Seq，同一SegMonitor会优先分
+至同一FOUP，同FOUP派工时一起派工
+同FOUP内RoutineMonitor派工：
+考虑同FOUP内存在RoutineMonitor需求派工（已上线）
+计算同FOUP内RoutineMonitor需求作业时间（包含机台剩余作业时间）
+与FOUP内TRCMonitor同Group且小于当前Seq的Controlid作业时间进行
+对比，若小于，即RoutineMonitor作业完成，TRCMonitor还未能开始作业
+即可派工该RoutineMonitor
+商密三级 上海华力
+Confidential I HLMC

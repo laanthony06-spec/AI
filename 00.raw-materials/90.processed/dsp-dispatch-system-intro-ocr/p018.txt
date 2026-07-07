@@ -1,0 +1,23 @@
+常见问题查询
+R2R相关Case
+>R2RFail：R2RFail原因都是因为匹配获取R2R配置信息时有问题，常见问题及解决方法如下
+问题：1.R2RFail：R2R配置信息表中无对应信息/前层作业信息未获取到。
+2.R2RFailXX状态：R2R配置信息表中R2R状态为OFF/PIRUNOFF。
+解决方法：联系R2R核实对应配置信息或R2R状态。
+Mask出厂相关Case
+>Mask出厂安全管控：MaskTransferToFab5时会将用到该Mask的LotHold在安全站点，等待Mask回线后Release，常见问题及解决方法如下：
+问题：Mask已出厂仍需下放Lot，将LotHoldRelease仍会继续Hold。
+解决方法：CallMPC将MaskTransfer签核流程Close，再讲StepHold和LotHold删除且Release即可。
+注意：由于报表延迟问题Close后需间隔十分钟左右再将HoldLotRelease。
+预排相关Case
+>LithoAssign：Litho区域根据光刻机台的Loading，将Lot提前预排到对应的机台上，常见问题及解决方法如下：
+问题：DLIMIAO5机台PM前未提前管控，LOt在BAC站点仍然下放。
+原因：DLIMIAO5在PM前未将PreControIFlag切至T导致LithoAssign判定结果可作业，且未打开垂直限定导致Qzone不会判断R2R。
+解决方法：PM前将PreControlFlag切至T或将PMFlag切至T。
+放版相关Case
+>放版推送：放版和退版指导是根据自动派工的预派结果，系统会形成放版和退版指导界面，提示用户进行提前操作，以避免因光刻版未及时放入没备导致的自动派工失败。
+问题：MaskTH-0888AB-312A在0102使用完成后，一直未被其他lot使用。但BP2R726在当站等待4小时放版指导未推送。
+原因：BLIMIA09只剩一块版子可以推送，根据对应lot的紧急程度选择较为紧急的MASK，优先推送TB-0985AA-410A。
+商密三级 上海华力
+19 HLMC
+ConfidentialI

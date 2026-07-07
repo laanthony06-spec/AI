@@ -1,0 +1,19 @@
+In UseStart-复机NPW 编辑
+TRC流程：
+PM流程 Action Owner
+前期准备 PE维护recoverygroup
+前期准备 PE
+WAITEE->PM EEtrigger PM item EE
+PM 自动分批（auto） PMNPW自动备片
+DSP
+PM->WAIT PE
+WAIT PE->WAITMFG 自动派工（auto） PE勾选is triggerPM season PE
+MON PM alam 触发TRC.PMNPW自动派工 DSP
+WAIT EE->DOWN PE trigger DOWN item PE
+DOWN DOWN NPW自动备片 DSP
+DOWN->WAITPE 异常处理
+WAIT PE->WAIT MFG PE勾选istriggerPMseason PE
+WAIT PE->WAIT MFG MON DOWN 触发TRC.DOWNNPW自动派工 DSP
+WAIT MFG-IDLE 派工pilot DSP
+商密三级 RUN Auto pi_run 上海华力
+Confidential I HLMC

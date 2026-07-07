@@ -1,0 +1,23 @@
+二，ExistingLot的计算方式：
+情况1：#
+Lot在连环QZone的起始站点作业时：
+Osort=MAX【QTlimit的累加+连接站点的PT+当前站点的
+RemainPT-Target站点至QZONE结束站点前一站的PT的累加），
+（Target站点前一站至当前站点PT的累加）】
+LOTL LOTI
+A-6H-6H+6H+5站点PT+10站点PT(byrecipe不by片数
+6H的PT1站点的剩余作业时间（BY到片数，recipe 的
+ProcessTime，需验证）-13站点的PT-14站点的PT+
+B-1站点的RPT累加至12站点的PT(PT除1站点其
+余站点By到Recipe不By片数
+10
+13 OSOrt-MAXAB)
+15
+情况2：LOT在LoOp的中间站点等待作业/正在作业
+Lot所在Loop已OverOT时：
+MAX【当前站点至当前QZone结束站点前一站的PT+其它
+QtimeLimit+连接站点的PT-Target站点至QZONE结束站点前
+站的PT的累加），（Target站点前一站至当前站点PT的累加））
+2024/07/18设明zsn售+算公式-经过safetyvalue高风险loopcT判断后的mergeglimit-
+当前zone的ghint-Targer站点至merge zone结束站点前一站的PT的紧加+当剪zone的款
+余step（不包结束站点）的PT的紧加

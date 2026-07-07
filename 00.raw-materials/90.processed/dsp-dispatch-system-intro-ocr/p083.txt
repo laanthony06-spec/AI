@@ -1,0 +1,14 @@
+Auto Reassign(Downgrade)
+口主要流程
+Watchdog每5min扫描一次
+获取Downgrade站点可作业lot列表
+判断可作业Iot列
+表是否为空？
+获取Downgrade站点可Reassign
+lot信息
+Downgrade站点做reassign
+发送报警 判断是否成功
+结束
+商密三级 上海华力
+HLMC
+Confidential I

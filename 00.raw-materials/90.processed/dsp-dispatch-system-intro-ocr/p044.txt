@@ -1,0 +1,18 @@
+其他QZone相关附加管控功能 4编辅辑
+2.Lot相互间影响（QO Prefer）
+Lot2在S2站点的qtime派工等级？
+Lot2
+Lot3
+Lot4
+Lot5 Lot6
+$2 S4 S6
+估算Lotoverqtime可能性：当某Lot在容许时间范围内不允许插入一卡Lot时，将降低所有紧急程度比该Lot小的lot派工优先等级。
+[RemainQTime-RemainCycleTime-Z （ProcessTime/Avail ToolCount)-GroupRemainTime]sRatio*ProcessTime
+例：若所有lo在S2站点只有一个可作业机台，且STN剩余作业时间为1H
+lotid Rqt-Rct PT PTEactSTN GroupRemainTime 排序 Lotid QoPreferfFlag QoPrefer等级
+Lot1 27 0.5 0.5 Lot1 1001
+Lot2 Lot2 1002
+Lot3 3.7 Lot3 2000
+Lot4 5.8 2000
+商密三级 Lot5 Lot5 3000 上海华力
+Confidential I 57 HLMC

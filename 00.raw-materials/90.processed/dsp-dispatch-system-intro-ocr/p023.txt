@@ -1,0 +1,17 @@
+常见问题查询
+ALL-SGE相关Case
+SGECannotRelease：lot在ALL-SGEReport中卡控reason时，rule里会卡此reason，主要原因如下：
+1.该lot在SGE站点无可作业腔/机台。
+2.对应机台无auto3的port。
+3.该lot被hold时间超过2h。
+4.卡控断线
+>WaitStartTimeToSGE：lot在ALL-SGEReport中已有预排结果但是该lot未到最早放货时间，主要原因如下：
+1.当站多为高等级lot，导致normallot排序靠后。
+2.该lot可作业机台少且可作业chamber少导致不易于穿插作业。
+3.该loop内有大量长qtime的lot，短qtime的lot需等待穿插作业。
+4.当站有qtime更加worse的lot，需等待其余lot先行下放，
+5.机台发生岩机、PM等情况，导致loop内流通速度变慢，所以lot会在起始站点等待loop内消货再进行下放。
+6.Loop内lot预排机台发生变动，计算时间会存在误差。
+>SGENeedSeqRun：lot需要等待排序靠前（剩余QT，可作业腔，高等级lot.）的lot按照顺序下放，避免排序混乱。
+商密三级 上海华力
+ConfidentialI 24 HLMC

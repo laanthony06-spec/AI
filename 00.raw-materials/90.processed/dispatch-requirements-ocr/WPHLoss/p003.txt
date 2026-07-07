@@ -1,0 +1,23 @@
+对需要判断WPHLoss的Lot,By CapablltyProcessGroup,EQPID,chamber与表
+mfgcim.tb dsp wphloss 中的 apability，ProcessGroup,Machine,sTN进行匹配
+拿取SubegpstateGroup（同类型chamber的分组信息），SameGroupCount（同
+组中的chamber个数信息
+b.计算缺少的chamber个数：
+对Lot按SubegpStateGroup进行分组，并累计处于同一SubegpstateGroup中可作
+业chamber个数，记为ActualCount；
+By SubegpstateGroup计算SameGroupCount-ActualCount的值，记为CountGap
+值，并将该值赋给对应的SubeqpStateGroup
+2.13判断Lot在该机台的WPHLOSS信息：
+a 计算每个SubegpStateGroup的WPHLoss
+By Capability.ProcessGroup,EQPID,SubegpStateGroup. CountGap与表
+tb dsp wphloss 的 Capability ProcessGroup Machine,subegpstateGroup,Court
+匹配，拿取对应的LOSS信息，当串不到时默认LOSS=O+
+b.计算机台的最终WPHLOsS值：
+取机台不同SubeqpStateGroup中的Max(Loss）做为Lot在该机台对应的wPHLoss
+表mfgcim.tbdsp.wphloss.中数据示例：
+Capability Machine STN SUBEORSTATE GROUP SAMEGURNRCOURE Count, LOsS
+M-RFCUS-C Groupi, BMCUBAG4 BMCUEAOAL1 200
+M-RFCUS-C Groupt, BMCUBAG4 BMCUBADA 2 40%
+MRFCUS-C Groupa BMCUBAG4 BMKUEADAC
+M-RFCUS-C Groupi BMCUBA94 BMRUBAOA D 50%
+.根据机台的WPHLOSS情况对原MVPH进行处理：

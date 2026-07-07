@@ -1,0 +1,26 @@
+CMP派工规则
+口概述：结合CMP区域Process机台作业特性，综合考量Recipe连续，R2R、PMCycle内同条件连续、TRIM机台LifeTime控货、
+CCU机台错开PM等因素设计一系列派工规则，判断Lot在机台上可作业性及紧急优先程度，并结合CCU排程等特定Pirun指导方
+式制定出符合CMP区域设备特性的自动派工逻辑。
+功能名称 功能描述 LotComment/RTDInfo
+PORT绑定功能 Chamber/FlowRecipe/Capability只能/不在级定机台的LoadPort上作业，未设重LoadPort绑定的LoadPor共通，支 ChamberName fail
+持正反向设定 Flowrecipe fail
+MachineCapability fait
+子母批练定 TD要求有绑定关系的子母批需过同一机台作业 Waitfor Child Pilot,
+Wrong Bonding Stn
+（管控Lot不自动派工） Reason IAPC IAPC逻轻主要判R2R开关、JOB状态、Tool状态，PolishTime和WHITELIST四个方面内容 apctoolrun off apcnainit. apc pilot lat wrang. apc job off apcout of limit
+apctodlpirun lotwrong.
+Special lotnotnuncthereqp
+R2R管控的Lot不照作业 R2RFail:R2R EpireDate
+R2R 被设定为其他机台的specialLot不能作业 被设定为其他机台的pirunLot不能作业 Need Pilat Pilot of +CMP PiToal:
+R2R会在context后面加expire time超过expiretime不作业 White listaf+WhitelistToal
+Recipe Continue 与机台/chamber近一次作业recipe是同一recipe的Lot优先作业同Recipe连续作业 RecipeContinue
+PMCycle内同条件连续 在设定cyde内作业过的PRODIDStage+PRODID前4码相同）对应Lot优先作业 IsPnonitizeBySpecialCyeeCentinue
+CCU派工采用CMPAssign结果 CMPLotAssignRePort中Lot在机台上的排序等级 CMPAssignPnanty
+（排序规则） Sorting CHAMBER Sorting 可作业chamber数多的优先 根据chamberloading打分loading低的得分高，得分越高的越优先 PPIDScore ChamberCount
+chamber剩余作业时间少的优先派该chamber的lot ChamberRemineTime
+Season Control 不需要作业recipechangeseason的lot优先作业 NoNeedRecipeSeason
+Check RuncardLot runcardlot优先 IsRuncardLot
+R2R R2R即将失效的Lot优先 IsNearExpine
+商密三级 上海华力
+Confidential I 25 HLMC

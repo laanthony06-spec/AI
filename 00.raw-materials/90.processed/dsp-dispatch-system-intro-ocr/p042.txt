@@ -1,0 +1,13 @@
+其他QZone相关附加管控功能
+Loop Lot Control
+特殊qzoneloop需要特殊管控方式，如CT/SAPloop需要byFOUP管控数量或部分IMPloop只管控结束站点WIP等，原qzone模型不适用。
+QT2 OTA
+C3 C1
+Qzone管控形式：
+ByBegin：管控起始站点同时在作业产品数量
+ByLoop：管控起始站点（在作业WIP）至结束站点（所有WIP）总产品数量
+√ByEnd：管控结束站点（所有WIP）总产品数量
+WIP统计形式： LOT COUNT/WAFER COUNT/FOUP COUNT
+产能计算方式：固定（与机台状态无关）／动态（随机台状态变化）
+商密三级 上海华力
+Confidential I HLMC

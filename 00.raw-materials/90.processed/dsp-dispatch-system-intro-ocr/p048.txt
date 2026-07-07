@@ -1,0 +1,16 @@
+Qzone异常处置机制
+Qzoneloopsafetyvalue取值
+safety value取值
+起始qzone safetyvalue:该lot当前step的safetyvalue
+V,=CurrentStep(safety value) Vs
+Te
+Tooldown/地贷
+中间qzone safetyvalue:所有qzone的最大safetyvalue
+Vm=max(min(safetyvalue;)hj 其中： Vm
+ie中间层qzone中的个step
+jE中间层每个qzone Tooldoan/mn
+异常qzone safetyvalue:该step 所在qzone中的最小safetyvalue
+Ve=min(min(safetyvalue)) 其中： Ve
+iEstep所在qzone,中的每个step
+商密三级 jEstep所在的每个qzone Tooldown堆
+Confidential I

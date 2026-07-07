@@ -1,0 +1,21 @@
+Qzone异常处置机制
+口SafetyValue风险等级管控逻辑
+Ym 以离Lot Current
+Step量近的
+IssueStep进行判断
+Step1 zdaxs Step3
+是否向下游放货？ Tooldown/堆货
+是否可RW 条件 结论 情况
+Vs=0且Vme可rework Any situation
+存在可rework Vs+0且Vm/Ve可rework
+loop Qzone Any situation
+Vs可rework.Vm/Ne不可rework 不放 Any situation
+VsVe月 Vs0 条件放贷
+Vs= Ve E Vs =0 立即放贷
+其中、条件放货：
+不存在可rework RQT<=n%*QTimeLimit
+loop qzone VsVe 且Ve≤0/1 件放货 m值的设定情况：
+0.2)50,
+Vm>=VsVe且 (2.4)30
+Ve=0/1 (4,6)25,
+VmVsVe月 Ve=0/1 不放 (8,)10 (6,8)20,

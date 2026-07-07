@@ -1,0 +1,18 @@
+In Use Start-Season
+Season InUse Start
+口AMA流程图
+Watch dog
+Check season Season触发判断
+Get control id list
+Get season lot list
+Exist season
+lot? Dispatch End
+Get season source lot
+Season准备：
+Send alarm Exist season 1.母批筛选
+source lot? 2.Season分批
+In use start with logical split
+Split success
+商密三级
+Confidential I Get season lot list Select target season lot 上海华力
+HLMC

@@ -1,0 +1,8 @@
+WET派工规则
+口概述：WET分为Chamber/Batch两种类型，因此分为两部分逻辑。WET区域派工逻辑不仅仅对WET本身使用，相对于其他
+chamber机台还多了一部分WET-DIFF，WET-SGE产品的派工逻辑。
+口MultiChamberWET管控逻辑 口WETBatch管控逻辑
+Global功能 PPID选择 WET-DIFF管控 Global功能 PPID选择
+Port绑定 PRF-SGE管控 高低温机台切换 Buffer数量 Batch填充率
+商密三级 上海华力
+Confidential I 28 HLMC

@@ -1,0 +1,17 @@
+ETCH派工规则
+口概述：结合ETCH区域Process机台作业特性，综合考量DomaPath、R2R限制Lot在机台上可作业性的各种因素等，而制定出
+相应的解决方案及设定一系列逻辑规则，判断出Lo的可作业性及紧急程度，并根据各个指标对可派工的Lo进行合理的实时调度
+功能猫述 Description
+LotComment/RTDInfo
+Port Bonding ByChamber/FlowRecipe/Capability设定只能/不能在绑定机台的 LoadPort上作业，未设置LoadPort绑定的LoadPort共通 Flowrecipe fail, ChamberNamefail,
+Reason MachineCapability fail,
+（管控Port作业） 对于当前各chamber的remaintimelotcount和wafercount,若存在
+Port Control 对应PPID赋子reasonspecial countcontrol 任意对应chamberremaintimelotcount和wafercount数小于设定值 则待派工lot包含该chamber的PPID可被选择：否则PPID不可被选择派工， special countcontrol
+PPID打分 根据chamberloading打分loading低的得分高，得分越高的越优先 PPIDScore
+可作业chamber数多的优先 ChamberCount
+Reason Chamber派工
+(排序规则 chamber剩余作业时间少的优先派该chamber的lot ChamberRemineTime
+NoNeedRecipe优先作业 不需要作业recipechange season的lot优先作业 NoNeedRecipeSeason
+ReworkedLot优先作业 已经Rework过的Lot优先作业 ReworkLotRQPri
+20 上海华力
+Confidential I HLMC

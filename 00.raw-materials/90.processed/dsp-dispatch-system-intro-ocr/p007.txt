@@ -1,0 +1,16 @@
+设备自动化模式
+AUTO Mode Description
+Manual Prep[lU]+JobIn[lUi]+JobOut[U]
+JobPrep[IUI]+EAP(JobIn+JobOut)
+AUTO-1:
+AUTO1
+EQP
+Job Prep[IUI+ MCs +EAP(Job In+Job Out)+MCS(WhereNext)
+AUTO-2
+AUTO1.5
+AUTO-2:
+AUTO2
+AUTO-3
+AUTO3
+Standbyto.bandleAlarm
+Confidential I HLMC

@@ -1,0 +1,26 @@
+类别（厂别/Macro/Report/功能模块/接口） 类别名称
+涉及厂别
+跨厂
+涉及Macro Macro2 Macro1
+Macro3
+Report1
+涉及Report Report2
+Report3
+10 Report4
+功能模块1
+12 涉及功能模块 功能模块2
+13 功能模块3
+14 功能模块4
+15 AMAMainJobName1
+16 涉及AMARule AMAMainJobName2
+AMAMainJobName3
+接口1
+19 涉及接口 接口2
+20 接口3
+21
+38
+30
+40
+42
+43
+功能沙及清单模版 lotesnattribute维度功能滋及清单 测试模板 iotcsnattribute雄度TestCase

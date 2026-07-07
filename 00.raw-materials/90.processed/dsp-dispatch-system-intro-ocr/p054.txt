@@ -1,0 +1,21 @@
+In UseStart--Routinemonitor 问题查询
+是否到分批时间
+查询上一次分批时间，推算是否到分批时间
+是否有延期
+配置是否正确
+U配置信息
+2. 底层信息是否正确：Mesprod.fabmonitoridenable=T，cansupportstandalone=T
+3. 是否有指定SoucelotidMesprod.fabmonitorid.Soucelotid
+机台当时状态
+机台为可作业状态
+Controlid当时状态
+1是否有已分批的Lot
+2.Controlid未正确结束，做账问题 版本号问题
+ReasonValidation operationfailed 或 is not same等
+AMAlog 通过NPWEPRFLOWReport文件拿取该Step的最新PLAN&Subplan版本（该
+1234 是否有可用Wafer（Lotowner） 文件由于数据量过大舍弃了RecycleEnd等站点，文件中没有的可通过表
+存在MonitorGroup内其他项目无法分批 mesprod.fwprocessplan拿取，name包含PLAN&Subplan，activeversion
+版本号问题 为当前最新版本）
+物理分批考虑是否有空Foup.等等 与Lot当前PLAN&Subplan版本对比，不同则可确定为版本问题
+商密三级 上海华力
+Confidential I HLMC

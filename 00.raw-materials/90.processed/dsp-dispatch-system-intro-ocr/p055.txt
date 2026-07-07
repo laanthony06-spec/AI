@@ -1,0 +1,16 @@
+In Use Start 一加做&延期monitor
+口加做&延期monitor逻辑介绍
+>加做monitor:split time=applytime
+系统申请 管理签核 自动备片 自动派工
+Add Approve AUTO split dispateh AUTO
+PE/EE
+延期monitor:split time =last split time +postpone
+Last Split time Schedule Monitor Split time Time
+last Monitor time
+Interval Time Postpone
+Leading Time ForPreparing
+Pre-Mea SCH-CTIFAOCFSS-FCSTMEA
+Process Tool SCH-CTHOSTMEE
+Post-Mea 上海华
+商密三级 HLMC
+Confidential I

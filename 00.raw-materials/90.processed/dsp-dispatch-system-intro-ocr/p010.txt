@@ -1,0 +1,12 @@
+实时自动派工系统触发方式（AMA）
+事件触发
+每当某台设备状态发生切换、某个portevent发生变化或port派工模式发生变化时，会询问RTD派工
+*运算
+答复
+定时触发
+每隔5分钟
+定时
+Pre-send
+Pre-send功能：根据EQP在作业Lot的剩余片数，提前给机台/port派工Lot
+商密三级
+Confidential I 10

@@ -1,0 +1,19 @@
+Qzone异常处置机制
+口SafetyValue定义标准
+SafetyValue QT类别 QT优先级 建议处置方式 定义标准 管控级
+长期停靠 无Q-time管控 Long term bank
+短期停靠<=15D（待定）无Q-time管控 可短期停靠
+停靠时间<=7D（待定）无Q-time管控 Q-timewindow未知，不建议长期 停靠 无风险
+保留字段 无Q-time管控
+保留字段 无Q-time管控
+RWK-Single单一Qtime 最低 Wait RWK 异常loop：直接进入；
+RWK-Multi连环Qtime 较低 Coating PR & Followed by RWK 当前loop：禁止向下放货 低风险
+1.5*qtimespec;
+Non-RWK-3 少量超出Q-time影响较轻微 异常loop：条件进入； 中风险
+当前loop：条件向下放货
+1*qtimespec;
+Non-RWK-2 次之 中间层级，不要Over 异常loop：不能进入； 高风险
+当前loop：条件向下放货
+Non-RWK-1 最高 严格FollowQ-time，不能Over 当前loop：直接向下放货 异常loop：不能进入； 必死货
+商密三级 上海华
+Confidential I HLMC

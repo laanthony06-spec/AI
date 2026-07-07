@@ -1,0 +1,23 @@
+IMP Monitor
+口IMPMonitor分批逻辑
+对于IMP的源种设备，在进行点检时需要更具机台作业的源种情况进行点检，所以RoutineMonitor是否分批还需要FollowIMP机
+台目前打开的源种，同机台任意源种PA每天只需作业1个，所以针对PA进行分批时，需另外检查是否已分批或已作业
+口涉及UI 与其他区域Routine
+MonitorSourceCategory Watchdog scanevery5min Monitor分批时间计算
+方式无差别
+Check monitor
+根据monitorppid
+Check源种是香打开 后一位（无取第一位）与UI
+MonitorSourceCategory对比
+Get control id list
+拿取该机台所有INUSE的controlID，其中中是否有符合
+Check是否有%PA%B1% %PA%BIl%的controlID，若有，则不再分批；
+Controlid已分批或已作业 monitortime是否存在为当前所在天，若存在，则不再分批； 拿取该机台所有符合%PA%Bll%的controlID，再看其last
+%PA%BR%类似
+Get monitor lot list
+Existmonitor lot? End
+Getmonitor source lot Monitor准备：
+1.母批筛选
+2.Monitor分批
+商密三级 此处逻辑一致 上海华力
+ConfidentialI HLMC

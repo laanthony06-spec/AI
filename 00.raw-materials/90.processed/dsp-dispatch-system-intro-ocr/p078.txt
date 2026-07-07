@@ -1,0 +1,14 @@
+InUse End 特殊NPW处理方法
+INPW处于非正常状态
+NPWHold暂无法处理：
+NPW被他部门HOLD，短时间内无法处理，影响同一卡其他Lot Recycle，可以用 LongHoldReasoncodeHold异常Lot
+NPW前量Fail：
+NPW前量Fail，BYControlid上线AutoHandleFail功能，自动Reset前量FailLot
+NPW剩余Wafer量少不足以使用：
+1.设定提前Recycle水位，剩余Wafer<水位，将inusestartWafer自动跳至ineusend站点，整卡自动Recycle
+2.打开AdvanceRecycle开关，系统自动计算当前可用保管量与PM+Routine用量，当保管量用量时，挑选Lot提前Recycle
+口特殊NPW
+量测标准片：
+Recycle&Reuse时不需要Mrege，每个Lot单独进行，BYProduct上线SingleHandle功能
+>NPWRecycleCount<=1实现自动处理
+需求NPWFLOW，配置符合自动处理前提条件，与自动功能相互配合

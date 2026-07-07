@@ -1,0 +1,36 @@
+No (Local/central) 所属 Report/Rule/AMA) Area功能模快 涉及acro/ 共通模块 逻辑变动内容 类别（正向/方向 （特殊符号处理） 测试内容 测试情景
+1lotA为Normalflowlot，当Lotcsnattribute维度为空，对应stn B设置了Csn 维度)
+特殊符号处理 1.当Lotcsnattribute维度为空，STNcsn未设置csnattribute维 2lotA为Runcardflowlot，当Lotcsnattribute维度为空，对应stn B设置了Csi
+3lotA为Branchflow(Rework）lot，当Lotcsnattribute维度为空：对应stn 维度）
+csnattribute维度）
+1lotA为Normalflowlot，当Lotcsnattribute维度为空，对应stnB设置了Csn
+特殊符号处理 2、当Lotcsnattribute维度为空，csn设置csnattribute维度 2lotA为Runcardflowlot，当Lotcsnattribute维度为空，对应stnB设置了Csr
+3.lotA为Branchflow(Rework）lot，当Lotcsnattribute维度为空，对应stn
+csnattribute维度
+1lotA为Normalflowlot，当Lotcsnattribute维度为NonKey，对应stnB设置
+正向 3.当Lotcsnattribute维度为NonKey，csn设置NonKey 2、lotA为Runcardflowiot，当Lotcsnattribute维度为NonKey，对应stn B设置 NonKeycsnattribute维度
+csnattribute维度 3、lotA为Branchflow(Rework）lot，Lotcsnattribute维度为NonKey，对 NonKeycsnattribute维度
+(STNcsn设置NanKeycsnattribute维）
+10 1，lotA为Nomalflowlot，当Lot.csnattribute维度为Key1，对应stnB设置了K
+csnattribute维营
+反向 4,当Lotcsnattribute维度为NonKey，csn设非NonKey 2、lotA为Runeardflowlat，当Lotcsnattrbute维度为Key2，对应stnB设置了 维度
+12 csnattribute维度或者csn未设置csnattribute维度 3、lotA为Branchflowlot，当Lotcsnattribute维度为Key1，对应stnB设置了K
+csnattribute维度
+13 4、lotA为Branchflowlot，当Lotcsnattnbute维度为Key2，对应stnB设置了k
+csnattrbute维度)
+14 1，lotA为Nomalflowlot，当Lotcsnattnibute准为Key1对应stnB设置了C
+15 16 Local Report ParaLCCResult 新增lotcsnattribute维 度逻辑判断 正向 5、当Lotcsnattribute维度为Key1.csn设置Key1 csnattribute维度 2lotA为Runcardflowlot，当Lotcsnattnbute维意为Key1，对应stn B设置了 csnattribute维度 3、lotA为Branchflow(Rework）lot，当Lotcsnattribute维度为Key1，对应sti 1csnattribute维度
+Key1csnattibute
+17 1、lotA为Namalflowlot，兰Lotcsnattnbute维度为NonKey，对应stnB设置
+Non Keycsnattribute维
+18 反向 6、当Lotcsnattribute维度为Key1，csn设置非Key1 2lotA为Runcardflowlot，当Lotcsnattribute维度为Key2，对应stnB设置了 维度）
+19 csnattribute维度或者csn未设置csnattribute维度 3、lotA为Branchtlowlot，当Lotcsnattnbute维度为Key2,对应stnB设置了Ke
+4、lotA为Branchflowlot.当Lotesnattnbute维度为NonKey，对应stn B设置 csnattnbute维
+20 置NonKey csnattnbute维度
+21 1、lotA为Nomalflowlot，当Lotcsnattribute准度为Key2，对应stnB设置了Cs
+22 正向 7、当Lotcsnattribute维度为Key2.csn设置Key2 2、lotA为Runcardflowlot当Lotcsnattribute维度为Key2，对应stnB设置了C csnattribute准度）
+csnattribute维度 csnattribute维度）
+23 3lotA为Branchtlow（Rework）lot，当Lotcsnattribute维度为Key2对应stn
+Key12csnattribute维度） 1、lotA为Normalflowlot，当Lotcsnattribute维度为NonKey，对应stn B设置
+NonKeycsnattnbute维度） lotA为Runcardflowlot当lotcsnattrbute维度为Key1对应stnB设置了k
+功能步及清单模版 lotcsnattribute维度功能步及清单 测试模板 lotcsnattribute维度TestCase

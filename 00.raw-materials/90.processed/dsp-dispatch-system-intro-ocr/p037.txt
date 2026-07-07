@@ -1,0 +1,14 @@
+QZone管控简介
+口管控类型
+Branch
+Main
+BBBE Branch
+Main
+口管控难点
+因素维度多，精准管控难度大 新型管控需求多，覆盖面更广
+·下游机台作业时间大于qtimeduration;
+·Zone中存在多道相同制程 .Wafer level qzone
+·交叉qzone，考虑duration不同和连环qzone交又 ·QZone跨度大、小于4h的短Loop数量多
+·Run card作业，工艺不确定性
+商密三级 ·考虑zone中各站点机台的可作业情况，如机台状态 ·特殊loop:如CT-NIC、PRF-SGELoop管控 上海华力
+Confidential I constraint,PMrecovertime等 49 HLMC

@@ -1,0 +1,14 @@
+QZone管控简介
+口整体判断逻辑
+根据不同设备群前面的Lot流通状态来估算各Lot在各种设备群的最大允许等待时间。结合各Lot余裕等待时间
+和剩余加工步骤中需经过机台群的产能，管控q-zone起始站点放货情况并能根据卡Qzone的情况进行特殊处理。
+获取Qzone信息 计算各Lot到每个
+下游设备信息、 作业条件 step的最大允许 等待时间 平衡各个机台 loading 判断放货情况 异常特殊处理
+PPID Recipe Constraint EQP/CHMBstatus 一多次分配 Queue sort 一待派TLot Wafer Balance Loop内lot 多次分配 待派工Lot 衡量overqtime可能性 待派工Lot不超qtime 待派工Lot放入loop后 不影响其他Lot作业 一堆货 一断线 下游卡Qzone
+作业机台/ 依次计算目标机台产能 AIBiabReStanUSIDLEALINREOYCLE BAEKUENGLOTMONROULMON
+排序 和在相应Lot的queue 管控放货 8KLRTDLOTE
+下precontoifagy时ar台下可
+sort范围内的作业零求
+商密三级 上海华力
+Confidential I 52
+HLMC

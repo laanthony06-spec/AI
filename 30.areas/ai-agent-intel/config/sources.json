@@ -1,0 +1,111 @@
+{
+  "output": {
+    "inbox_dir": "inbox",
+    "cache_dir": "cache",
+    "max_items_per_run": 120
+  },
+  "keywords": [
+    "AI agent",
+    "AI agents",
+    "LLM agent",
+    "autonomous agent",
+    "multi-agent",
+    "agentic workflow",
+    "tool use",
+    "function calling",
+    "MCP",
+    "Model Context Protocol",
+    "computer use",
+    "browser agent",
+    "coding agent",
+    "agent framework",
+    "RAG agent",
+    "workflow automation",
+    "OpenAI Agents",
+    "LangGraph",
+    "CrewAI",
+    "AutoGen",
+    "AutoGPT",
+    "Semantic Kernel",
+    "智能体",
+    "AI 智能体",
+    "多智能体",
+    "工具调用",
+    "工作流自动化"
+  ],
+  "github": {
+    "enabled": true,
+    "searches": [
+      {
+        "name": "GitHub repositories - AI agents recently updated",
+        "type": "repositories",
+        "query": "\"AI agent\" OR \"LLM agent\" OR \"multi-agent\" in:name,description,readme",
+        "sort": "updated",
+        "order": "desc"
+      },
+      {
+        "name": "GitHub repositories - agent frameworks",
+        "type": "repositories",
+        "query": "\"agent framework\" OR LangGraph OR CrewAI OR AutoGen OR AutoGPT in:name,description,readme",
+        "sort": "updated",
+        "order": "desc"
+      },
+      {
+        "name": "GitHub issues - MCP agents",
+        "type": "issues",
+        "query": "\"Model Context Protocol\" agent is:issue",
+        "sort": "updated",
+        "order": "desc"
+      }
+    ]
+  },
+  "rss": {
+    "enabled": true,
+    "feeds": [
+      {
+        "name": "arXiv cs.AI agent search",
+        "url": "https://export.arxiv.org/api/query?search_query=all:%22LLM%20agent%22%20OR%20all:%22multi-agent%22%20OR%20all:%22tool%20use%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+        "tags": [
+          "paper",
+          "arxiv"
+        ]
+      },
+      {
+        "name": "Hacker News - AI agent",
+        "url": "https://hnrss.org/newest?q=%22AI%20agent%22",
+        "tags": [
+          "hacker-news"
+        ]
+      },
+      {
+        "name": "Hacker News - LLM agent",
+        "url": "https://hnrss.org/newest?q=%22LLM%20agent%22",
+        "tags": [
+          "hacker-news"
+        ]
+      },
+      {
+        "name": "Reddit search - AI agents",
+        "url": "https://www.reddit.com/search.rss?q=%22AI%20agent%22%20OR%20%22LLM%20agent%22%20OR%20%22multi-agent%22&sort=new",
+        "tags": [
+          "reddit"
+        ]
+      }
+    ]
+  },
+  "x": {
+    "enabled": true,
+    "searches": [
+      {
+        "name": "X recent - AI agents",
+        "query": "(\"AI agent\" OR \"LLM agent\" OR \"agentic workflow\" OR \"multi-agent\") -is:retweet lang:en",
+        "max_results": 10
+      },
+      {
+        "name": "X recent - MCP agents",
+        "query": "(\"Model Context Protocol\" OR MCP) (agent OR agents) -is:retweet lang:en",
+        "max_results": 10
+      }
+    ]
+  }
+}

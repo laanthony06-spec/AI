@@ -1,0 +1,27 @@
+Global派工规则
+口概述：GlobalRule指各Module通用的DSP派工逻辑，从整体控线角度出发，确定最优的调度方案。涉及Lot基本属性、Foup属
+性、机台状态、工艺限定等，但与机台的具体作业方式没有关系。
+Get Lot list From MES 功能名称 从MES获取可派工Lot信忘，即，符合Lot状态OK/FOUP状态OK/DSP未禁止的Recipe/Reticdeinmachine/无 功能描述 LotComment/RTDInfo
+Machine/Chamber均要处于可作业状态：此外，还要检毫所有关型的constrain限定 BatchID等条件的Lot，若RuncardLot定的机台非本机台，则不能派工 NotJobPrepLowPnonty: NotinFouce
+CheckMachine
+Multi Lot InOne Foup 同Foup中的其他Lot正在作业/已被Reserve时，该Lot不能派，用户设定的机台不可以作业与其他Lot共用FOUP的Lot EQPUnavailable:x,ChambarState:wo
+Reason Check Qzone Control 未达到是少等待时间的Lot不能派工被qzone管控下游断线或产能不足的Lo坏不能派工 MultiLotBlock
+（管控Lot不自动派工） Check Loop Lot Control 制造部限定qzoneloop的Wafer/Lot/FOUPcount时满足限定条件的Lot不能派工 MinqimeNotEnough:Pathissue,Caoacit
+Check MFG control 制适部根据eqp.capabilityProdutiontype.prodid.stage.recipe.tech.flow.priorityquantityqtime等信密进行生产调 IsLoopLotControi
+控时，满足设定禁止作业条件的LO不派工 MFG Control
+Reserve Lot 已经被Preserve的Lot不能派工
+Cancel Lot JobPrepCancel/Joblncancel的lot在10min内不能派工
+AMA Mark Lot auto3派工失败而被Mark的Lot在10min内不优先作业 MultiJobPrepCancal;MulfiJotinCance
+Qtime Urgency 计点Lot的QtimeUrgency案急Lot优先作业 IsByAMAMarkLot
+Pnority Pnonty高的Lot优先作业 QLURGENCY0/1/2/CATEGORY
+Rush Lot RushLot优先作业 lotSkipCantrol PRIOR 1/2:PRIOR
+Target Lot MPC设定的TargetLot优先作业 Target 0/1Nalue
+Sorting Broken Lot MPC设定高等级Lot达到导待时间limit的优先 BrokenLat
+（排序规则） MFG Control 设定需要在该机台优先/不优先作业产品 RunPni PreferRunPn NonPrerer
+Rework Lot ReworkLot优先作业 REWORK
+Sub Lot 下游等待merge的Lot优先作业 SubLat
+Small Lot 作业连续少枚数后大枚数LOt优先作业 SmallLot
+Remain Qtime RemainQtime小的Lot优先作业 RemQTime
+Rework Lot RQPri Rework过的Lot优先作业 ReworklatRQPni
+Waiting Time 等待时间长的Lot优先作业 WaitingTime
+ConfidentialI HLMC

@@ -1,0 +1,24 @@
+THKNPWAuto Handle
+Litho涨膜Monitor自动处理
+当前存在LITHOSIARCTHKWPAWafer必须涂布一层Soc才能发Recycle，但FabRoutineMonitor片数为4或6Pcs，因此导致一卡lot总有1-3PcsWafer无法投出，导致无法Recyle需求在
+Wafer总数在低于4Pcs时，AMA自动投入固定Controlid的Monitor，作业完成后即能实现自动Recyle
+具体逻辑，
+一、设定水位
+RTDConfig中设定Product及其水位，小于水位触发后续分批判断
+二、选择需要处理的Wafer 存在不属于UI中的Inuse Watchdog scan every5min
+筛选条件如下： Monitor暂不处理
+1.PRODUCTname=RTDConfig.THKNPWLeftAvaCount配置Product 选择需要处理的Wafer
+2其余条件与RoutineMonitor分批筛选条件一致 远择分批Controlid
+将选出Lot按同PRODUCT小数点前Lotid相同的分为一个Group，计算每个Group总可用Wafer量，若小于设定水位，则认为这个Group的剩
+余可用Wafer需要进行自动分批 选泽分批Lot
+三、选择分批Controlid
+Controlid=UI THKNPWAutoHandle.ControlidETHKNPWAutoHandle.Enable-T
+四、选择分批Lot
+1.SourceLot从上述一筛选出的Lot中进行选取
+2.SourceLot排序：
+①LotWaferqty=ControlidWafergty的Lot优先
+②Foup内存在InUseMonitor对应Machine与当前Controlid所对应Machine相同的优先
+③LotWaferqty大的优先
+4)后续Sotring同RoutingMonitor选取的SourceLotSorting
+口涉及UI
+THKNPWAutoHandle
