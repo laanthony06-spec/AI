@@ -1,6 +1,6 @@
 ---
 type: hooks-scanner
-updated: 2026-07-07T20:59:34
+updated: 2026-07-09T00:02:53
 tags: [Agent, Hooks, 自动触发]
 ---
 
@@ -24,7 +24,9 @@ tags: [Agent, Hooks, 自动触发]
 
 | 事件 | 文件 | 大小 | 建议动作 |
 |---|---|---:|---|
-| created | [[00.raw-materials/20.metadata/Obsidian插件安装清单.md]] | 1556 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| modified | [[00.raw-materials/20.metadata/Obsidian插件安装清单.md]] | 1556 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| modified | [[30.areas/ai-agent-intel/inbox/2026-07-07.md]] | 98764 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| modified | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-07.md]] | 34409 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
 
 ## 触发规则草案
 

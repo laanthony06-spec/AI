@@ -1,7 +1,17 @@
 [
   {
-    "event": "created",
+    "event": "modified",
     "path": "00.raw-materials/20.metadata/Obsidian插件安装清单.md",
     "size": 1556
+  },
+  {
+    "event": "modified",
+    "path": "30.areas/ai-agent-intel/inbox/2026-07-07.md",
+    "size": 98764
+  },
+  {
+    "event": "modified",
+    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-07.md",
+    "size": 34409
   }
 ]
