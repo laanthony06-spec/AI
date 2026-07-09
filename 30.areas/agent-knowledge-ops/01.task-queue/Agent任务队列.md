@@ -1,6 +1,6 @@
 ---
 type: agent-task-queue
-updated: 2026-07-09T00:02:53
+updated: 2026-07-09T21:44:32
 tags: [Agent, Dispatch, 任务队列, 自动化]
 ---
 
@@ -39,9 +39,6 @@ tags: [Agent, Dispatch, 任务队列, 自动化]
 | todo | P1 | TestCase | source_folder: TestCase_SOP/TestCase示例 | Codex | brief_or_note_scan | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md]] | `30.areas/agent-knowledge-ops/03.testcases/` | 人工确认后执行 |
 | todo | P1 | TestCase | topic: TestCase / SOP / 验证规范 | Codex | brief_or_note_scan | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md]] | `30.areas/agent-knowledge-ops/03.testcases/` | 人工确认后执行 |
 | todo | P1 | 知识整理 | 需求目标是什么：提升产能、降低 Cycle Time、减少 OverQtime、降低 WPH Loss，还是提升自动化率？ | Codex + 人工复核 | brief_or_note_scan | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md]] | `00.raw-materials/90.processed/agent-knowledge-ops/` | 人工确认后执行 |
-| todo | P2 | Hooks | 处理 Hook 事件：modified 00.raw-materials/20.metadata/Obsidian插件安装清单.md | Codex | modified | [[00.raw-materials/20.metadata/Obsidian插件安装清单.md]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
-| todo | P2 | Hooks | 处理 Hook 事件：modified 30.areas/ai-agent-intel/inbox/2026-07-07.md | Codex | modified | [[30.areas/ai-agent-intel/inbox/2026-07-07.md]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
-| todo | P2 | Hooks | 处理 Hook 事件：modified 30.areas/semiconductor-dispatch-intel/inbox/2026-07-07.md | Codex | modified | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-07.md]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
 | todo | P2 | Memory | ### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-07.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | Memory | - 中文导读：关注它是否提供 Agent 编排、状态管理、工具调用和生产化部署能力。 关键词信号：RAG / Memory、评测 / 安全。 相关度中等，可快速浏览。 | Codex + 人工复核 | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-07.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | 知识整理 | ## 待澄清问题 | Codex + 人工复核 | brief_or_note_scan | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md]] | `00.raw-materials/90.processed/agent-knowledge-ops/` | 人工确认后执行 |

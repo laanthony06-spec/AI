@@ -1,4 +1,0 @@
-interface:
-  display_name: "Humanizer-zh"
-  short_description: "Rewrite Chinese naturally while preserving facts and tone."
-  default_prompt: "Use $humanizer-zh to rewrite the following Chinese text so it sounds natural and human while preserving meaning:"

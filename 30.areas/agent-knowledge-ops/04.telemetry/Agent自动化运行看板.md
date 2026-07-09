@@ -1,6 +1,6 @@
 ---
 type: agent-telemetry-dashboard
-updated: 2026-07-07T20:59:37
+updated: 2026-07-09T21:44:44
 tags: [Agent, Telemetry, 自动化看板]
 ---
 
@@ -10,10 +10,10 @@ tags: [Agent, Telemetry, 自动化看板]
 
 | 任务 | 状态 |
 |---|---|
-| Obsidian Agent Knowledge Ops Refresh | 3 |
-| Obsidian AI Agent Intel Daily | 3 |
+| Obsidian Agent Knowledge Ops Refresh | 4 |
+| Obsidian AI Agent Intel Daily | 4 |
 | Obsidian Raw Materials Weekly Knowledge Distill | 3 |
-| Obsidian Semiconductor Dispatch Intel Daily | 3 |
+| Obsidian Semiconductor Dispatch Intel Daily | 4 |
 | Obsidian Sensitive Scan Weekly | 3 |
 
 ## 关键输出目录
