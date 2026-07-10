@@ -463,53 +463,89 @@ def draw_architecture(path):
 def draw_flow(path):
     img = Image.new("RGB", (1836, 1152), "white")
     draw = ImageDraw.Draw(img)
-    box_font = _diagram_font(24, True)
-    small_font = _diagram_font(21, True)
-    label_font = _diagram_font(20, True)
+    box_font = _diagram_font(23, True)
+    small_font = _diagram_font(20, True)
+    label_font = _diagram_font(18, True)
+    lane_font = _diagram_font(20, True)
 
-    def box(cx, cy, w, h, text, color=NAVY):
+    # Three visual lanes keep the decision branches and execution chain separate.
+    draw.rounded_rectangle((18, 18, 1818, 258), radius=18, fill="#F6F9FC", outline="#D8E2EE", width=2)
+    draw.rounded_rectangle((18, 278, 1818, 710), radius=18, fill="#FFFCF3", outline="#E8D9A7", width=2)
+    draw.rounded_rectangle((18, 730, 1818, 1134), radius=18, fill="#F4FAFA", outline="#CDE3E6", width=2)
+    draw.text((42, 34), "触发与候选", font=lane_font, fill="#" + NAVY)
+    draw.text((42, 294), "需求判定", font=lane_font, fill="#7A5A00")
+    draw.text((42, 746), "执行与回执", font=lane_font, fill="#" + TEAL)
+
+    def box(cx, cy, w, h, text, color=NAVY, fill="white"):
         x1, y1, x2, y2 = cx-w/2, cy-h/2, cx+w/2, cy+h/2
-        draw.rounded_rectangle((x1,y1,x2,y2), radius=16, fill="white", outline="#"+color, width=4)
+        draw.rounded_rectangle((x1,y1,x2,y2), radius=16, fill=fill, outline="#"+color, width=4)
         _center_text(draw, (cx,cy), text, box_font, "#"+color, spacing=5)
 
     def diamond(cx, cy, w, h, text, color=GOLD):
         pts = [(cx,cy-h/2),(cx+w/2,cy),(cx,cy+h/2),(cx-w/2,cy)]
-        draw.polygon(pts, fill="#FFF9E8", outline="#"+color)
+        draw.polygon(pts, fill="#FFF8E6", outline="#"+color)
         draw.line(pts+[pts[0]], fill="#"+color, width=4)
         _center_text(draw, (cx,cy), text, small_font, "#5F4600", spacing=4)
 
-    box(180,120,250,100,"WatchDog\n按配置触发")
-    box(540,120,300,100,"读取配置与\n最新 CMPAssign")
-    diamond(940,120,275,150,"配置有效且\n存在候选 Lot？")
-    box(1395,120,330,100,"按 selfcapability\n分组")
-    diamond(1395,350,350,165,"Q-time / Lifetime\n风险？")
-    box(950,350,320,110,"needpirunflag = 2\n风险优先")
-    diamond(1395,600,350,165,"Highwip 条件\n满足？")
-    box(950,600,320,110,"needpirunflag = 1\n宽度需求")
-    box(1395,840,350,112,"选择可 Pi 机台\n低 loading 优先")
-    box(950,840,320,112,"按配置片数\n执行子批 Split")
-    diamond(560,840,280,150,"Split 成功？")
-    box(190,840,260,108,"发送 R2R\n记录审计日志",TEAL)
-    box(560,1050,290,90,"失败补偿 / 告警",RISK)
-    box(950,1050,280,90,"本轮结束",GRAY)
+    def poly_arrow(points, color="#667085", width=4):
+        draw.line(points, fill=color, width=width, joint="curve")
+        _arrow(draw, points[-2], points[-1], fill=color, width=width)
 
-    arrows = [
-        ((305,120),(390,120),None), ((690,120),(802,120),None), ((1077,120),(1230,120),"是"),
-        ((1395,170),(1395,267),None), ((1220,350),(1110,350),"是"), ((1395,433),(1395,517),"否"),
-        ((1220,600),(1110,600),"是"), ((1395,683),(1395,784),"是"), ((1220,840),(1110,840),None),
-        ((790,840),(700,840),None), ((420,840),(320,840),"是"), ((560,915),(560,1005),"否"),
-        ((815,350),(950,785),None), ((815,600),(950,785),None), ((1075,120),(950,1005),"否 / 无候选"),
-        ((320,895),(815,1035),"成功后继续下一组"),
-    ]
-    for a,b,label in arrows:
-        _arrow(draw,a,b)
-        if label:
-            mx,my=(a[0]+b[0])/2,(a[1]+b[1])/2
-            bbox=draw.textbbox((0,0),label,font=label_font)
-            pad=5
-            draw.rectangle((mx-(bbox[2]-bbox[0])/2-pad,my-(bbox[3]-bbox[1])/2-pad,
-                            mx+(bbox[2]-bbox[0])/2+pad,my+(bbox[3]-bbox[1])/2+pad),fill="white")
-            draw.text((mx-(bbox[2]-bbox[0])/2,my-(bbox[3]-bbox[1])/2),label,font=label_font,fill="#667085")
+    def label(x, y, text, color="#667085"):
+        bbox = draw.textbbox((0,0), text, font=label_font)
+        pad = 4
+        draw.rounded_rectangle((x-pad, y-pad, x+(bbox[2]-bbox[0])+pad, y+(bbox[3]-bbox[1])+pad),
+                               radius=4, fill="white")
+        draw.text((x,y), text, font=label_font, fill=color)
+
+    # Lane 1: trigger and candidate loading.
+    box(185,145,250,92,"WatchDog\n按配置触发")
+    box(515,145,300,92,"读取配置与\n最新 CMPAssign")
+    diamond(865,145,265,132,"配置有效且\n存在候选 Lot？")
+    box(1215,145,330,92,"按 selfcapability\n分组")
+    box(1585,145,275,92,"无候选\n本轮结束",GRAY,"#F7F8FA")
+    _arrow(draw,(310,145),(365,145))
+    _arrow(draw,(665,145),(732,145))
+    _arrow(draw,(998,145),(1050,145))
+    label(1010,108,"是")
+    poly_arrow([(865,79),(865,66),(1585,66),(1585,99)], color="#7A8494")
+    label(890,62,"否")
+
+    # Lane 2: risk and high-WIP decisions use independent left/right branches.
+    diamond(920,390,330,150,"Q-time / Lifetime\n风险？")
+    box(430,390,330,104,"needpirunflag = 2\n风险优先",TEAL,"#F0FAF8")
+    diamond(920,565,330,150,"Highwip 条件\n满足？")
+    box(1410,565,330,104,"needpirunflag = 1\n宽度需求",TEAL,"#F0FAF8")
+    box(920,680,300,72,"本组无需求\n继续下一组",GRAY,"#F7F8FA")
+    poly_arrow([(1215,191),(1215,270),(920,270),(920,315)])
+    _arrow(draw,(755,390),(595,390))
+    label(675,350,"是")
+    _arrow(draw,(920,465),(920,490))
+    label(940,468,"否")
+    _arrow(draw,(1085,565),(1245,565))
+    label(1120,525,"是")
+    _arrow(draw,(920,640),(920,644))
+    label(940,620,"否")
+
+    # Lane 3: branches merge before the execution chain. No connector crosses a node.
+    box(410,855,300,100,"候选 Lot 确定\n记录选择原因",NAVY)
+    box(785,855,300,100,"选择可 Pi 机台\n低 loading 优先",NAVY)
+    box(1145,855,280,100,"按配置片数\n执行子批 Split",NAVY)
+    diamond(1465,855,260,140,"Split 成功？")
+    box(1715,855,200,100,"发送 R2R\n记录审计",TEAL,"#F0FAF8")
+    box(1465,1040,275,84,"失败补偿\n并告警",RISK,"#FFF4F4")
+    box(1715,1040,200,84,"继续下一组\n或本轮结束",GRAY,"#F7F8FA")
+
+    poly_arrow([(430,442),(430,735),(410,735),(410,805)])
+    poly_arrow([(1410,617),(1410,735),(520,735),(520,805)])
+    _arrow(draw,(560,855),(635,855))
+    _arrow(draw,(935,855),(1005,855))
+    _arrow(draw,(1285,855),(1335,855))
+    _arrow(draw,(1595,855),(1615,855))
+    label(1585,815,"是")
+    _arrow(draw,(1715,905),(1715,998))
+    _arrow(draw,(1465,925),(1465,998))
+    label(1485,940,"否")
     img.save(path, quality=95)
 
 
