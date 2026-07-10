@@ -1,6 +1,6 @@
 ---
 type: agent-telemetry-dashboard
-updated: 2026-07-09T21:44:44
+updated: 2026-07-10T20:22:02
 tags: [Agent, Telemetry, 自动化看板]
 ---
 
@@ -20,10 +20,10 @@ tags: [Agent, Telemetry, 自动化看板]
 
 | 目录 | 文件数 | 最新文件 |
 |---|---:|---|
-| `30.areas/ai-agent-intel/inbox` | 2 | [[30.areas/ai-agent-intel/inbox/2026-07-07.md]] |
-| `30.areas/semiconductor-dispatch-intel/inbox` | 2 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-07.md]] |
+| `30.areas/ai-agent-intel/inbox` | 3 | [[30.areas/ai-agent-intel/inbox/2026-07-09.md]] |
+| `30.areas/semiconductor-dispatch-intel/inbox` | 3 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md]] |
 | `00.raw-materials/90.processed/weekly-knowledge-distill` | 2 | [[00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md]] |
-| `00.raw-materials/90.processed/dispatch-requirements-notes` | 8 | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md]] |
+| `00.raw-materials/90.processed/dispatch-requirements-notes` | 10 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md]] |
 | `30.areas/agent-knowledge-ops/01.task-queue` | 2 | [[30.areas/agent-knowledge-ops/01.task-queue/Agent任务队列.md]] |
 | `30.areas/agent-knowledge-ops/02.evidence` | 1 | [[30.areas/agent-knowledge-ops/02.evidence/Evidence索引.md]] |
 | `30.areas/agent-knowledge-ops/03.testcases` | 2 | [[30.areas/agent-knowledge-ops/03.testcases/WaferBalance-TestCases.md]] |
@@ -36,9 +36,9 @@ tags: [Agent, Telemetry, 自动化看板]
 |---|---:|---:|
 | [[00.raw-materials/99.system/cache/weekly_knowledge_distill.log]] | 2001 | 0 |
 | [[00.raw-materials/99.system/cache/weekly_knowledge_distill_task.log]] | 314 | 0 |
-| [[30.areas/ai-agent-intel/cache/last_run.log]] | 112 | 0 |
-| [[30.areas/ai-agent-intel/cache/last_run_task.log]] | 424 | 0 |
-| [[30.areas/semiconductor-dispatch-intel/cache/last_run.log]] | 828 | 0 |
+| [[30.areas/ai-agent-intel/cache/last_run.log]] | 111 | 0 |
+| [[30.areas/ai-agent-intel/cache/last_run_task.log]] | 1408 | 0 |
+| [[30.areas/semiconductor-dispatch-intel/cache/last_run.log]] | 1458 | 0 |
 
 ## 建议
 

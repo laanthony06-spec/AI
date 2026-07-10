@@ -1,0 +1,76 @@
+[
+  {
+    "source": "Google Patents - wafer fab dispatching",
+    "platform": "Patent",
+    "title": "Google Patents - wafer fab dispatching",
+    "url": "https://patents.google.com/?q=%22wafer+fab%22+dispatching",
+    "published": "2026-07-10",
+    "summary": "手动查看晶圆厂派工相关专利新结果。",
+    "tags": [
+      "patent"
+    ],
+    "category": "派工规则",
+    "score": 3,
+    "id": "f66a70ec025c74c4"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "Ranking routes in semiconductor wafer fabs.",
+    "url": "https://doi.org/10.1038/s41598-023-39187-2",
+    "published": "2023-08-15",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "a442acbbab48f2f6"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "A review of the applications of multi-agent reinforcement learning in smart factories.",
+    "url": "https://doi.org/10.3389/frobt.2022.1027340",
+    "published": "2022-12-01",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "b1ea6a7993396583"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "A Survey on AI-Driven Digital Twins in Industry 4.0: Smart Manufacturing and Advanced Robotics.",
+    "url": "https://doi.org/10.3390/s21196340",
+    "published": "2021-09-23",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "8ff265b48ddf18bf"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.",
+    "url": "https://doi.org/10.1155/2019/8729367",
+    "published": "2019-01-02",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "e3c1ad5c45951c6e"
+  }
+]
