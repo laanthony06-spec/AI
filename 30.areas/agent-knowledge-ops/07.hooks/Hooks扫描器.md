@@ -1,6 +1,6 @@
 ---
 type: hooks-scanner
-updated: 2026-07-10T20:21:50
+updated: 2026-07-12T09:20:03
 tags: [Agent, Hooks, 自动触发]
 ---
 
@@ -24,23 +24,22 @@ tags: [Agent, Hooks, 自动触发]
 
 | 事件 | 文件 | 大小 | 建议动作 |
 |---|---|---:|---|
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/1.jpg]] | 318258 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/2.jpg]] | 376360 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/3.jpg]] | 400809 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/4.jpg]] | 375383 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/5.jpg]] | 372808 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/6.jpg]] | 384837 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/7.jpg]] | 348292 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/8.jpg]] | 408379 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/10.sources/images/LithoAutoPirun优化/9.jpg]] | 823820 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.docx]] | 43050 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.md]] | 9465 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.docx]] | 132111 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md]] | 11418 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/litho_physical_split_v02.docx]] | 43050 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/test.docx]] | 36580 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[30.areas/ai-agent-intel/inbox/2026-07-09.md]] | 64075 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md]] | 17248 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/PPT.jpg]] | 327103 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/Testcase1.jpg]] | 308655 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/Testcase2.jpg]] | 464507 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/技术文档1.jpg]] | 447215 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/技术文档2.jpg]] | 356206 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/技术文档3.jpg]] | 376113 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/技术文档4.jpg]] | 441458 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/需求单1.jpg]] | 369678 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/需求单2.jpg]] | 384173 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/需求单3.jpg]] | 410465 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/需求单4.jpg]] | 395345 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/CMPAutoPirun/需求单5.jpg]] | 386433 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/ai-agent-intel/inbox/2026-07-10.md]] | 13397 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/ai-agent-intel/inbox/2026-07-12.md]] | 77899 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-10.md]] | 3750 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md]] | 26568 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
 
 ## 触发规则草案
 

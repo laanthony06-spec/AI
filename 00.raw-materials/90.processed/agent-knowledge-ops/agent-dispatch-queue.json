@@ -3,61 +3,61 @@
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "### [Refusal training for LLM agents against disguised MCP attacks](https://github.com/johnhalloran321/mcp_safety_training)",
+    "task": "### [Add query-first wiki mcp subcommand](https://github.com/wazootech/wiki/issues/209)",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP、评测 / 安全。 相关度较高，建议优先阅读。",
+    "task": "- 中文导读：关注 API、SDK、平台能力变化，以及是否会影响你的工具链选择。 关键词信号：工具调用 / MCP、自动化 / Coding Agent、RAG / Memory。 相关度较高，建议优先阅读。",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP。 相关度较高，建议优先阅读。",
+    "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP、自动化 / Coding Agent。 相关度中等，可快速浏览。",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "- 中文导读：关注它是否提供 Agent 编排、状态管理、工具调用和生产化部署能力。 关键词信号：工具调用 / MCP、评测 / 安全。 相关度较高，建议优先阅读。",
+    "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP、自动化 / Coding Agent。 相关度较高，建议优先阅读。",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "- 中文导读：建议提取问题定义、方法、实验指标和可复用模型结构。 关键词信号：工具调用 / MCP、多智能体。 相关度较高，建议优先阅读。",
+    "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：自动化 / Coding Agent、RAG / Memory、评测 / 安全。 相关度较高，建议优先阅读。",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -66,22 +66,10 @@
     "task": "- 分类：工具调用 / MCP",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P1",
-    "category": "MCP / 工具接口",
-    "task": "- 原文摘要：Article URL: https://github.com/johnhalloran321/mcp_safety_training Comments URL: https://news.ycombinator.com/item?id=48834106 Points: 1 # Comments: 0",
-    "recommended_executor": "Codex（先本地只读）",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -90,226 +78,214 @@
     "task": "- 本简报聚焦 AI Agent、LLM Agent、多智能体、工具调用、MCP、Coding Agent、RAG / Memory、评测与安全。",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/1.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/1.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/1.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/2.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/2.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/2.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/3.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/3.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/3.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/4.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/4.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/4.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/5.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/5.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/5.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/6.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/6.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/6.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/7.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/7.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/7.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/8.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/8.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/8.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPirun优化/9.jpg",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/10.sources/images/LithoAutoPirun优化/9.jpg",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/10.sources/images/LithoAutoPirun优化/9.jpg"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.docx",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.docx",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.docx"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.md",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.md",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.docx",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.docx",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.docx"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/litho_physical_split_v02.docx",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/litho_physical_split_v02.docx",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/litho_physical_split_v02.docx"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/test.docx",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/test.docx",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/test.docx"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Memory",
-    "task": "### [A hierarchical memory architecture overcomes context limits in long-horizon multi-agent computational modeling](https://arxiv.org/abs/2607.07666v1)",
-    "recommended_executor": "Codex + 人工复核",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "- 来源：GitHub issues - MCP agents",
+    "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "output": "30.areas/agent-knowledge-ops/06.memory/",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/PPT.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/PPT.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/PPT.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/Testcase1.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase1.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase1.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/Testcase2.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase2.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase2.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/技术文档1.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档1.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档1.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/技术文档2.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档2.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档2.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/技术文档3.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档3.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档3.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/技术文档4.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档4.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档4.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/需求单1.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单1.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单1.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/需求单2.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单2.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单2.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/需求单3.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单3.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单3.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/需求单4.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单4.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单4.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 00.raw-materials/10.sources/images/CMPAutoPirun/需求单5.jpg",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单5.jpg",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单5.jpg"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-10.md",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-10.md",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-10.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-10.md",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-10.md",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-10.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Hooks",
+    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
+    "recommended_executor": "Codex",
+    "trigger": "created",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
+    "output": "30.areas/agent-knowledge-ops/07.hooks/",
+    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -318,22 +294,46 @@
     "task": "### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/06.memory/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P2",
     "category": "Memory",
-    "task": "- 中文导读：建议提取问题定义、方法、实验指标和可复用模型结构。 关键词信号：多智能体、RAG / Memory、评测 / 安全。 相关度较高，建议优先阅读。",
+    "task": "### [Proposal: Strengthen Ralph memory handoff by requiring structured implementation learnings in `progress.md`](https://github.com/Rubiss-Projects/spec-kit-ralph/issues/27)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "30.areas/agent-knowledge-ops/06.memory/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Memory",
+    "task": "- 中文导读：关注它是否提供 Agent 编排、状态管理、工具调用和生产化部署能力。 关键词信号：自动化 / Coding Agent、RAG / Memory。 相关度中等，可快速浏览。",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "30.areas/agent-knowledge-ops/06.memory/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Memory",
+    "task": "- 原文摘要：<p>Schottky barriers at Si/metal interfaces; agentic HLS; probabilistic memory for edge; agentic HW design automation as repository-level code evolution; HW fingerprinting for photonic ICs; functional safety; open",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
+    "output": "30.areas/agent-knowledge-ops/06.memory/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -362,26 +362,14 @@
   {
     "status": "todo",
     "priority": "P3",
-    "category": "安全预检",
-    "task": "- 中文导读：建议提取问题定义、方法、实验指标和可复用模型结构。 关键词信号：评测 / 安全。 相关度较高，建议优先阅读。",
-    "recommended_executor": "人工确认 + Codex",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
     "category": "知识整理",
-    "task": "# AI / Agent 每日情报简报 - 2026-07-09",
+    "task": "# AI / Agent 每日情报简报 - 2026-07-12",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -390,58 +378,34 @@
     "task": "### [A review of the applications of multi-agent reinforcement learning in smart factories.](https://doi.org/10.3389/frobt.2022.1027340)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Agent-Exploitation Affordances: From Basic to Complex Representation Patterns](https://arxiv.org/abs/2607.07475v1)",
+    "task": "### [The Architecture Decisions Behind A Production-Ready EDA AI Agent](https://semiengineering.com/the-architecture-decisions-behind-a-production-ready-eda-ai-agent/)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [From Atomic Actions to Standard Operating Procedures: Iterative Tool Optimization for Self-Evolving LLM Agents](https://arxiv.org/abs/2607.07321v1)",
+    "task": "### [allcolor/PawFlow-Agents](https://github.com/allcolor/PawFlow-Agents)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [Physics-Audited Agentic Discovery in Scientific Machine Learning](https://arxiv.org/abs/2607.07379v1)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [Show HN: microide, a 100% vibecoded IDE that LLM agents can drive](https://pablojimenezmateo.github.io/microide/)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -450,10 +414,46 @@
     "task": "### [johannalberts/supply-chain-research-agent](https://github.com/johannalberts/supply-chain-research-agent)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理",
+    "task": "### [💬 Tech Community AI Digest 2026-07-04](https://github.com/kakapez/agents-radar/issues/628)",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理",
+    "task": "### [📈 AI Open Source Trends 2026-07-12](https://github.com/kakapez/agents-radar/issues/735)",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理",
+    "task": "- 中文导读：关注它是否提供 Agent 编排、状态管理、工具调用和生产化部署能力。 相关度较高，建议优先阅读。",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -462,82 +462,118 @@
     "task": "- 分类：Agent 框架",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "- 原文摘要：I want to be very upfront: this IDE's code is 100% generated by LLMs supervised by me, I am not hiding this fact. This submission was written by a human. microide's focus is performance and privacy, I was very tir",
+    "task": "- 原文摘要：# AI Open Source Trends 2026-07-12 > Sources: GitHub Trending + GitHub Search API ｜ Generated: 2026-07-11 22:48 UTC --- # AI Open Source Trends Report (2026-07-12) --- ## 1. Today's Highlights The 2026-07-12 GitHu",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "- 原文摘要：In agentic scientific machine learning (SciML), large language model (LLM) agents can discover surrogate models and select one by an automated score, typically an error metric. A low error, however, does not estab",
+    "task": "- 原文摘要：# Tech Community AI Digest 2026-07-04 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (14 stories) ｜ Generated: 2026-07-03 23:04 UTC --- # Dev.to + Lobste.rs AI Community Diges",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "- 原文摘要：Large language models (LLMs) demonstrate remarkable reasoning capabilities, yet their stateless architecture fundamentally limits deployment in long-horizon research workflows requiring multi-session continuity an",
+    "task": "- 原文摘要：## Problem Ralph intentionally starts each iteration in a fresh agent context. That is one of its biggest strengths: it avoids context rot, keeps work bounded, and makes long-running implementation more reliable t",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "- 原文摘要：Tool utilization enables Large Language Model (LLM) agents to interact with the real world and resolve complex tasks. However, existing agent frameworks predominantly rely on static toolsets composed of granular a",
+    "task": "- 原文摘要：<p>As AI infrastructure fragments into specialized tiers, CPUs are becoming the orchestration layer for agentic workloads.</p> <p>The post <a href=\"https://semiengineering.com/from-host-node-to-heterogeneous-rack-",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "- 来源：Hacker News - LLM agent",
+    "task": "- 原文摘要：<p>Building an AI agent that works in semiconductor and PCB design requires solving problems that generic agentic frameworks were never designed to handle. </p> <p>The post <a href=\"https://semiengineering.com/the",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "- 来源：arXiv cs.AI agent search",
+    "task": "- 原文摘要：CrewAI is a framework for orchestrating role-playing autonomous AI agents that collaborate on complex tasks.",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理",
+    "task": "- 原文摘要：PawFlow (Platform for Agentic Workflows) Self-hosted agent runtime for real infrastructure. Run durable AI agents against your own files, tools, browsers, desktops, services, and workflows with relay-backed execut",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理",
+    "task": "- 来源：GitHub repositories - AI agents recently updated",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P3",
+    "category": "知识整理",
+    "task": "- 来源：GitHub repositories - agent frameworks",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -546,10 +582,10 @@
     "task": "tags: [AI, Agent, 智能体, 情报简报]",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -558,10 +594,10 @@
     "task": "type: ai-agent-intel",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-09.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -570,10 +606,10 @@
     "task": "优先阅读相关度高且分类为“派工规则 / WIP / AMHS / MES / AI 调度”的条目",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -582,10 +618,10 @@
     "task": "对明显无关的条目记录噪声来源，并更新关键词 / 来源配置",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -594,10 +630,10 @@
     "task": "对涉及公司内部派工逻辑的启发，单独沉淀到内部专题笔记",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   },
   {
     "status": "todo",
@@ -606,9 +642,9 @@
     "task": "将高价值条目移动到专题笔记或建立 wiki-link",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md"
   }
 ]

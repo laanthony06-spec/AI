@@ -1,87 +1,82 @@
 [
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/1.jpg",
-    "size": 318258
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/PPT.jpg",
+    "size": 327103
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/2.jpg",
-    "size": 376360
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase1.jpg",
+    "size": 308655
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/3.jpg",
-    "size": 400809
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase2.jpg",
+    "size": 464507
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/4.jpg",
-    "size": 375383
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档1.jpg",
+    "size": 447215
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/5.jpg",
-    "size": 372808
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档2.jpg",
+    "size": 356206
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/6.jpg",
-    "size": 384837
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档3.jpg",
+    "size": 376113
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/7.jpg",
-    "size": 348292
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档4.jpg",
+    "size": 441458
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/8.jpg",
-    "size": 408379
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单1.jpg",
+    "size": 369678
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/LithoAutoPirun优化/9.jpg",
-    "size": 823820
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单2.jpg",
+    "size": 384173
   },
   {
     "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.docx",
-    "size": 43050
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单3.jpg",
+    "size": 410465
   },
   {
     "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.md",
-    "size": 9465
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单4.jpg",
+    "size": 395345
   },
   {
     "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.docx",
-    "size": 132111
+    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单5.jpg",
+    "size": 386433
   },
   {
     "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md",
-    "size": 11418
+    "path": "30.areas/ai-agent-intel/inbox/2026-07-10.md",
+    "size": 13397
   },
   {
     "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/litho_physical_split_v02.docx",
-    "size": 43050
+    "path": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
+    "size": 77899
   },
   {
     "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/render_LithoAutoSplitPirun_v0.2_manual/test.docx",
-    "size": 36580
+    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-10.md",
+    "size": 3750
   },
   {
     "event": "created",
-    "path": "30.areas/ai-agent-intel/inbox/2026-07-09.md",
-    "size": 64075
-  },
-  {
-    "event": "created",
-    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-09.md",
-    "size": 17248
+    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
+    "size": 26568
   }
 ]
