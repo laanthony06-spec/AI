@@ -1,82 +1,12 @@
 [
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/PPT.jpg",
-    "size": 327103
+    "path": "30.areas/ai-agent-intel/inbox/2026-07-16.md",
+    "size": 100575
   },
   {
     "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase1.jpg",
-    "size": 308655
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/Testcase2.jpg",
-    "size": 464507
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档1.jpg",
-    "size": 447215
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档2.jpg",
-    "size": 356206
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档3.jpg",
-    "size": 376113
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/技术文档4.jpg",
-    "size": 441458
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单1.jpg",
-    "size": 369678
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单2.jpg",
-    "size": 384173
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单3.jpg",
-    "size": 410465
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单4.jpg",
-    "size": 395345
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/10.sources/images/CMPAutoPirun/需求单5.jpg",
-    "size": 386433
-  },
-  {
-    "event": "created",
-    "path": "30.areas/ai-agent-intel/inbox/2026-07-10.md",
-    "size": 13397
-  },
-  {
-    "event": "created",
-    "path": "30.areas/ai-agent-intel/inbox/2026-07-12.md",
-    "size": 77899
-  },
-  {
-    "event": "created",
-    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-10.md",
-    "size": 3750
-  },
-  {
-    "event": "created",
-    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md",
-    "size": 26568
+    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-16.md",
+    "size": 27914
   }
 ]
