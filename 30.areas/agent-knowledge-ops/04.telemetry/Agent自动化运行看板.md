@@ -1,6 +1,6 @@
 ---
 type: agent-telemetry-dashboard
-updated: 2026-07-16T22:17:36
+updated: 2026-07-22T19:57:41
 tags: [Agent, Telemetry, 自动化看板]
 ---
 
@@ -20,8 +20,8 @@ tags: [Agent, Telemetry, 自动化看板]
 
 | 目录 | 文件数 | 最新文件 |
 |---|---:|---|
-| `30.areas/ai-agent-intel/inbox` | 5 | [[30.areas/ai-agent-intel/inbox/2026-07-12.md]] |
-| `30.areas/semiconductor-dispatch-intel/inbox` | 6 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-14.md]] |
+| `30.areas/ai-agent-intel/inbox` | 6 | [[30.areas/ai-agent-intel/inbox/2026-07-16.md]] |
+| `30.areas/semiconductor-dispatch-intel/inbox` | 7 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-16.md]] |
 | `00.raw-materials/90.processed/weekly-knowledge-distill` | 2 | [[00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md]] |
 | `00.raw-materials/90.processed/dispatch-requirements-notes` | 10 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md]] |
 | `30.areas/agent-knowledge-ops/01.task-queue` | 2 | [[30.areas/agent-knowledge-ops/01.task-queue/Agent任务队列.md]] |
@@ -41,7 +41,7 @@ tags: [Agent, Telemetry, 自动化看板]
 | [[00.raw-materials/99.system/cache/weekly_knowledge_distill.log]] | 2001 | 0 |
 | [[00.raw-materials/99.system/cache/weekly_knowledge_distill_task.log]] | 314 | 0 |
 | [[30.areas/ai-agent-intel/cache/last_run.log]] | 112 | 0 |
-| [[30.areas/ai-agent-intel/cache/last_run_task.log]] | 720 | 0 |
+| [[30.areas/ai-agent-intel/cache/last_run_task.log]] | 424 | 0 |
 | [[30.areas/semiconductor-dispatch-intel/cache/last_run.log]] | 1458 | 0 |
 
 ## 建议

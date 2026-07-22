@@ -1,6 +1,6 @@
 ---
 type: agent-task-queue
-updated: 2026-07-21T20:05:04
+updated: 2026-07-22T19:57:27
 tags: [Agent, Dispatch, 任务队列, 自动化]
 ---
 
@@ -31,8 +31,6 @@ tags: [Agent, Dispatch, 任务队列, 自动化]
 | todo | P1 | MCP / 工具接口 | - 原文摘要：Modular, agentic framework and MCP platform you self-host. Build and run your own AI agents, connect Claude/ChatGPT/Cursor as a native MCP connector, self-host your apps, and share over encrypted P2P — on hardware | Codex（先本地只读） | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/05.mcp-server/` | 人工确认后执行 |
 | todo | P1 | MCP / 工具接口 | - 本简报聚焦 AI Agent、LLM Agent、多智能体、工具调用、MCP、Coding Agent、RAG / Memory、评测与安全。 | Codex（先本地只读） | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/05.mcp-server/` | 人工确认后执行 |
 | todo | P1 | MCP / 工具接口 | - 来源：GitHub issues - MCP agents | Codex（先本地只读） | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/05.mcp-server/` | 人工确认后执行 |
-| todo | P2 | Hooks | 处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-16.md | Codex | created | [[30.areas/ai-agent-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
-| todo | P2 | Hooks | 处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-16.md | Codex | created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
 | todo | P2 | Memory | ### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | Memory | ### [New Nonvolatile Memory Winners Emerge](https://semiengineering.com/new-nonvolatile-memory-winners-emerge/) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | Memory | ### [[Proposal Update] Speculative Routing Predictor (SRP) v2.0: Full Production Engineering Blueprints for MoE Memory Bottleneck Mitigation](https://github.com/deepseek-ai/DeepSeek-V3/issues/1492) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-16.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |

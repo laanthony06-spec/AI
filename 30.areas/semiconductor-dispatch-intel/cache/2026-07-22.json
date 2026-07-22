@@ -1,0 +1,546 @@
+[
+  {
+    "source": "GitHub issues - wafer fab scheduling",
+    "platform": "GitHub",
+    "title": "[Phase 403] Global Semiconductor Manufacturing Intelligence Platform",
+    "url": "https://github.com/SAPTARSHI-coder/EaseMotion-css/issues/24173",
+    "published": "2026-06-27T07:08:20Z",
+    "summary": "## Overview\n\nPhase 403: Global Semiconductor Manufacturing Intelligence Platform - Cleanroom manufacturing intelligence platform monitoring fabrication lines, yields, and production quality for semiconductor facilities.\n\n## What We Are Building\n\nA comprehensive platform providing real-time monitoring of semiconductor fabrication operations including wafer yield tracking, equipment health monitoring, defect detection, and production scheduling.\n\n## Dashboard Sections\n\n### Hero Section\n- Fab Yield percentage display\n- Running Production Lines counter\n- Wafer Output tracker\n- Equipment Health indicator\n\n### Main Dashboard Sections\n1. Fabrication Overview with yield tracking\n2. Wafer Production with lot tracking\n3. Cleanroom Monitoring with environmental controls\n4. Equipment Health with predi",
+    "tags": [
+      "github",
+      "issue"
+    ],
+    "category": "MES",
+    "score": 8,
+    "id": "7b27909a3732f244"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "kbd0011/fabflow",
+    "url": "https://github.com/kbd0011/fabflow",
+    "published": "2026-05-29T22:09:46Z",
+    "summary": "SimPy wafer-fab digital twin with DuckDB analytics and a replicated pre/post improvement study",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 4,
+    "id": "0bee5dc1187e3262"
+  },
+  {
+    "source": "Google Patents - wafer fab dispatching",
+    "platform": "Patent",
+    "title": "Google Patents - wafer fab dispatching",
+    "url": "https://patents.google.com/?q=%22wafer+fab%22+dispatching",
+    "published": "2026-07-22",
+    "summary": "手动查看晶圆厂派工相关专利新结果。",
+    "tags": [
+      "patent"
+    ],
+    "category": "派工规则",
+    "score": 3,
+    "id": "f66a70ec025c74c4"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "Sa3doun13/Scheduling-with-optimizing-setup-and-batching",
+    "url": "https://github.com/Sa3doun13/Scheduling-with-optimizing-setup-and-batching",
+    "published": "2025-11-21T05:27:20Z",
+    "summary": "It contains a logical model that schedules a Semiconductor scheduling problem with makespan as the main optimization criterion and (setup and batching) as a second optimization criteria",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "AI 调度",
+    "score": 3,
+    "id": "f94c92ca74473d69"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Bringing Design Data Management into the Developer Workflow",
+    "url": "https://semiengineering.com/bringing-design-data-management-into-the-developer-workflow/",
+    "published": "Wed, 22 Jul 2026 07:01:40 +0000",
+    "summary": "<p>Bridging the gap between modern development environments and enterprise EDA data management. </p> <p>The post <a href=\"https://semiengineering.com/bringing-design-data-management-into-the-developer-workflow/\">Bringing Design Data Management into the Developer Workflow</a> appeared first on <a href=\"https://semiengineering.com\">Semiconductor Engineering</a>.</p>",
+    "tags": [
+      "industry"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "f377fe1c8ab47693"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Blog Review: July 22",
+    "url": "https://semiengineering.com/blog-review-july-22-3/",
+    "published": "Wed, 22 Jul 2026 07:01:38 +0000",
+    "summary": "<p>Securing physical AI; agents need feedback; 3D-IC security; chiplet interoperability; RF digital twins.</p> <p>The post <a href=\"https://semiengineering.com/blog-review-july-22-3/\">Blog Review: July 22</a> appeared first on <a href=\"https://semiengineering.com\">Semiconductor Engineering</a>.</p>",
+    "tags": [
+      "industry"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "e2f3ffb4de69d813"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Enabling Comprehensive CWE-based Assurance for RISC-V Processors",
+    "url": "https://semiengineering.com/enabling-comprehensive-cwe-based-assurance-for-risc-v-processors/",
+    "published": "Wed, 22 Jul 2026 07:01:35 +0000",
+    "summary": "<p>A scalable, Common Weakness Enumeration (CWE)–based security assurance methodology for third-party RISC-V processor IP.</p> <p>The post <a href=\"https://semiengineering.com/enabling-comprehensive-cwe-based-assurance-for-risc-v-processors/\">Enabling Comprehensive CWE-based Assurance for RISC-V Processors</a> appeared first on <a href=\"https://semiengineering.com\">Semiconductor Engineering</a>.</p>",
+    "tags": [
+      "industry"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "e617ea4e38859ae3"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "From Highways To Health Care: Portability Proves Key To Physical AI",
+    "url": "https://semiengineering.com/from-highways-to-health-care-portability-proves-key-to-physical-ai/",
+    "published": "Wed, 22 Jul 2026 07:01:26 +0000",
+    "summary": "<p>Success at the edge takes advantage of common threads — lithography, imaging, chiplets, and AI.  </p> <p>The post <a href=\"https://semiengineering.com/from-highways-to-health-care-portability-proves-key-to-physical-ai/\">From Highways To Health Care: Portability Proves Key To Physical AI</a> appeared first on <a href=\"https://semiengineering.com\">Semiconductor Engineering</a>.</p>",
+    "tags": [
+      "industry"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "ad6fb2b146db98fa"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Silicon Starts with Proven IP: eBook",
+    "url": "https://semiengineering.com/silicon-starts-with-proven-ip/",
+    "published": "Wed, 22 Jul 2026 07:01:10 +0000",
+    "summary": "<p>Why IP strategy is now an architectural decision and how silicon-proven IP reduces integration risk, improves first-pass success, and accelerates time-to-market.  </p> <p>The post <a href=\"https://semiengineering.com/silicon-starts-with-proven-ip/\">Silicon Starts with Proven IP: eBook</a> appeared first on <a href=\"https://semiengineering.com\">Semiconductor Engineering</a>.</p>",
+    "tags": [
+      "industry"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "57c5d3a6d1016c09"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "HW-based Methods to Dynamically Throttle AI Performance (Princeton University)",
+    "url": "https://semiengineering.com/hw-based-methods-to-dynamically-throttle-ai-performance-princeton-university/",
+    "published": "Tue, 21 Jul 2026 18:41:34 +0000",
+    "summary": "<p>Researchers from Princeton University published a technical paper titled “Hardware Mechanisms to Dynamically Throttle AI Performance.” Abstract Excerpt: “In this paper, we introduce a set of microarchitecture knobs which dynamically control the available hardware resources to limit AI performance at runtime. We evaluate candidate knobs spanning the GPU memory subsystem, across capacity, bandwidth, latency and... <a class=\"read_more\" href=\"https://semiengineering.com/hw-based-methods-to-dynamically-throttle-ai-performance-princeton-university/\">&#187; read more</a></p> <p>The post <a href=\"https://semiengineering.com/hw-based-methods-to-dynamically-throttle-ai-performance-princeton-university/\">HW-based Methods to Dynamically Throttle AI Performance (Princeton University)</a> appeared fi",
+    "tags": [
+      "industry"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "8571c6e6888fcdad"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Monolithic 3D-DRAM with Oxide-Semiconductor Architecture (imec, KU Leuven, Samsung, Lam)",
+    "url": "https://semiengineering.com/monolithic-3d-dram-with-oxide-semiconductor-architecture-imec-ku-leuven-samsung-lam/",
+    "published": "Tue, 21 Jul 2026 18:31:31 +0000",
+    "summary": "<p>Researchers from imec, KU Leuven, Samsung Electronics, and Lam Research published a technical paper titled “Optimization of 3D-DRAM Architecture with Oxide-Semiconductor Channel through Process and Device Simulation.” Abstract Excerpt: “We investigate a monolithically stackable OSC-based 3D-DRAM cell using an integrated framework combining process emulation, TCAD device simulation, parasitic extraction, and analytical modeling.” Find the technical... <a class=\"read_more\" href=\"https://semiengineering.com/monolithic-3d-dram-with-oxide-semiconductor-architecture-imec-ku-leuven-samsung-lam/\">&#187; read more</a></p> <p>The post <a href=\"https://semiengineering.com/monolithic-3d-dram-with-oxide-semiconductor-architecture-imec-ku-leuven-samsung-lam/\">Monolithic 3D-DRAM with Oxide-Semiconduct",
+    "tags": [
+      "industry"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "973581b30ba441aa"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Chip Industry Technical Paper Roundup: July 21",
+    "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-july-21/",
+    "published": "Tue, 21 Jul 2026 07:01:42 +0000",
+    "summary": "<p>Near-memory HBM for LLM inference; processing-in-memory for 3D DRAM; SDV hardware abstraction; 3nm GAAFET SRAM self-heating and rad-hard; monolithic CMOS-photonic integration; quantum photonic chips; AI-driven thermal modeling for 3D photonic circuits.</p> <p>The post <a href=\"https://semiengineering.com/chip-industry-technical-paper-roundup-july-21/\">Chip Industry Technical Paper Roundup: July 21</a> appeared first on <a href=\"https://semiengineering.com\">Semiconductor Engineering</a>.</p>",
+    "tags": [
+      "industry"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "7e533d57b9316e52"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Research Bits: July 21",
+    "url": "https://semiengineering.com/research-bits-july-21/",
+    "published": "Tue, 21 Jul 2026 07:01:14 +0000",
+    "summary": "<p>Thin TMD transistors; diamond defect detection; roll-to-roll litho.</p> <p>The post <a href=\"https://semiengineering.com/research-bits-july-21/\">Research Bits: July 21</a> appeared first on <a href=\"https://semiengineering.com\">Semiconductor Engineering</a>.</p>",
+    "tags": [
+      "industry"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "62690e634f743bf1"
+  },
+  {
+    "source": "Semiconductor Engineering",
+    "platform": "RSS",
+    "title": "Graph Transformer Speeds IC Interconnect Signal Integrity Analysis (Buffalo, Stuttgart, IBM)",
+    "url": "https://semiengineering.com/graph-transformer-speeds-ic-interconnect-signal-integrity-analysis-buffalo-stuttgart-ibm/",
+    "published": "Mon, 20 Jul 2026 18:30:40 +0000",
+    "summary": "<p>Researchers at the University at Buffalo, University of Stuttgart, and IBM Research published &#8220;SI-GT: Fast Interconnect Signal Integrity Analysis For Integrated Circuit Design Via Graph Transformers.&#8221; Abstract Excerpt: “In this paper, we propose Si-GT, a novel transformer-based model for fast and accurate signal integrity analysis in IC interconnects.” Find the technical paper here. April 2026.... <a class=\"read_more\" href=\"https://semiengineering.com/graph-transformer-speeds-ic-interconnect-signal-integrity-analysis-buffalo-stuttgart-ibm/\">&#187; read more</a></p> <p>The post <a href=\"https://semiengineering.com/graph-transformer-speeds-ic-interconnect-signal-integrity-analysis-buffalo-stuttgart-ibm/\">Graph Transformer Speeds IC Interconnect Signal Integrity Analysis (Buffa",
+    "tags": [
+      "industry"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "f3760e544c9d07e6"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "Lightiam/Fab07",
+    "url": "https://github.com/Lightiam/Fab07",
+    "published": "2026-07-17T17:03:12Z",
+    "summary": "ASIC-NCE ",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 0,
+    "id": "e8450ea4f2369c14"
+  },
+  {
+    "source": "GitHub issues - wafer fab scheduling",
+    "platform": "GitHub",
+    "title": "[Proposal Update] Speculative Routing Predictor (SRP) v2.0: Full Production Engineering Blueprints for MoE Memory Bottleneck Mitigation",
+    "url": "https://github.com/deepseek-ai/DeepSeek-V3/issues/1492",
+    "published": "2026-07-14T13:08:45Z",
+    "summary": "\n**📌 Context & Reference**\n\nThis proposal serves as the comprehensive, production-grade engineering continuation of our initial architectural design discussed in **Issue #1484**. After extensive cycles of hardware-software co-design and architectural auditing, the **Amoeba Protocol** team has frozen and validated the conceptual specifications for the **Speculative Routing Predictor (SRP)**.\n\nWhat follows is the complete technical breakdown, ready for review by Deepseek team.\n\n\n## 1. Executive Summary\n\nMixture-of-Experts (MoE) architectures (e.g., DeepSeek-V3/V4) have dramatically optimized algorithmic efficiency. However, their physical deployment remains severely bound by the **memory wall**—specifically, the dynamic, low-latency loading of un-cached expert weights from High Bandwidth Mem",
+    "tags": [
+      "github",
+      "issue"
+    ],
+    "category": "WIP",
+    "score": 0,
+    "id": "5c113ed6999cf97a"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "leonlaiyc/manufacturing-ops-analytics",
+    "url": "https://github.com/leonlaiyc/manufacturing-ops-analytics",
+    "published": "2026-07-13T15:01:42Z",
+    "summary": "Transparent, reproducible wafer-fab operations analytics: a hand-built synthetic DES validated against known ground truth, used for process mining, bottleneck proof, KPI and equipment monitoring, and CRN-paired what-if decision support.",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 0,
+    "id": "fd9da51a3d4030e4"
+  },
+  {
+    "source": "GitHub issues - wafer fab scheduling",
+    "platform": "GitHub",
+    "title": "[Phase 421] Global Semiconductor Supply Chain Intelligence Platform",
+    "url": "https://github.com/SAPTARSHI-coder/EaseMotion-css/issues/24215",
+    "published": "2026-06-28T18:54:03Z",
+    "summary": "## Overview\nPhase 421: Global Semiconductor Supply Chain Intelligence Platform - Mission-critical semiconductor supply chain dashboard for monitoring chip fabrication, supplier ecosystems, logistics, production capacity, inventory, and geopolitical manufacturing risks.\n## What We Build\nDevelop a comprehensive semiconductor supply chain platform that provides real-time visibility into wafer production, fab utilization, supplier dependencies, and logistics intelligence.\n## Dashboard Sections\n### Hero Section\n- Global Fab Capacity percentage\n- Wafer Production volume tracking\n- Supplier Health index rating\n- Supply Chain Risk level\n### Main Dashboard (16 sections)\n1. Global Fab Network monitoring\n2. Supplier Intelligence tracking\n3. Wafer Production metrics\n4. Equipment Availability status\n5.",
+    "tags": [
+      "github",
+      "issue"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "fd11deba0a853ca0"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "VENTABLACK10/Distribution-Aware-Cycle-Time-Prediction-in-Semiconductor-Wafer-Fabrication",
+    "url": "https://github.com/VENTABLACK10/Distribution-Aware-Cycle-Time-Prediction-in-Semiconductor-Wafer-Fabrication",
+    "published": "2026-06-18T08:53:33Z",
+    "summary": "Research code for quantile-based cycle time distribution prediction in semiconductor wafer fabrication using Attention and HGT.",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 0,
+    "id": "98f5d9f656f7cac1"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "liyicheng101/Semiconductor-Scheduling-Algorithm",
+    "url": "https://github.com/liyicheng101/Semiconductor-Scheduling-Algorithm",
+    "published": "2026-06-15T11:49:42Z",
+    "summary": "半导体晶圆流水车间调度算法与甘特图可视化",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "82048b90bc588700"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "PO-LAB/Operations-Research-Applications",
+    "url": "https://github.com/PO-LAB/Operations-Research-Applications",
+    "published": "2026-05-30T18:33:23Z",
+    "summary": "",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "4683abedd9f1fa82"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "sangyeop-kim/gy",
+    "url": "https://github.com/sangyeop-kim/gy",
+    "published": "2026-05-29T11:30:09Z",
+    "summary": "",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 0,
+    "id": "6d294ce785c5b8b1"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "asddzxcc1856/LIMS",
+    "url": "https://github.com/asddzxcc1856/LIMS",
+    "published": "2026-05-26T09:29:26Z",
+    "summary": "Final Project",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 0,
+    "id": "39e4a074d9e195b5"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "jeonghuh/semiconductor-scheduling-RL-GP",
+    "url": "https://github.com/jeonghuh/semiconductor-scheduling-RL-GP",
+    "published": "2026-05-21T13:44:27Z",
+    "summary": "유전프로그래밍과 강화학습을 결합한 반도체 공정 시스템의 스케쥴링 최적화 알고리즘입니다.",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "7361ffc80a4edc2e"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "yuxinyongMath16/ml-cop-survey-resources",
+    "url": "https://github.com/yuxinyongMath16/ml-cop-survey-resources",
+    "published": "2026-05-18T02:55:20Z",
+    "summary": "A curated collection of references and comparative tables for the survey on Machine Learning for Combinatorial Optimization Problems",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "474ec80852bb9329"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "jk-choi-yonsei/Semiconductor_Scheduling",
+    "url": "https://github.com/jk-choi-yonsei/Semiconductor_Scheduling",
+    "published": "2026-03-09T06:31:00Z",
+    "summary": "",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "146453c6d87df1f2"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "jfboy-codex/RL4jssp",
+    "url": "https://github.com/jfboy-codex/RL4jssp",
+    "published": "2026-02-15T08:47:50Z",
+    "summary": "",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "0be468d2aedefe0f"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "johannalberts/supply-chain-research-agent",
+    "url": "https://github.com/johannalberts/supply-chain-research-agent",
+    "published": "2025-12-29T23:03:35Z",
+    "summary": "",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "f8530b3ba5fec7f1"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "karthik1915/test_reports",
+    "url": "https://github.com/karthik1915/test_reports",
+    "published": "2025-07-26T04:27:15Z",
+    "summary": "Repo for testing Reports that generated from GH Actions",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "1b11714bdfc98fa3"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "Santosh3672/Packaging-Fundamentals-of-Design---Testing",
+    "url": "https://github.com/Santosh3672/Packaging-Fundamentals-of-Design---Testing",
+    "published": "2025-06-28T12:51:02Z",
+    "summary": "VSD Workshop on Packaging fundamentals on design and testing with labs based on Ansys 20-29June 2025",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 0,
+    "id": "de2156b114d4751d"
+  },
+  {
+    "source": "GitHub repositories - wafer fab dispatching",
+    "platform": "GitHub",
+    "title": "seshasai499/Automod_Project",
+    "url": "https://github.com/seshasai499/Automod_Project",
+    "published": "2025-01-16T03:03:31Z",
+    "summary": "These are the projects from ISE-5264 Semiconductor Manufacturing which mainly focus on the learning of the basics of applying a simulation modelling technique to a real world semiconductor manufacturing Process.",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "派工规则",
+    "score": 0,
+    "id": "cf967a81f1642711"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "Ranking routes in semiconductor wafer fabs.",
+    "url": "https://doi.org/10.1038/s41598-023-39187-2",
+    "published": "2023-08-15",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "a442acbbab48f2f6"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "liyongchao911/chipmos-APS",
+    "url": "https://github.com/liyongchao911/chipmos-APS",
+    "published": "2023-01-08T09:10:00Z",
+    "summary": "A software is used to solve semiconductor scheduling problem in ChipMOS Co.",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "ba7ce0a0bcf52d31"
+  },
+  {
+    "source": "GitHub repositories - semiconductor scheduling",
+    "platform": "GitHub",
+    "title": "prosysscience/Semiconductor_scheduling_multi-shot",
+    "url": "https://github.com/prosysscience/Semiconductor_scheduling_multi-shot",
+    "published": "2023-01-08T08:50:24Z",
+    "summary": "",
+    "tags": [
+      "github",
+      "repo"
+    ],
+    "category": "未分类",
+    "score": 0,
+    "id": "afbe6d8afb072d4f"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "A review of the applications of multi-agent reinforcement learning in smart factories.",
+    "url": "https://doi.org/10.3389/frobt.2022.1027340",
+    "published": "2022-12-01",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "b1ea6a7993396583"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "A Survey on AI-Driven Digital Twins in Industry 4.0: Smart Manufacturing and Advanced Robotics.",
+    "url": "https://doi.org/10.3390/s21196340",
+    "published": "2021-09-23",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "AI 调度",
+    "score": 0,
+    "id": "8ff265b48ddf18bf"
+  },
+  {
+    "source": "Europe PMC - semiconductor manufacturing scheduling",
+    "platform": "Paper",
+    "title": "Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.",
+    "url": "https://doi.org/10.1155/2019/8729367",
+    "published": "2019-01-02",
+    "summary": "",
+    "tags": [
+      "paper",
+      "europe-pmc"
+    ],
+    "category": "论文",
+    "score": 0,
+    "id": "e3c1ad5c45951c6e"
+  }
+]
