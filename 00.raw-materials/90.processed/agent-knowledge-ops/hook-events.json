@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "event": "created",
+    "path": "30.areas/ai-agent-intel/inbox/2026-07-22.md",
+    "size": 99985
+  },
+  {
+    "event": "created",
+    "path": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md",
+    "size": 28730
+  }
+]
