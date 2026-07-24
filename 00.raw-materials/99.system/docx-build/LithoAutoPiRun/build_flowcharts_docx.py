@@ -8,7 +8,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Inches, Pt
 
 from build_requirement_docx import (
-    BLUE,
+    BLACK,
     MUTED,
     add_field,
     add_figure,
@@ -16,6 +16,7 @@ from build_requirement_docx import (
     setup_page,
     setup_styles,
 )
+from make_bw_flowcharts import make_flowcharts
 
 
 ROOT = Path(r"D:\Obsidian\work\OBSidianCodex")
@@ -34,28 +35,28 @@ FLOWCHARTS = [
         "01-rtd-selection.png",
         "流程图 1：RTD 候选筛选与 Pilot 选择",
         "展示 Lot 获取、基础条件过滤、候选排序与 Pilot 选定的完整判断链路。",
-        5.55,
+        6.15,
     ),
     (
         "02_Pilot整批与物理分批判断流程.png",
         "02-pilot-split.png",
         "流程图 2：Pilot 整批与物理分批判断",
         "展示整批条件、分批数量配置校验、Wafer 排序、FOUP 预留及失败回退逻辑。",
-        5.60,
+        6.15,
     ),
     (
         "03_WaitPilotChangeFOUP卡控流程.png",
         "03-wait-pilot-control.png",
         "流程图 3：WaitPilotChangeFOUP 卡控",
         "展示 Litho、BARCO 与其他站点在不同 Queue Time 状态下的卡控差异。",
-        5.70,
+        6.15,
     ),
     (
         "04_AMA物理分批与回退流程.png",
         "04-ama-split.png",
         "流程图 4：AMA 物理分批与回退",
         "展示分批前置校验、Transfer FOUP、物理分批执行与异常回退处理。",
-        5.60,
+        6.15,
     ),
 ]
 
@@ -67,18 +68,18 @@ def setup_header_footer(section):
     p.paragraph_format.space_after = Pt(0)
     p.paragraph_format.tab_stops.add_tab_stop(Inches(6.5))
     r = p.add_run("LithoAutoPiRun 复杂逻辑流程图")
-    set_run_font(r, size=8.5, color=MUTED, bold=True)
+    set_run_font(r, size=8.5, color=BLACK, bold=True)
     r = p.add_run("\t独立交付版 | 2026-07-24")
-    set_run_font(r, size=8.5, color=MUTED)
+    set_run_font(r, size=8.5, color=BLACK)
 
     footer = section.footer
     p = footer.paragraphs[0]
     p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
     r = p.add_run("第 ")
-    set_run_font(r, size=9, color=MUTED)
+    set_run_font(r, size=9, color=BLACK)
     add_field(p, "PAGE", "1")
     r = p.add_run(" 页")
-    set_run_font(r, size=9, color=MUTED)
+    set_run_font(r, size=9, color=BLACK)
 
 
 def add_page_title(doc, title, summary):
@@ -87,16 +88,17 @@ def add_page_title(doc, title, summary):
     p.paragraph_format.space_after = Pt(3)
     p.paragraph_format.keep_with_next = True
     r = p.add_run(title)
-    set_run_font(r, size=17, color=BLUE, bold=True)
+    set_run_font(r, size=17, color=BLACK, bold=True)
 
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(3)
     p.paragraph_format.keep_with_next = True
     r = p.add_run(summary)
-    set_run_font(r, size=9.5, color=MUTED)
+    set_run_font(r, size=9.5, color=BLACK)
 
 
 def build_document():
+    make_flowcharts()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     FLOW_DIR.mkdir(parents=True, exist_ok=True)
     QA_DIR.mkdir(parents=True, exist_ok=True)
