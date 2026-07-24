@@ -182,30 +182,6 @@
   {
     "status": "todo",
     "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-22.md",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-22.md",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-22.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
-    "category": "Hooks",
-    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md",
-    "recommended_executor": "Codex",
-    "trigger": "created",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md",
-    "output": "30.areas/agent-knowledge-ops/07.hooks/",
-    "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P2",
     "category": "Memory",
     "task": "### [A Shared Common Knowledge Pool for AI Agents](https://github.com/SMJAI/open-memory-protocol/issues/1)",
     "recommended_executor": "Codex + 人工复核",
