@@ -1,6 +1,6 @@
 ---
 type: agent-task-queue
-updated: 2026-07-24T19:58:16
+updated: 2026-07-25T15:00:07
 tags: [Agent, Dispatch, 任务队列, 自动化]
 ---
 
@@ -34,6 +34,14 @@ tags: [Agent, Dispatch, 任务队列, 自动化]
 | todo | P1 | MCP / 工具接口 | - 本简报聚焦 AI Agent、LLM Agent、多智能体、工具调用、MCP、Coding Agent、RAG / Memory、评测与安全。 | Codex（先本地只读） | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-22.md]] | `30.areas/agent-knowledge-ops/05.mcp-server/` | 人工确认后执行 |
 | todo | P1 | MCP / 工具接口 | - 来源：GitHub issues - MCP agents | Codex（先本地只读） | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-22.md]] | `30.areas/agent-knowledge-ops/05.mcp-server/` | 人工确认后执行 |
 | todo | P1 | 知识整理 | - 原文摘要：<p>Securing physical AI; agents need feedback; 3D-IC security; chiplet interoperability; RF digital twins.</p> <p>The post <a href="https://semiengineering.com/blog-review-july-22-3/">Blog Review: July 22</a> appe | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md]] | `00.raw-materials/90.processed/agent-knowledge-ops/` | 人工确认后执行 |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/1.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/1.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/2.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/2.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/3.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/3.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/4.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/4.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/5.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/5.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/6.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/6.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/7.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/7.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
+| todo | P2 | Hooks | 处理 Hook 事件：created 00.raw-materials/10.sources/images/LithoAutoPiRun/8.jpg | Codex | created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/8.jpg]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
 | todo | P2 | Memory | ### [A Shared Common Knowledge Pool for AI Agents](https://github.com/SMJAI/open-memory-protocol/issues/1) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-22.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | Memory | ### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | Memory | ### [[Proposal Update] Speculative Routing Predictor (SRP) v2.0: Full Production Engineering Blueprints for MoE Memory Bottleneck Mitigation](https://github.com/deepseek-ai/DeepSeek-V3/issues/1492) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |

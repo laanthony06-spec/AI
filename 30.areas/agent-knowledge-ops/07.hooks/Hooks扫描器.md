@@ -1,6 +1,6 @@
 ---
 type: hooks-scanner
-updated: 2026-07-24T19:58:16
+updated: 2026-07-25T15:00:07
 tags: [Agent, Hooks, 自动触发]
 ---
 
@@ -22,7 +22,16 @@ tags: [Agent, Hooks, 自动触发]
 
 ## 本次扫描结果
 
-- 未发现新增、修改或删除事件。
+| 事件 | 文件 | 大小 | 建议动作 |
+|---|---|---:|---|
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/1.jpg]] | 453496 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/2.jpg]] | 356967 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/3.jpg]] | 371837 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/4.jpg]] | 320108 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/5.jpg]] | 346452 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/6.jpg]] | 344060 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/7.jpg]] | 363765 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[00.raw-materials/10.sources/images/LithoAutoPiRun/8.jpg]] | 342482 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
 
 ## 触发规则草案
 

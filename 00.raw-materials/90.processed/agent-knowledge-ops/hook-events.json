@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/1.jpg",
+    "size": 453496
+  },
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/2.jpg",
+    "size": 356967
+  },
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/3.jpg",
+    "size": 371837
+  },
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/4.jpg",
+    "size": 320108
+  },
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/5.jpg",
+    "size": 346452
+  },
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/6.jpg",
+    "size": 344060
+  },
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/7.jpg",
+    "size": 363765
+  },
+  {
+    "event": "created",
+    "path": "00.raw-materials/10.sources/images/LithoAutoPiRun/8.jpg",
+    "size": 342482
+  }
+]
