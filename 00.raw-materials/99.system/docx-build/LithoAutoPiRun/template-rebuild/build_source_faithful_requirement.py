@@ -101,12 +101,14 @@ def set_table_geometry(table, total_width_twips=10380):
         tbl_layout = OxmlElement("w:tblLayout")
         tbl_pr.append(tbl_layout)
     tbl_layout.set(qn("w:type"), "fixed")
+    column_count = len(table.columns)
     grid = table._tbl.tblGrid
     for col in list(grid):
         grid.remove(col)
-    for width in (total_width_twips // 2, total_width_twips // 2):
+    base_width = total_width_twips // column_count
+    for _ in range(column_count):
         col = OxmlElement("w:gridCol")
-        col.set(qn("w:w"), str(width))
+        col.set(qn("w:w"), str(base_width))
         grid.append(col)
     for row in table.rows:
         for cell in row.cells:
@@ -114,7 +116,7 @@ def set_table_geometry(table, total_width_twips=10380):
             if tc_w is None:
                 tc_w = OxmlElement("w:tcW")
                 cell._tc.get_or_add_tcPr().append(tc_w)
-            tc_w.set(qn("w:w"), str(total_width_twips // 2))
+            tc_w.set(qn("w:w"), str(base_width))
             tc_w.set(qn("w:type"), "dxa")
 
 
@@ -147,7 +149,7 @@ def add_cell_paragraph(cell, text="", *, bold=False, align=WD_ALIGN_PARAGRAPH.JU
     p.alignment = align
     p.paragraph_format.space_before = Pt(before)
     p.paragraph_format.space_after = Pt(after)
-    p.paragraph_format.line_spacing = 1.5
+    p.paragraph_format.line_spacing = 1.3
     if first_line:
         p.paragraph_format.first_line_indent = Pt(21)
     p.paragraph_format.keep_with_next = keep
@@ -157,7 +159,7 @@ def add_cell_paragraph(cell, text="", *, bold=False, align=WD_ALIGN_PARAGRAPH.JU
 
 
 def add_heading(cell, text, level=1):
-    before = {1: 5, 2: 4, 3: 3, 4: 2}.get(level, 2)
+    before = {1: 3, 2: 3, 3: 2, 4: 1}.get(level, 1)
     p = add_cell_paragraph(
         cell,
         text,
@@ -165,7 +167,7 @@ def add_heading(cell, text, level=1):
         align=WD_ALIGN_PARAGRAPH.LEFT,
         first_line=False,
         before=before,
-        after=2,
+        after=1,
         keep=True,
     )
     return p
@@ -184,7 +186,7 @@ def add_item(cell, text, indent_chars=2):
     return p
 
 
-def add_flowchart(cell, caption, image_name):
+def add_flowchart(cell, caption, image_name, width_inches=5.75):
     figure_table = cell.add_table(rows=1, cols=1)
     figure_table.autofit = False
     figure_table.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -212,7 +214,7 @@ def add_flowchart(cell, caption, image_name):
     p2.paragraph_format.space_after = Pt(2)
     p2.paragraph_format.line_spacing = 1.0
     run = p2.add_run()
-    run.add_picture(str(ASSET_DIR / image_name), width=Inches(5.75))
+    run.add_picture(str(ASSET_DIR / image_name), width=Inches(width_inches))
 
 
 def add_content(cell):
@@ -421,10 +423,210 @@ def add_content(cell):
     add_cell_paragraph(cell, "获取 Report：LithoPiLotAutoDoAdhocSorter 栏位信息，并按顺序调用 MES Transfer FOUP 接口，将 Pilot 导入空 FOUP。若无法取得可用空 FOUP、空 FOUP 数量为 0，或 MES Transfer FOUP 接口失败，则在 AMALog 中记录失败信息；后续继续沿用现有 Adhoc Sorter 流程。")
 
 
+def add_content_exact_replica(cell):
+    """Reproduce the source-image wording, with only confirmed Q&A changes."""
+    clear_cell(cell)
+    add_heading(cell, "需求内容（可添加附件）：", 1)
+    add_heading(cell, "■  方案逻辑：", 1)
+
+    add_heading(cell, "一、 RTD新增逻辑", 1)
+    add_cell_paragraph(cell, "1. 修改 Report： Central_GetLithoR2RAutoPirunInfo 中的 Pilot 选择逻辑；2.增加 Report：LithoPiLotAutoDoAdhocSorter；3.Rule和 Assign 中增加子母批作业同一机台逻辑")
+
+    add_heading(cell, "1.Report：Central_GetLithoR2RAutoPirunInfo部分", 1)
+    add_cell_paragraph(cell, "对选 lot 和选片逻辑进行修改。")
+
+    add_heading(cell, "1.1 Lot获取", 2)
+    add_cell_paragraph(cell, "从 FAB6 和 FAB8 两厂获取待判断 Lot，并进行初步过滤。")
+
+    add_heading(cell, "1.1.1 Lot基础信息获取", 3)
+    add_cell_paragraph(cell, "通过表fwlot获取appid、priority、processingstatus、componentqty栏位信息；")
+    add_cell_paragraph(cell, "通过表fablotext获取requiredcapability、runcardid、reticleid栏位信息；")
+    add_cell_paragraph(cell, "通过表fablotcarrierext获取carrierkind栏位信息；")
+    add_cell_paragraph(cell, "通过fabinqtimeprocess获取RemainQ栏位信息；")
+    add_cell_paragraph(cell, "从 UI.RTDConfig-LITHOLotAssignment-LithoAssignCapability 中获取 LithoCapability；BARCO Capability 固定为 L-BARCO-L、L-BARCO-S。")
+
+    add_heading(cell, "1.1.2 基础过滤条件", 3)
+    add_cell_paragraph(cell, "对拿取的 Lot 执行以下过滤：")
+    add_item(cell, "（1）基本条件过滤：筛选出满足 processingstatus = 'Active' or 'CrossFabTransferred'，carrierkind = 'FOUP'、runcardid 为空、requiredcapability In（LithoCapability，L-BARCO-L，L-BARCO-S）的 Lot。")
+    add_item(cell, "（2）跨厂信息去重：筛选出满足 IsTransferLot =True 或（IsTransferLot ≠ True 且 processingStatus ≠ 'CrossFabTransferred'）的 Lot。（IsTransferLot 指标经 istransferlot marco 判断得到）")
+
+    add_heading(cell, "1.2 获取Pirun站点并对lot进一步过滤", 2)
+    add_cell_paragraph(cell, "获取 Lot 后续站点信息并进一步判断是否符合AutoPirun条件。")
+
+    add_heading(cell, "1.2.1 PirunLoop信息获取", 3)
+    add_cell_paragraph(cell, "对通过 1.1 筛选的 Lot，向下 Fetch 20 站，获取每个站点的 productname、planname、stage、capability、stepseq、recipeid、STN 信息(Transferlot 需修正厂别)。将 Fetch 的站点截取到同 Stage 最后一道 CD 站点，Lot 当前站点到最后一道 CD 站点即为一段 PirunLoop。若 lot Fetch 站点中无 CD 站点，则过滤该 Lot。")
+
+    add_heading(cell, "1.2.2 其他过滤条件", 3)
+    add_item(cell, "（1）Litho 站点判断：判断 PirunLoop 中是否存在 capability =LithoCapability 且含有 Reticle 信息的站点。若无则过滤 Lot。")
+    add_item(cell, "（2）Specify 判断：判断 lot 是否在 r2r_litho_whitelist（匹配 productid，layer，lotid）中，若在则沿用现有 Specify Lot 处理。")
+    add_item(cell, "（3）同 Foup Pilot 判断：从表 rtd_r2r_litho_context_ovlcd 和 rtd_r2r_lot_history 获取 Litho Pilot，判断同 Foup 中是否有 Litho Pilot，若有则过滤 Lot。")
+    add_item(cell, "（4）FutureHold 判断：从表 fabfutureaction 获取 PirunLoop 中每个站点的 FutureAction 信息，判断 Loop 中是否存在 FutureHold，若有则过滤 Lot。")
+    add_item(cell, "（5）RC 判断：判断 PirunLoop 中是否存在 RC站点，若有则过滤 Lot。")
+
+    add_heading(cell, "1.3 R2R条件判断", 2)
+    add_cell_paragraph(cell, "获取lot在可作业机台的R2R 状态，并判断lot是否存在多路径。")
+
+    add_heading(cell, "1.3.1 可作业机台获取", 3)
+    add_cell_paragraph(cell, "拿取 1.2 中 Lot 的 Litho 站点，经 TransferMarco 判断后，若 Lot 在 Litho 站点能 Transfer 则同时拿取对厂 Litho 机台。")
+    add_cell_paragraph(cell, "By 机台厂别从表 rtd_r2r_litho_add_setting 中获取 Lot 在机台的 Pi_split flag 和 pi_splitcnt。若 Lot 不存在 Pi_split flag = 'Y' 的机台，则过滤 Lot。")
+    add_cell_paragraph(cell, "将剩余 lot 在 Litho 站点的机台经过 EQPStatus、LCC、Capability、Recipe、PPID、Global Reason 判断，若存在卡控则筛除对应机台。")
+
+    add_heading(cell, "1.3.2 多路径判断", 3)
+    add_cell_paragraph(cell, "By Lot+STN+Reticle 维度从表 rtd_r2r_litho_context_ovl 和 rtd_r2r_litho_context_cd 匹配 R2R 状态，并判断是否存在 R2R Reason。筛选出满足：OVL_Status In(PIRUNON，ON，Fixed)且 CD_Status In(PIRUNON，ON，Fixed)且无 R2R Reason 的 Context (By Lot+STN+Reticle)。")
+    add_cell_paragraph(cell, "By Lot 统计符合上述条件的 Context 数量，若 ContextCount>1，则认为 Lot 存在多路径，过滤该 Lot。")
+
+    add_heading(cell, "1.4 选Lot规则", 2)
+    add_cell_paragraph(cell, "By Context 为 Lot 排序并挑选最优 Lot。")
+
+    add_heading(cell, "1.4.1 AutoPirun Context筛选", 3)
+    add_cell_paragraph(cell, "获取 1.3 过滤后的 Lot 及 Context 信息，栏位包括 Lot、STN、Reticle、Prod、Layer、Recipe、Pretool、Prereticle、Custom_Context_Value、CD_Status、OVL_Status、Pilot_CD、Pilot_OVL、Pi_split_flag、pi_splitcnt。")
+    add_cell_paragraph(cell, "筛选出满足 Pi_split_flag='Y'且(Pilot_CD 为 Null 或 Pilot_OVL 为 Null)的 Context，即为需要自动 Pirun 的 Context。")
+
+    add_heading(cell, "1.4.2 Context内Lot排序", 3)
+    add_cell_paragraph(cell, "获取 lot 的排序指标")
+    add_item(cell, "（1）计算 Lot 当前站点距 Litho 站点的剩余 Step 数量，记为 GapToLitho；")
+    add_item(cell, "（2）判断 Lot 的片数是否大于等于 Pi_splitcnt（默认为4），若是则 SplitCntMatched=1，否则为0；Pi_splitcnt 为空、为0、为负数或大于25时使用默认值4；")
+    add_item(cell, "（3）若 Lot 存在 prelayer，则从表 r2r_litho_waferhistory 中获取每片 Wafer 的 Chuck 信息；否则从表 fsmaterialassociation 中获取 Wafer 的 Slot 信息。判断 Lot 是否满足包含 C1/C2（或 Slot 奇/偶）各大于等于两片，若是则 RequiredChuckCount=1，否则为0；")
+    add_item(cell, "（4）判断 Lot 是否为空扣/空 Lp Lot，若是则 BulletLot=1，否则为0；")
+    add_item(cell, "（5）若 Lot RemainQ 有值且大于0，则指标 RemainQ 为 lot 剩余 Qtime，否则为9999；")
+    add_item(cell, "（6）若 Lot 在表 quota_applyinfo 中且 KeyLot=1 且 Status=CONFIRM，则指标 KeyLot=1，否则为0。")
+    add_cell_paragraph(cell, "按以下优先级对 Lot 排序，并记为 RTDRank：")
+    for text in ("①Min(GapToLitho)", "②Max(SplitCntMatched)", "③Max(RequiredChuckCount)", "④Max(BulletLot)", "⑤Min(RemainQ)", "⑥Min(KeyLot)", "⑦Min(lotid)"):
+        add_item(cell, text, indent_chars=3)
+
+    add_heading(cell, "1.4.2 Context 之间排序", 3)
+    add_cell_paragraph(cell, "Lot 存在多个 Pirun Context时，为实现使用同一 Reticle 的Lot尽量分配到同一机台，不同 Reticle 的 lot 均衡分配，需要对 Context 进行排序。")
+    add_cell_paragraph(cell, "Context 排序指标：")
+    add_item(cell, "（1）By Reticle+STN 给 Context 分组，获取 Reticle 当前所在机台信息 ReticleOnSTN，循环前，若 Context 的 STN=ReticleOnSTN，则 ReticleSTNRank=1；循环中，若 Context 与上轮排序第一的 Context 属于同一组，则 ReticleSTNRank=1，否则为0。")
+    add_item(cell, "（2）统计 Context 内当前可选 Lot 的数量，记作 ContextCandidateCount。")
+    add_item(cell, "（3）By STN 统计已选择 Pilot 的 Context 数量，记作 ActualSTNPilotCount。")
+    add_cell_paragraph(cell, "最终按以下优先级对 Lot +Context 排序：")
+    for text in ("① Max(ReticleSTNRank)", "② Min(ContextCandidateCount)", "③ Min(ActualSTNPilotCount)", "④ Min(RTDRank)"):
+        add_item(cell, text, indent_chars=3)
+
+    add_heading(cell, "1.4.3 Context 循环挑选 Pilot", 3)
+    add_cell_paragraph(cell, "将排序第一的 Lot+Context 固定，作为已选 Pilot 的 Context，并去除 lot/Context 与已选 Context 相同的其他 Lot+Context，在更新 ReticleSTNRank、ContextCandidateCount、ActualSTNPilotCount 指标后，进入下一轮循环，直至无可用 Context 或无可用 Lot 后，结束循环。每个 Context 最多选择一个 Pilot。")
+    add_flowchart(cell, "图1  RTD候选筛选与Pilot选择流程", "01-rtd-selection.png")
+
+    add_heading(cell, "1.5 Pilot选片逻辑", 2)
+    add_cell_paragraph(cell, "判断 Lot 是否要整批设为 Pilot，不满足的需要选片进行物理分批。")
+
+    add_heading(cell, "1.5.1 整批设为 Pilot 场景", 3)
+    for text in (
+        "（1）Lot 生效 BulletLot=1 或 KeyLot=1；",
+        "（2）Lot 的 CurCapability=LithoCapability 且 FuLL(RemainQ)；",
+        "（3）Lot 的指标 RequiredChuckCount=0；",
+        "（4）Lot 的指标 SplitCntMatched=0；",
+        "（5）Lot 的片数 componentqty<=6",
+    ):
+        add_item(cell, text)
+    add_cell_paragraph(cell, "以上五项为“或”关系，任一项成立时将整批设为 Pilot。")
+
+    add_heading(cell, "1.5.2 物理分批选片逻辑", 3)
+    add_cell_paragraph(cell, "不满足 1.5.1 场景时，Pilot 需要物理分批，Flag:IsNeedSplit 生效 T，并进行选片，规则如下：")
+
+    add_heading(cell, "1.5.2.1 Wafer 分组", 4)
+    add_cell_paragraph(cell, "将 Lot 的 Wafer 分为以下层级：")
+    add_item(cell, "（1）Group 层：按 Waferid 编号，Waferid #1-#10 的 Wafer 划入 Group1；Waferid #11-#25 的 Wafer 划入 Group2。")
+    add_item(cell, "（2）SubGroup 层：若 Lot 有 Chuck 信息，则 Chuck1（C1）的 Wafer → SubGroup1，Chuck2（C2）的 Wafer → SubGroup2；否则按 SlotMap，奇数 Slot 的 Wafer → SubGroup1，偶数 Slot 的 Wafer → SubGroup2。")
+    add_item(cell, "（3）GroupRank 赋值：Group1-SubGroup1 =1；Group1-SubGroup2 =2；Group2-SubGroup1 =3；Group2-SubGroup2 =4。")
+
+    add_heading(cell, "1.5.2.2 Wafer 排序与选择", 4)
+    add_cell_paragraph(cell, "在 Group + SubGroup 内按 waferid 排序并编号，记为 WaferRank。按以下优先级排序：① MIN(WaferRank)；② MIN(GroupRank)。")
+    add_cell_paragraph(cell, "选择规则：")
+    add_cell_paragraph(cell, "若 Context 对应的 pi_splitcnt 有值，则按排序顺序挑选 pi_splitcnt 片 Wafer 作为 pi_splitwafer；pi_splitcnt 为空、为0、为负数或大于25时，使用默认值4。若选片数大于 Lot 当前可用 Wafer 数，则不执行物理分批，改为整批 Pilot。")
+    add_cell_paragraph(cell, "将 pi_splitwafer 分批后设为 Pilot。")
+
+    add_heading(cell, "1.5.3 Merge 站点设定", 3)
+    add_cell_paragraph(cell, "若 Lot 有 ADI 站点（不包含 SRC），则 lot 需物理分批时，将第一道 ADI 设为 Merge 站点；否则将最后一道 CD 设为 Merge 站点。")
+    add_flowchart(cell, "图2  Pilot整批与物理分批判断流程", "02-pilot-split.png")
+
+    add_heading(cell, "1.6 输出 Report", 2)
+    add_cell_paragraph(cell, "以上全部计算结果存入 Report：Central_GetLithoR2RAutoPirunInfo，供 AMA 读取执行。")
+    add_cell_paragraph(cell, "Report 栏位包括：Lot、toolid、productid、layerid、reticleid、prereticle、pretool、custom_context_value、pi_splitwafer、IsNeedSplit、isSTNSite。")
+
+    add_heading(cell, "2.新增Report：LithoPiLotAutoDoAdhocSorter", 1)
+    add_cell_paragraph(cell, "获取需要 TransferFoup 的 Pilot。")
+
+    add_heading(cell, "2.1  Litho Pilot拿取", 2)
+    add_cell_paragraph(cell, "获取需要 TransferFoup 的 Litho Pilot，判断逻辑如下：")
+    add_heading(cell, "2.1.1 数据获取：", 3)
+    add_cell_paragraph(cell, "从 r2r_litho_context_ovl 获取 ovl_status、pilot 栏位信息；从 r2r_litho_context_cd 获取 cd_status、pilot 栏位信息；从 fwlot 中获取 appid、lottype、priority 栏位信息；从 fabcategorymap 中获取 lottype、category 栏位信息。")
+    add_heading(cell, "2.1.2 筛选判断：", 3)
+    add_cell_paragraph(cell, "筛选出满足 priority<5 且 category='Production' 且（ovl_status='PIRUNON' 或 cd_status='PIRUNON'）的 Pilot，即为需要 TransferFoup 的 Litho Pilot。")
+
+    add_heading(cell, "2.2 Transfer FOUP判断", 2)
+    add_cell_paragraph(cell, "拿取 2.1 中 LithoPilot 的 Carrier 信息，By Carrier 从 fwlot 中获取所有 Lot，保留 extrastatus='WaitForJobPrep' 的 Lot。")
+    add_cell_paragraph(cell, "若 LithoPilot 同 Carrier 中存在其他 Lot 时，则该 Pilot 需要 Change Foup。")
+
+    add_heading(cell, "2.3 Carrier排序规则", 2)
+    add_cell_paragraph(cell, "对于需 TransferFOUP 的 LithoPilot 进行排序，拿取 LithoPilot 的 RemainQ、Priority、componentqty 指标，并按照 Min(RemainQ)、Min(Priority)、Max(componentqty)、Min(lotid)排序，根据排序建立 AdhocSorterJob。")
+
+    add_heading(cell, "2.4输出Report", 2)
+    add_cell_paragraph(cell, "从 AMA.TriggerConfig-WatchDog_LithoPiLotAutoDoAdhocSorter 拿取 Switch、Trigger Time Slot、TriggerCount/Time 栏位信息，当 Switch='Y' 且当前时间在 Trigger Time Slot 范围内时，将前 TriggerCount/Time 个需物理分批的 Carrier 结果存入 Report:LithoPiLotAutoDoAdhocSorter 中，栏位包括：Carrier、Pilot、extrastatus、Status、RemainQ、Pieces、Prod、Priority。")
+
+    add_heading(cell, "3.Rule中新增卡控逻辑", 1)
+    add_cell_paragraph(cell, "在 Global Macro 中新增对需导 Foup LithoPilot 的卡控；在 LithoRule 中增加子母批 Run 相同机台的卡控。")
+
+    add_heading(cell, "3.1 Global Macro新增卡控逻辑", 2)
+    add_cell_paragraph(cell, "拿取 2.1 中的 LithoPilot，当 WatchDog_LithoPiLotAutoDoAdhocSorter 中的 Switch='Y' 且当前时间在 Trigger Time Slot 范围内时，满足以下两种场景的 lot 需卡控 Reason：")
+    add_item(cell, "（1）若 LithoPilot 在 AdhocSoter 站点（adhocplanname 包含 'UnScheduleSorter'），则 LithoPilot 同 Foup 不在 AdhocSoter 站点的 Other Lot 需要卡控 Reason: WaitPilotChangeFOUP。Remove 规则：当 Other Lot 在 Litho 站点时，不能 Remove；当 Other Lot 在 Barco 站点时，RemainQ<4H 或触发 Qu_0 时，Remove 卡控；当 Other Lot 在非 Litho/Barco 站点时，仅触发 Qu_0 时，Remove 卡控。")
+    add_item(cell, "（2）若 LithoPilot 不在 AdhocSoter 站点，则 LithoPilot 和同 Foup 不在 AdhocSoter 站点的 Other Lot 都需要卡控 Reason: WaitPilotChangeFOUP。Remove 规则：Other Lot Follow（1），LithoPilot 的 RemainQ<4H 或触发 Qu_0 时，Remove 卡控。")
+    add_flowchart(cell, "图3  WaitPilotChangeFOUP卡控流程", "03-wait-pilot-control.png")
+
+    add_heading(cell, "3.2 Litho Rule 新增卡控逻辑", 2)
+    add_heading(cell, "3.2.1 R2RAutoPirunControl卡控", 3)
+    add_cell_paragraph(cell, "针对非Specify Lot，若Pi_SplitFlag='Y'且R2R CD/OVL Status=PIRUNON且Pilot不为Null，则卡控 Reason:R2RAutoPirunControl，否则不卡控。")
+
+    add_heading(cell, "3.2.2 Parent&ChildLotNeedRunSameTool卡控", 3)
+    add_heading(cell, "3.2.2.1 判断lot是否有Pretool", 4)
+    add_cell_paragraph(cell, "从表r2r_litho_context_relation中获取productid、curr_layer、pre_layer栏位信息；从r2r_litho_context_ovl中获取productid、layerid、pretool栏位信息；")
+    add_cell_paragraph(cell, "By Prod、layer从r2r_litho_context_relation（匹配productid、pre_layer）获取curr_layer，再通过Prod、curr_layer从r2r_litho_context_ovl获取pretool，当lot存在pretool不为空时，则需要后续判断。")
+    add_heading(cell, "3.2.2.2 获取子母批作业机台", 4)
+    add_cell_paragraph(cell, "通过表fabfutureaction拿取和lot有FutureMerge关系的子批/母批lot，从表r2r_lot_history中（匹配Lotid、productid、layerid）获取最新一笔子批/母批在待判断lot当前layer的作业机台toolid（按实际作业完成时间、记录ID降序取最新记录）。")
+    add_heading(cell, "3.2.2.3 判断是否需卡控", 4)
+    add_cell_paragraph(cell, "通过r2r_litho_whitelist判断（匹配 productid、layerid、lotid）lot是否为Specify Lot，针对非Specify Lot，若待判断lot的机台与子批/母批作业机台toolid不一致，则卡控Reason：Parent&ChildLotNeedRunSameTool，否则按原逻辑判断。")
+
+    add_heading(cell, "4.LithoAssign新增卡控逻辑", 1)
+    add_cell_paragraph(cell, "LithoAssign 增加子母批 Run 相同机台的卡控，并保留原 R2RAutoPirunControl 逻辑。")
+    add_heading(cell, "4.1 R2RAutoPirunControl卡控", 2)
+    add_cell_paragraph(cell, "针对非Specify Lot，若Pi_SplitFlag='Y'且R2R CD/OVL Status=PIRUNON且Pilot不为Null，则卡控 Reason:R2RAutoPirunControl，否则不卡控。")
+    add_heading(cell, "4.2 Parent&ChildLotNeedRunSameTool卡控", 2)
+    add_cell_paragraph(cell, "逻辑与 LithoRule 中一致，pretool 获取和子批/母批作业机台获取改为 Central。")
+
+    add_heading(cell, "二、 AMA新增逻辑", 1)
+    add_cell_paragraph(cell, "根据 Report:Central_GetLithoR2RAutoPirunInfo 执行物理分批，并将 Pilot 给到 R2R；根据 Report:LithoPiLotAutoDoAdhocSorter执行 TransferFoup。")
+
+    add_heading(cell, "1. 设置Pilot", 2)
+    add_cell_paragraph(cell, "获取 Report:Central_GetLithoR2RAutoPirunInfo 栏位信息:Lot、toolid、productid、layerid、reticleid、prereticle、pretool、custom_context_value、pi_splitwafer、IsNeedSplit、isSTNSite。")
+    add_heading(cell, "1.1 整批设为Pilot", 3)
+    add_cell_paragraph(cell, "当 IsNeedSplit=F 时，直接将整批 Lot 传给 R2R。")
+
+    add_heading(cell, "1.2 物理分批Pilot", 3)
+    add_heading(cell, "1.2.1 执行前复核", 4)
+    for text in (
+        "（1）分批 Lot 属于本厂，即 FAB6 或 FAB8；",
+        "（2）Lot 当前状态为 WaitForJobPrep；",
+        "（3）Lot 当前站点的 runcardid 为空；",
+        "（4）Lot 当前 Capability 为 LithoCapability、L-BARCO-L 或 L-BARCO-S；",
+        "（5）CarrierKind='FOUP'；",
+        "（6）Report 中选中的 Wafer 确实存在于该 Lot 中。",
+    ):
+        add_item(cell, text)
+    add_cell_paragraph(cell, "仅检查 Wafer 归属关系，不额外检查 Wafer 状态、Slot 或 Chuck。任一复核项不满足时，停止处理该 Lot，记录失败原因并等待下一轮重新计算，不回退为整批 Pilot。")
+
+    add_heading(cell, "1.2.2 空FOUP与MES物理分批", 4)
+    add_cell_paragraph(cell, "当 IsNeedSplit=T 时，先执行上述六项复核。复核通过后，先获取并预占空 Foup，再给 MES 物理分批接口，将 pi_splitwafer 从 Lot 中分出。若未拿到可用空 Foup，则不执行物理分批，将整批 Lot 传给 R2R；若分批接口 Fail，则立即释放预占的空 Foup，并将整批 Lot 传给 R2R；否则将分出的子批 pilot 传给 R2R。")
+    add_flowchart(cell, "图4  AMA物理分批与回退流程", "04-ama-split.png", width_inches=4.5)
+
+    add_heading(cell, "2. TransferFoup", 2)
+    add_cell_paragraph(cell, "获取 Report：LithoPiLotAutoDoAdhocSorter 栏位信息，并按顺序给 MES 打 TransferFOUP 接口，将 Pilot 导到空 FOUP 中，若拿取可用的空 Foup 失败或空 Foup 数量为0，或 MES TransferFOUP 接口失败，则在 AMALog 中记录 Fail 信息。")
+
+
 def set_metadata_cell(cell, parts):
     p = clear_cell(cell)
     p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    p.paragraph_format.line_spacing = 1.2
+    p.paragraph_format.line_spacing = 1.0
     p.paragraph_format.space_before = Pt(0)
     p.paragraph_format.space_after = Pt(0)
     add_runs(p, parts)
@@ -468,13 +670,15 @@ def build_document():
     number.paragraph_format.space_before = Pt(0)
     number.paragraph_format.space_after = Pt(5)
     number.paragraph_format.line_spacing = 1.0
-    add_runs(number, [
-        ("编号：", False, False),
-        ("　　　　　　　　　　　", False, False),
-        ("（此处由信息技术部填写）", False, False),
-    ])
+    run = number.add_run("编号：")
+    set_run_font(run)
+    run = number.add_run("　　　　　　　　　　　")
+    set_run_font(run)
+    run.font.underline = True
+    run = number.add_run("（此处由信息技术部填写）")
+    set_run_font(run)
 
-    table = doc.add_table(rows=10, cols=2)
+    table = doc.add_table(rows=10, cols=10)
     table.style = "Table Grid"
     set_table_geometry(table)
     set_table_borders(table)
@@ -482,29 +686,34 @@ def build_document():
         for cell in row.cells:
             set_cell_margins(cell)
 
-    category = table.rows[0].cells[0].merge(table.rows[0].cells[1])
+    category = table.rows[0].cells[0].merge(table.rows[0].cells[9])
     set_metadata_cell(category, [
         ("类别（请在方框内打勾）：", True, False),
         ("□1. 软件采购　□2. 硬件采购　■3. 功能开发　□4. 工程及服务", False, False),
     ])
     set_cant_split(table.rows[0])
 
-    set_metadata_cell(table.rows[1].cells[0], [("申请部门：", True, False), ("制造部", False, False)])
-    set_metadata_cell(table.rows[1].cells[1], [("系统名称（类别为3时必填）：", True, False), ("CIM 计算机集成制造系统 Fab6（一科）", False, False)])
-    set_metadata_cell(table.rows[2].cells[0], [("申请人员：", True, False), ("温浩奇", False, False)])
-    set_metadata_cell(table.rows[2].cells[1], [("功能模块（类别为3时必填）：", True, False), ("智能派工系统（RTD/DSP）", False, False)])
-    set_metadata_cell(table.rows[3].cells[0], [("申请日期：", True, False), ("2026-07-24", False, False)])
-    set_metadata_cell(table.rows[3].cells[1], [("希望交付日期：", True, False), ("2026-07-29", False, False)])
+    metadata_cells = []
+    for row in table.rows[1:4]:
+        left = row.cells[0].merge(row.cells[3])
+        right = row.cells[4].merge(row.cells[9])
+        metadata_cells.append((left, right))
+    set_metadata_cell(metadata_cells[0][0], [("申请部门：", True, False), ("制造部", False, False)])
+    set_metadata_cell(metadata_cells[0][1], [("系统名称（类别为3时必填）：", True, False), ("CIM 计算机集成制造系统 Fab6（一科）", False, False)])
+    set_metadata_cell(metadata_cells[1][0], [("申请人员：", True, False), ("温浩奇", False, False)])
+    set_metadata_cell(metadata_cells[1][1], [("功能模块（类别为3时必填）：", True, False), ("智能派工系统（RTD/DSP）", False, False)])
+    set_metadata_cell(metadata_cells[2][0], [("申请日期：", True, False), ("2026-07-24", False, False)])
+    set_metadata_cell(metadata_cells[2][1], [("希望交付日期：", True, False), ("2026-07-29", False, False)])
     for row in table.rows[1:4]:
         set_cant_split(row)
 
-    intro = table.rows[4].cells[0].merge(table.rows[4].cells[1])
+    intro = table.rows[4].cells[0].merge(table.rows[4].cells[9])
     clear_cell(intro)
     add_heading(intro, "项目简介和必要性分析：", 1)
     add_cell_paragraph(intro, "当前 LithoAutoSplitPirun 为逻辑分批，分出的 Pilot 与母批在同一 Foup，跨厂场景下会因同 FOUP Lot Transfer 限制，导致 Pilot 无法及时 Pirun，对产线 WIP 流通造成影响。另外，AutoPirun 只针对满足分批条件的 Lot 自动设置为 Pilot 进行 Pirun，不满足条件的 Lot 会被一直卡控，导致产线许多 Lot OverQtime。因此需将 LithoAutoSplitPirun 由逻辑分批修改为物理分批，并优化 Pilot 选择逻辑。")
     set_cant_split(table.rows[4])
 
-    analysis = table.rows[5].cells[0].merge(table.rows[5].cells[1])
+    analysis = table.rows[5].cells[0].merge(table.rows[5].cells[9])
     clear_cell(analysis)
     add_heading(analysis, "项目投资方案比较及效果分析：", 1)
     add_heading(analysis, "改善方案：", 2)
@@ -513,8 +722,8 @@ def build_document():
     add_cell_paragraph(analysis, "减少 Lot OverQtime 风险。")
     set_cant_split(table.rows[5])
 
-    content = table.rows[6].cells[0].merge(table.rows[6].cells[1])
-    add_content(content)
+    content = table.rows[6].cells[0].merge(table.rows[6].cells[9])
+    add_content_exact_replica(content)
     set_cant_split(table.rows[6], enabled=False)
 
     approval_labels = (
@@ -524,12 +733,13 @@ def build_document():
     )
     for row, labels in zip(table.rows[7:10], approval_labels):
         set_cant_split(row)
-        row.height = Mm(33)
-        row.height_rule = WD_ROW_HEIGHT_RULE.AT_LEAST
-        for cell, label in zip(row.cells, labels):
+        row.height = Mm(27)
+        row.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
+        approval_cells = (row.cells[0].merge(row.cells[4]), row.cells[5].merge(row.cells[9]))
+        for cell, label in zip(approval_cells, labels):
             clear_cell(cell)
             add_heading(cell, label, 1)
-            add_cell_paragraph(cell, "", first_line=False, after=18)
+            add_cell_paragraph(cell, "", first_line=False, after=4)
             add_heading(cell, "日期：", 2)
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
 
