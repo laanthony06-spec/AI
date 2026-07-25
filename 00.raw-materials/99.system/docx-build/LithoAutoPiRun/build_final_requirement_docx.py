@@ -5,6 +5,7 @@ from pathlib import Path
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 from build_requirement_docx import (
@@ -60,6 +61,54 @@ def force_all_text_black(doc):
     for section in doc.sections:
         blacken(section.header)
         blacken(section.footer)
+
+
+def apply_body_typography(doc):
+    """Apply the requested正文字体 and remove all character-level shading."""
+    normal = doc.styles["Normal"]
+    normal.font.name = "Times New Roman"
+    normal._element.get_or_add_rPr().rFonts.set(qn("w:ascii"), "Times New Roman")
+    normal._element.get_or_add_rPr().rFonts.set(qn("w:hAnsi"), "Times New Roman")
+    normal._element.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), "SimSun")
+    normal.font.size = Pt(10.5)
+
+    def format_run(run, body=False):
+        rpr = run._element.get_or_add_rPr()
+        for shading in list(rpr.findall(qn("w:shd"))):
+            rpr.remove(shading)
+        if body:
+            set_run_font(
+                run,
+                ascii_font="Times New Roman",
+                east_asia="SimSun",
+                size=10.5,
+                color="000000",
+            )
+
+    body_started = False
+    for paragraph in doc.paragraphs:
+        if paragraph.style.name == "Heading 1" and paragraph.text.strip() == "一、基础信息":
+            body_started = True
+        for run in paragraph.runs:
+            format_run(run, body=body_started and paragraph.style.name == "Normal")
+
+    def format_tables(container):
+        for table in container.tables:
+            for row in table.rows:
+                for cell in row.cells:
+                    for paragraph in cell.paragraphs:
+                        for run in paragraph.runs:
+                            format_run(run, body=True)
+                    format_tables(cell)
+
+    format_tables(doc)
+
+    for section in doc.sections:
+        for container in (section.header, section.footer):
+            for paragraph in container.paragraphs:
+                for run in paragraph.runs:
+                    format_run(run, body=False)
+            format_tables(container)
 
 
 def setup_header_footer(section):
@@ -457,6 +506,7 @@ def build_document():
     doc.core_properties.keywords = "LithoAutoPiRun, RTD, AMA, Pilot, FOUP, 物理分批"
 
     force_all_text_black(doc)
+    apply_body_typography(doc)
     doc.save(OUT_PATH)
     shutil.copy2(OUT_PATH, QA_PATH)
     print(OUT_PATH)
