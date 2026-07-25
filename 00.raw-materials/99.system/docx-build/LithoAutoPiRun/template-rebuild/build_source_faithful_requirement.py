@@ -739,8 +739,8 @@ def build_document():
         for cell, label in zip(approval_cells, labels):
             clear_cell(cell)
             add_heading(cell, label, 1)
-            add_cell_paragraph(cell, "", first_line=False, after=4)
-            add_heading(cell, "日期：", 2)
+            date_paragraph = add_heading(cell, "日期：", 2)
+            date_paragraph.paragraph_format.space_before = Pt(18)
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
 
     doc.core_properties.title = "LithoAutoPiRun 新增需求申请单"
