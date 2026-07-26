@@ -1,0 +1,127 @@
+{
+  "path": "D:\\Obsidian\\work\\OBSidianCodex\\00.raw-materials\\90.processed\\LithoAutoPiRun\\LithoAutoPiRun_复杂逻辑流程图.docx",
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "流程图 1：RTD 候选筛选与 Pilot 选择",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 1,
+      "text": "展示 Lot 获取、基础条件过滤、候选排序与 Pilot 选定的完整判断链路。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 2,
+      "text": "复杂逻辑流程图（按最终确认规则整理）",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 3,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image1.png"
+      ]
+    },
+    {
+      "index": 4,
+      "text": "\n",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 5,
+      "text": "流程图 2：Pilot 整批与物理分批判断",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 6,
+      "text": "展示整批条件、分批数量配置校验、Wafer 排序、FOUP 预留及失败回退逻辑。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 7,
+      "text": "复杂逻辑流程图（按最终确认规则整理）",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 8,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image2.png"
+      ]
+    },
+    {
+      "index": 9,
+      "text": "\n",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 10,
+      "text": "流程图 3：WaitPilotChangeFOUP 卡控",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 11,
+      "text": "展示 Litho、BARCO 与其他站点在不同 Queue Time 状态下的卡控差异。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 12,
+      "text": "复杂逻辑流程图（按最终确认规则整理）",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 13,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image3.png"
+      ]
+    },
+    {
+      "index": 14,
+      "text": "\n",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 15,
+      "text": "流程图 4：AMA 物理分批与回退",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 16,
+      "text": "展示分批前置校验、Transfer FOUP、物理分批执行与异常回退处理。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 17,
+      "text": "复杂逻辑流程图（按最终确认规则整理）",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 18,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image4.png"
+      ]
+    }
+  ]
+}

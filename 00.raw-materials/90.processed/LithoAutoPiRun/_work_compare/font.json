@@ -1,0 +1,1507 @@
+{
+  "path": "D:\\Obsidian\\work\\OBSidianCodex\\00.raw-materials\\90.processed\\LithoAutoPiRun\\LithoAutoPiRun_需求申请单_最终版_规范字体.docx",
+  "paragraphs": [
+    {
+      "index": 0,
+      "text": "功能需求规格",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 1,
+      "text": "LithoAutoPiRun 需求申请单",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 2,
+      "text": "逻辑分批调整为物理分批，并优化 Pilot 选择、Transfer FOUP 及相关卡控",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 3,
+      "text": "一、基础信息",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 4,
+      "text": "编号",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 5,
+      "text": "由信息技术部填写",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 6,
+      "text": "类别",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 7,
+      "text": "功能开发",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 8,
+      "text": "申请部门",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 9,
+      "text": "制造部",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 10,
+      "text": "申请人员",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 11,
+      "text": "温浩奇",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 12,
+      "text": "系统名称",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 13,
+      "text": "CIM 计算机集成制造系统 Fab6（一科）",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 14,
+      "text": "功能模块",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 15,
+      "text": "智能派工系统（RTD／DSP）",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 16,
+      "text": "申请日期",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 17,
+      "text": "2026-07-25",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 18,
+      "text": "希望交付日期",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 19,
+      "text": "2026-07-29",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 20,
+      "text": "",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 21,
+      "text": "二、项目简介和必要性分析",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 22,
+      "text": "2.1 项目背景",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 23,
+      "text": "当前 LithoAutoSplitPirun 采用逻辑分批。生成的 Pilot 与母批仍位于同一 FOUP，跨厂转运时可能受同 FOUP 内其他 Lot 状态限制，Pilot 无法及时执行 PiRun。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 24,
+      "text": "2.2 存在问题",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 25,
+      "text": "逻辑分批未实际拆分 Wafer，Pilot 与母批共用 FOUP，Transfer 条件受同载具其他 Lot 影响。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 26,
+      "text": "现有 AutoPiRun 只对满足分批条件的 Lot 自动设置 Pilot；不满足条件的 Lot 可能持续卡控。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 27,
+      "text": "Pilot 选择、物理分批、Transfer FOUP、子母批同机台卡控分散在 RTD、Rule、LithoAssign 和 AMA，缺少统一闭环。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 28,
+      "text": "2.3 需求目标",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 29,
+      "text": "将 LithoAutoSplitPirun 由逻辑分批调整为物理分批。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 30,
+      "text": "优化 RTD 候选 Lot 筛选、Context 排序、Pilot 选片及 Report 输出。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 31,
+      "text": "由 AMA 完成分批前复核、空 FOUP 预占、MES 物理分批和 Transfer FOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 32,
+      "text": "补充 WaitPilotChangeFOUP、R2RAutoPirunControl、Parent&ChildLotNeedRunSameTool 卡控。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 33,
+      "text": "2.4 本次范围",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 34,
+      "text": "涉及范围：RTD Report、Global Macro、LithoRule、LithoAssign、AMA、MES 物理分批与 Transfer FOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 35,
+      "text": "不在本次范围：不新增重复物理分批防护；不新增 request_id、generated_time、execution_status、error_code；不重新定义 WatchDog 时区或 Trigger Time Slot 边界；详细 Test Case 另行编制。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 36,
+      "text": "三、项目投资方案比较及效果分析",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 37,
+      "text": "3.1 原方案",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 38,
+      "text": "维持逻辑分批。该方案改动较小，但 Pilot 与母批仍共用 FOUP，无法解决跨厂及同 FOUP Other Lot 对 Pilot 转运的限制。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 39,
+      "text": "3.2 改善方案",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 40,
+      "text": "RTD 选择 Pilot Wafer 并输出 IsNeedSplit 与 pi_splitwafer；AMA 复核 Lot 状态后执行物理分批，必要时为 Pilot 更换 FOUP，并同步补充相关 Rule 卡控。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 41,
+      "text": "3.3 效果分析",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 42,
+      "text": "Pilot 与母批可分离处理，降低同 FOUP Other Lot 对 PiRun 执行的影响。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 43,
+      "text": "无空 FOUP、MES 分批失败等场景有明确回退路径。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 44,
+      "text": "降低 Lot Queue Time 超时风险。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 45,
+      "text": "四、需求流程图",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 46,
+      "text": "复杂逻辑拆分为四个子流程，流程节点与正文判断规则一致。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 47,
+      "text": "4.1 RTD 候选筛选与 Pilot 选择",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 48,
+      "text": "图 1  RTD 候选筛选与 Pilot 选择流程",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 49,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image1.png"
+      ]
+    },
+    {
+      "index": 50,
+      "text": "4.2 Pilot 整批与物理分批判断",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 51,
+      "text": "图 2  Pilot 整批与物理分批判断流程",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 52,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image2.png"
+      ]
+    },
+    {
+      "index": 53,
+      "text": "4.3 WaitPilotChangeFOUP 卡控",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 54,
+      "text": "图 3  WaitPilotChangeFOUP 卡控流程",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 55,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image3.png"
+      ]
+    },
+    {
+      "index": 56,
+      "text": "4.4 AMA 物理分批与回退",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 57,
+      "text": "图 4  AMA 物理分批与回退流程",
+      "style": "FigureCaption",
+      "images": []
+    },
+    {
+      "index": 58,
+      "text": "",
+      "style": "",
+      "images": [
+        "media/image4.png"
+      ]
+    },
+    {
+      "index": 59,
+      "text": "五、RTD 部分更改逻辑",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 60,
+      "text": "RTD 修改范围包括两个 Report、Global Macro、LithoRule 和 LithoAssign。Pi_split_flag 统一使用 Y 表示允许物理分批；PiRun 状态统一使用 PIRUNON。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 61,
+      "text": "5.1 数据获取与基础筛选",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 62,
+      "text": "5.1.1 数据范围",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 63,
+      "text": "从 FAB6、FAB8 获取候选 Lot。读取以下资料：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 64,
+      "text": "fwlot：appid、priority、processingstatus、componentqty。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 65,
+      "text": "fablotext：requiredcapability、runcardid、reticleid。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 66,
+      "text": "fablotcarrierext：carrierkind。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 67,
+      "text": "fabinqtimeprocess：RemainQ。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 68,
+      "text": "UI.RTDConfig-LITHOLotAssignment-LithoAssignCapability：LithoCapability。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 69,
+      "text": "BARCO Capability 固定为 L-BARCO-L、L-BARCO-S。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 70,
+      "text": "5.1.2 基础筛选",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 71,
+      "text": "候选 Lot 必须同时满足以下条件：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 72,
+      "text": "processingstatus 为 Active 或 CrossFabTransferred。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 73,
+      "text": "carrierkind='FOUP'。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 74,
+      "text": "runcardid 为空。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 75,
+      "text": "requiredcapability 为 LithoCapability、L-BARCO-L 或 L-BARCO-S。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 76,
+      "text": "跨厂 Lot 沿用现有 istransferlot Macro。若 IsTransferLot=True，保留该记录；若 IsTransferLot<>True，则仅保留 processingstatus<>'CrossFabTransferred' 的记录。本需求不新增 FAB6/FAB8 跨厂资料去重规则。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 77,
+      "text": "5.2 PiRun 站点与 R2R 条件",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 78,
+      "text": "5.2.1 PiRunLoop",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 79,
+      "text": "对通过基础筛选的 Lot 向后 Fetch 20 个站点，读取 productname、planname、stage、capability、stepseq、recipeid、STN。Transfer Lot 的厂别信息沿用现有修正规则。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 80,
+      "text": "Lot 当前站点至相同 Stage 最后一道 CD 站点之间的区段定义为 PiRunLoop。若 Fetch 结果不存在 CD 站点，则剔除该 Lot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 81,
+      "text": "5.2.2 进一步筛选",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 82,
+      "text": "PiRunLoop 中必须存在 capability=LithoCapability 且具有 Reticle 信息的 Litho 站点。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 83,
+      "text": "按 productid + layer + lotid 匹配 r2r_litho_whitelist；命中时沿用 Specify Lot 处理。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 84,
+      "text": "同一 FOUP 已存在 Litho Pilot 时，剔除当前候选 Lot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 85,
+      "text": "PiRunLoop 中存在 FutureHold 或 RC 站点时，剔除该 Lot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 86,
+      "text": "5.2.3 可作业机台与 Context",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 87,
+      "text": "通过现有 Transfer Macro 判断 Lot 是否可在对应 Litho 站点执行 Transfer；满足时获取对应工厂的 Litho 机台。按厂别从 rtd_r2r_litho_add_setting 读取 Pi_split_flag 和 pi_splitcnt。若不存在 Pi_split_flag='Y' 的可作业机台，则剔除该 Lot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 88,
+      "text": "继续检查 EQPStatus、LCC、Capability、Recipe、PPID 和 Global Reason；存在卡控时剔除对应机台。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 89,
+      "text": "按 Lot + STN + Reticle 从 rtd_r2r_litho_context_ovl、rtd_r2r_litho_context_cd 匹配 Context。OVL、CD 状态均须属于 PIRUNON、ON、Fixed，且不存在 R2R Reason。若同一 Lot 的有效 ContextCount>1，按多路径 Lot 剔除。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 90,
+      "text": "5.3 Pilot 候选排序与循环选择",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 91,
+      "text": "5.3.1 Context 内 Lot 排序指标",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 92,
+      "text": "GapToLitho：Lot 当前站点距 Litho 站点的剩余 Step 数。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 93,
+      "text": "SplitCntMatched：componentqty>=pi_splitcnt 时为 1，否则为 0。pi_splitcnt 无效时按默认值 4 计算。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 94,
+      "text": "RequiredChuckCount：存在 prelayer 时读取 r2r_litho_waferhistory 的 Chuck；否则读取 fsmaterialassociation 的 Slot。C1/C2 或奇偶 Slot 各至少 2 片时为 1，否则为 0。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 95,
+      "text": "BulletLot：沿用现有空扣或空 LP Lot 判断。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 96,
+      "text": "RemainQ：取实际剩余 Queue Time；空值按 9999 h。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 97,
+      "text": "KeyLot：quota_applyinfo 中 KeyLot=1 且 Status='CONFIRM' 时为 1，否则为 0。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 98,
+      "text": "RTDRank 排序优先级如下：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 99,
+      "text": "GapToLitho ASC。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 100,
+      "text": "SplitCntMatched DESC。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 101,
+      "text": "RequiredChuckCount DESC。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 102,
+      "text": "BulletLot DESC。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 103,
+      "text": "RemainQ ASC。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 104,
+      "text": "KeyLot ASC，即普通 Lot 优先于 Key Lot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 105,
+      "text": "lotid ASC，作为最终 Tie-breaker。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 106,
+      "text": "5.3.2 Context 排序与循环",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 107,
+      "text": "ReticleSTNRank：第一轮优先 Reticle 当前所在 STN；后续轮次优先与上一轮相同的 Reticle + STN 分组。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 108,
+      "text": "ContextCandidateCount：当前 Context 的候选 Lot 数量。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 109,
+      "text": "ActualSTNPilotCount：对应 STN 已选 Pilot Context 数量。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 110,
+      "text": "最终按 ReticleSTNRank DESC、ContextCandidateCount ASC、ActualSTNPilotCount ASC、RTDRank ASC 排序。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 111,
+      "text": "每轮固定排序第一的 Lot + Context。每个 Context 最多选择一个 Pilot；选中后删除同一 Context 的其他候选，并重新计算排序指标，直至无可用 Context 或无可用 Lot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 112,
+      "text": "5.4 Pilot 整批与物理分批判断",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 113,
+      "text": "5.4.1 整批 Pilot 条件",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 114,
+      "text": "以下五项使用“或”关系。任意一项成立时，设置 IsNeedSplit=F，整批 Lot 作为 Pilot：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 115,
+      "text": "BulletLot=1 或 KeyLot=1。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 116,
+      "text": "CurCapability=LithoCapability 且 FuLL(RemainQ)。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 117,
+      "text": "RequiredChuckCount=0。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 118,
+      "text": "SplitCntMatched=0。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 119,
+      "text": "componentqty<=6。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 120,
+      "text": "componentqty>0 由上游保证，本需求不增加零片判断。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 121,
+      "text": "5.4.2 物理分批选片",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 122,
+      "text": "不满足任一整批条件时，设置 IsNeedSplit=T。Wafer ID 1～10 为 Group1，11～25 为 Group2；有 Chuck 信息时 C1/C2 对应 SubGroup1/SubGroup2，无 Chuck 信息时奇数/偶数 Slot 对应 SubGroup1/SubGroup2。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 123,
+      "text": "Group1 + SubGroup1：GroupRank=1。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 124,
+      "text": "Group1 + SubGroup2：GroupRank=2。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 125,
+      "text": "Group2 + SubGroup1：GroupRank=3。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 126,
+      "text": "Group2 + SubGroup2：GroupRank=4。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 127,
+      "text": "在每个 Group + SubGroup 内按 Wafer ID 升序计算 WaferRank，最终按 WaferRank ASC、GroupRank ASC 轮流选片。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 128,
+      "text": "pi_splitcnt 为空、等于 0、小于 0 或大于 25 时，使用默认值 4。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 129,
+      "text": "pi_splitcnt 在 1～25 范围内时，按配置值选片。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 130,
+      "text": "选片数大于当前可用 Wafer 数时，不执行物理分批，改为整批 Pilot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 131,
+      "text": "选中 Wafer 写入 pi_splitwafer。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 132,
+      "text": "5.4.3 Merge 站点",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 133,
+      "text": "若 Lot 存在不包含 SRC 的 ADI 站点，则取第一道符合条件的 ADI 作为 Merge 站点；否则取最后一道 CD。有效 Merge 站点由现有流程保证，本需求不增加两者均不存在时的处理。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 134,
+      "text": "5.5 Report 调整",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 135,
+      "text": "5.5.1 Central_GetLithoR2RAutoPirunInfo",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 136,
+      "text": "修改现有 Pilot 选择和选片逻辑，输出字段包括：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 137,
+      "text": "Lot、toolid、productid、layerid、reticleid。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 138,
+      "text": "prereticle、pretool、custom_context_value。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 139,
+      "text": "pi_splitwafer、IsNeedSplit、isSTNSite。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 140,
+      "text": "保持现有输出范围和记录方式，不新增请求追踪或执行状态字段。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 141,
+      "text": "5.5.2 LithoPilotAutoDoAdhocSorter",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 142,
+      "text": "新增 Report，用于取得需要 Transfer FOUP 的 Litho Pilot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 143,
+      "text": "从 r2r_litho_context_ovl 读取 ovl_status、pilot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 144,
+      "text": "从 r2r_litho_context_cd 读取 cd_status、pilot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 145,
+      "text": "从 fwlot 读取 appid、lottype、priority。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 146,
+      "text": "从 fabcategorymap 读取 lottype、category。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 147,
+      "text": "保留 priority<5、category='Production'，且 OVL 或 CD 状态为 PIRUNON 的记录。按 Carrier 获取同 FOUP 所有 Lot，并保留 extrastatus='WaitForJobPrep' 的记录；若 Carrier 中存在 Other Lot，则该 Pilot 需要 Change FOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 148,
+      "text": "Carrier 按 RemainQ ASC、Priority ASC、componentqty DESC、lotid ASC 排序并建立 AdhocSorterJob。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 149,
+      "text": "当 AMA.TriggerConfig-WatchDog_LithoPilotAutoDoAdhocSorter.Switch='Y' 且当前时间位于现有 Trigger Time Slot 时，按 TriggerCount/Time 选择 Carrier。输出字段包括 Carrier、Pilot、extrastatus、Status、RemainQ、Pieces、Prod、Priority。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 150,
+      "text": "5.6 Rule 与 LithoAssign",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 151,
+      "text": "5.6.1 Global Macro：WaitPilotChangeFOUP",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 152,
+      "text": "WatchDog 开启并位于 Trigger Time Slot 时，按 Pilot 是否位于 UnscheduledSorter 决定需要卡控的同 FOUP Other Lot。符合范围的 Other Lot 增加 Reason=WaitPilotChangeFOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 153,
+      "text": "Other Lot 位于 Litho 站点：不解除卡控。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 154,
+      "text": "Other Lot 位于 BARCO 站点：RemainQ<4 h 或触发 Qu_0 时解除。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 155,
+      "text": "Other Lot 位于其他站点：仅触发 Qu_0 时解除。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 156,
+      "text": "Pilot 的 RemainQ<4 h 或 Pilot 触发 Qu_0 时，解除相关卡控。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 157,
+      "text": "5.6.2 LithoRule：R2RAutoPirunControl",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 158,
+      "text": "针对非 Specify Lot，若 Pi_split_flag='Y'，R2R CD 或 OVL Status 为 PIRUNON，且 Pilot 不为空，则增加 Reason=R2RAutoPirunControl；否则不增加。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 159,
+      "text": "5.6.3 LithoRule：Parent&ChildLotNeedRunSameTool",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 160,
+      "text": "从 r2r_litho_context_relation 获取 productid、curr_layer、pre_layer，从 r2r_litho_context_ovl 获取 productid、layerid、pretool。只有 pretool 不为空时继续判断。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 161,
+      "text": "通过 fabfutureaction 取得 FutureMerge 关系的子批或母批；关系范围沿用现有返回结果。从 r2r_lot_history 按 lotid + productid + layerid 获取对应 Layer 的 toolid，以实际作业完成时间降序、记录 ID 降序取得最新记录。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 162,
+      "text": "针对非 Specify Lot，若当前 Lot 与子批或母批的 toolid 不一致，则增加 Reason=Parent&ChildLotNeedRunSameTool；否则继续现有逻辑。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 163,
+      "text": "5.6.4 LithoAssign",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 164,
+      "text": "LithoAssign 保留 R2RAutoPirunControl，并新增 Parent&ChildLotNeedRunSameTool。判断逻辑与 LithoRule 一致，pretool 及子母批作业机台信息由 Central 获取。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 165,
+      "text": "5.7 UI 配置",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 166,
+      "text": "rtd_r2r_litho_add_setting.Pi_split_flag：Y 表示机台允许物理分批。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 167,
+      "text": "rtd_r2r_litho_add_setting.pi_splitcnt：有效范围 1～25；为空、0、负数或大于 25 时使用默认值 4。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 168,
+      "text": "AMA.TriggerConfig-WatchDog_LithoPilotAutoDoAdhocSorter：沿用 Switch、Trigger Time Slot、TriggerCount/Time。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 169,
+      "text": "六、AMA 部分更改逻辑",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 170,
+      "text": "6.1 触发方式与数据获取",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 171,
+      "text": "Pilot 设置沿用现有 AMA 触发方式和执行周期，本需求不新增 Trigger。AMA 读取 Central_GetLithoR2RAutoPirunInfo 执行 Pilot 设置；Transfer FOUP 按 WatchDog 配置读取 LithoPilotAutoDoAdhocSorter。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 172,
+      "text": "设置 Pilot 时读取 Lot、toolid、productid、layerid、reticleid、prereticle、pretool、custom_context_value、pi_splitwafer、IsNeedSplit、isSTNSite。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 173,
+      "text": "6.2 整批 Pilot",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 174,
+      "text": "若 IsNeedSplit=F，则直接将整批 Lot 传给 R2R。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 175,
+      "text": "6.3 物理分批 Pilot",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 176,
+      "text": "6.3.1 执行前复核",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 177,
+      "text": "若 IsNeedSplit=T，AMA 必须重新检查以下六项：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 178,
+      "text": "Lot 属于当前执行工厂，即 FAB6 或 FAB8。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 179,
+      "text": "fwlot.extrastatus='WaitForJobPrep'。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 180,
+      "text": "Lot 当前站点的 runcardid 为空。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 181,
+      "text": "当前 Capability 为 LithoCapability、L-BARCO-L 或 L-BARCO-S。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 182,
+      "text": "CarrierKind='FOUP'。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 183,
+      "text": "Report 选中的 Wafer 当前仍归属于该 Lot；不额外检查 Wafer 状态、Slot 或 Chuck。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 184,
+      "text": "若任一项不满足，则停止处理该 Lot，记录失败原因，等待下一轮重新计算；不回退为整批 Pilot。现有系统负责避免同一 Lot 重复物理分批，本需求不新增幂等防护。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 185,
+      "text": "6.3.2 空 FOUP 与 MES 分批",
+      "style": "Heading3",
+      "images": []
+    },
+    {
+      "index": 186,
+      "text": "六项复核通过后，先获取并预占空 FOUP，再调用 MES 物理分批接口。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 187,
+      "text": "未取得空 FOUP：不执行物理分批，将整批 Lot 传给 R2R。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 188,
+      "text": "接口成功：将 pi_splitwafer 分出，生成子批并设置为 Pilot，再按现有顺序传给 R2R、执行 Transfer FOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 189,
+      "text": "接口失败：立即释放预占 FOUP，将整批 Lot 作为 Pilot 传给 R2R；IsNeedSplit、pi_splitwafer 的后续处理沿用现有 AMA 逻辑。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 190,
+      "text": "6.4 Transfer FOUP",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 191,
+      "text": "AMA 按 LithoPilotAutoDoAdhocSorter 排序结果调用 MES Transfer FOUP 接口，将 Pilot 导入已取得的空 FOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 192,
+      "text": "若无法取得空 FOUP、可用空 FOUP 数量为 0，或 MES Transfer FOUP 接口失败，则在 AMALog 记录失败信息。Other Lot 紧急解除卡控后，Pilot 的 Transfer FOUP 任务继续由现有 Adhoc Sorter 流程处理。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 193,
+      "text": "6.5 AMA 输出",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 194,
+      "text": "整批 Pilot 或物理分批后的子批 Pilot 传给 R2R。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 195,
+      "text": "需要 Change FOUP 的 Pilot 按 Report 顺序执行 Transfer FOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 196,
+      "text": "前置复核、物理分批或 Transfer FOUP 失败时记录原因。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 197,
+      "text": "本需求不新增 Alarm。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 198,
+      "text": "七、原逻辑／修改后逻辑／修改原因",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 199,
+      "text": "7.1 原逻辑",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 200,
+      "text": "LithoAutoSplitPirun 使用逻辑分批，Pilot 与母批仍位于同一 FOUP。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 201,
+      "text": "AutoPiRun 主要对满足既有条件的 Lot 设置 Pilot，Transfer FOUP 与物理分批未形成完整闭环。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 202,
+      "text": "子母批同机台、WaitPilotChangeFOUP 等卡控未按本需求规则处理。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 203,
+      "text": "7.2 修改后逻辑",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 204,
+      "text": "RTD 统一筛选 FAB6/FAB8 候选 Lot，按 Context 和 RTDRank 循环选择 Pilot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 205,
+      "text": "RTD 输出整批或物理分批结果；AMA 复核后执行物理分批，并处理空 FOUP 和接口失败回退。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 206,
+      "text": "新增 Change FOUP Report 及 WaitPilotChangeFOUP、R2RAutoPirunControl、Parent&ChildLotNeedRunSameTool 卡控。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 207,
+      "text": "7.3 修改原因",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 208,
+      "text": "逻辑分批无法解除 Pilot 与母批共用 FOUP 的限制。改为物理分批并增加 Transfer FOUP 后，Pilot 可独立进入 PiRun 流程；同时通过 Rule 和 AMA 复核避免状态变化导致错误执行。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 209,
+      "text": "八、影响范围及异常边界",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 210,
+      "text": "8.1 系统影响",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 211,
+      "text": "RTD：影响候选 Lot Filter、Context Sorting、Pilot 选片、Reason、Report 和 LithoAssign。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 212,
+      "text": "AMA：影响 Pilot 设置、物理分批、空 FOUP 预占、Transfer FOUP 和失败记录。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 213,
+      "text": "MES：调用现有物理分批与 Transfer FOUP 接口；接口成功或失败按本需求分支处理。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 214,
+      "text": "MCS／AMHS：本需求不新增搬送规则；MES 后续搬送沿用现有流程。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 215,
+      "text": "EAP：本需求不修改 EAP 逻辑。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 216,
+      "text": "DB：本需求未定义新增业务表或字段；两个 Report 的输出字段按 5.5 执行。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 217,
+      "text": "8.2 边界与异常",
+      "style": "Heading2",
+      "images": []
+    },
+    {
+      "index": 218,
+      "text": "RemainQ 为空时按 9999 h 参与排序。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 219,
+      "text": "pi_splitcnt 无效时使用默认值 4；有效但大于当前可用 Wafer 数时改为整批 Pilot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 220,
+      "text": "候选 Lot 无 CD、无有效 Litho/Reticle、存在 FutureHold/RC、无有效机台或多路径时直接剔除。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 221,
+      "text": "AMA 六项复核失败时停止并等待下一轮，不回退整批。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 222,
+      "text": "无空 FOUP 时整批回退；MES 物理分批失败时释放 FOUP 后整批回退。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 223,
+      "text": "MES Transfer FOUP 失败时记录 AMALog，不新增额外恢复动作。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 224,
+      "text": "WatchDog 时间判断、Specify Lot、Transfer Macro、FuLL(RemainQ)、Adhoc Sorter 后续处理均沿用现有逻辑。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 225,
+      "text": "九、待确认事项",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 226,
+      "text": "需求编号由信息技术部填写。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 227,
+      "text": "新增 Report LithoPilotAutoDoAdhocSorter 的唯一记录维度、同一次执行的去重方式及历史保留策略需 IT 确认；本需求不新增对应业务字段。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 228,
+      "text": "十、测试及验收说明",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 229,
+      "text": "详细 Test Case 另行建立。本需求验收至少覆盖以下场景：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 230,
+      "text": "整批 Pilot 与物理分批 Pilot。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 231,
+      "text": "pi_splitcnt 空值、0、负数、大于 25、以及大于可用 Wafer 数。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 232,
+      "text": "FAB6／FAB8 与 CrossFabTransferred。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 233,
+      "text": "AMA 六项复核失败、无空 FOUP、MES 分批失败、Transfer FOUP 失败。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 234,
+      "text": "Litho、BARCO、其他站点的 WaitPilotChangeFOUP 解除条件。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 235,
+      "text": "子母批同机台与 Specify Lot 回归。",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 236,
+      "text": "十一、审批意见",
+      "style": "Heading1",
+      "images": []
+    },
+    {
+      "index": 237,
+      "text": "申请部门意见",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 238,
+      "text": "意见：\n\n日期：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 239,
+      "text": "申请部门分管领导意见",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 240,
+      "text": "意见：\n\n日期：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 241,
+      "text": "相关部门意见",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 242,
+      "text": "意见：\n\n日期：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 243,
+      "text": "相关部门分管领导意见",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 244,
+      "text": "意见：\n\n日期：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 245,
+      "text": "信息技术部意见",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 246,
+      "text": "意见：\n\n日期：",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 247,
+      "text": "信息技术部分管领导意见",
+      "style": "",
+      "images": []
+    },
+    {
+      "index": 248,
+      "text": "意见：\n\n日期：",
+      "style": "",
+      "images": []
+    }
+  ]
+}
