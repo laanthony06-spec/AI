@@ -1,0 +1,29 @@
+新增需火中请单
+编号： （比处由信息技术部填写）
+类别（请在方框内打勾）：口1软件采购 2硬件采购 3.功能开发4.工程及服务
+申请部门：制造部 系统名称（类别内3时必填）：CIM计算机集成制造系统Fab6
+（科））
+申请人员：温洁奇 功能模快（类别为3时必填）=智能派工系统（RTD/DSP）
+申请日期：2026-07-24 希望交付期：2026-0729
+项目简介和必要性分析：
+当前LithoAutoSplitPinn 为逻辑分批，分出的Pilot与母批在同Foup，跨厂场景下会因同FoUP Lot
+Transfer限制，导致Pilot无法及时Pinun对产线WiP流通造成景影响。另外因AutoPirun只针对满足分批条件
+的Lot自动设置为Pilot进行Pirun，不满足条件的Lot会被一直卡控，导致产线许多LotOverQtime。因此需
+将LithoAutoSplitPinn为由逻辑分批修改为物理分批，并优化Pilot选择逻辑。
+项目投资方案比较及效果分析折：
+改善方案：
+将LithoAutoSplitPinun为由逻辑分批修改力物理分批，并优化Pilot选择逻辑。
+效果分析：
+减少LotoverQtime风险
+需求内容（可添加附件）：
+方案逻辑：
+RTD新增逻辑
+1修改Report：Central GetLithoR2RAutoPinuninfo 中的Pilot 选择逻辑，2增加 Report：
+LithoPLotAutoDoAdhocSorter：3Rule和Assign中增加子母批作业同一机台逻辑
+IReport:Central CetLithoR2RAutoPirunlnfo
+对选1ot和选片逻辑进行修改。
+11Lot获取
+从FAB6和FAB8 两厂获取待判断Lot，并进行初步过滤。
+L1ILot基础信息获取
+通过表fwlot获取appid，pnority，processngstatus，componentqty栏位信息；
+通过表fablotext获取requiredcapabilityruncardid，reticleid位信息

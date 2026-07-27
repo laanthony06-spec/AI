@@ -1,0 +1,20 @@
+UI：RTD.CMPIOWWIP修改
+Capability SelfCapability Ratio Controltype
+必填项，不支持模糊匹配必填项，支持模糊匹配必填项，不支持模糊匹配，必填项，不支持模糊匹配
+新增配置参数：
+HLRS O60..
+华力商密级
+HL Cofdental
+Contxoltype：设置下拉选项，选项内包含Lowaip/Highwip（必填项，不支持模糊匹配）Lowip用来判断
+原Lowwip逻辑，Highwp用于新增选择Piunlou判断逻辑。
+原有配置Contzoltzpe-认为 Lowwie，原cMP Lowwip逻辑中需求匹配 Controltype-Lowip 的
+配置进行计算lowip界限
+新增AMAJob：CMPAutosplitPirunLot每5分钟触发一次，此Job 开关配置在UI:TriggerConfig中，
+functionname-ucMPAutoSplitPirunlLotuswitch-时且当前触发的时间符合设定的时间范围，可执行
+此Jobo
+二、AMA新增选取pirunlot逻辑
+通过享取CMPASE品最新一版的结果 根据以下逻辑选取需进行Pi的lot并进行自动分批。
+1、设定需自动分批seltcapability取
+拿取R2R表中维护的tech prod、stage、count（该elfaapa下分子批的数量）gtx（该lot分子批
+的片数等数据信息。
+通过专中维护

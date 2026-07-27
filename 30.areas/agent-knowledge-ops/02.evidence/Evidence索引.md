@@ -1,6 +1,6 @@
 ---
 type: evidence-index
-updated: 2026-07-25T15:00:15
+updated: 2026-07-27T19:12:08
 tags: [Evidence, 证据层, Agent, 自动派工]
 ---
 
@@ -27,11 +27,11 @@ tags: [Evidence, 证据层, Agent, 自动派工]
 | [[00.raw-materials/90.processed/agent-knowledge-ops/2026-06-30_WorkBuddy_agent_workspace_insights.md]] | md | 2800 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/agent-knowledge-ops/2026-07-03_WorkBuddy_wechat_official_account_workflow_insights.md]] | md | 3370 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/agent-knowledge-ops/2026-07-07_Obsidian工作台SOP符合性检查.md]] | md | 6366 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[00.raw-materials/90.processed/agent-knowledge-ops/agent-dispatch-queue.json]] | json | 26622 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/agent-knowledge-ops/agent-dispatch-queue.json]] | json | 22118 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/agent-knowledge-ops/agent-task-queue.json]] | json | 10798 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/agent-knowledge-ops/evidence-index.json]] | json | 19116 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md]] | md | 30934 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[00.raw-materials/90.processed/agent-knowledge-ops/state/hooks_state.json]] | json | 28306 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/agent-knowledge-ops/sensitive-scan-report.md]] | md | 20040 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/agent-knowledge-ops/state/hooks_state.json]] | json | 28792 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/agent-knowledge-ops/telemetry.json]] | json | 487 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/claude-code/Claude-Code斜杠命令速查.md]] | md | 3823 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.2.md]] | md | 9465 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
@@ -221,20 +221,38 @@ tags: [Evidence, 证据层, Agent, 自动派工]
 | [[00.raw-materials/90.processed/dsp-dispatch-system-intro-ocr/p091.txt]] | txt | 1757 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/inventory/raw-materials-inventory-2026-07-04.csv]] | csv | 32720 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/inventory/raw-materials-inventory-2026-07-04.json]] | json | 49570 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/LithoAutoPiRun/_work_compare/complex.json]] | json | 2892 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/LithoAutoPiRun/_work_compare/current.json]] | json | 34625 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/LithoAutoPiRun/_work_compare/draft.json]] | json | 38961 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/LithoAutoPiRun/_work_compare/final.json]] | json | 35658 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/90.processed/LithoAutoPiRun/_work_compare/font.json]] | json | 40819 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/90.processed/weekly-knowledge-distill/2026-07-04-每周原始资料知识提纯.md]] | md | 26163 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/template-rebuild/artifact.md]] | md | 4220 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/@oai/artifact-tool/node_modules/agent-base/package.json]] | json | 1059 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/@oai/artifact-tool/node_modules/agent-base/README.md]] | md | 2459 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/@oai/artifact-tool/node_modules/follow-redirects/README.md]] | md | 6605 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/@oai/artifact-tool/node_modules/https-proxy-agent/package.json]] | json | 1223 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/@oai/artifact-tool/node_modules/https-proxy-agent/README.md]] | md | 2172 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/node-fetch/README.md]] | md | 21332 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/playwright-core/lib/server/deviceDescriptorsSource.json]] | json | 80785 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/playwright-core/lib/tools/cli-client/help.json]] | json | 36596 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/playwright-core/lib/tools/cli-client/skill/references/running-code.md]] | md | 5642 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/playwright/lib/agents/playwright-test-coverage.prompt.md]] | md | 1294 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/playwright/lib/agents/playwright-test-healer.agent.md]] | md | 2891 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[00.raw-materials/99.system/xlsx-build/LithoAutoPirun-TestCase/node_modules/playwright/README.md]] | md | 11282 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[00.raw-materials/README.md]] | md | 3547 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/agent-knowledge-ops/01.task-queue/Agent任务队列.md]] | md | 16616 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[30.areas/agent-knowledge-ops/01.task-queue/Agent任务队列.md]] | md | 14057 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/01.task-queue/远程触发语句库.md]] | md | 2378 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/02.evidence/Evidence索引.md]] | md | 39267 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/03.testcases/WaferBalance-TestCases.md]] | md | 3018 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/03.testcases/派工规则TestCase库.md]] | md | 1116 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/agent-knowledge-ops/04.telemetry/Agent自动化运行看板.md]] | md | 2722 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[30.areas/agent-knowledge-ops/04.telemetry/Agent自动化运行看板.md]] | md | 3425 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/05.mcp-server/Obsidian只读MCP服务说明.md]] | md | 1744 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/agent-knowledge-ops/06.memory/任务执行记忆.md]] | md | 811 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[30.areas/agent-knowledge-ops/06.memory/任务执行记忆.md]] | md | 377 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/06.memory/系统约定记忆.md]] | md | 490 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/06.memory/错误与修复记录.md]] | md | 444 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/06.memory/高价值来源记录.md]] | md | 392 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/agent-knowledge-ops/07.hooks/Hooks扫描器.md]] | md | 2375 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[30.areas/agent-knowledge-ops/07.hooks/Hooks扫描器.md]] | md | 1453 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/Dashboard.md]] | md | 1824 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/agent-knowledge-ops/README.md]] | md | 2245 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/ai-agent-intel/cache/2026-07-04.json]] | json | 92772 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
@@ -244,21 +262,8 @@ tags: [Evidence, 证据层, Agent, 自动派工]
 | [[30.areas/ai-agent-intel/cache/2026-07-12.json]] | json | 74861 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/ai-agent-intel/cache/2026-07-16.json]] | json | 96211 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/ai-agent-intel/cache/2026-07-22.json]] | json | 95856 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
+| [[30.areas/ai-agent-intel/cache/2026-07-25.json]] | json | 87881 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 | [[30.areas/ai-agent-intel/config/sources.json]] | json | 2979 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/inbox/2026-07-04.md]] | md | 96026 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/inbox/2026-07-07.md]] | md | 98764 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/inbox/2026-07-09.md]] | md | 64075 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/inbox/2026-07-10.md]] | md | 13397 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/inbox/2026-07-12.md]] | md | 77899 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/inbox/2026-07-16.md]] | md | 100575 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/inbox/2026-07-22.md]] | md | 99985 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/ai-agent-intel/README.md]] | md | 1457 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/semiconductor-dispatch-intel/cache/2026-07-04.json]] | json | 23001 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/semiconductor-dispatch-intel/cache/2026-07-07.json]] | json | 29498 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/semiconductor-dispatch-intel/cache/2026-07-12.json]] | json | 21815 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-04.md]] | md | 26519 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-07.md]] | md | 34409 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
-| [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-12.md]] | md | 26568 | 自动识别为可能包含 Agent / 派工 / TestCase 证据 |
 
 ## 证据引用模板
 

@@ -171,25 +171,25 @@
     "status": "todo",
     "priority": "P2",
     "category": "Hooks",
-    "task": "处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-25.md",
+    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-26.md",
     "recommended_executor": "Codex",
     "trigger": "created",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-26.md",
     "output": "30.areas/agent-knowledge-ops/07.hooks/",
     "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-26.md"
   },
   {
     "status": "todo",
     "priority": "P2",
     "category": "Hooks",
-    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "recommended_executor": "Codex",
     "trigger": "created",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "30.areas/agent-knowledge-ops/07.hooks/",
     "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -198,10 +198,10 @@
     "task": "### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "30.areas/agent-knowledge-ops/06.memory/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -210,10 +210,10 @@
     "task": "### [[Proposal Update] Speculative Routing Predictor (SRP) v2.0: Full Production Engineering Blueprints for MoE Memory Bottleneck Mitigation](https://github.com/deepseek-ai/DeepSeek-V3/issues/1492)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "30.areas/agent-knowledge-ops/06.memory/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -246,10 +246,10 @@
     "task": "- 原文摘要：<p>Integrating real-time voltage telemetry and functional monitoring for deeper insights.</p> <p>The post <a href=\"https://semiengineering.com/enhancing-system-observability/\">Enhancing System Observability</a> ap",
     "recommended_executor": "Codex",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "30.areas/agent-knowledge-ops/04.telemetry/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -294,10 +294,10 @@
     "task": "### [A review of the applications of multi-agent reinforcement learning in smart factories.](https://doi.org/10.3389/frobt.2022.1027340)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -315,25 +315,13 @@
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Agent-based dynamic scheduling for semiconductor wafer fab](https://www.semanticscholar.org/paper/db062b192daf596c3fa49d24b5c3ed2dcb9299dc)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
     "task": "### [johannalberts/supply-chain-research-agent](https://github.com/johannalberts/supply-chain-research-agent)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -426,10 +414,10 @@
     "task": "优先阅读相关度高且分类为“派工规则 / WIP / AMHS / MES / AI 调度”的条目",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -438,10 +426,10 @@
     "task": "对明显无关的条目记录噪声来源，并更新关键词 / 来源配置",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -450,10 +438,10 @@
     "task": "对涉及公司内部派工逻辑的启发，单独沉淀到内部专题笔记",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
     "status": "todo",
@@ -462,9 +450,9 @@
     "task": "将高价值条目移动到专题笔记或建立 wiki-link",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   }
 ]

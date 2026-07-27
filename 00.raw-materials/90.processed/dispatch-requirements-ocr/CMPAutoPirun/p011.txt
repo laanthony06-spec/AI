@@ -1,0 +1,18 @@
+取lifetime频度低的机台）。对此Lot选定的机台需判断pi该机台后不存在超lifetime频度风险，此外，若
+该机台已存在pi1ot则需按照上述逻辑重新选择机台，若未拿取到满足以上条件的机台，则按照上述选取pilot
+逻辑重新章取新的pilot并选择所需pirun的机台·
+3-2特殊判断逻辑：
+3/5- HLRS-0060-3.
+华力商饭
+HLConfidentialll
+O超lifetime频度风险：Byequipmentid、dhanberid metertpe串取表mesprod.fabcnpwafercount
+&表mesprod.fweapequipment&表mesprodlxsiteeapusagemetet享取value.afercount等信息，其中metertype
+由于CMP机台边对应类型的Curtent(value）值为对应Chanber对应类型中Current（value)的最大值，所
+以对于同一个边拿取到的两个腔的cuent(value）需取最大值，例如机台MAB边的当前value值拿取M机台
+A边和B边当前值中的最大的值记为MAB边的currentvalue）
+拿取Charber对应的wafexcount即为该Chanber对应的最大警戒值max value,机台边对应的最大警戒值
+axyalue为边对应Chamber中对应的Min（maxvalue）值
+By 边将预排至该机台的 lot 循环计算Nelifetine值，NevKlifetine）待计算 lot 的tx+
+Current（yalue），若计算出的Ne（lifetime>该边的Min（max yalue）则认为有超lifetime频度风险
+需注意：对于C-CCCCU-C.m，部分边（BCCcUA05/06/09）跑卡货仅需消耗正常边的一半1ifetime值，
+所此处需增加special判断：如果边在Ripconfia中ParapterName MPlLowieMachinedouble 对应value

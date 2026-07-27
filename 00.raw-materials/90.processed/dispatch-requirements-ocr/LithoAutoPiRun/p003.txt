@@ -1,0 +1,27 @@
+拿取12 中Lot的Litho 站点，经TransferMarco判断后，若Lot 在Litho 站点能 Transfer则同时章取
+对厂Litho机台。
+By机台别从表rtd r2r litho add setting中获取 Lot 在机台的 Pi split flag 和pi splitcnt。若Lot不存
+在Pi splitflagT的机台，则过滤Lot
+将剩余lot在Litho站点的机台经过EQPStatus、LCC、Capabiity、Recipe、PPID、Global Reason判断，
+若存在卡控则筛除对应机台。
+13.2多路径判断
+By Lot-STN+Reticle维度从表 rtd 2rlitho context ovi 和 rtd r2r litho context cd 匹配R2R 状态，并
+半断是否存在 R2R Reason。筛选出满足：OVL Status InPirunON ONFixed)CD Status In(PinunON ON
+Fixed）且无R2RReason的Context(ByLot-STN+Reticle)
+ByLot统计Context数量，若ContextCount>1且存在OVL Status In(ON.Fixed)且CDStatusIn(ON,Fi区xed)
+的Context，则认为Lot存在多路径，过滤该Lot。
+1L.4选Lot规则
+By Context为Lot排序并挑选最优Lot
+L.4.1AutoPirunContext筛选
+获取13过滤后的Lot及Context信息，栏位包括Lot、STN、Reticle.Prod、Layer、Recipe、Pretool
+Prereticle.Custom ContextValueCD StatusOVL Status.Pilot CD.Pilot OVL.Pi splitflag.Pi splitcnt.
+筛选出满足Pi splitflag-Y且（PilotCD为Null或PilotOVL为Null的Context，即为需要自动Pirun的
+.4.2Context内Lot排序
+获取lot的排序指标
+（1）计算Lot当前站点距 Litho 站点的剩余 Step 数量，记为GapToLitho：
+（2）判断Lot的片数是否大于等于Pisplitcnt（黑认为4），若是则SplitCntMatched-1，否则为0；
+（3）若Lot存在prelayer，则从表2r litho waferhistory 中获取每片Wafer的Chuck 信息；否则从表
+fsmaterialassociation 中获取Wafer的 Slot信息。判断Lot是否满足包合C1C2（或Slot奇偶）各大于等于
+两片，若是则RequiredChuckCount-1，否则为0，
+（4>判断Lot是否为空机空LpLot，若是则BulletLot-1，否则为os
+（5若LotRemainQ有值且大于0，贝指标RemanQ力lot剩余Qtime，否则为9909

@@ -1,6 +1,6 @@
 ---
 type: agent-telemetry-dashboard
-updated: 2026-07-25T15:00:20
+updated: 2026-07-27T19:12:11
 tags: [Agent, Telemetry, 自动化看板]
 ---
 
@@ -11,23 +11,23 @@ tags: [Agent, Telemetry, 自动化看板]
 | 任务 | 状态 |
 |---|---|
 | Obsidian Agent Knowledge Ops Refresh | 4 |
-| Obsidian AI Agent Intel Daily | 4 |
-| Obsidian Raw Materials Weekly Knowledge Distill | 3 |
-| Obsidian Semiconductor Dispatch Intel Daily | 4 |
+| Obsidian AI Agent Intel Daily | 3 |
+| Obsidian Raw Materials Weekly Knowledge Distill | 4 |
+| Obsidian Semiconductor Dispatch Intel Daily | 3 |
 | Obsidian Sensitive Scan Weekly | 3 |
 
 ## 关键输出目录
 
 | 目录 | 文件数 | 最新文件 |
 |---|---:|---|
-| `30.areas/ai-agent-intel/inbox` | 7 | [[30.areas/ai-agent-intel/inbox/2026-07-22.md]] |
-| `30.areas/semiconductor-dispatch-intel/inbox` | 8 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-22.md]] |
+| `30.areas/ai-agent-intel/inbox` | 9 | [[30.areas/ai-agent-intel/inbox/2026-07-27.md]] |
+| `30.areas/semiconductor-dispatch-intel/inbox` | 11 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md]] |
 | `00.raw-materials/90.processed/weekly-knowledge-distill` | 2 | [[00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md]] |
 | `00.raw-materials/90.processed/dispatch-requirements-notes` | 10 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md]] |
 | `30.areas/agent-knowledge-ops/01.task-queue` | 2 | [[30.areas/agent-knowledge-ops/01.task-queue/Agent任务队列.md]] |
 | `30.areas/agent-knowledge-ops/02.evidence` | 1 | [[30.areas/agent-knowledge-ops/02.evidence/Evidence索引.md]] |
 | `30.areas/agent-knowledge-ops/03.testcases` | 2 | [[30.areas/agent-knowledge-ops/03.testcases/WaferBalance-TestCases.md]] |
-| `30.areas/agent-knowledge-ops/06.memory` | 4 | [[30.areas/agent-knowledge-ops/06.memory/高价值来源记录.md]] |
+| `30.areas/agent-knowledge-ops/06.memory` | 4 | [[30.areas/agent-knowledge-ops/06.memory/错误与修复记录.md]] |
 | `30.areas/agent-knowledge-ops/07.hooks` | 1 | [[30.areas/agent-knowledge-ops/07.hooks/Hooks扫描器.md]] |
 
 ## 日志健康度
@@ -43,11 +43,22 @@ tags: [Agent, Telemetry, 自动化看板]
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-2/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-3/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-4/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-exact-replica-1/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-exact-replica-2/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-exact-replica-3/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-exact-replica-4/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-exact-replica-5/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-exact-replica-6/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-final2/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-final3/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-flowcharts-bw/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-flowcharts-bw2/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-flowcharts/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-source-1/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-source-2/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-source-3/cache/opencl_devices.log]] | 1768 | 0 |
 | [[30.areas/ai-agent-intel/cache/last_run.log]] | 112 | 0 |
-| [[30.areas/ai-agent-intel/cache/last_run_task.log]] | 582 | 0 |
+| [[30.areas/ai-agent-intel/cache/last_run_task.log]] | 424 | 0 |
 | [[30.areas/semiconductor-dispatch-intel/cache/last_run.log]] | 1458 | 0 |
 
 ## 建议

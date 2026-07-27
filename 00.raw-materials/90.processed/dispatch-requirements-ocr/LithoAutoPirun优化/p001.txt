@@ -1,0 +1,26 @@
+申请部门：制造部 系统名称类别为3时必填）：CIM计算机集成制造系统Fab6
+申请人员：温洁奇 功能模块（类别为3时必填）：智能派工系统（RTD/DSP）
+申请日期：2026-02-11 希望交付期：
+顶目简介和必要性分析
+当前LithoPurun需要PE设置Pilot，在pilot的Mask放入机台后才会自动分批，purun流程花费时间较
+长，容易造成lotOQT。现需根据lot的R2R状态，作业条件由系统自动选择pilot，不限制pilot自动分批站
+点，实现lot在Barc站点AutoSplitPinum·
+项目投资方案比较及效果分折：
+改善方案：
+优化AutoSplit逻辑，选择状态仅为piunon且在光刻有作业条件的lot反馈给R2R，自动分批不再卡控
+reticle位置，pilot在purun loop中优先派工。
+效果分析：
+R2RAutoPinunOtimeBuffer从最低6小时变至24小时
+需求内容（可添加附件）：
+方案逻辑：
+RTD新增逻辑
+实现 AutoSplitPurun 的全部判定逻辑，并输出 Pilot 选择结果的Repont 供AMA 执行分批。另外对
+LithoRule和LithoAssign涉及AutoSplitPunun 的逻辑同步进行修改。
+LReport部分
+涉及生成Report：Central GetLithoR2RAutoPirunInfo
+L1Lot获取
+从FAB6 和FAB8 两厂获取待判断 Lot，并进行初步过滤。
+L.1.ILot基础信息获取
+通过表fwlot获取appid、priontyprocessingstatus、componentgty位信息
+通过表fablotext获取reguredcapabilityruncardidretcled栏位信息，
+通过表fablotcanerext获取camerknd栏位信息：

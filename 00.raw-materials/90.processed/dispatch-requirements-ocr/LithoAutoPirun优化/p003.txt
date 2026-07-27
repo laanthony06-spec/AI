@@ -1,0 +1,28 @@
+(2）Ltho站点划断：半断 Loop 中是否存在 capabilityLithoCapabilty 且合有 Reticle 信息的站点。
+若无贝过滤Lot。
+<3） FutureHold 半断：从表fabfutureacuion获取Loop中每个站点的FutureActon信息，判断Loop 中
+是否存在FutureHold，若有过滤Lot。
+（4）RC判断：判断Loop 中是否存在 RC站点，若有则过滤Lot。
+1.2.3Merge站点设定
+若Lot有ADI站点（不包合 SRC则lot被选为分批Iot时，将第道ADI设力Merge站点，否
+则将最后一道CD 设为Merge 站点。
+1.3AntoSplir条件力断
+获取lot的R2R状态并进行AutoSplit条件的判断。
+13.1机台及Lot卡控断
+对12 的Lot，拿取其 Litho 站点：判断逻辑为（IsLithoStep And (Curstep Full Segl-Full StepSea or
+ExtralStatus-Waitfor JobPrep OR Wait For Transport And Null(tuackinTime))
+经TIransferMarco判断后，若Lot 在Litho 站点能 Transfer则同时拿取对广Litho 机台信息。
+将 Lot 在litho 站点的机台List 进行折分，By 机台厂别以表rtd r2r litho add setting 中获取Lot在机
+台的 spltflag 和 pisplitct若Lot不存在Pusplit flag一T的机台，则过滤Lot。
+将剩余lot 在 Litho站点的机台经 EQPStatus、LCC、Capabiity、Recipe、PPID、Global Reason 的判断
+（followLithoassign逻辑），若存在卡控则筛除对应机台。
+L32R2R状态四配
+从表rtd2r litho contextovl和 ntd r2r litho_contextcd匹配 R2R状态，并判断是否存在R2R
+Reason。筛选同时满足以下条件的Lot：
+( OVL Status E PinnON,ON.Fixed:
+(2)CD Status E (PinunON.ON.Fixed;
+(3)R2RReason力空。
+此时Lot.STNOVL Status、CD Status 为一行信息
+L3.3AutoSplit条件力断
+串取 Lot 的 Chuck 和 Slot 信息 从表ntd rr ltho gontext relauon 联取 Prelaver信息若 Lot 存在
+elaye，以表2r ltho waferhistory 中联取每片 Wafe 的 Chuck 信息，百u从表matenalassocatuon 中

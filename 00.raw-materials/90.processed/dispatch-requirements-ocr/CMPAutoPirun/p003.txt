@@ -1,0 +1,12 @@
+筛选掉不可pi的机台：机况不符合条件的，边上有正在pilot的，pi上该lot
+后会超出lifetime频度的。在此基础上选择ReasoncodeCMP里含有APC-JOB 正确选取可pi的机台边
+OFF的。
+t可pi
+在上述拿取到的机台中选取loading最低的机台作为分批该Lot选定的机台（当 2025/12/4
+机台loading相同时，选取lifetime频度低的机台）循环选取，每次循环记
+录lot和对应pi的机台，lot不参与接下来的分子批pirun，时间间隔设置为1 能够正确选取1ot要pi的机台边，并且机台边
+天，1天后可再次选取该lot，stn同样不参与循环，直至stnside上不存在 不重复，即已选的机台边不参与接下来的判断。
+pilot为止。
+正确分批，保证1ot片数大于要分子批的片数，
+lot 根据R2RIAPC表中配置的分批片数进行分子批pirun 2025/12/4
+输出componentinfo

@@ -1,0 +1,27 @@
+Report 栏位包括：Lot、toolid、productidlayend、reticleid、prereticle、pretool、custom contextvalue
+pi splitwafer,IsNeedSplit,isSTNSite
+2新增ReportLithoPiLotAutoDoAdhocSorter
+获取需要TransferFoup的Pilot。
+2.1LithoPilot拿取
+获取需要TransferFoup的LithoPilot，判断逻辑如下：
+2.11数据获取：
+从2r litho contextovl获取ovlstatus pilot栏位信息：从r2r litho contextcd获取cd status、pilot栏位
+信息：从fwlot中获取appid、lottype、priority栏位信息；从fabcategorymap中获取lottype、category栏位信
+212筛选判断：
+筛选出满足priority5category-Production且（ovlstatus-PIRUNON 或cd status-“PIRUNON）
+的Pilot，即为需要TransferFoup的LithoPilot。
+2.2TransferFOUP翔判断
+拿取2.1中LithoPilot的Carnier信息，By Carnier 从fuwlot中获取所有Lot，筛选出Lotextrastatus均为
+WaitForJobPrep的Carrier。
+若LithoPilot同Caier中存在其他Lot时，则该Pilot需要ChangeFoup。
+2.3Carrier排序规则
+对于需TransferFOUP的LithoPilot进行排序，拿取LithoPilot的RemainQ、Priority、componentqty指标
+并按照Mim(RemainQ）、Min(Priority）、Max（componentqty）排序，根据排序建立AdhocSorterJob。
+2.4输出Report
+从 AMATriggerConfig-WatchDog LithoPiLotAutoDoAdhocSorter 拿取 Switch、 Tnigger Time Slot
+TriggerCountTime栏位信息，当Switch-Y且当前时间在TnggerTimeSlot范围内时，将前TniggerCountTime
+个需物理分批的Carnier结果存入Report：LithoPiLotAutoDoAdhocSorter中，栏位包括：Camer、Pilotextrastatus、
+StatusRemainOPieces.Prod,Priority
+3.Rule中新增卡控罗辑
+在GlobalMacro中新增对需导FoupLithoPilot的卡控：在LithoRule中增加子母批Run相同机台的卡控
+3.1ClobalMacro新增卡控逻箱

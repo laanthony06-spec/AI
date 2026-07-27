@@ -1,0 +1,27 @@
+为避免不同Context的lot被集中分配到同一机台：
+(1）按Ltho 机台 name分组并编号，记为 Index2：组内排序编号记为Index；统计机台总数量记为
+Index3
+(2）计算公式：fulSTNindex-(Index-DxIndex3+Index2
+(3）Lot+Context按fullSTNindex排序
+L4.3按Context循环挑选
+按排序后的Context依次选择SplitLot，每轮循环结束后去除已选的Context和Lot，继卖下一轮挑选，
+直至无可用Context或无可用Lot。
+15Pilot选片逻辑
+从SplitLot中按规则选择Wafer 作为Pilota
+1.5.1Wafer分组
+拿取 14中选定的Context 及 SplitLot，将 Split Lot 的 Wafer 分为以下层级：+
+（1）Group层：按 Wafend编号，Wafenid#1-#10 的Wafer 划入Groupl，Wafenid#11-#25的Wafer
+划入Group2。
+（2）SubGroup层：若Lot有Chuck信息，则 Chuck1（C1）的Wafer一SubGroupl，Chuck2（C2）
+的 Wafer一SubGroup2；否则按SlotMap，奇数 Slot的 Wafer一SubGroupl，偶数 Slot的Wafer一
+SubGroup2。-
+(3）GroupRank 值：Group1-SubGroupl-1:Group1-SubGroup2-2;Group2-SubGroup1-3；Group2
+SubGroup2=4。-
+L5.2Wafer排序与选择+
+在 Group +SubGroup 内按 wafernd排序并编号，记为 WaferRank·按以下优先级排序：
+MINWaferRank);@MN(GroupRank)+
+选择规则：
+（1）若Context对应的pisplitcmt有值，则按排序顺序排选puspltcnt片Wafer 作为pusplituaferi
+（2）若pisplitcm无值且Wafer总数6，则安排序顺序兆选6片Wafer作为Pspwae+
+（3>否则无需挑选，直接特SpltLot整体作力Pilota
+流程图：

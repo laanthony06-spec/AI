@@ -1,0 +1,27 @@
+通过fabinqtimeprocess天取Remaino栏位信息。
+从 UIRTDConfig-LITHOLotAssignment LithoAssignCapability 中获取 LithoCapability
+1.1.2基础过滤条件，
+对掌取的Lot执行以下三步过滤：?
+（1）状态过滤：筛选出满足(priority 8且processimgstatus=Active）或（priority5且
+（2）基本条件过滤：筛选出满足samierkind-TFOUP、runcardid 为空、RemainQ0或Remano为空、
+reguiredcapability E LithoCapability,L-BARCO-LL-BARCO-S) 的 Lot
+（3）跨厂lot去重：筛选出满足IsTransferLot-True 或(IsTransferLotTrue 且 processmgStatus#
+CrossFabTransfered的Lot。
+（IsTransferLot指标经istransferlotmarco判断得到）
+1.13其他过滤条件
+拿取112的lot并过滤满足以下条件的lot
+（1）去除Bullet LotBullet LP：即空机或空PortLot，空机 lot定义：prionity一BulletLotpriority，
+imtemalpnonity-BulletLot intemalpriority BulletLot pnonity  BulletLot intemalpniority 在 RTDConfig 中
+BulletLot PnoAndInterpno的ParameterValue Char栏位获取空PontLot定义：mpcpnionity-mpcpriority config的lot
+即为空portlot。mpcpriorityconfig从tbmpgprionity.config拿取，即freepont-Y时的mpspriority。
+（2）去除R2R白名单Lot：通过表2rlithowhitelist 获取白名单lot。
+（3）去除同 FOUP 已存在 Litho Pilot 的 LotLithoPilot 从表 rtd r2r litho context ovl/cd 和
+ntd 2r lot histony获取。+
+12Pirun站点获取
+获取Lot后续站点信息并进一步判断是否符合AutoSplitPiun条件。
+L2.1Fetch站点信息获取
+对通过1.1筛选的Lot，向下Fetch20站，获取每个站点的productmame、planname、stage、capability、
+stepseg、tecipeid、STN 信息eTransterlot需修正厂广另D
+L22PirunLoop判断
+Lo般Pinn的站点力BARCLthoOVLCDADI对121的Kt进以下过滤
+1）CD站点判断：截取到最后道CD站点若LoOP中无CD站点：过Lo+

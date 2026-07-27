@@ -1,0 +1,19 @@
+CMPR2RPi-RunLot自动分批功能
+Q01 项目描述：当CMP在堆货的时候，PE手动Pi-Run效率低，客 容易导致lotoverQ-time，现需
+AMA系统根据lot作业条件，机台loading情况进行自动分批Pi-Run，提升效率。
+Q02 项目方案： AMA系统根据Q-timeRisk等指标选定需要Pi-RunLot，分配到Loading最低并且
+Lifetime充足机台，然后对选定Pi-RunLot进行自动分批，同时将Pi-RunLot
+信息发送给R2R系统
+LOT EQP
+E1
+E2 没有Q-timelot
+有Q-timelot
+子批A.1作为Pi-Runlot将 AMA自动选择Alot同时分 A1可Run Pi-RunLot E3
+A.1相关信息发送给R2R系统 A.1
+R2ROn机台
+E4
+R2ROff机台
+R2R
+03 项目效益：减少overQ-timelot数量，同时提升机台生产效率3%以上。
+商密二级 上海华力
+ConfidentialⅡ HLMC

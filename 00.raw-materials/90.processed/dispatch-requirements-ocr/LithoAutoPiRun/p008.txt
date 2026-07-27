@@ -1,0 +1,24 @@
+4.1R2RAutoPirunControl卡控
+针对非SpecifyLot，若Pi SplitFlag-Y且R2R CD/OVL Status-PIRUNON且Pilot力Null，则卡控
+ReasonR2RAutoPinunControl，否则不卡控
+4.2Parent&ChildLotNeedRunSameTool卡控
+逻辑与LithoRule中一致，pretool获取和子批母批作业机台获取改为Central。
+ANLA新增逻辑
+根据Report Central GetLithoR2RAutoPinuninfo 热行物理分批，并将 Pilot给到 R2R，根据Report：
+LithoPiLotAutoDoAdhocSorter热行TransferFoup
+获取Report Central GetLithoR2RAutoPirunInfo栏位信息Lottoolid.productid layenid.reticleid.prereticle.
+pretool, custom context value, pi splitwaferIsNeedSplitisSTNSite.
+L1整批设为Pilot
+当IsNeedSplit-F时，直接将整批Lot传给R2R。
+1.2物理分批Pilot
+当IsNeedSplit-T时，给MES物理接口，将pisplitwafer从Lot中分出，若未拿到可用空Foup或call分
+批接口Fai，则将整批Lot传给R2R，否则将分出的子批pilot传给R2R。
+2.TransferFoup
+获取Repont：LithoPLotAutoDoAdhocSorter栏位信息，并按顺序给MES打TransferFOUP接口，将Pilot
+导到空FOUP中，若拿取可用的空Foup失收或空Foup数量为o，则在AMALog中记录Fail信息。
+申请部门意见： 申请部门分管领导意见：
+日期： 日期：
+相关部门意见： 相关部门分管领导意见：
+日期： 日期：
+信息技术部意见： 信息技术部分管领导意见
+日期： 日期：

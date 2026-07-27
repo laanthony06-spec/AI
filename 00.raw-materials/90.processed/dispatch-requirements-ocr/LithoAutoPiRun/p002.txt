@@ -1,0 +1,25 @@
+通过表fablotcarierext获取camierkind栏位信息
+通过fabnqtimeprocess获取RemainQ栏位信息
+从UIRTDConfig LITHOLotAssignment-LithoAssignCapability 中获取LithoCapability。
+112基础过滤条件
+对章取的Lot执行以下过滤：
+K1）基本条件过滤：筛选出满足processingstatus-Active orCrossFabTransfered，camerkind-FOUP
+runcardid 为空，requiredcapability In (LithoCapability,L-BARCO-L,L-BARCO S)的Lot
+（2）跨厂信息去重：筛选出满足 IsTransferLot-True 或CIsTransferLot#True 且processingStatus
+CrossFabTransfered）的Lot（IsTransferLot指标经istransferlotmarco判断得到
+12获取Pirun站点并对lot进一步过滤
+获取Lot后续站点信息并进一步判断是否符合AutoPinun条件。
+12.1PirunLoop信息获取
+对通过11筛选的Lot，向下Fetch20站，获取每个站点的productname、planname、stage、capability
+Lot当前站点到最后一道CD站点即为一段PinunLoop。若lotFetch站点中无CD站点，则过滤该Lot
+1.2.2其他过滤条件
+点。若无则过滤Lot。
+（2）Specify判断：判断lot是否在r2r litho whitelist（匹配productid、layer、lotid）中，若在则过滤Lot。
+（3）同FoupPilot判断：从表rntdr2rlitho contextov/cd和rtd r2rlothistory获取LithoPilot，判断同
+Foup中是否有LithoPilot，若有则过滤Lot。
+（4）FutureHold 判断：从表fabfutureaction获取PinunLoop中每个站点的FutureAction信息，判断Loop
+中是否存在FutureHold，若有则过滤Lot。
+（5）RC判断：判断 PirunLoop中是否存在RC站点，若有则过滤Lot。
+1.3R2R条件断
+获取1ot在可作业机台的R2R状态，并判断1o是否存在多路径
+13.1可作业机台获取

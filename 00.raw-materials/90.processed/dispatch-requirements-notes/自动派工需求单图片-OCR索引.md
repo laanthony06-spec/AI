@@ -7,14 +7,17 @@ tags: [自动派工, 需求单, OCR, 索引]
 
 ## 汇总
 
-- 已处理文件夹数量：6
-- 已处理图片数量：25
+- 已处理文件夹数量：9
+- 已处理图片数量：54
 - 空文件夹未生成 OCR 笔记，例如当前 `TestCase_SOP` 下暂无图片。
 
 ## 文件夹清单
 
 | 文件夹 | 图片数 | 初步主题 | 整理笔记 |
 |---|---:|---|---|
+| CMPAutoPirun | 12 | PM 管控 / 设备保养约束 | [[00.raw-materials/90.processed/dispatch-requirements-notes/CMPAutoPirun-需求单整理.md]] |
+| LithoAutoPiRun | 8 | 自动派工需求 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md]] |
+| LithoAutoPirun优化 | 9 | 自动派工需求 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPirun优化-需求单整理.md]] |
 | PM_Control | 7 | PM 管控 / 设备保养约束 | [[00.raw-materials/90.processed/dispatch-requirements-notes/PM_Control-需求单整理.md]] |
 | Qsort | 4 | Qsort / 派工排序 | [[00.raw-materials/90.processed/dispatch-requirements-notes/Qsort-需求单整理.md]] |
 | TestCase_SOP/TestCase示例 | 5 | TestCase / SOP / 验证规范 | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md]] |

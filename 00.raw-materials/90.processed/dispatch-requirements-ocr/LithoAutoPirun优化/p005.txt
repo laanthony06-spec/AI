@@ -1,0 +1,20 @@
+eutureHold?
+群在RC装忧？
+OVL/CD状态黑足？
+PUONON/Fd) （不满件）
+Paot为空？
+Chuck/sota?
+商有位微可用益可分批）
+进入AutoSpli颜选Lot
+（限足所有条件）
+1.4Lot与Context排序
+对Lot 排序及并byContetx循环排选最优SplitLot。
+L4.1Context统计与Lot排序
+获取Lot当前站点距Litho 站点的乘余Step数量，记为GapIoLitho（值越小越优）。
+判断 Lot 是否为 STRMSTRLot（是否在表ystrmstr lot中）：若是 STRMSTRLot且RemainQ
+8，则记NonPreferFlag-Ture，反之为Flase·
+按以下优先级对Lot排序：
+DMIN(GapToLitho) 距Litho站点越近越优先
+RemainO越少越优先无Remain赋值9999）
+?NonPreferflag-Flase优先 STRMSTRLot优先
+L4.2Context均衡分配（fullSTNindex）

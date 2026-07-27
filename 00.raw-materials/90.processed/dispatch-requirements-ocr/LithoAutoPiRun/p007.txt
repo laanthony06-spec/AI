@@ -1,0 +1,28 @@
+拿取21中的LithoPilot，当 WatchDog LithoPiLotAutoDoAdhocSorte中的Switch-Y且当前时间在
+IniggerTime Slot范围内时，满足以下两种场景的lot需卡控Reason：
+（1）若LithoPilot在AdhocSoter站点（adhocplanname包合“UnScheduleSorter，则LithoPilot同Foup
+不在 AdhocSoter站点的Other Lot需要卡控Reason WaitPilotChangeFOUP。Remove规则：当Other Lot在
+Litho站点时，不能Remove：当OtherLot在Barco站点时，RemainQ-4H或触发QuO时，Remove卡控，当
+OtherLot在非Litho/Barco站点时，仅触发Qu o时，Remove卡控
+2）若LithoPilot不在AdhocSoter站点，则LithoPilot和同Foup不在AdhocSoter站点的OtherLot者都需
+要卡控Reason WaitPilotChangeFOUPRemove规贝：OtherLotFollow（D，LithoPilot 的RemainQ-4H或触
+发Qu0时、Remove卡控
+3.2LithoRale新增卡控逻辑
+3.2.1R2RAutoPirunControl控
+针对非SpecifyLot，若Pi SplitFlag-Y且R2RCDOVLStatus-PIRUNONPilot为Null，则卡控
+ReasonR2RAutoPirunControl，否则不卡控
+3.2.2Parent&ChildLotNeedRunSameTool卡控
+3221判断lot是否有Pretool
+从表2rlitho context relation中获取productid、cur layer、pre layer栏位信息，从r2rltho_contextovi中
+获取productid、layerid、pretool栏位信息；
+ByProdlayer从2r litho contextrelation（匹配productid、pre layer）获取curlayer，再通过Prod
+curlayer从r2rlitho_contextov获取pretool，当lot存在pretoo不为空时，则需要后续判断。
+3222获取子母批作业机台
+通过表fabfutureaction拿取和lot有FutureMerge关系的子批母批lot，从表2rlothistory中（匹配Lotid、
+productid，layend获取最新一笔子批母批在待判断lot当前layer的作业机台toolid。
+3223判断是否需卡控
+通过2rlitho whitelist判断（匹配productid、layend、lotid）lot是否为SpecifyLot，针对非SpecifyLot，
+若待判断lot的机台与子批/母批作业机台toolid不一致，则卡控Reason：Parent&ChildLotNeedRunSameTool
+否则按原逻辑判断
+4LithoAssign新增卡控逻辑
+LithoAssign增加子母批Run相同机台的卡控，并保有原R2RAutoPinunControl逻辑。

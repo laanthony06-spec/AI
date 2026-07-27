@@ -1,0 +1,20 @@
+AdDu 正文 标题1 标题2 标题3 标颖4 标额5 标题 副标题
+样式
+1用户需求
+-1.1背景
+当CaP在堆货的时候，PE 手动Pi-Run效率低，容易导致 lot overO-time，现需AMA
+系统根据lot作业条件，机台loading情况进行自动分批Pi-Run，提升效率。
+1.2需求描述
+AMA需求流程图
+Select Pllot
+And STN
+AMA End
+R2R
+实现功能：AMA 系统根据o-time Risk 等指标选定需要Pi-Run Lot，分配到 Loading
+最低并且Lifetime充足机台，然后对选定 Pi-Run Lot 进行自动分批，同时将Pi-Run
+Lot 信息发送给 R2R 系统。
+2详细设计
+2.1UI设计
+（一）在AMATigxCOnfi中增加开关，描述如下
+Punction NameCMPAutosplitirunlott
+SwitchYe

@@ -1,0 +1,20 @@
+需末项目 R2RAutOSOltPin能优化
+方适免cossFABot行分批失败故不优先已设定futuremerge、Elot物理位置不处于同一FAB的lot当作plot
+2大是免同一ot组下含有多前层的lot，故不优先将lotname前码相同的不同lot再次设定大eilot
+兰行自动分批选时不优先选择带futuremerge巨子三批不在同一FAB的当作piot
+2当该ot被系统选中plot目扶行分批动作时若执行失败 则AMA汽行自动分批失败的lothold住hodconnentR2RAutoSpltExeauteFail
+需求内容 BeausefxxXXX（报告技行自动分批失败原因）
+s当同context下，当站三有执行自动分批失败的lot并巨又到站同至的带有tremege的et时不再将该lot排选为自动分批的lot，也不多效lothold
+住具他正常lot仍可板AMA当作pilot热行分批
+4当同stagenane存在不同的lotname但tname前码相同时，当作一个etE，当该t组内有ot被设定大plot时其他lot环不手被AMA选为pilot
+效益型
+计算方式制造或工程 当同一FouP存在多前层的情兄时ot过货完前t多的proces站点，需是老费近倍的时间我是个ot多用个FoUPquota
+部培写，尽量教字化
+涉及制造科科室可多选六区 及制造科主任 评信者 浅及工程部风险 邹天飞季
+选择DSP组别 DSPTEDSTEE
+风险等级
+预期影响 影响描述 风险评估等级
+生产影响 当分批失败时会触发AMAH需二程部及时处理
+工程响 兰影批封会触发AMAHOd需工程及时处
+系统影响
+综合风险等级

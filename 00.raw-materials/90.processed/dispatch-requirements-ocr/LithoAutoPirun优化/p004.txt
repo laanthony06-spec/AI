@@ -1,0 +1,16 @@
+prelayet，则从表r2r litho waferhistory中获取每片Wafer的Chuck信息，否则从表fsmaterialassociation中
+获取Wafer 的 Slot 信息。若Lot 包含 Chuckl 和Chuck2，或 Slot 包含奇偶号，则 ChuckOrSlotidSatisty
+TRUE.N
+按LotSTN维度计算以下 Flag：
+ChuckOrSlotidSatisf-TRUE，则为 TRUE，否贝内 FALSE。
+CanAutoSplitFlag CD若CD StatusPuunoNE pusplitflag二Y且Pilot为空目
+ChuckOrSlotidSatisfy-TRUE，则为 TRUE百贝 FALSE。
+TRUE：否则为FALSE。J
+按Lot 维度汇总（各STN 的 Flag取OR）筛选 CanAutoSplitFlag OVLTRUE 或
+CanAutoSplitFlag CD-TRUE) 月 HaveOtherAvailableSTN-FALSE 的 Lote
+存在CD站点？ （不清是条件）
+存在uho站？
+（不满足条件）
+（不满足条件
+中在RCO？ （不满足养件）
+HONON

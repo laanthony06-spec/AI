@@ -1,0 +1,15 @@
+1.6Report输出
+以上全部计算结果存入Report：Central GetLithoR2RAutoPirunInfo，供AMA 读取执行。
+Report栏位包括：toolid、toolname productidlavenid、retucleidprereticleprotool custom context value
+prelaver pilot, STNSite.
+2.Assign和Rule相关逻辑
+在LithoAssign/LithoRule中增加Pilot相关逻辑的修改，以及新增Pilot加速的Global Sorting
+2.1LithoAssign/RuleLithoRule修改
+针对Pi SplitFlag-Y 且R2RCDOVL Status-PinunON 且无Pilot 的场景，修改 Pilot 的选取规则。
+2.1.1原罗辑+
+当无Pilot时，取排序第一的 Lot 作为 Pilote+
+2.12现逻辑
+当无Pilot时，增加划断：LithoAssign和LithoRule中，针对Pi SpltFlag-Y且R2RCD/OVL
+Status-PIRUNON，对lot卡控ReasonR2RAutoPirunControl，待AutoSpltPinun功能确定Pilot。
+22Pilot加速Clobal Sorting
+在 RTD Global Sorting 中新增 Piulot 加速逻辑

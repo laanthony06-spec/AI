@@ -1,6 +1,6 @@
 ---
 type: hooks-scanner
-updated: 2026-07-26T18:20:28
+updated: 2026-07-27T19:11:46
 tags: [Agent, Hooks, 自动触发]
 ---
 
@@ -24,8 +24,8 @@ tags: [Agent, Hooks, 自动触发]
 
 | 事件 | 文件 | 大小 | 建议动作 |
 |---|---|---:|---|
-| created | [[30.areas/ai-agent-intel/inbox/2026-07-25.md]] | 91086 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-25.md]] | 35976 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-26.md]] | 55080 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md]] | 28148 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
 
 ## 触发规则草案
 

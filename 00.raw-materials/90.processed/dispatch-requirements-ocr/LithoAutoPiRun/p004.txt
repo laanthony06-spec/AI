@@ -1,0 +1,28 @@
+（6）若Lot在表guota applyinf。中且Keylot=lStatus-CONFIRM，则指标KeyLot-1，否则为0。
+按以下优先级对Lot排序，并记为力RTDRank：
+DMin(GapToLitho)
+@Max(SplitCntMatched)
+?Max (RequredChuckCount)
+@Max(BulletLot)
+5Min(RemainQ)
+@Min(KeyLot)
+1.42Context之间排序
+Lot存在多个Pirun Context时，为实现使用同一Reticle的Lot尽量分配到同一机台，不同Reticle的lot
+均衡分配，需要对Context进行排序。
+Context排序指标：
+（1）ByReticle-STN给Context分组，获取Reticle当前所在机台信息ReticleOnSTN，循环前，若Context
+的STN-ReticleOnSTN，则ReticleSINRank-1，循环中，若Context与上轮排序第一的Context属于同一组，
+则ReticleSTNRank-1，否则为0。
+（2》统计Contetx内当前可选Lot的数量，记作ContextCandidateCount。
+（3）BySTN统计已选择Pilot的Contetx数量，记作ActualSTNPilotCount
+最终按以下优先级对 Lot-Context排序
+D Max(ReticleSTNRank)
+Min(ContextCandidateCount)
+3)Min(ActualSTNPilotCount)
+@Min(RTDRank)
+L4.3Context循环挑选Pilot
+将排序第一的Lot-Context固定，作为已选Pilot的Context，并去除lotContext与已选Context相同的其
+他LotContext，在更新ReticleSTNRank、ContextCandidateCount、ActualSTNPilotCount指标后，进入下一轮
+循环，直至无可用Context或无可用Lot后，结束循环。
+15Pilot选片逻辑
+判断Lot是否要整批设为Pilo，不满足的需要选片进行物理分批。

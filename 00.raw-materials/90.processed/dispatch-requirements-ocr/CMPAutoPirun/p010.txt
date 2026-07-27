@@ -1,0 +1,21 @@
+2-2.展路宽需求的1ot+
+只针对设定有pilot atx对应的selfsapabilitz判断loading是否到达pirun水位，判断逻辑如下
+selfcapabilitix对应的QwIP>LimitWipLimitwip-（SunSidewph*Min（QTimelimit）ratio）C该部逻
+辑与CMPLowip管控类似，ratio拿取上述UI中sontroltxRe-Hghwip的值）贝管控生效《Switch=（T）
+反之，则管控不生效（Switch=“F·在上述需要管控的selefcapabilitx且在原逻辑判断中不存在oxexa
+风险或超lifetine频度风险的lot时需求分别从对应selfcapabilitx选取1oading最高的机台中拿取除无
+Qtimelot外Remaing最长的lot分子批进行Pirm 对于此类lot给needpirunflag：1
+反之，不满足上述两种情况的lot给needeiunfla：o.needpirunflag2>1>0
+置信息需存在mergestep。
+3、选取需求Pirun的机台
+对以上选取的pilot选取urun 机台时需无视掉LowwipControl且 APclJOB OFF 为PE 需求Pirun 的
+reasoneE 由于cMP机台特性，机台Idle时需要作业season为避免连续pirun产生idleloss，所以需求同
+个机台只能分一个子批进行piun。
+3-1.选取机台逻辑如下：
+选取完需要Pixun的1ot后，通过Assign中结果章取Lot对应的sTN信息，从该Lot可顶排的所有机台
+中无视掉Reason：LowwipControl，在机台剩余的Reasoncode中存在以下三类情形的机台中进行选取Piun机
+台：DReasoncode:APC JOB OFF"@ ReasoncodeAPC JOB OFFAssienOtherSTN “APC JOB OFF
+Assienotherside"
+在上述章取到的机台中选取 oading最低的机台作为分挑该Lot选定的机台当机台loading相同时，选
+取lifetime频度低的机台）对此Lot选定的机台需判断pi该机台后不存在超lifetine频度风险，此外，若
+该机台已存在piot则需按照上达逻辑重新选择机台，若未拿取到满足以上条件的机台，则按照上述选取piot

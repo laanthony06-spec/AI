@@ -1,0 +1,29 @@
+1.5.1整批设为Pilot场景
+（1bLot生效BulletLot-1或KeyLot-1
+2）Lot 的CurCapability-LithoCapabilityEFullRemainQ
+（3Lot的指标RequiredChuckCount-0
+4Lot的指标SplitCntMatched-0：
+5Lot的片数componentqty<-6
+1.5.2物理分批选片逻辑
+不满足151场景时，Pilot需要物理分批，FlagIsNeedSplit生效T并进行选片，规则如下
+1521Wafer分组
+将Lot的Wafer分为以下层级：
+（1Group 层：按Wafend编号，Wafend#1-#1o 的 Wafer 划入Group1Wafend#11-#25的Wafer
+划入Group2。
+（2）SubGroup 层：若Lot有 Chuck 信息，则 Chuckl （C1）的 Wafer一SubGroupl，Chuck2（C2）
+的 Wafer一SubGroup2：否则按 SlotMap，奇数 slot 的 WaferSubGroupl偶数 Slot 的Wafer一
+SubGroup2.
+(3)GroupRank 贝值：Groupl-SubGroupl-1:Group1-SubGroup2-2;Group2-SubGroup1-3:Group2
+SubGroup2-4.
+15.22Wafer排序与选择
+在 Group +SubGroup 内按 waferid 排序并编号，记为WaferRank。按以下优先级排序：
+MN(WaferRank);@ MIN(GroupRank)
+选择规则：
+若Context对应的pisplitcnt 有值，则按排序顺序挑选pisplitcnt片Wafer 作为pisplitwafer否则
+按排序顺序挑选4片Wafer作为pisplitwafer
+将pisplitwafer分批后设为Pilot。
+L53Merge站点设定
+若Lot有ADI站点不包含 SRC，则lot需物理分批时，将第一道ADI设为Merge站点，否则将
+最后道CD 设力Merge站点·
+L6输出Report
+以上全部计算结果存入Report：Central GetLithoR2RAutoPinunInfo，供AMA 读取热行。

@@ -1,0 +1,18 @@
+用户测试 I测
+测试内容 预期结果 测试日期
+owner own
+By处理过后的tool name（by到side）从tb machineselfcapa表中串取机台边 成功串取到所有机台边的selfcapability并按
+ity 对应的selfcapability，从R2R表中串取mergestep，qty以及count 此分group，设置groupidx，每个group的 2025/12/4
+picountconfig取最小值
+首先通过sysId串取lot当前的各项信息，筛选lot状态，选取片数大于5片的
+lot
+正确拿取初始符合条件的Lot信息 2025/12/4
+doublecheck，比对CMPLotAssignment表里记录的lot信息是否是实时的，选
+取实时信息
+邓怀骏
+ot 获取overq或者超lifetime频度的lot，同selfcapability下多个lot生效时 QTimeWorse和LifeTimeWorse有一个为T的，
+优先选取除无Qtimelot外Remaing最短的lot，给needpirunflag：2 则赋给该记录needpirunflag为2
+获取有展路宽需求的lot，需要管控的selefcapability且在原逻辑判断中不存 首先计算QWIP以及LimitWIP，根据公式进行比 2025/12/4
+在overa风险或超lifetime频度风险的lot，从对应selfcapability选取 较，得出正确的Switch，对于Switch为true
+loading最高的机台（assignedstn）中拿取除无Qtimelot外RemainQ最长的 的，且QTimeWorse和LifeTimeWorse同时为F
+lot分子批进行Pirun，给needpirunflag：1 的，赋给该记录needpirunflag为1

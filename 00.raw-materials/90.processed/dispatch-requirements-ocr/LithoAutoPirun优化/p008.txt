@@ -1,0 +1,27 @@
+2.2.1OVLPilot加速
+数据来源从表nd r2rlitho context ovi中获取 layerid、olstatus、pilot等栏位，筛选出oxlstatus
+PirunON对应的pilot
+数据来源：从表nd r2rlothistory 和fwwipstephistory中获取近天历史数居，获取 lotid
+productud、plot、process subrype、stagename 栏位。从表fiwlot、fablotext中获取lot当前stage筛选出
+process subtrype-Litho 且 pilot-OVLY且当前stage-stagename的pilot
+Global Sortung判断：若当前Lot的lotid 等于上述任未源的 pilot值，则生效 Pilot-l：反之按原逻
+辑断。
+2.2.2CDPilot加速
+CDPilot加速逻辑与OVL一致：
+数据来源：从表ntd r2r ltho context cd 中获取 layerid、cd status、pilot等栏位，筛选出：cd status
+PinunON对应的pilot。
+数据来源：从表rtd rarlot history 和fiuwipstephistory中获取近三天历史数据居·获取lotud productid
+pilot、process subtrype、stagename栏位从表fiwlot、tablotext 中获取lot 当前 stage筛选出：
+process subtrype Litho且pilot-CD/ Y且当前 Stage-stagename的pilot
+Global Sonting 半断：若当前Lot 的lotid 等于上述任来源的pilot 值，则生效Pilot-1，反之按原
+逻辑判断。
+AMA新增逻辑
+AMA根据Repont结果向MEScall分批接口并将分出的Pilot传给R2R
+工分批检查
+AMA读取Report后、执行分批接口前，需核对以下条件：
+（1）Lot厂别校验：确认分批Lot属于本厂（FAB6或FAB8）。
+（2）Lot状态校验：确认Lot当前状态为WaitForJobPrep 且当前站点runcardid 为空。
+（4）Camier类型校验：确认CanerKind-FOUP
+<5）Wafer校验：确Repont中选中的Wafer确实存在于该Lot中。
+检查后的lot根据repont结果分出对应Wafer作为Pilot。
+2向R2R传

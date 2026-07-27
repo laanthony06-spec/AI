@@ -1,0 +1,15 @@
+拿取R2R表中维护的tech prodstage count（该elfcapa 下分子批的数量）gt（该lot分子批
+的片数等数据信息。
+通过R2R表中维护tech、prod、stage等数据从表MECCIMtb selfcapa rule未同步成csy中串取
+selfcapabilitx，对于串取到的selfcapabilitx需进行下述判断，未串取到的selfcapabilix则无需进行后
+续判断。 注：R2R中 By tech、prod、stagegtx维护，需处理成by selfcapa 的gtx作为符合此条件Lot 的分
+批数量，若存在多条Count指标则取小
+选取Pirun lot
+掌取OM 最新版的信果优配R中seapab要信息 满足以下两种
+情况的任一需进行自动分批piot
+2-.存在Overo&超lifetime风险的lot
+CPAasin中已存在overa风险或超lifetime频度风险（该部分判断逻辑follow原CMPLotAssign判断逻
+辑：64-R-20250901）的1ot给needpirunelag：2，同selfcapabilitx下多个1ot生效时优先选取除无Qtimelot
+外Remaing最短的lot。
+HLRS 00603.
+2-2.展路宽需求的10t
