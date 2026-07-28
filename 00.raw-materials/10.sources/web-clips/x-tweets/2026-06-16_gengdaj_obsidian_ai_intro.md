@@ -95,6 +95,6 @@ Obsidian 不只是笔记软件，还可以通过插件接入：
 
 ## 关联笔记
 
-- [[00.raw-materials/90.processed/agent-knowledge-ops/2026-06-16_gengdaj_obsidian_ai_intro_insights.md]]
+- [[00.raw-materials/90.processed/agent-knowledge-ops/2026-06-16_AI时代Obsidian工作台搭建SOP.md]]
 - [[30.areas/agent-knowledge-ops/Dashboard.md]]
 - [[30.areas/agent-knowledge-ops/02.evidence/Evidence索引.md]]

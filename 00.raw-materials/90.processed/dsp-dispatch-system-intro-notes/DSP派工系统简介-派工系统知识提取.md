@@ -121,10 +121,10 @@ OverQtime 分析关注长时间未派工产品在日志中的卡控原因，重�
 
 ## 后续建议建立的专题笔记
 
-- [[DSP 派工系统]]
-- [[RTD 实时派工逻辑]]
-- [[AMA 自动派工管理]]
-- [[QZone 管控模型]]
-- [[AMHS 与派工联动]]
-- [[NPW 自动化管理]]
-- [[OverQtime 原因分析]]
+- DSP 总览：[[30.areas/dsp-knowledge-base/Dashboard.md]]
+- RTD：[[30.areas/dsp-knowledge-base/00_System/RTD.md]]
+- AMA：[[30.areas/dsp-knowledge-base/00_System/AMA.md]]
+- QZone：[[30.areas/dsp-knowledge-base/02_Logic/QZone.md]]
+- AMHS / MCS：[[30.areas/dsp-knowledge-base/00_System/MCS.md]]
+- NPW：[[30.areas/dsp-knowledge-base/02_Logic/NPW.md]]
+- OverQtime：[[30.areas/dsp-knowledge-base/02_Logic/QZone.md]]

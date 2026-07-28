@@ -181,5 +181,4 @@ Claude Code 的 `/` 斜杠命令不是用来“写 Prompt”的，而是用来**
 ## 关联笔记
 
 - 原始推文归档：[[00.raw-materials/10.sources/web-clips/claude-code/2026-07-05_Claude-Code斜杠命令推文.md]]
-- 可扩展为专题：[[Claude Code 使用规范]]
-
+- 可扩展为专题：Claude Code 使用规范（待建立）

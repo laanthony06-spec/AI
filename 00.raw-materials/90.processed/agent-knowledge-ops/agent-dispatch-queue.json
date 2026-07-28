@@ -258,10 +258,10 @@
     "task": "# 四、测试重点",
     "recommended_executor": "Codex",
     "trigger": "brief_or_note_scan",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md",
+    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/archive/LithoAutoSplitPirun/LithoAutoSplitPirun物理分批优化需求单_v0.3.md",
     "output": "30.areas/agent-knowledge-ops/03.testcases/",
     "next_action": "人工确认后执行",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md"
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/archive/LithoAutoSplitPirun/LithoAutoSplitPirun物理分批优化需求单_v0.3.md"
   },
   {
     "status": "cancelled",
@@ -270,10 +270,10 @@
     "task": "｜ 测试内容 ｜ 测试场景 ｜ 预期结果 ｜",
     "recommended_executor": "Codex",
     "trigger": "brief_or_note_scan",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md",
+    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/archive/LithoAutoSplitPirun/LithoAutoSplitPirun物理分批优化需求单_v0.3.md",
     "output": "30.areas/agent-knowledge-ops/03.testcases/",
     "next_action": "人工确认后执行",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md"
+    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/archive/LithoAutoSplitPirun/LithoAutoSplitPirun物理分批优化需求单_v0.3.md"
   },
   {
     "status": "cancelled",

@@ -1,41 +1,29 @@
-# Requirement SOP
+---
+type: quick-reference
+canonical: 30.areas/requirement-writing/01_SOP/需求单SOP提炼.md
+tags: [需求单, SOP, 速查]
+updated: 2026-07-28
+---
 
-> 来源：`30.areas/requirement-writing` 已提炼 SOP。此处作为 DSP Workspace 的简版规则。
+# Requirement SOP 速查
 
-## 核心原则
+完整规则统一维护在：
 
-- 写业务 / 系统逻辑，不写代码实现。
-- 说明数据来源、判断逻辑、处理逻辑、输出结果、预期效果。
+[[30.areas/requirement-writing/01_SOP/需求单SOP提炼.md]]
+
+## 开始前
+
+1. 使用 [[30.areas/dsp-knowledge-base/03_Template/Requirement_Input_Form.md]] 收集输入。
+2. 查阅相关系统、业务逻辑和 Evidence。
+3. 使用 [[30.areas/requirement-writing/01_SOP/需求单模板.md]] 建稿。
+
+## 最低要求
+
+- 写业务和系统逻辑，不写代码实现。
+- 明确数据来源、判断、处理、输出、异常和验收标准。
 - 未确认字段写 `【待确认】`。
-- 涉及 RTD / AMA 时按大章节展开。
-- Rule / UI / Report 是 RTD 或 AMA 下的小章节，不默认与 RTD / AMA 平级。
+- RTD / AMA 分章节；Rule、UI、Report 放在所属系统章节下。
+- 交付前执行 [[30.areas/dsp-knowledge-base/07_ReviewAssistant/Requirement_Review_Checklist.md]]。
 
-## 推荐结构
-
-1. 基础信息
-2. 项目简介和必要性分析
-3. 项目投资方案比较及效果分析
-4. 需求流程图
-5. RTD 部分更改逻辑
-6. AMA 部分更改逻辑
-7. 原逻辑 / 现逻辑 / 修改原因
-8. 效果分析
-9. 待确认事项
-10. 审批意见区
-
-## 逻辑表达
-
-推荐：
-
-```text
-若条件 A 成立，则执行逻辑 B；否则执行逻辑 C。
-```
-
-避免：
-
-- 大概
-- 可能
-- 应该
-- 尽量
-- 预计
+本文件只用于快速提醒，不再复制完整 SOP 内容。
 

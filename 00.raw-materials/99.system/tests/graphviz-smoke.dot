@@ -1,0 +1,15 @@
+digraph smoke_test {
+    graph [rankdir=TB, splines=ortho, bgcolor="white"];
+    node [fontname="Microsoft YaHei", color="black", fontcolor="black"];
+    edge [fontname="Microsoft YaHei", color="black", fontcolor="black"];
+
+    start [label="开始", shape=ellipse];
+    check [label="条件满足？", shape=diamond];
+    process [label="执行处理", shape=box];
+    finish [label="结束", shape=ellipse];
+
+    start -> check;
+    check -> process [xlabel="是"];
+    check -> finish [xlabel="否"];
+    process -> finish;
+}

@@ -16,9 +16,9 @@ updated: 2026-07-28
 | 模块 | 入口 | 用途 |
 |---|---|---|
 | 系统边界 | [[30.areas/dsp-knowledge-base/00_System/README.md]] | RTD、AMA、MES、MCS / AMHS、EAP |
-| SOP | [[30.areas/dsp-knowledge-base/01_SOP/README.md]] | 需求单、TestCase、流程图规范 |
+| SOP | [[30.areas/dsp-knowledge-base/01_SOP/README.md]] | TestCase、流程图规范；需求单完整 SOP 统一链接到需求单工程 |
 | 业务逻辑 | [[30.areas/dsp-knowledge-base/02_Logic/README.md]] | 派工规则、QZone、WaferBalance、WPHLoss、PM Control、Qsort、NPW |
-| 模板 | [[30.areas/dsp-knowledge-base/03_Template/Requirement.md]] | 需求、输入、TestCase、Review 模板 |
+| 模板 | [[30.areas/requirement-writing/01_SOP/需求单模板.md]] | 统一需求模板；输入、TestCase、Review 模板继续保存在 DSP 区 |
 | 案例 | [[30.areas/dsp-knowledge-base/04_Case/README.md]] | 案例模板与 STNLoadingBalance 案例 |
 | Prompt | [[30.areas/dsp-knowledge-base/05_PromptLibrary/README.md]] | 生成、审查、流程图、风险检查与自然化 |
 | Workflow | [[30.areas/dsp-knowledge-base/06_Workflow/README.md]] | 需求到交付、TestCase 和案例沉淀流程 |

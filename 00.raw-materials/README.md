@@ -37,11 +37,20 @@ tags: [原始资料, 资料管理, Obsidian]
 
 ## 当前重点资料
 
+- 全库内容地图：[[内容地图.md]]
+- 需求项目索引：[[30.areas/requirement-writing/02_Cases/README.md]]
 - DSP 派工系统简介资料卡：[[00.raw-materials/20.metadata/DSP派工系统简介-资料卡.md]]
 - 自动派工需求单 OCR 索引：[[00.raw-materials/90.processed/dispatch-requirements-notes/自动派工需求单图片-OCR索引.md]]
 - 最新每周知识提纯：[[00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md]]
 - Codex 知识迁移清单：[[00.raw-materials/20.metadata/2026-07-28_Codex知识迁移清单.md]]
-- 需求单最新交付物：`00.raw-materials/90.processed/requirement-writing-deliverables/`
+- 需求单最新交付物：[[00.raw-materials/90.processed/requirement-writing-deliverables/README.md]]
+
+## 内容边界
+
+- `00.inbox/` 只作为临时收件箱；完成识别后应归入 `10.sources/`。
+- `10.sources/` 保存原始证据，不放构建缓存和派生 QA 图片。
+- `90.processed/` 保存 OCR、结构化笔记和可阅读交付物。
+- `99.system/` 保存脚本、缓存、构建、渲染和 QA 过程，日常阅读时忽略。
 
 ## 推荐命名规范
 

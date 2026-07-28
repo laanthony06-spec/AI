@@ -11,8 +11,8 @@ tags: [DSP, 自动派工, 工作流]
 
 1. [[30.areas/dsp-knowledge-base/06_Workflow/DSP_Requirement_Writer_Workflow.md]]
 2. [[30.areas/dsp-knowledge-base/05_PromptLibrary/Requirement_Generator.md]]
-3. [[30.areas/dsp-knowledge-base/01_SOP/Requirement_SOP.md]]
-4. [[30.areas/dsp-knowledge-base/03_Template/Requirement.md]]
+3. [[30.areas/requirement-writing/01_SOP/需求单SOP提炼.md]]
+4. [[30.areas/requirement-writing/01_SOP/需求单模板.md]]
 5. [[30.areas/dsp-knowledge-base/07_ReviewAssistant/Requirement_Review_Checklist.md]]
 
 ### 写 TestCase
@@ -29,6 +29,12 @@ tags: [DSP, 自动派工, 工作流]
 - AMA：[[30.areas/dsp-knowledge-base/07_ReviewAssistant/AMA_Impact_Checklist.md]]
 - Report / DB：[[30.areas/dsp-knowledge-base/07_ReviewAssistant/Report_DB_Checklist.md]]
 - 风险检查：[[30.areas/dsp-knowledge-base/05_PromptLibrary/Risk_Checker.md]]
+
+### 画流程图
+
+1. 规范：[[30.areas/dsp-knowledge-base/01_SOP/FlowChart_SOP.md]]
+2. Prompt：[[30.areas/dsp-knowledge-base/05_PromptLibrary/FlowChart_Generator.md]]
+3. Codex + Graphviz 工作流：[[30.areas/dsp-knowledge-base/06_Workflow/Codex_Graphviz_Flowchart_Workflow.md]]
 
 ## 当前高价值案例
 

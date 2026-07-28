@@ -1,5 +1,9 @@
 # FlowChart SOP
 
+完整的 Codex + Graphviz 生成、渲染和迭代流程：
+
+[[30.areas/dsp-knowledge-base/06_Workflow/Codex_Graphviz_Flowchart_Workflow.md]]
+
 ## 使用场景
 
 当需求包含多条件判断、多系统交互、异常分支或循环逻辑时，应补充流程图。
@@ -26,4 +30,7 @@
 - 每个分支要有明确结论。
 - 异常流程不能省略。
 - 字段不确定时写 `【待确认】`。
-
+- 快速讨论可使用 Mermaid；正式、复杂或需要打印的流程图优先使用 Graphviz DOT。
+- Graphviz 流程图以 `.dot` 为源文件，以 `.svg` 为主要交付文件。
+- 黑白样式，主流程从上到下，判断分支统一标记“是”和“否”。
+- 节点文字尽量不超过 20 个字；超过 4 层判断时拆分主流程和子流程。

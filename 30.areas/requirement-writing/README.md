@@ -16,12 +16,13 @@ updated: 2026-07-28
 - [[30.areas/requirement-writing/01_SOP/需求单SOP提炼.md]]
 - [[30.areas/requirement-writing/01_SOP/需求单工程化降AI风格规则.md]]
 - [[30.areas/requirement-writing/01_SOP/需求单模板.md]]
-- [[30.areas/requirement-writing/01_SOP/经验沉淀.md]]
+- 统一经验库：[[30.areas/dsp-knowledge-base/08_Experience/经验沉淀.md]]
 
 通用 DSP 模板与检查清单继续使用：
 
-- [[30.areas/dsp-knowledge-base/03_Template/Requirement.md]]
 - [[30.areas/dsp-knowledge-base/07_ReviewAssistant/Requirement_Review_Checklist.md]]
+
+项目与版本统一入口：[[30.areas/requirement-writing/02_Cases/README.md]]
 
 ## 当前有效版本
 

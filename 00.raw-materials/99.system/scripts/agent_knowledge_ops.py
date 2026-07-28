@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -23,7 +24,7 @@ WATCH_DIRS = [
 ]
 
 TEXT_EXTS = {".md", ".txt", ".json", ".csv", ".yml", ".yaml"}
-EXCLUDED_PARTS = {".git", ".obsidian", ".venv", "__pycache__"}
+EXCLUDED_PARTS = {".git", ".obsidian", ".venv", "__pycache__", "node_modules", "99.system"}
 
 
 def rel(path: Path) -> str:
@@ -160,14 +161,29 @@ def extract_tasks_from_text(text: str, source: Path, max_tasks: int = 25) -> lis
         "待澄清", "优化空间", "TODO", "Action Preflight", "guardrail",
         "工具调用", "证据", "看板", "安全", "测试", "验证",
     ]
+    action_prefixes = (
+        "整理", "处理", "研究", "评估", "阅读", "优先阅读", "将", "把", "对",
+        "检查", "补充", "补齐", "建立", "申请", "填写", "更新", "优化",
+        "验证", "确认", "跟进",
+    )
+    ignored_prefixes = (
+        "type:", "tags:", "source:", "date:", "updated:", "- 分类：",
+        "- 来源：", "- 原文摘要：", "- 中文导读：", "- 本简报",
+    )
     tasks: list[dict[str, Any]] = []
     seen: set[str] = set()
     for line in text.splitlines():
         line = line.strip()
         if not line:
             continue
-        hit = line.startswith("- [ ]") or any(k.lower() in line.lower() for k in keywords)
-        if not hit:
+        if line.lower().startswith(tuple(prefix.lower() for prefix in ignored_prefixes)):
+            continue
+        checkbox = line.startswith("- [ ]")
+        heading_link = bool(re.match(r"^#{2,4}\s+.*\[[^\]]+\]\([^)]+\)", line))
+        action_text = line.lstrip("-* ").strip()
+        action_line = action_text.startswith(action_prefixes)
+        keyword_hit = any(k.lower() in line.lower() for k in keywords)
+        if not checkbox and not (heading_link and keyword_hit) and not action_line:
             continue
         clean = line.replace("|", "｜")
         if clean.startswith("- [ ]"):
@@ -460,14 +476,21 @@ def build_task_queue(hook_events: list[dict[str, Any]]) -> tuple[Path, list[dict
         "| 状态 | 优先级 | 分类 | 任务 | 推荐执行者 | 触发来源 | Evidence | 输出位置 | 下一步 |",
         "|---|---|---|---|---|---|---|---|---|",
     ]
-    for t in tasks[:120]:
+    active_tasks = [task for task in tasks if task["status"] != "cancelled"]
+    closed_task_count = sum(task["status"] == "cancelled" for task in tasks)
+    for t in active_tasks[:120]:
         evidence = f"[[{t['evidence']}]]" if t.get("evidence") else ""
         lines.append(
             f"| {t['status']} | {t['priority']} | {t['category']} | {t['task']} | {t['recommended_executor']} | {t['trigger']} | {evidence} | `{t['output']}` | {t['next_action']} |"
         )
-    if not tasks:
-        lines.append("| todo | P3 | 知识整理 | 暂无自动抽取任务 | Codex | none |  |  | 人工追加 |")
+    if not active_tasks:
+        lines.append("| — | — | — | 当前没有自动生成的待办任务 | — | — | — | — | 新任务将在后续刷新时加入 |")
     lines += [
+        "",
+        "## 已关闭自动任务",
+        "",
+        f"- 已关闭：{closed_task_count} 条。",
+        "- 明细保存在 [[00.raw-materials/90.processed/agent-knowledge-ops/agent-dispatch-queue.json]]。",
         "",
         "## 人工追加任务",
         "",

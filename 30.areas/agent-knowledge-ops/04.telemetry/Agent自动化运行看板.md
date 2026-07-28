@@ -1,6 +1,6 @@
 ---
 type: agent-telemetry-dashboard
-updated: 2026-07-27T19:12:11
+updated: 2026-07-28T22:32:07
 tags: [Agent, Telemetry, 自动化看板]
 ---
 
@@ -10,11 +10,7 @@ tags: [Agent, Telemetry, 自动化看板]
 
 | 任务 | 状态 |
 |---|---|
-| Obsidian Agent Knowledge Ops Refresh | 4 |
-| Obsidian AI Agent Intel Daily | 3 |
-| Obsidian Raw Materials Weekly Knowledge Distill | 4 |
-| Obsidian Semiconductor Dispatch Intel Daily | 3 |
-| Obsidian Sensitive Scan Weekly | 3 |
+| 未读取到 | 可能是权限限制；不代表任务不存在 |
 
 ## 关键输出目录
 
@@ -22,8 +18,8 @@ tags: [Agent, Telemetry, 自动化看板]
 |---|---:|---|
 | `30.areas/ai-agent-intel/inbox` | 9 | [[30.areas/ai-agent-intel/inbox/2026-07-27.md]] |
 | `30.areas/semiconductor-dispatch-intel/inbox` | 11 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md]] |
-| `00.raw-materials/90.processed/weekly-knowledge-distill` | 2 | [[00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md]] |
-| `00.raw-materials/90.processed/dispatch-requirements-notes` | 10 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md]] |
+| `00.raw-materials/90.processed/weekly-knowledge-distill` | 3 | [[00.raw-materials/90.processed/weekly-knowledge-distill/2026-07-27-每周原始资料知识提纯.md]] |
+| `00.raw-materials/90.processed/dispatch-requirements-notes` | 11 | [[00.raw-materials/90.processed/dispatch-requirements-notes/CMPAutoPirun-需求单整理.md]] |
 | `30.areas/agent-knowledge-ops/01.task-queue` | 2 | [[30.areas/agent-knowledge-ops/01.task-queue/Agent任务队列.md]] |
 | `30.areas/agent-knowledge-ops/02.evidence` | 1 | [[30.areas/agent-knowledge-ops/02.evidence/Evidence索引.md]] |
 | `30.areas/agent-knowledge-ops/03.testcases` | 2 | [[30.areas/agent-knowledge-ops/03.testcases/WaferBalance-TestCases.md]] |
@@ -34,12 +30,12 @@ tags: [Agent, Telemetry, 自动化看板]
 
 | 日志 | 大小 | Warning / Error 计数 |
 |---|---:|---:|
-| [[00.raw-materials/90.processed/CMPAutoPirun/.build/lo-profile-final/cache/opencl_devices.log]] | 1768 | 0 |
-| [[00.raw-materials/90.processed/CMPAutoPirun/.build/lo-profile-flowfix/cache/opencl_devices.log]] | 1768 | 0 |
-| [[00.raw-materials/90.processed/CMPAutoPirun/.build/lo-profile-numbering/cache/opencl_devices.log]] | 1768 | 0 |
-| [[00.raw-materials/90.processed/CMPAutoPirun/.build/lo-profile2/cache/opencl_devices.log]] | 1768 | 0 |
-| [[00.raw-materials/99.system/cache/weekly_knowledge_distill.log]] | 2001 | 0 |
-| [[00.raw-materials/99.system/cache/weekly_knowledge_distill_task.log]] | 314 | 0 |
+| [[00.raw-materials/99.system/cache/weekly_knowledge_distill.log]] | 3369 | 0 |
+| [[00.raw-materials/99.system/cache/weekly_knowledge_distill_task.log]] | 324 | 0 |
+| [[00.raw-materials/99.system/docx-build/CMPAutoPirun/build/lo-profile-final/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/CMPAutoPirun/build/lo-profile-flowfix/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/CMPAutoPirun/build/lo-profile-numbering/cache/opencl_devices.log]] | 1768 | 0 |
+| [[00.raw-materials/99.system/docx-build/CMPAutoPirun/build/lo-profile2/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-2/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-3/cache/opencl_devices.log]] | 1768 | 0 |
 | [[00.raw-materials/99.system/docx-build/LithoAutoPiRun/lo-profile-4/cache/opencl_devices.log]] | 1768 | 0 |

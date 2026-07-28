@@ -10,6 +10,7 @@
 | `Requirement_Workflow.md` | 早期简版需求流程 |
 | `Requirement_to_TestCase_Workflow.md` | 从需求单生成测试用例 |
 | `Case_Capture_Workflow.md` | 需求完成后的案例沉淀流程 |
+| `Codex_Graphviz_Flowchart_Workflow.md` | Codex 提取业务逻辑、Graphviz 排版、SVG / PDF 渲染与迭代 |
 
 ## 推荐入口
 
@@ -18,4 +19,3 @@
 ```text
 DSP_Requirement_Writer_Workflow.md
 ```
-
