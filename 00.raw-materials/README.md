@@ -40,6 +40,8 @@ tags: [原始资料, 资料管理, Obsidian]
 - DSP 派工系统简介资料卡：[[00.raw-materials/20.metadata/DSP派工系统简介-资料卡.md]]
 - 自动派工需求单 OCR 索引：[[00.raw-materials/90.processed/dispatch-requirements-notes/自动派工需求单图片-OCR索引.md]]
 - 最新每周知识提纯：[[00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md]]
+- Codex 知识迁移清单：[[00.raw-materials/20.metadata/2026-07-28_Codex知识迁移清单.md]]
+- 需求单最新交付物：`00.raw-materials/90.processed/requirement-writing-deliverables/`
 
 ## 推荐命名规范
 
