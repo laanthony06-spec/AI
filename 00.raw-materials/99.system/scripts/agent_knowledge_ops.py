@@ -10,6 +10,7 @@ VAULT = Path(__file__).resolve().parents[3]
 OPS = VAULT / "30.areas" / "agent-knowledge-ops"
 PROCESSED = VAULT / "00.raw-materials" / "90.processed" / "agent-knowledge-ops"
 STATE_DIR = PROCESSED / "state"
+TASK_QUEUE_JSON = PROCESSED / "agent-dispatch-queue.json"
 
 WATCH_DIRS = [
     VAULT / "00.raw-materials" / "00.inbox",
@@ -40,6 +41,26 @@ def write(path: Path, text: str) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
     return path
+
+
+def load_existing_task_statuses() -> dict[tuple[str, str], str]:
+    if not TASK_QUEUE_JSON.exists():
+        return {}
+    try:
+        existing_tasks = json.loads(TASK_QUEUE_JSON.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+    statuses: dict[tuple[str, str], str] = {}
+    for task in existing_tasks:
+        if not isinstance(task, dict):
+            continue
+        task_text = str(task.get("task", "")).strip()
+        source = str(task.get("source", "")).strip()
+        status = str(task.get("status", "todo")).strip().lower()
+        if task_text and source and status in {"doing", "done", "blocked", "cancelled"}:
+            statuses[(task_text, source)] = status
+    return statuses
 
 
 def ensure_dirs() -> None:
@@ -369,6 +390,7 @@ def build_memory(events: list[dict[str, Any]], tasks: list[dict[str, Any]]) -> l
 
 
 def build_task_queue(hook_events: list[dict[str, Any]]) -> tuple[Path, list[dict[str, Any]]]:
+    existing_statuses = load_existing_task_statuses()
     sources: list[Path] = []
     for folder in [
         VAULT / "30.areas" / "ai-agent-intel" / "inbox",
@@ -407,6 +429,10 @@ def build_task_queue(hook_events: list[dict[str, Any]]) -> tuple[Path, list[dict
                 "source": path,
             }
         )
+
+    for task in tasks:
+        key = (task["task"], task["source"])
+        task["status"] = existing_statuses.get(key, task["status"])
 
     tasks.sort(key=lambda x: (x["priority"], x["category"], x["task"]))
 
@@ -451,7 +477,7 @@ def build_task_queue(hook_events: list[dict[str, Any]]) -> tuple[Path, list[dict
         "",
     ]
     write(out, "\n".join(lines))
-    write(PROCESSED / "agent-dispatch-queue.json", json.dumps(tasks, ensure_ascii=False, indent=2))
+    write(TASK_QUEUE_JSON, json.dumps(tasks, ensure_ascii=False, indent=2))
     return out, tasks
 
 

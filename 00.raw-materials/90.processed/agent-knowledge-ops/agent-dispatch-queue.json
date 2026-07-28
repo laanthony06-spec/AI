@@ -1,6 +1,6 @@
 [
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "### [Proposal: Security audit for MCP servers used by AutoGen agents](https://github.com/microsoft/autogen/issues/7924)",
@@ -12,7 +12,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "### [[Feature]: Develop MCP Server for AI-Native Kmesh Service Mesh Management](https://github.com/kmesh-net/kmesh/issues/1800)",
@@ -24,7 +24,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "### [[i18n] Thai Translation: Features Part 2b - MCP, Memory, Personality](https://github.com/NousResearch/hermes-agent/issues/15003)",
@@ -36,7 +36,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP、多智能体、自动化 / Coding Agent、RAG / Memory。 相关度较高，建议优先阅读。",
@@ -48,7 +48,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP、自动化 / Coding Agent、RAG / Memory。 相关度较高，建议优先阅读。",
@@ -60,7 +60,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP、评测 / 安全。 相关度较高，建议优先阅读。",
@@ -72,7 +72,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 中文导读：关注它如何连接外部工具、数据源和上下文，尤其适合沉淀到 MCP / connector 知识。 关键词信号：工具调用 / MCP。 相关度较高，建议优先阅读。",
@@ -84,7 +84,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 分类：工具调用 / MCP",
@@ -96,7 +96,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 原文摘要：## Security certification for MCP servers AutoGen agents increasingly use MCP (Model Context Protocol) servers as tools. These servers execute arbitrary code. How do we verify they are safe? We built **Sentinel** ",
@@ -108,7 +108,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 原文摘要：## 📄 user-guide/features/mcp.md --- sidebar_position: 4 title: \"MCP (Model Context Protocol)\" description: \"Connect Hermes Agent to external tool servers via MCP - and control exactly which MCP tools Hermes loads\"",
@@ -120,7 +120,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 原文摘要：### **Description:** Build a Model Context Protocol (MCP) server that exposes Kmesh's capabilities as callable tools for AI agents (Claude, Cursor, GitHub Copilot). The MCP server acts as a middle layer between AI",
@@ -132,7 +132,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 原文摘要：All BROAD queries returned items already in `_seen.txt` or zero results. **Queries run (5):** - Claude Code new features updates 2026 - Claude API tool use agents anthropic 2026 - MCP model context protocol new se",
@@ -144,7 +144,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 本简报聚焦 AI Agent、LLM Agent、多智能体、工具调用、MCP、Coding Agent、RAG / Memory、评测与安全。",
@@ -156,7 +156,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P1",
     "category": "MCP / 工具接口",
     "task": "- 来源：GitHub issues - MCP agents",
@@ -168,7 +168,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P2",
     "category": "Hooks",
     "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-26.md",
@@ -180,7 +180,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-26.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P2",
     "category": "Hooks",
     "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
@@ -192,7 +192,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P2",
     "category": "Memory",
     "task": "### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367)",
@@ -204,7 +204,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P2",
     "category": "Memory",
     "task": "### [[Proposal Update] Speculative Routing Predictor (SRP) v2.0: Full Production Engineering Blueprints for MoE Memory Bottleneck Mitigation](https://github.com/deepseek-ai/DeepSeek-V3/issues/1492)",
@@ -216,7 +216,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P2",
     "category": "Memory",
     "task": "- 中文导读：关注它是否提供 Agent 编排、状态管理、工具调用和生产化部署能力。 关键词信号：多智能体、RAG / Memory。 相关度中等，可快速浏览。",
@@ -228,7 +228,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P2",
     "category": "Memory",
     "task": "- 原文摘要：# AI Agent Radar 日报 · 2026-07-25 ## 今日摘要 共排名 312 个项目，展示前 10 个，收录 1 条资讯。 ## 今日新发现 1. [Fmarzochi/EGC](https://github.com/Fmarzochi/EGC) — EGC gives every AI coding agent the same brain\\. Shared memory, skills, and l",
@@ -240,7 +240,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P2",
     "category": "Telemetry",
     "task": "- 原文摘要：<p>Integrating real-time voltage telemetry and functional monitoring for deeper insights.</p> <p>The post <a href=\"https://semiengineering.com/enhancing-system-observability/\">Enhancing System Observability</a> ap",
@@ -252,7 +252,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "TestCase",
     "task": "# 四、测试重点",
@@ -264,7 +264,7 @@
     "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "TestCase",
     "task": "｜ 测试内容 ｜ 测试场景 ｜ 预期结果 ｜",
@@ -276,7 +276,7 @@
     "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoSplitPirun物理分批优化需求单_v0.3.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "# AI / Agent 每日情报简报 - 2026-07-25",
@@ -288,7 +288,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "### [A review of the applications of multi-agent reinforcement learning in smart factories.](https://doi.org/10.3389/frobt.2022.1027340)",
@@ -300,7 +300,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "### [AI Agent Radar 日报 · 2026-07-25](https://github.com/apiiskan/ai-agent-radar/issues/6)",
@@ -312,7 +312,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "### [johannalberts/supply-chain-research-agent](https://github.com/johannalberts/supply-chain-research-agent)",
@@ -324,7 +324,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "### [syed-fouzaan/Support-Ticket-Triage-Agent](https://github.com/syed-fouzaan/Support-Ticket-Triage-Agent)",
@@ -336,7 +336,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "### [🔍 Tool candidates for 2026-07-25 — 245 new](https://github.com/duolaAmengweb3/agentstore/issues/94)",
@@ -348,7 +348,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "- 分类：Agent 框架",
@@ -360,7 +360,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "- 原文摘要：### 20 candidates need your review Auto-onboarded trusted sources this run: **0** For each candidate below: - ✅ **Onboard**: reply with `/onboard ` — bot will create a PR - ❌ **Skip**: no action needed, candidates",
@@ -372,7 +372,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "- 来源：GitHub repositories - AI agents recently updated",
@@ -384,7 +384,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "tags: [AI, Agent, 智能体, 情报简报]",
@@ -396,7 +396,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "type: ai-agent-intel",
@@ -408,7 +408,7 @@
     "source": "30.areas/ai-agent-intel/inbox/2026-07-25.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "优先阅读相关度高且分类为“派工规则 / WIP / AMHS / MES / AI 调度”的条目",
@@ -420,7 +420,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "对明显无关的条目记录噪声来源，并更新关键词 / 来源配置",
@@ -432,7 +432,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "对涉及公司内部派工逻辑的启发，单独沉淀到内部专题笔记",
@@ -444,7 +444,7 @@
     "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
   },
   {
-    "status": "todo",
+    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "将高价值条目移动到专题笔记或建立 wiki-link",
