@@ -19,3 +19,15 @@ updated: 2026-07-28
 
 日常阅读和 Obsidian 检索时可以忽略本目录。
 
+## LibreOffice 命令行
+
+- 安装位置：`C:\Program Files\LibreOffice\program\soffice.exe`
+- 自动化入口：`C:\Program Files\LibreOffice\program\soffice.com`
+- `soffice.exe` 是 GUI 启动器，自动化任务中可能保持进程；无界面转换统一使用 `soffice.com`。
+- 安全渲染脚本：`scripts/render_docx_safe.ps1`
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass `
+  -File "00.raw-materials/99.system/scripts/render_docx_safe.ps1" `
+  -InputPath "path/to/input.docx"
+```
