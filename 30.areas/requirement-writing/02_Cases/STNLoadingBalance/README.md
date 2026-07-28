@@ -7,9 +7,9 @@ updated: 2026-07-28
 
 # STNLoadingBalance
 
-## 当前有效内容
+## 现有参考内容
 
-- 当前需求知识稿：[[30.areas/requirement-writing/02_Cases/STNLoadingBalance/STNLoadingBalance需求单_优化稿_v1.1.md]]
+- 需求知识参考稿：[[30.areas/requirement-writing/02_Cases/STNLoadingBalance/STNLoadingBalance需求单_优化稿_v1.1.md]]
 - LoadingCandidateLot 分析：[[30.areas/requirement-writing/02_Cases/STNLoadingBalance/STNLoadingBalance_LoadingCandidateLot需求内容分析_v0.1.md]]
 - DSP 案例沉淀：[[30.areas/dsp-knowledge-base/04_Case/Case_STNLoadingBalance_v0.1.md]]
 - TestCase：[[30.areas/agent-knowledge-ops/03.testcases/WaferBalance-TestCases.md]]
@@ -30,5 +30,4 @@ updated: 2026-07-28
 ## 历史说明
 
 - `v0.7修改后_确认记录` 和 `v0.8_优化建议` 是 v1.1 的形成过程，不作为当前交付入口。
-- 当前有效口径以 v1.1 为准；历史记录仅用于追溯确认过程。
-
+- v1.1 是该轮交付的确认记录；后续新需求如修改其中逻辑，应以本次变更声明重新建立确认基线。

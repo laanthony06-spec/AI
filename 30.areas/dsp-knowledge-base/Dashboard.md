@@ -15,7 +15,9 @@ tags: [DSP, 自动派工, 工作流]
 4. [[30.areas/requirement-writing/01_SOP/需求单模板.md]]
 5. [[30.areas/dsp-knowledge-base/07_ReviewAssistant/Requirement_Review_Checklist.md]]
 
-### 写 TestCase
+### 写 Test Case Excel
+
+需求单业务口径确认后，单独生成 Excel，不写入需求单正文。
 
 1. [[30.areas/dsp-knowledge-base/06_Workflow/Requirement_to_TestCase_Workflow.md]]
 2. [[30.areas/dsp-knowledge-base/05_PromptLibrary/TestCase_Generator.md]]

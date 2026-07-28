@@ -2,6 +2,14 @@
 
 > 来源：`00.raw-materials/10.sources/images/TestCase_SOP/TestCase要求\1.jpg`、`2.jpg`，以及 `00.raw-materials/10.sources/images/TestCase_SOP/TestCase示例\case1.jpg` ~ `case5.jpg`。
 
+## 交付规则
+
+- Test Case 基于已确认需求单单独编写，不属于需求单正文。
+- 正式输出为 Excel `.xlsx`，不以 Markdown 表格作为最终交付。
+- Excel 文件需记录需求单名称、依据版本和确认日期。
+- 默认保存到 `00.raw-materials/90.processed/testcase-deliverables/`。
+- 需求单发生业务变更后，应评估 Test Case Excel 是否需要同步升版。
+
 ## 功能涉及清单
 
 编写 Test Case 前，先列出本需求涉及范围，避免漏测：

@@ -13,7 +13,7 @@ DSP Solution Designer
 不是程序员。重点是帮助用户完成：
 
 ```text
-需求分析 → 逻辑设计 → 需求单 → 流程图 → Test Case → Review
+需求分析 → 逻辑设计 → 需求单与流程图 → Requirement Review → 单独生成 Test Case Excel → Test Case Review
 ```
 
 ## 1. 读取顺序
@@ -100,6 +100,8 @@ DSP Solution Designer
 
 ### 3.7 生成 Test Case
 
+需求单业务口径确认后，再启动独立 Test Case 工作项；不把 Test Case 写入需求单正文。
+
 至少覆盖：
 
 - Normal
@@ -108,9 +110,11 @@ DSP Solution Designer
 - Recovery
 - Regression
 
+最终输出 `.xlsx`，保存到 `00.raw-materials/90.processed/testcase-deliverables/`。
+
 ### 3.8 Review
 
-使用 `07_ReviewAssistant\Requirement_Review_Checklist.md` 检查。
+需求单使用 `Requirement_Review_Checklist.md`；Test Case Excel 使用 `TestCase_Review_Checklist.md`，两者分别评审。
 
 ### 3.9 Humanizer 后处理
 
@@ -128,9 +132,9 @@ DSP Solution Designer
 ```text
 work\需求名_分析稿.md
 work\需求名_需求单草稿.md
-work\需求名_测试用例草稿.md
 work\需求名_Review报告.md
 交付物\需求名_需求单.docx
+00.raw-materials\90.processed\testcase-deliverables\需求名_TestCase_vX.Y.xlsx
 ```
 
 ## 5. 完成后沉淀

@@ -27,11 +27,15 @@
 ↓
 生成 Requirement
 ↓
-生成 Test Case
-↓
-生成 Review Checklist
+完成 Requirement Review
 ↓
 列出待确认事项
+↓
+确认需求业务口径
+↓
+单独生成 Test Case Excel
+↓
+完成 Test Case Review
 ```
 
 ## 输出
@@ -39,11 +43,11 @@
 - 需求分析
 - 流程图
 - 需求申请单
-- 测试用例
-- Review Checklist
+- Requirement Review Checklist
 - 待确认事项
+- 独立 Test Case Excel
+- Test Case Review Checklist
 
 ## 时间目标
 
 成熟后，目标是 5~10 分钟完成初稿。
-

@@ -14,8 +14,10 @@ updated: 2026-07-28
 ## SOP 与模板
 
 - [[30.areas/requirement-writing/01_SOP/需求单SOP提炼.md]]
+- [[30.areas/requirement-writing/01_SOP/需求事实来源与变更基线规则.md]]
 - [[30.areas/requirement-writing/01_SOP/需求单工程化降AI风格规则.md]]
 - [[30.areas/requirement-writing/01_SOP/需求单模板.md]]
+- Word 首选个人模板：`$artifact-template-word`
 - 统一经验库：[[30.areas/dsp-knowledge-base/08_Experience/经验沉淀.md]]
 
 通用 DSP 模板与检查清单继续使用：
@@ -24,9 +26,11 @@ updated: 2026-07-28
 
 项目与版本统一入口：[[30.areas/requirement-writing/02_Cases/README.md]]
 
-## 当前有效版本
+## 现有参考版本与交付状态
 
-| 主题 | 当前知识稿 | 当前可交付文件 | 说明 |
+以下内容用于检索和对照，不表示它们天然优先于新的需求声明或现场证据。
+
+| 主题 | 现有知识稿 | 现有交付文件 | 说明 |
 |---|---|---|---|
 | STNLoadingBalance | [[30.areas/requirement-writing/02_Cases/STNLoadingBalance/STNLoadingBalance需求单_优化稿_v1.1.md]] | [[00.raw-materials/90.processed/requirement-writing-deliverables/STNLoadingBalance需求单_优化稿_v1.1.docx]] | v1.1 为源工作台最新完整版本 |
 | STNLoadingBalance 功能介绍 | 同上 | [[00.raw-materials/90.processed/requirement-writing-deliverables/STNLoadingBalance功能介绍_Loading计算与选Lot逻辑_v1.1_图解增强版.pptx]] | 图解增强版 |
@@ -43,6 +47,7 @@ updated: 2026-07-28
 
 ## 版本规则
 
-- 默认入口只指向上表中的当前有效版本。
-- 旧版价值已被最新稿吸收时不重复迁入，避免 Obsidian 搜索结果被草稿淹没。
-- 版本不同步时同时标明“知识稿版本”和“可交付文件版本”，不得把较旧 Word 误称为最新逻辑。
+- 默认入口展示现有参考版本和交付状态，不把版本号等同于事实正确性。
+- 新需求可能有意修改历史需求；差异必须作为变更项确认，不能自动使用旧知识覆盖新稿。
+- 旧稿可移入归档减少检索噪声，但仍作为历史证据保留。
+- 版本不同步时分别标明知识稿、工作稿和交付文件状态，不使用“较新版本必然正确”的判断。
