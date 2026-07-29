@@ -36,7 +36,7 @@ digraph RTDPilotSelection {
   loop [label="构建 20 站 PirunLoop"];
   loop_filter [label="执行 Loop 条件过滤"];
   loop_left [shape=diamond, label="仍有候选 Lot？"];
-  specify [shape=diamond, label="属于 Specify Lot？"];
+  specify [shape=diamond, label="属于非 Specify Lot？"];
   specify_flow [label="转现有 Specify 处理"];
   tools [label="获取并筛选可作业机台"];
   context [label="匹配有效 R2R Context"];
@@ -47,27 +47,44 @@ digraph RTDPilotSelection {
   context_rank [label="计算 Context 排序指标"];
   select [label="锁定首位 Lot+Context"];
   remove [label="移除重复 Lot/Context"];
-  remain [shape=diamond, label="仍有 Lot 与 Context？"];
-  update [label="更新排序指标"];
+  remain [shape=diamond, label="全部候选处理完成？"];
+  update [label="循环更新排序并处理候选"];
   output [label="输出各 Context 最优 Pilot"];
-  reject [label="过滤该 Lot"];
+  output_loop [label="循环完成后输出最优 Pilot"];
+  reject_base [label="无基础候选，过滤该 Lot"];
+  reject_loop [label="Loop 后无候选，过滤该 Lot"];
+  reject_context [label="无单一路径，过滤该 Lot"];
+  reject_auto [label="无待 Pirun Context，过滤该 Lot"];
 
-  start -> base -> base_filter -> base_left;
-  base_left -> reject [xlabel="否"];
-  base_left -> loop [xlabel="是"];
-  loop -> loop_filter -> loop_left;
-  loop_left -> reject [xlabel="否"];
-  loop_left -> specify [xlabel="是"];
-  specify -> specify_flow [xlabel="是"];
-  specify -> tools [xlabel="否"];
-  tools -> context -> context_ok;
-  context_ok -> reject [xlabel="否"];
-  context_ok -> auto_context [xlabel="是"];
-  auto_context -> auto_ok;
-  auto_ok -> reject [xlabel="否"];
-  auto_ok -> rtd_rank [xlabel="是"];
-  rtd_rank -> context_rank -> select -> remove -> remain;
-  remain -> output [xlabel="否"];
-  remain -> update [xlabel="是"];
-  update -> context_rank;
+  start:s -> base:n;
+  base:s -> base_filter:n;
+  base_filter:s -> base_left:n;
+  { rank=same; base_left; reject_base; }
+  base_left:e -> reject_base:w [xlabel="否", constraint=false];
+  base_left:s -> loop:n [xlabel="是"];
+  loop:s -> loop_filter:n;
+  loop_filter:s -> loop_left:n;
+  { rank=same; loop_left; reject_loop; }
+  loop_left:e -> reject_loop:w [xlabel="否", constraint=false];
+  loop_left:s -> specify:n [xlabel="是"];
+  { rank=same; specify; specify_flow; }
+  specify:e -> specify_flow:w [xlabel="否", constraint=false];
+  specify:s -> tools:n [xlabel="是"];
+  tools:s -> context:n;
+  context:s -> context_ok:n;
+  { rank=same; context_ok; reject_context; }
+  context_ok:e -> reject_context:w [xlabel="否", constraint=false];
+  context_ok:s -> auto_context:n [xlabel="是"];
+  auto_context:s -> auto_ok:n;
+  { rank=same; auto_ok; reject_auto; }
+  auto_ok:e -> reject_auto:w [xlabel="否", constraint=false];
+  auto_ok:s -> rtd_rank:n [xlabel="是"];
+  rtd_rank:s -> context_rank:n;
+  context_rank:s -> select:n;
+  select:s -> remove:n;
+  remove:s -> remain:n;
+  remain:s -> output:n [xlabel="是"];
+  { rank=same; remain; update; }
+  remain:e -> update:w [xlabel="否", constraint=false];
+  update:s -> output_loop:n;
 }

@@ -29,32 +29,54 @@ digraph WaitPilotChangeFoupRelease {
     arrowsize=0.7
   ];
 
-  start [label="检查已卡控对象"];
-  is_pilot [shape=diamond, label="当前对象是 Pilot？"];
-  pilot_release [shape=diamond, label="RemainQ<4h 或 Qu_0？"];
-  litho [shape=diamond, label="Other Lot 在 Litho？"];
-  barco [shape=diamond, label="Other Lot 在 BARCO？"];
-  barco_release [shape=diamond, label="RemainQ<4h 或 Qu_0？"];
-  other_release [shape=diamond, label="触发 Qu_0？"];
-  pilot_remove [label="解除 Pilot 卡控"];
-  pilot_keep [label="保持 Pilot 卡控"];
-  litho_keep [label="Litho：保持卡控"];
-  barco_remove [label="BARCO：解除卡控"];
-  barco_keep [label="BARCO：保持卡控"];
-  other_remove [label="其他站：解除卡控"];
-  other_keep [label="其他站：保持卡控"];
+  subgraph cluster_pilot {
+    label="Pilot 对象";
+    color="black";
+    pilot_start [label="检查 Pilot 卡控"];
+    pilot_release [shape=diamond, label="RemainQ<4h 或 Qu_0？"];
+    pilot_remove [label="解除 Pilot 卡控"];
+    pilot_keep [label="保持 Pilot 卡控"];
 
-  start -> is_pilot;
-  is_pilot -> pilot_release [xlabel="是"];
-  pilot_release -> pilot_remove [xlabel="是"];
-  pilot_release -> pilot_keep [xlabel="否"];
-  is_pilot -> litho [xlabel="否"];
-  litho -> litho_keep [xlabel="是"];
-  litho -> barco [xlabel="否"];
-  barco -> barco_release [xlabel="是"];
-  barco_release -> barco_remove [xlabel="是"];
-  barco_release -> barco_keep [xlabel="否"];
-  barco -> other_release [xlabel="否"];
-  other_release -> other_remove [xlabel="是"];
-  other_release -> other_keep [xlabel="否"];
+    pilot_start:s -> pilot_release:n;
+    pilot_release:s -> pilot_remove:n [xlabel="是"];
+    { rank=same; pilot_release; pilot_keep; }
+    pilot_release:e -> pilot_keep:w [xlabel="否", constraint=false];
+  }
+
+  subgraph cluster_litho {
+    label="Litho Other Lot";
+    color="black";
+    litho_start [label="检查 Litho Other Lot"];
+    litho_keep [label="保持卡控"];
+
+    litho_start:s -> litho_keep:n;
+  }
+
+  subgraph cluster_barco {
+    label="BARCO Other Lot";
+    color="black";
+    barco_start [label="检查 BARCO Other Lot"];
+    barco_release [shape=diamond, label="RemainQ<4h 或 Qu_0？"];
+    barco_remove [label="解除 BARCO 卡控"];
+    barco_keep [label="保持 BARCO 卡控"];
+
+    barco_start:s -> barco_release:n;
+    barco_release:s -> barco_remove:n [xlabel="是"];
+    { rank=same; barco_release; barco_keep; }
+    barco_release:e -> barco_keep:w [xlabel="否", constraint=false];
+  }
+
+  subgraph cluster_other {
+    label="其他站 Other Lot";
+    color="black";
+    other_start [label="检查其他站 Other Lot"];
+    other_release [shape=diamond, label="触发 Qu_0？"];
+    other_remove [label="解除其他站卡控"];
+    other_keep [label="保持其他站卡控"];
+
+    other_start:s -> other_release:n;
+    other_release:s -> other_remove:n [xlabel="是"];
+    { rank=same; other_release; other_keep; }
+    other_release:e -> other_keep:w [xlabel="否", constraint=false];
+  }
 }

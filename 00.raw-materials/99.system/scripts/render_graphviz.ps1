@@ -26,6 +26,45 @@ if ([System.IO.Path]::GetExtension($resolvedInput) -ne ".dot") {
     throw "Input must be a .dot file: $resolvedInput"
 }
 
+$dotLines = Get-Content -LiteralPath $resolvedInput -Encoding UTF8
+$dotText = $dotLines -join "`n"
+if ($dotText -notmatch 'rankdir\s*=\s*TB') {
+    throw "DOT must use rankdir=TB: $resolvedInput"
+}
+if ($dotText -notmatch 'splines\s*=\s*ortho') {
+    throw "DOT must use splines=ortho: $resolvedInput"
+}
+
+$edgePattern = '^\s*(?:"[^"]+"|[A-Za-z_][A-Za-z0-9_]*)\s*:[nswe]\s*->\s*(?:"[^"]+"|[A-Za-z_][A-Za-z0-9_]*)\s*:[nswe]\b'
+$invalidEdges = @(
+    $dotLines |
+        Where-Object { $_ -match '->' -and $_ -notmatch '^\s*(//|#)' -and $_ -notmatch $edgePattern }
+)
+if ($invalidEdges.Count -gt 0) {
+    $details = $invalidEdges | ForEach-Object { "  $($_.Trim())" }
+    throw "Every DOT edge must explicitly use :n/:s/:w/:e fixed ports:`n$($details -join "`n")"
+}
+
+$incomingCounts = @{}
+foreach ($line in $dotLines) {
+    if ($line -match '->\s*(?<target>"[^"]+"|[A-Za-z_][A-Za-z0-9_]*)\s*:[nswe]\b') {
+        $target = $Matches.target
+        if (-not $incomingCounts.ContainsKey($target)) {
+            $incomingCounts[$target] = 0
+        }
+        $incomingCounts[$target]++
+    }
+}
+$multiIncoming = @(
+    $incomingCounts.GetEnumerator() |
+        Where-Object { $_.Value -gt 1 } |
+        Sort-Object Name
+)
+if ($multiIncoming.Count -gt 0) {
+    $targets = $multiIncoming | ForEach-Object { "$($_.Name)=$($_.Value)" }
+    Write-Warning "Multiple edges enter the same node ($($targets -join ', ')). Inspect the rendered geometry; Graphviz may spread or misplace shared entry anchors."
+}
+
 if ($OutputDirectory) {
     $resolvedOutputDirectory = [System.IO.Path]::GetFullPath($OutputDirectory)
     if (-not (Test-Path -LiteralPath $resolvedOutputDirectory)) {

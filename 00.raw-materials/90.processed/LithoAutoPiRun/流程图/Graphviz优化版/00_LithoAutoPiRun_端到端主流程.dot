@@ -45,23 +45,32 @@ digraph LithoAutoPiRunOverview {
     a_split [shape=diamond, label="需要物理分批？"];
     a_whole [label="整批设为 Pilot"];
     a_phy [label="执行物理分批子流程"];
-    a_r2r [label="Pilot 传给 R2R"];
-    a_control [label="执行 Rule/Assign 卡控"];
-    a_allow [shape=diamond, label="允许继续作业？"];
-    a_hold [label="保持卡控"];
-    a_end [label="进入 PiRun"];
+    a_whole_r2r [label="整批 Pilot 传给 R2R"];
+    a_whole_control [label="执行卡控并按结果处理"];
+    a_phy_r2r [label="子批 Pilot 传给 R2R"];
+    a_phy_control [label="执行 Rule/Assign 卡控"];
+    a_phy_allow [shape=diamond, label="允许继续作业？"];
+    a_phy_hold [label="子批保持卡控"];
+    a_phy_end [label="子批进入 PiRun"];
 
-    a_start -> a_rtd -> a_found;
-    a_found -> a_wait [xlabel="否"];
-    a_found -> a_report [xlabel="是"];
-    a_report -> a_ama -> a_split;
-    a_split -> a_whole [xlabel="否"];
-    a_split -> a_phy [xlabel="是"];
-    a_whole -> a_r2r;
-    a_phy -> a_r2r;
-    a_r2r -> a_control -> a_allow;
-    a_allow -> a_hold [xlabel="否"];
-    a_allow -> a_end [xlabel="是"];
+    a_start:s -> a_rtd:n;
+    a_rtd:s -> a_found:n;
+    { rank=same; a_found; a_wait; }
+    a_found:e -> a_wait:w [xlabel="否", constraint=false];
+    a_found:s -> a_report:n [xlabel="是"];
+    a_report:s -> a_ama:n;
+    a_ama:s -> a_split:n;
+    { rank=same; a_split; a_whole; }
+    a_split:e -> a_whole:w [xlabel="否", constraint=false];
+    a_split:s -> a_phy:n [xlabel="是"];
+    a_whole:s -> a_whole_r2r:n;
+    a_whole_r2r:s -> a_whole_control:n;
+    a_phy:s -> a_phy_r2r:n;
+    a_phy_r2r:s -> a_phy_control:n;
+    a_phy_control:s -> a_phy_allow:n;
+    { rank=same; a_phy_allow; a_phy_hold; }
+    a_phy_allow:e -> a_phy_hold:w [xlabel="否", constraint=false];
+    a_phy_allow:s -> a_phy_end:n [xlabel="是"];
   }
 
   subgraph cluster_foup {
@@ -79,9 +88,13 @@ digraph LithoAutoPiRunOverview {
     b_remove [label="按站点与 Qtime 解除"];
     b_end [label="本轮处理完成"];
 
-    b_start -> b_report -> b_has;
-    b_has -> b_none [xlabel="否"];
-    b_has -> b_hold [xlabel="是"];
-    b_hold -> b_transfer -> b_remove -> b_end;
+    b_start:s -> b_report:n;
+    b_report:s -> b_has:n;
+    { rank=same; b_has; b_none; }
+    b_has:e -> b_none:w [xlabel="否", constraint=false];
+    b_has:s -> b_hold:n [xlabel="是"];
+    b_hold:s -> b_transfer:n;
+    b_transfer:s -> b_remove:n;
+    b_remove:s -> b_end:n;
   }
 }

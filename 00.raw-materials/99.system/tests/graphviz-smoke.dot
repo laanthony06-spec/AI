@@ -3,13 +3,15 @@ digraph smoke_test {
     node [fontname="Microsoft YaHei", color="black", fontcolor="black"];
     edge [fontname="Microsoft YaHei", color="black", fontcolor="black"];
 
-    start [label="开始", shape=ellipse];
+    start [label="开始", shape=box];
     check [label="条件满足？", shape=diamond];
     process [label="执行处理", shape=box];
-    finish [label="结束", shape=ellipse];
+    finish_yes [label="处理完成", shape=box];
+    finish_no [label="条件不满足，结束", shape=box];
 
-    start -> check;
-    check -> process [xlabel="是"];
-    check -> finish [xlabel="否"];
-    process -> finish;
+    start:s -> check:n;
+    check:s -> process:n [xlabel="是"];
+    { rank=same; check; finish_no; }
+    check:e -> finish_no:w [xlabel="否", constraint=false];
+    process:s -> finish_yes:n;
 }

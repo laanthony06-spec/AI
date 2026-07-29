@@ -36,24 +36,45 @@ digraph AMATransferFoup {
   reserve_ok [shape=diamond, label="空 FOUP 可用且非零？"];
   transfer [label="调用 MES TransferFOUP"];
   transfer_ok [shape=diamond, label="接口调用成功？"];
-  fail [label="在 AMALog 记录 Fail"];
+  fail_reserve [label="记录空 FOUP 获取失败"];
+  mark_reserve [label="当前记录处理结束"];
+  continue_reserve [label="继续处理其余记录直至完成"];
+  end_reserve [label="本轮执行结束"];
+  fail_transfer [label="记录 TransferFOUP 失败"];
+  mark_transfer [label="当前记录处理结束"];
+  continue_transfer [label="继续处理其余记录直至完成"];
+  end_transfer [label="本轮执行结束"];
   success [label="记录当前处理成功"];
-  mark [label="当前记录处理结束"];
-  remain [shape=diamond, label="仍有下一条记录？"];
-  end [label="本轮执行结束"];
+  mark_success [label="当前记录处理结束"];
+  remain [shape=diamond, label="全部记录处理完成？"];
+  continue_success [label="继续处理其余记录直至完成"];
+  end_success [label="本轮执行结束"];
+  end_loop [label="循环处理完成，本轮结束"];
+  end_none [label="无待处理记录，本轮结束"];
 
-  start -> has;
-  has -> end [xlabel="否"];
-  has -> read [xlabel="是"];
-  read -> reserve -> reserve_ok;
-  reserve_ok -> fail [xlabel="否"];
-  reserve_ok -> transfer [xlabel="是"];
-  transfer -> transfer_ok;
-  transfer_ok -> fail [xlabel="否"];
-  transfer_ok -> success [xlabel="是"];
-  fail -> mark;
-  success -> mark;
-  mark -> remain;
-  remain -> end [xlabel="否"];
-  remain -> read [xlabel="是"];
+  start:s -> has:n;
+  { rank=same; has; end_none; }
+  has:e -> end_none:w [xlabel="否", constraint=false];
+  has:s -> read:n [xlabel="是"];
+  read:s -> reserve:n;
+  reserve:s -> reserve_ok:n;
+  { rank=same; reserve_ok; fail_reserve; }
+  reserve_ok:e -> fail_reserve:w [xlabel="否", constraint=false];
+  fail_reserve:s -> mark_reserve:n;
+  mark_reserve:s -> continue_reserve:n;
+  continue_reserve:s -> end_reserve:n;
+  reserve_ok:s -> transfer:n [xlabel="是"];
+  transfer:s -> transfer_ok:n;
+  { rank=same; transfer_ok; fail_transfer; }
+  transfer_ok:e -> fail_transfer:w [xlabel="否", constraint=false];
+  fail_transfer:s -> mark_transfer:n;
+  mark_transfer:s -> continue_transfer:n;
+  continue_transfer:s -> end_transfer:n;
+  transfer_ok:s -> success:n [xlabel="是"];
+  success:s -> mark_success:n;
+  mark_success:s -> remain:n;
+  remain:s -> end_success:n [xlabel="是"];
+  { rank=same; remain; continue_success; }
+  remain:e -> continue_success:w [xlabel="否", constraint=false];
+  continue_success:s -> end_loop:n;
 }

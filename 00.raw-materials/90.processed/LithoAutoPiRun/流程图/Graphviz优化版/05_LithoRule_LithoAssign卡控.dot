@@ -30,30 +30,57 @@ digraph LithoRuleAssignControl {
   ];
 
   start [label="Lot 进入 Litho 判断"];
-  specify [shape=diamond, label="属于 Specify Lot？"];
+  specify [shape=diamond, label="属于非 Specify Lot？"];
   original [label="沿用原有逻辑"];
+  original_output [label="输出原有卡控结果"];
   auto_cond [shape=diamond, label="满足自动 PiRun 条件？"];
   auto_hold [label="增加 R2RAutoPirunControl"];
   auto_pass [label="不增加自动 PiRun 卡控"];
-  pretool [shape=diamond, label="Pretool 不为空？"];
-  relation [label="获取 FutureMerge 关联 Lot"];
-  last_tool [label="获取关联 Lot 最新机台"];
-  same [shape=diamond, label="待派机台与其一致？"];
-  parent_hold [label="增加子母批同机台卡控"];
-  output [label="输出最终卡控结果"];
+  pretool_hold [shape=diamond, label="Pretool 不为空？"];
+  relation_hold [label="获取 FutureMerge 关联 Lot"];
+  last_tool_hold [label="获取关联 Lot 最新机台"];
+  same_hold [shape=diamond, label="待派机台与其一致？"];
+  parent_hold_hold [label="增加子母批同机台卡控"];
+  output_hold_empty [label="输出：保留自动 PiRun 卡控"];
+  output_hold_same [label="输出：无需子母批卡控"];
+  output_hold_parent [label="输出：叠加子母批同机台卡控"];
+  pretool_pass [shape=diamond, label="Pretool 不为空？"];
+  relation_pass [label="获取 FutureMerge 关联 Lot"];
+  last_tool_pass [label="获取关联 Lot 最新机台"];
+  same_pass [shape=diamond, label="待派机台与其一致？"];
+  parent_hold_pass [label="增加子母批同机台卡控"];
+  output_pass_empty [label="输出：不增加新卡控"];
+  output_pass_same [label="输出：无需子母批卡控"];
+  output_pass_parent [label="输出：仅增加子母批卡控"];
 
-  start -> specify;
-  specify -> original [xlabel="是"];
-  original -> output;
-  specify -> auto_cond [xlabel="否"];
-  auto_cond -> auto_hold [xlabel="是"];
-  auto_cond -> auto_pass [xlabel="否"];
-  auto_hold -> pretool;
-  auto_pass -> pretool;
-  pretool -> output [xlabel="否"];
-  pretool -> relation [xlabel="是"];
-  relation -> last_tool -> same;
-  same -> output [xlabel="是"];
-  same -> parent_hold [xlabel="否"];
-  parent_hold -> output;
+  start:s -> specify:n;
+  { rank=same; specify; original; }
+  specify:e -> original:w [xlabel="否", constraint=false];
+  original:s -> original_output:n;
+  specify:s -> auto_cond:n [xlabel="是"];
+  auto_cond:s -> auto_hold:n [xlabel="是"];
+  { rank=same; auto_cond; auto_pass; }
+  auto_cond:e -> auto_pass:w [xlabel="否", constraint=false];
+
+  auto_hold:s -> pretool_hold:n;
+  pretool_hold:s -> relation_hold:n [xlabel="是"];
+  relation_hold:s -> last_tool_hold:n;
+  last_tool_hold:s -> same_hold:n;
+  same_hold:s -> output_hold_same:n [xlabel="是"];
+  { rank=same; same_hold; parent_hold_hold; }
+  same_hold:e -> parent_hold_hold:w [xlabel="否", constraint=false];
+  parent_hold_hold:s -> output_hold_parent:n;
+  { rank=same; pretool_hold; output_hold_empty; }
+  pretool_hold:e -> output_hold_empty:w [xlabel="否", constraint=false];
+
+  auto_pass:s -> pretool_pass:n;
+  pretool_pass:s -> relation_pass:n [xlabel="是"];
+  relation_pass:s -> last_tool_pass:n;
+  last_tool_pass:s -> same_pass:n;
+  same_pass:s -> output_pass_same:n [xlabel="是"];
+  { rank=same; same_pass; parent_hold_pass; }
+  same_pass:e -> parent_hold_pass:w [xlabel="否", constraint=false];
+  parent_hold_pass:s -> output_pass_parent:n;
+  { rank=same; pretool_pass; output_pass_empty; }
+  pretool_pass:e -> output_pass_empty:w [xlabel="否", constraint=false];
 }

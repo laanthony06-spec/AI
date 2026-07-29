@@ -35,16 +35,24 @@ digraph WaitPilotChangeFoup {
   in_sorter [shape=diamond, label="Pilot 在 Sorter？"];
   hold_other [label="卡控非 Sorter Other Lot"];
   hold_both [label="卡控 Pilot+非 Sorter Lot"];
-  monitor [label="持续检查解除条件"];
-  release_sub [label="执行独立解除规则"];
-  result [label="解除或保持卡控"];
+  monitor_other [label="持续检查 Other Lot 解除条件"];
+  release_other [label="执行 Other Lot 独立解除规则"];
+  result_other [label="解除或保持 Other Lot 卡控"];
+  monitor_both [label="持续检查两类对象解除条件"];
+  release_both [label="分别执行独立解除规则"];
+  result_both [label="分别解除或保持卡控"];
 
-  start -> active;
-  active -> no_hold [xlabel="否"];
-  active -> in_sorter [xlabel="是"];
-  in_sorter -> hold_other [xlabel="是"];
-  in_sorter -> hold_both [xlabel="否"];
-  hold_other -> monitor;
-  hold_both -> monitor;
-  monitor -> release_sub -> result;
+  start:s -> active:n;
+  { rank=same; active; no_hold; }
+  active:e -> no_hold:w [xlabel="否", constraint=false];
+  active:s -> in_sorter:n [xlabel="是"];
+  in_sorter:s -> hold_other:n [xlabel="是"];
+  { rank=same; in_sorter; hold_both; }
+  in_sorter:e -> hold_both:w [xlabel="否", constraint=false];
+  hold_other:s -> monitor_other:n;
+  monitor_other:s -> release_other:n;
+  release_other:s -> result_other:n;
+  hold_both:s -> monitor_both:n;
+  monitor_both:s -> release_both:n;
+  release_both:s -> result_both:n;
 }

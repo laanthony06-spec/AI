@@ -38,16 +38,22 @@ digraph RTDTransferFoupReport {
   trigger [shape=diamond, label="WatchDog 有效且到时？"];
   take [label="截取前 N 个 Carrier"];
   output [label="输出 TransferFOUP Report"];
-  reject [label="本轮不输出"];
+  reject_pilot [label="Pilot 条件不满足，本轮不输出"];
+  reject_other [label="无其他待作业 Lot，本轮不输出"];
+  reject_trigger [label="WatchDog 未到时，本轮不输出"];
 
-  start -> pilot_filter;
-  pilot_filter -> reject [xlabel="否"];
-  pilot_filter -> carrier [xlabel="是"];
-  carrier -> other;
-  other -> reject [xlabel="否"];
-  other -> change [xlabel="是"];
-  change -> sort -> trigger;
-  trigger -> reject [xlabel="否"];
-  trigger -> take [xlabel="是"];
-  take -> output;
+  start:s -> pilot_filter:n;
+  { rank=same; pilot_filter; reject_pilot; }
+  pilot_filter:e -> reject_pilot:w [xlabel="否", constraint=false];
+  pilot_filter:s -> carrier:n [xlabel="是"];
+  carrier:s -> other:n;
+  { rank=same; other; reject_other; }
+  other:e -> reject_other:w [xlabel="否", constraint=false];
+  other:s -> change:n [xlabel="是"];
+  change:s -> sort:n;
+  sort:s -> trigger:n;
+  { rank=same; trigger; reject_trigger; }
+  trigger:e -> reject_trigger:w [xlabel="否", constraint=false];
+  trigger:s -> take:n [xlabel="是"];
+  take:s -> output:n;
 }

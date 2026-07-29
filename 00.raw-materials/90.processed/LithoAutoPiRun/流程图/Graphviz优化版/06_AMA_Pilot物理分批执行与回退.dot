@@ -42,27 +42,41 @@ digraph AMAPhysicalSplit {
   mes [label="调用 MES 物理分批"];
   mes_ok [shape=diamond, label="分批接口成功？"];
   release [label="释放预占 FOUP"];
-  fallback [label="回退为整批 Pilot"];
+  fallback_reserve [label="无空 FOUP，回退整批 Pilot"];
+  fallback_reserve_send [label="整批 Lot 传给 R2R"];
+  fallback_reserve_end [label="空 FOUP 失败回退完成"];
+  fallback_mes [label="接口失败，回退整批 Pilot"];
+  fallback_mes_send [label="整批 Lot 传给 R2R"];
+  fallback_mes_end [label="分批接口失败回退完成"];
   child [label="生成子批并设为 Pilot"];
   send [label="子批传给 R2R"];
   transfer [label="按现有顺序 Transfer FOUP"];
   end [label="物理分批完成"];
 
-  start -> split;
-  split -> whole [xlabel="否"];
-  whole -> whole_end;
-  split -> review [xlabel="是"];
-  review -> review_ok;
-  review_ok -> stop [xlabel="否"];
-  stop -> wait;
-  review_ok -> reserve [xlabel="是"];
-  reserve -> reserve_ok;
-  reserve_ok -> fallback [xlabel="否"];
-  reserve_ok -> mes [xlabel="是"];
-  mes -> mes_ok;
-  mes_ok -> release [xlabel="否"];
-  release -> fallback;
-  fallback -> whole;
-  mes_ok -> child [xlabel="是"];
-  child -> send -> transfer -> end;
+  start:s -> split:n;
+  { rank=same; split; whole; }
+  split:e -> whole:w [xlabel="否", constraint=false];
+  whole:s -> whole_end:n;
+  split:s -> review:n [xlabel="是"];
+  review:s -> review_ok:n;
+  { rank=same; review_ok; stop; }
+  review_ok:e -> stop:w [xlabel="否", constraint=false];
+  stop:s -> wait:n;
+  review_ok:s -> reserve:n [xlabel="是"];
+  reserve:s -> reserve_ok:n;
+  { rank=same; reserve_ok; fallback_reserve; }
+  reserve_ok:e -> fallback_reserve:w [xlabel="否", constraint=false];
+  fallback_reserve:s -> fallback_reserve_send:n;
+  fallback_reserve_send:s -> fallback_reserve_end:n;
+  reserve_ok:s -> mes:n [xlabel="是"];
+  mes:s -> mes_ok:n;
+  { rank=same; mes_ok; release; }
+  mes_ok:e -> release:w [xlabel="否", constraint=false];
+  release:s -> fallback_mes:n;
+  fallback_mes:s -> fallback_mes_send:n;
+  fallback_mes_send:s -> fallback_mes_end:n;
+  mes_ok:s -> child:n [xlabel="是"];
+  child:s -> send:n;
+  send:s -> transfer:n;
+  transfer:s -> end:n;
 }

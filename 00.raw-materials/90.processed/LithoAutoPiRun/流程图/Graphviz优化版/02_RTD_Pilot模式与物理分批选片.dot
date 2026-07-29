@@ -30,37 +30,42 @@ digraph RTDPilotMode {
   ];
 
   start [label="取得已选 Lot+Context"];
-  whole_rule [shape=diamond, label="任一整批条件成立？"];
+  whole_rule [shape=diamond, label="需要物理分批？"];
   whole [label="IsNeedSplit=F"];
   whole_out [label="整批设为 Pilot"];
   split [label="IsNeedSplit=T"];
   read_cnt [label="读取 pi_splitcnt"];
-  invalid_cnt [shape=diamond, label="分片数无效？"];
-  default_cnt [label="使用默认值 4"];
-  config_cnt [label="使用配置值"];
+  resolve_cnt [label="确定分片数：有效用配置，否则默认 4"];
   enough [shape=diamond, label="可用 Wafer 足够？"];
+  fallback_whole [label="IsNeedSplit=F"];
+  fallback_out [label="Wafer 不足，整批设为 Pilot"];
   group [label="建立 Group/SubGroup"];
   rank [label="计算 GroupRank/WaferRank"];
   choose [label="按排序选择 Wafer"];
   adi [shape=diamond, label="存在非 SRC 的 ADI？"];
   first_adi [label="首道 ADI 为 Merge"];
   last_cd [label="末道 CD 为 Merge"];
-  output [label="输出分批参数 Report"];
+  output_adi [label="按首道 ADI 输出分批 Report"];
+  output_cd [label="按末道 CD 输出分批 Report"];
 
-  start -> whole_rule;
-  whole_rule -> whole [xlabel="是"];
-  whole -> whole_out;
-  whole_rule -> split [xlabel="否"];
-  split -> read_cnt -> invalid_cnt;
-  invalid_cnt -> default_cnt [xlabel="是"];
-  invalid_cnt -> config_cnt [xlabel="否"];
-  default_cnt -> enough;
-  config_cnt -> enough;
-  enough -> whole [xlabel="否"];
-  enough -> group [xlabel="是"];
-  group -> rank -> choose -> adi;
-  adi -> first_adi [xlabel="是"];
-  adi -> last_cd [xlabel="否"];
-  first_adi -> output;
-  last_cd -> output;
+  start:s -> whole_rule:n;
+  { rank=same; whole_rule; whole; }
+  whole_rule:e -> whole:w [xlabel="否", constraint=false];
+  whole:s -> whole_out:n;
+  whole_rule:s -> split:n [xlabel="是"];
+  split:s -> read_cnt:n;
+  read_cnt:s -> resolve_cnt:n;
+  resolve_cnt:s -> enough:n;
+  { rank=same; enough; fallback_whole; }
+  enough:e -> fallback_whole:w [xlabel="否", constraint=false];
+  fallback_whole:s -> fallback_out:n;
+  enough:s -> group:n [xlabel="是"];
+  group:s -> rank:n;
+  rank:s -> choose:n;
+  choose:s -> adi:n;
+  adi:s -> first_adi:n [xlabel="是"];
+  { rank=same; adi; last_cd; }
+  adi:e -> last_cd:w [xlabel="否", constraint=false];
+  first_adi:s -> output_adi:n;
+  last_cd:s -> output_cd:n;
 }
