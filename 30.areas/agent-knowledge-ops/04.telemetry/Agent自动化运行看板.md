@@ -1,6 +1,6 @@
 ---
 type: agent-telemetry-dashboard
-updated: 2026-07-28T22:32:07
+updated: 2026-07-29T20:02:31
 tags: [Agent, Telemetry, 自动化看板]
 ---
 
@@ -10,7 +10,11 @@ tags: [Agent, Telemetry, 自动化看板]
 
 | 任务 | 状态 |
 |---|---|
-| 未读取到 | 可能是权限限制；不代表任务不存在 |
+| Obsidian Agent Knowledge Ops Refresh | 4 |
+| Obsidian AI Agent Intel Daily | 4 |
+| Obsidian Raw Materials Weekly Knowledge Distill | 3 |
+| Obsidian Semiconductor Dispatch Intel Daily | 4 |
+| Obsidian Sensitive Scan Weekly | 3 |
 
 ## 关键输出目录
 
@@ -19,11 +23,11 @@ tags: [Agent, Telemetry, 自动化看板]
 | `30.areas/ai-agent-intel/inbox` | 9 | [[30.areas/ai-agent-intel/inbox/2026-07-27.md]] |
 | `30.areas/semiconductor-dispatch-intel/inbox` | 11 | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md]] |
 | `00.raw-materials/90.processed/weekly-knowledge-distill` | 3 | [[00.raw-materials/90.processed/weekly-knowledge-distill/2026-07-27-每周原始资料知识提纯.md]] |
-| `00.raw-materials/90.processed/dispatch-requirements-notes` | 11 | [[00.raw-materials/90.processed/dispatch-requirements-notes/CMPAutoPirun-需求单整理.md]] |
+| `00.raw-materials/90.processed/dispatch-requirements-notes` | 11 | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md]] |
 | `30.areas/agent-knowledge-ops/01.task-queue` | 2 | [[30.areas/agent-knowledge-ops/01.task-queue/Agent任务队列.md]] |
 | `30.areas/agent-knowledge-ops/02.evidence` | 1 | [[30.areas/agent-knowledge-ops/02.evidence/Evidence索引.md]] |
 | `30.areas/agent-knowledge-ops/03.testcases` | 2 | [[30.areas/agent-knowledge-ops/03.testcases/WaferBalance-TestCases.md]] |
-| `30.areas/agent-knowledge-ops/06.memory` | 4 | [[30.areas/agent-knowledge-ops/06.memory/错误与修复记录.md]] |
+| `30.areas/agent-knowledge-ops/06.memory` | 4 | [[30.areas/agent-knowledge-ops/06.memory/高价值来源记录.md]] |
 | `30.areas/agent-knowledge-ops/07.hooks` | 1 | [[30.areas/agent-knowledge-ops/07.hooks/Hooks扫描器.md]] |
 
 ## 日志健康度

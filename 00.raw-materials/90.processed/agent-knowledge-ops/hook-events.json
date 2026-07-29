@@ -1,67 +1,12 @@
 [
   {
-    "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/CMPAutoPirun-需求单整理.md",
-    "size": 26280
+    "event": "modified",
+    "path": "00.raw-materials/20.metadata/2026-07-28_内容整合清单.md",
+    "size": 1919
   },
   {
-    "event": "created",
+    "event": "modified",
     "path": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md",
-    "size": 23901
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPirun优化-需求单整理.md",
-    "size": 23497
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/PM_Control-需求单整理.md",
-    "size": 26932
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/Qsort-需求单整理.md",
-    "size": 6992
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md",
-    "size": 27533
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase要求-需求单整理.md",
-    "size": 6866
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/WaferBalance-需求单整理.md",
-    "size": 12380
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/WPHLoss-需求单整理.md",
-    "size": 10834
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/dispatch-requirements-notes/自动派工需求单图片-OCR索引.md",
-    "size": 2077
-  },
-  {
-    "event": "created",
-    "path": "00.raw-materials/90.processed/weekly-knowledge-distill/2026-07-27-每周原始资料知识提纯.md",
-    "size": 31883
-  },
-  {
-    "event": "modified",
-    "path": "00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md",
-    "size": 283
-  },
-  {
-    "event": "created",
-    "path": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "size": 102776
+    "size": 23436
   }
 ]

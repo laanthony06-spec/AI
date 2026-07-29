@@ -1,6 +1,6 @@
 ---
 type: hooks-scanner
-updated: 2026-07-28T19:23:21
+updated: 2026-07-29T20:02:24
 tags: [Agent, Hooks, 自动触发]
 ---
 
@@ -24,19 +24,8 @@ tags: [Agent, Hooks, 自动触发]
 
 | 事件 | 文件 | 大小 | 建议动作 |
 |---|---|---:|---|
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/CMPAutoPirun-需求单整理.md]] | 26280 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md]] | 23901 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPirun优化-需求单整理.md]] | 23497 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/PM_Control-需求单整理.md]] | 26932 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/Qsort-需求单整理.md]] | 6992 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase示例-需求单整理.md]] | 27533 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/TestCase_SOP__TestCase要求-需求单整理.md]] | 6866 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/WaferBalance-需求单整理.md]] | 12380 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/WPHLoss-需求单整理.md]] | 10834 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/自动派工需求单图片-OCR索引.md]] | 2077 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[00.raw-materials/90.processed/weekly-knowledge-distill/2026-07-27-每周原始资料知识提纯.md]] | 31883 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/weekly-knowledge-distill/最新每周知识提纯.md]] | 283 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| created | [[30.areas/ai-agent-intel/inbox/2026-07-27.md]] | 102776 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| modified | [[00.raw-materials/20.metadata/2026-07-28_内容整合清单.md]] | 1919 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md]] | 23436 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
 
 ## 触发规则草案
 
