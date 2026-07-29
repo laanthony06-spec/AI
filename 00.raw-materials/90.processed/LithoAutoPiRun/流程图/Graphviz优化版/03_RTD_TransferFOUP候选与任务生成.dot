@@ -1,0 +1,53 @@
+digraph RTDTransferFoupReport {
+  graph [
+    charset="UTF-8",
+    rankdir=TB,
+    splines=ortho,
+    bgcolor="white",
+    pad=0.25,
+    nodesep=0.48,
+    ranksep=0.66,
+    fontname="Microsoft YaHei",
+    fontsize=15,
+    labelloc="t",
+    label="RTD TransferFOUP 候选与任务生成"
+  ];
+  node [
+    shape=box,
+    style="solid",
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=11,
+    margin="0.16,0.10"
+  ];
+  edge [
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  start [label="获取 Litho Pilot"];
+  pilot_filter [shape=diamond, label="满足生产 Pilot 条件？"];
+  carrier [label="获取同 Carrier 全部 Lot"];
+  other [shape=diamond, label="存在其他待作业 Lot？"];
+  change [label="标记需要 Change FOUP"];
+  sort [label="按四项指标排序"];
+  trigger [shape=diamond, label="WatchDog 有效且到时？"];
+  take [label="截取前 N 个 Carrier"];
+  output [label="输出 TransferFOUP Report"];
+  reject [label="本轮不输出"];
+
+  start -> pilot_filter;
+  pilot_filter -> reject [xlabel="否"];
+  pilot_filter -> carrier [xlabel="是"];
+  carrier -> other;
+  other -> reject [xlabel="否"];
+  other -> change [xlabel="是"];
+  change -> sort -> trigger;
+  trigger -> reject [xlabel="否"];
+  trigger -> take [xlabel="是"];
+  take -> output;
+}

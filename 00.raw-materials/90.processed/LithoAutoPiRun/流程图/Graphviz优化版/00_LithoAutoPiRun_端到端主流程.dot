@@ -1,0 +1,87 @@
+digraph LithoAutoPiRunOverview {
+  graph [
+    charset="UTF-8",
+    rankdir=TB,
+    splines=ortho,
+    bgcolor="white",
+    pad=0.25,
+    nodesep=0.45,
+    ranksep=0.65,
+    newrank=true,
+    fontname="Microsoft YaHei",
+    fontsize=15,
+    labelloc="t",
+    label="LithoAutoPiRun 端到端主流程"
+  ];
+  node [
+    shape=box,
+    style="solid",
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=11,
+    margin="0.16,0.10"
+  ];
+  edge [
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  subgraph cluster_pilot {
+    label="链路 A：Pilot 生成与派工";
+    color="black";
+    penwidth=1;
+    margin=18;
+
+    a_start [label="触发 Pilot 计算"];
+    a_rtd [label="RTD 筛选最佳 Pilot"];
+    a_found [shape=diamond, label="存在可用 Pilot？"];
+    a_wait [label="等待下一轮"];
+    a_report [label="输出 Pilot Report"];
+    a_ama [label="AMA 读取 Report"];
+    a_split [shape=diamond, label="需要物理分批？"];
+    a_whole [label="整批设为 Pilot"];
+    a_phy [label="执行物理分批子流程"];
+    a_r2r [label="Pilot 传给 R2R"];
+    a_control [label="执行 Rule/Assign 卡控"];
+    a_allow [shape=diamond, label="允许继续作业？"];
+    a_hold [label="保持卡控"];
+    a_end [label="进入 PiRun"];
+
+    a_start -> a_rtd -> a_found;
+    a_found -> a_wait [xlabel="否"];
+    a_found -> a_report [xlabel="是"];
+    a_report -> a_ama -> a_split;
+    a_split -> a_whole [xlabel="否"];
+    a_split -> a_phy [xlabel="是"];
+    a_whole -> a_r2r;
+    a_phy -> a_r2r;
+    a_r2r -> a_control -> a_allow;
+    a_allow -> a_hold [xlabel="否"];
+    a_allow -> a_end [xlabel="是"];
+  }
+
+  subgraph cluster_foup {
+    label="链路 B：Transfer FOUP 与临时卡控";
+    color="black";
+    penwidth=1;
+    margin=18;
+
+    b_start [label="WatchDog 周期触发"];
+    b_report [label="生成 TransferFOUP Report"];
+    b_has [shape=diamond, label="存在待转 Carrier？"];
+    b_none [label="本轮结束"];
+    b_hold [label="新增 WaitPilotChangeFOUP"];
+    b_transfer [label="AMA 执行 TransferFOUP"];
+    b_remove [label="按站点与 Qtime 解除"];
+    b_end [label="本轮处理完成"];
+
+    b_start -> b_report -> b_has;
+    b_has -> b_none [xlabel="否"];
+    b_has -> b_hold [xlabel="是"];
+    b_hold -> b_transfer -> b_remove -> b_end;
+  }
+}

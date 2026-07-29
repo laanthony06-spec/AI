@@ -1,0 +1,68 @@
+digraph AMAPhysicalSplit {
+  graph [
+    charset="UTF-8",
+    rankdir=TB,
+    splines=ortho,
+    bgcolor="white",
+    pad=0.25,
+    nodesep=0.5,
+    ranksep=0.68,
+    fontname="Microsoft YaHei",
+    fontsize=15,
+    labelloc="t",
+    label="AMA Pilot 物理分批执行与回退"
+  ];
+  node [
+    shape=box,
+    style="solid",
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=11,
+    margin="0.16,0.10"
+  ];
+  edge [
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  start [label="读取 Pilot Report"];
+  split [shape=diamond, label="IsNeedSplit=T？"];
+  whole [label="整批 Lot 传给 R2R"];
+  whole_end [label="整批 Pilot 完成"];
+  review [label="执行六项复核"];
+  review_ok [shape=diamond, label="六项复核全部通过？"];
+  stop [label="停止并记录失败原因"];
+  wait [label="等待下一轮重算"];
+  reserve [label="获取并预占空 FOUP"];
+  reserve_ok [shape=diamond, label="成功取得空 FOUP？"];
+  mes [label="调用 MES 物理分批"];
+  mes_ok [shape=diamond, label="分批接口成功？"];
+  release [label="释放预占 FOUP"];
+  fallback [label="回退为整批 Pilot"];
+  child [label="生成子批并设为 Pilot"];
+  send [label="子批传给 R2R"];
+  transfer [label="按现有顺序 Transfer FOUP"];
+  end [label="物理分批完成"];
+
+  start -> split;
+  split -> whole [xlabel="否"];
+  whole -> whole_end;
+  split -> review [xlabel="是"];
+  review -> review_ok;
+  review_ok -> stop [xlabel="否"];
+  stop -> wait;
+  review_ok -> reserve [xlabel="是"];
+  reserve -> reserve_ok;
+  reserve_ok -> fallback [xlabel="否"];
+  reserve_ok -> mes [xlabel="是"];
+  mes -> mes_ok;
+  mes_ok -> release [xlabel="否"];
+  release -> fallback;
+  fallback -> whole;
+  mes_ok -> child [xlabel="是"];
+  child -> send -> transfer -> end;
+}

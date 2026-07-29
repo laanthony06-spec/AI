@@ -1,0 +1,59 @@
+digraph LithoRuleAssignControl {
+  graph [
+    charset="UTF-8",
+    rankdir=TB,
+    splines=ortho,
+    bgcolor="white",
+    pad=0.25,
+    nodesep=0.5,
+    ranksep=0.68,
+    fontname="Microsoft YaHei",
+    fontsize=15,
+    labelloc="t",
+    label="LithoRule / LithoAssign 卡控"
+  ];
+  node [
+    shape=box,
+    style="solid",
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=11,
+    margin="0.16,0.10"
+  ];
+  edge [
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  start [label="Lot 进入 Litho 判断"];
+  specify [shape=diamond, label="属于 Specify Lot？"];
+  original [label="沿用原有逻辑"];
+  auto_cond [shape=diamond, label="满足自动 PiRun 条件？"];
+  auto_hold [label="增加 R2RAutoPirunControl"];
+  auto_pass [label="不增加自动 PiRun 卡控"];
+  pretool [shape=diamond, label="Pretool 不为空？"];
+  relation [label="获取 FutureMerge 关联 Lot"];
+  last_tool [label="获取关联 Lot 最新机台"];
+  same [shape=diamond, label="待派机台与其一致？"];
+  parent_hold [label="增加子母批同机台卡控"];
+  output [label="输出最终卡控结果"];
+
+  start -> specify;
+  specify -> original [xlabel="是"];
+  original -> output;
+  specify -> auto_cond [xlabel="否"];
+  auto_cond -> auto_hold [xlabel="是"];
+  auto_cond -> auto_pass [xlabel="否"];
+  auto_hold -> pretool;
+  auto_pass -> pretool;
+  pretool -> output [xlabel="否"];
+  pretool -> relation [xlabel="是"];
+  relation -> last_tool -> same;
+  same -> output [xlabel="是"];
+  same -> parent_hold [xlabel="否"];
+  parent_hold -> output;
+}

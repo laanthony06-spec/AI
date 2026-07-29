@@ -1,0 +1,73 @@
+digraph RTDPilotSelection {
+  graph [
+    charset="UTF-8",
+    rankdir=TB,
+    splines=ortho,
+    bgcolor="white",
+    pad=0.25,
+    nodesep=0.45,
+    ranksep=0.62,
+    fontname="Microsoft YaHei",
+    fontsize=15,
+    labelloc="t",
+    label="RTD 候选过滤与 Pilot 选择"
+  ];
+  node [
+    shape=box,
+    style="solid",
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=11,
+    margin="0.16,0.10"
+  ];
+  edge [
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  start [label="获取 FAB6/FAB8 候选 Lot"];
+  base [label="获取 Lot 基础信息"];
+  base_filter [label="执行基础过滤与去重"];
+  base_left [shape=diamond, label="仍有候选 Lot？"];
+  loop [label="构建 20 站 PirunLoop"];
+  loop_filter [label="执行 Loop 条件过滤"];
+  loop_left [shape=diamond, label="仍有候选 Lot？"];
+  specify [shape=diamond, label="属于 Specify Lot？"];
+  specify_flow [label="转现有 Specify 处理"];
+  tools [label="获取并筛选可作业机台"];
+  context [label="匹配有效 R2R Context"];
+  context_ok [shape=diamond, label="存在单一路径 Context？"];
+  auto_context [label="筛选 AutoPirun Context"];
+  auto_ok [shape=diamond, label="存在待 Pirun Context？"];
+  rtd_rank [label="计算 Lot 的 RTDRank"];
+  context_rank [label="计算 Context 排序指标"];
+  select [label="锁定首位 Lot+Context"];
+  remove [label="移除重复 Lot/Context"];
+  remain [shape=diamond, label="仍有 Lot 与 Context？"];
+  update [label="更新排序指标"];
+  output [label="输出各 Context 最优 Pilot"];
+  reject [label="过滤该 Lot"];
+
+  start -> base -> base_filter -> base_left;
+  base_left -> reject [xlabel="否"];
+  base_left -> loop [xlabel="是"];
+  loop -> loop_filter -> loop_left;
+  loop_left -> reject [xlabel="否"];
+  loop_left -> specify [xlabel="是"];
+  specify -> specify_flow [xlabel="是"];
+  specify -> tools [xlabel="否"];
+  tools -> context -> context_ok;
+  context_ok -> reject [xlabel="否"];
+  context_ok -> auto_context [xlabel="是"];
+  auto_context -> auto_ok;
+  auto_ok -> reject [xlabel="否"];
+  auto_ok -> rtd_rank [xlabel="是"];
+  rtd_rank -> context_rank -> select -> remove -> remain;
+  remain -> output [xlabel="否"];
+  remain -> update [xlabel="是"];
+  update -> context_rank;
+}

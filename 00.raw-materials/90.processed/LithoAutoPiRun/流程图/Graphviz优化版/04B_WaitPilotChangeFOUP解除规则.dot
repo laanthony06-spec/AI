@@ -1,0 +1,60 @@
+digraph WaitPilotChangeFoupRelease {
+  graph [
+    charset="UTF-8",
+    rankdir=TB,
+    splines=ortho,
+    bgcolor="white",
+    pad=0.25,
+    nodesep=0.5,
+    ranksep=0.68,
+    fontname="Microsoft YaHei",
+    fontsize=15,
+    labelloc="t",
+    label="WaitPilotChangeFOUP 解除规则"
+  ];
+  node [
+    shape=box,
+    style="solid",
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=11,
+    margin="0.16,0.10"
+  ];
+  edge [
+    color="black",
+    fontcolor="black",
+    fontname="Microsoft YaHei",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  start [label="检查已卡控对象"];
+  is_pilot [shape=diamond, label="当前对象是 Pilot？"];
+  pilot_release [shape=diamond, label="RemainQ<4h 或 Qu_0？"];
+  litho [shape=diamond, label="Other Lot 在 Litho？"];
+  barco [shape=diamond, label="Other Lot 在 BARCO？"];
+  barco_release [shape=diamond, label="RemainQ<4h 或 Qu_0？"];
+  other_release [shape=diamond, label="触发 Qu_0？"];
+  pilot_remove [label="解除 Pilot 卡控"];
+  pilot_keep [label="保持 Pilot 卡控"];
+  litho_keep [label="Litho：保持卡控"];
+  barco_remove [label="BARCO：解除卡控"];
+  barco_keep [label="BARCO：保持卡控"];
+  other_remove [label="其他站：解除卡控"];
+  other_keep [label="其他站：保持卡控"];
+
+  start -> is_pilot;
+  is_pilot -> pilot_release [xlabel="是"];
+  pilot_release -> pilot_remove [xlabel="是"];
+  pilot_release -> pilot_keep [xlabel="否"];
+  is_pilot -> litho [xlabel="否"];
+  litho -> litho_keep [xlabel="是"];
+  litho -> barco [xlabel="否"];
+  barco -> barco_release [xlabel="是"];
+  barco_release -> barco_remove [xlabel="是"];
+  barco_release -> barco_keep [xlabel="否"];
+  barco -> other_release [xlabel="否"];
+  other_release -> other_remove [xlabel="是"];
+  other_release -> other_keep [xlabel="否"];
+}
