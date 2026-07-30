@@ -3,61 +3,157 @@
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "### [Add support for `2026-07-28` MCP Specification](https://github.com/reshaprio/reshapr/issues/285)",
+    "task": "### [Autonomous AI Shopping Assistant Playground with Real-Time MCP Tool Call Inspector](https://github.com/abhisek2004/62Days-CodeSprint-WebDev-Challenge/issues/320)",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "### [Exercise: Integrate MCP with Copilot](https://github.com/ReehanaaAbdulRazak/skills-integrate-mcp-with-copilot/issues/1)",
+    "task": "### [Exercise: Integrate MCP with Copilot](https://github.com/Potato061/mcp-exer/issues/1)",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "### [Publish blog draft: Building an authenticated MCP server with Routecraft and Clerk](https://github.com/routecraftjs/routecraft/issues/506)",
+    "task": "### [GENAI - MCP Registry](https://github.com/constructorfabric/gears-rust/issues/4329)",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "### [feat: MCP tool validation and compatibility checking](https://github.com/Apicurio/apicurio-registry/issues/8427)",
+    "task": "### [M2.5: MCP adapter (thin, over the core)](https://github.com/mandaloriat/fenix-spoon/issues/49)",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P1",
     "category": "MCP / 工具接口",
-    "task": "### [极致IT MCP入门到实战67集完整版 少走99%的弯路 精品教程](https://github.com/dsfgfdg12345/DeepSeek-/issues/19)",
+    "task": "### [Phase 17: MCP Execution Fabric Integration — Governed interoperability without replacing Gummy architecture](https://github.com/bohselecta/gummy-os/issues/36)",
     "recommended_executor": "Codex（先本地只读）",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [Server instructions from initialize response not passed to model](https://github.com/anthropics/claude-ai-mcp/issues/93)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [YogevBokobza/health-mcp](https://github.com/YogevBokobza/health-mcp)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [bug: MCP tool handlers return errors as \"Error: ...\" strings instead of structured error responses](https://github.com/nunchi-labs/sdk/issues/479)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [feat(registry): unify agent tools behind an AgentCore Gateway (managed MCP aggregation + dual-sided auth, any substrate)](https://github.com/aws-samples/sample-autonomous-cloud-coding-agents/issues/641)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [feat: implement Dockerized Auditing Daemon & MCP Server Support (Phase 17)](https://github.com/jmrenouard/MySQLTuner-perl/issues/62)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [feat: implement Dockerized Auditing Daemon & MCP Server Support (Phase 17)](https://github.com/major/MySQLTuner-perl/issues/954)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [security: .cursor/ directory not in .gitignore — AI IDE config (including future MCP credentials) can be accidentally committed](https://github.com/nunchi-labs/sdk/issues/810)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P1",
+    "category": "MCP / 工具接口",
+    "task": "### [test(mcp): add tests for MCP server behavior against an empty database](https://github.com/AbdulmalikAlayande/sorokeep/issues/468)",
+    "recommended_executor": "Codex（先本地只读）",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/05.mcp-server/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
@@ -75,49 +171,49 @@
     "status": "todo",
     "priority": "P2",
     "category": "Hooks",
-    "task": "处理 Hook 事件：modified 00.raw-materials/20.metadata/2026-07-28_内容整合清单.md",
+    "task": "处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "recommended_executor": "Codex",
-    "trigger": "modified",
-    "evidence": "00.raw-materials/20.metadata/2026-07-28_内容整合清单.md",
+    "trigger": "created",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/07.hooks/",
     "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/20.metadata/2026-07-28_内容整合清单.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P2",
     "category": "Hooks",
-    "task": "处理 Hook 事件：modified 00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md",
+    "task": "处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "recommended_executor": "Codex",
-    "trigger": "modified",
-    "evidence": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md",
+    "trigger": "created",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/07.hooks/",
     "next_action": "判断是否需要 OCR、整理、Evidence 或 TestCase",
-    "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md"
-  },
-  {
-    "status": "cancelled",
-    "priority": "P2",
-    "category": "Memory",
-    "task": "### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
-    "output": "30.areas/agent-knowledge-ops/06.memory/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P2",
     "category": "Memory",
-    "task": "### [Show HN: CMEM – Persistent Memory for AI Coding Agents](https://cmem.ai)",
+    "task": "### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "30.areas/agent-knowledge-ops/06.memory/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
+  },
+  {
+    "status": "todo",
+    "priority": "P2",
+    "category": "Memory",
+    "task": "### [UniMem: Complementary Episodic-to-Parametric Memory for Boundary-Agnostic Task Streams](https://arxiv.org/abs/2607.26017v1)",
+    "recommended_executor": "Codex + 人工复核",
+    "trigger": "brief_or_note_scan",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
+    "output": "30.areas/agent-knowledge-ops/06.memory/",
+    "next_action": "人工确认后执行",
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
@@ -195,253 +291,169 @@
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [A Self-Calibrating Agentic AI Framework for Autonomous Edge Resource Allocation](https://arxiv.org/abs/2607.22400v1)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
-  },
-  {
-    "status": "cancelled",
-    "priority": "P3",
-    "category": "知识整理",
     "task": "### [A review of the applications of multi-agent reinforcement learning in smart factories.](https://doi.org/10.3389/frobt.2022.1027340)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [AgentAbstain: Do LLM Agents Know When Not to Act?](https://arxiv.org/abs/2607.10059)",
+    "task": "### [AI Agent Orchestration For ASIC Autonomy](https://semiengineering.com/ai-agent-orchestration-for-asic-autonomy/)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Agentic CPU-GPU Scheduling for Heterogeneous AI Workloads](https://arxiv.org/abs/2607.22242v1)",
+    "task": "### [Agentic AI in medicine: architectures, applications, evaluation, and challenges for clinical translation](https://arxiv.org/abs/2607.25489v1)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Dynamic Capability Scoping for Enterprise AI Agents: A Synthetic Dataset and Three-Source Permission Architecture](https://arxiv.org/abs/2607.22445v1)",
+    "task": "### [AnjanaMadhushanaj/Heart_Agent_App](https://github.com/AnjanaMadhushanaj/Heart_Agent_App)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Feature Request: Support AGENTS.md.](https://github.com/anthropics/claude-code/issues/6235)",
+    "task": "### [Dylanperry04/ai-triage-agentic-system](https://github.com/Dylanperry04/ai-triage-agentic-system)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [IDEAgent: Agentic Quality-Diversity Search for Research Idea Generation](https://arxiv.org/abs/2607.22375v1)",
+    "task": "### [HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs](https://arxiv.org/abs/2607.25853v1)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [IDSTune: A Multi-Agent Collaborative Framework for Integrated Database System Tuning](https://arxiv.org/abs/2607.22031v1)",
+    "task": "### [PatientAgentBench: A Benchmark Framework for Evaluating Patient-Facing Health AI Agents](https://arxiv.org/abs/2607.25485v1)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Is drift on websites still a problem for ai browser agents?](https://www.reddit.com/r/AI_Agents/comments/1v7x4w8/is_drift_on_websites_still_a_problem_for_ai/)",
+    "task": "### [Runtime Uncertainty Monitoring for LLM-Based Multi-Agent Systems Using Bayesian Networks](https://arxiv.org/abs/2607.25877v1)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Mode](https://arxiv.org/abs/2607.22083v1)",
+    "task": "### [Upstream update: microsoft-agent-framework](https://github.com/managedcode/dotnet-skills/issues/1163)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Reliability-Contagion Feasibility in LLM Multi-Agent Networks](https://arxiv.org/abs/2607.21912v1)",
+    "task": "### [WaniyaKhan211/Agentic_AI_Essay_Writer](https://github.com/WaniyaKhan211/Agentic_AI_Essay_Writer)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [Show HN: Rules that stop AI coding agents from breaking working code](https://github.com/avenna01-ceo/claude-code-survival-kr)",
+    "task": "### [bhakti857/AgenticCommercePlatform](https://github.com/bhakti857/AgenticCommercePlatform)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents](https://arxiv.org/abs/2607.22520v1)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [The state of AI agents, in numbers](https://www.getreadyforagents.com/statistics/)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [Towards Trustworthy and Cost-Efficient Data Integration: From Naïve RAG to Agentic RAG](https://arxiv.org/abs/2607.22319v1)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [Void8478/AgentFlow](https://github.com/Void8478/AgentFlow)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
-  },
-  {
-    "status": "todo",
-    "priority": "P3",
-    "category": "知识整理",
-    "task": "### [dhruvb2028/AI-Research-Agent](https://github.com/dhruvb2028/AI-Research-Agent)",
-    "recommended_executor": "Codex + 人工复核",
-    "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
-    "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
-    "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
-  },
-  {
-    "status": "cancelled",
     "priority": "P3",
     "category": "知识整理",
     "task": "### [johannalberts/supply-chain-research-agent](https://github.com/johannalberts/supply-chain-research-agent)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [junghakim2023/AI_AGENT_stock_agent](https://github.com/junghakim2023/AI_AGENT_stock_agent)",
+    "task": "### [mohamedalaaabdella-maker/Agentic-RAG-System](https://github.com/mohamedalaaabdella-maker/Agentic-RAG-System)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
     "priority": "P3",
     "category": "知识整理",
-    "task": "### [📅 Daily Trending: AI Agents · LLMs · Governance — 2026-07-27](https://github.com/princeruhulofficial/github-trending/issues/18)",
+    "task": "### [yusheng-g/openagent-go](https://github.com/yusheng-g/openagent-go)",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/ai-agent-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/ai-agent-intel/inbox/2026-07-27.md"
+    "source": "30.areas/ai-agent-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
@@ -552,16 +564,16 @@
     "source": "00.raw-materials/90.processed/weekly-knowledge-distill/2026-07-27-每周原始资料知识提纯.md"
   },
   {
-    "status": "cancelled",
+    "status": "todo",
     "priority": "P3",
     "category": "知识整理",
     "task": "优先阅读相关度高且分类为“派工规则 / WIP / AMHS / MES / AI 调度”的条目",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
@@ -600,28 +612,28 @@
     "source": "00.raw-materials/90.processed/weekly-knowledge-distill/2026-07-27-每周原始资料知识提纯.md"
   },
   {
-    "status": "cancelled",
+    "status": "todo",
     "priority": "P3",
     "category": "知识整理",
     "task": "对明显无关的条目记录噪声来源，并更新关键词 / 来源配置",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
-    "status": "cancelled",
+    "status": "todo",
     "priority": "P3",
     "category": "知识整理",
     "task": "对涉及公司内部派工逻辑的启发，单独沉淀到内部专题笔记",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",
@@ -696,16 +708,16 @@
     "source": "00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md"
   },
   {
-    "status": "cancelled",
+    "status": "todo",
     "priority": "P3",
     "category": "知识整理",
     "task": "将高价值条目移动到专题笔记或建立 wiki-link",
     "recommended_executor": "Codex + 人工复核",
     "trigger": "brief_or_note_scan",
-    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md",
+    "evidence": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md",
     "output": "00.raw-materials/90.processed/agent-knowledge-ops/",
     "next_action": "人工确认后执行",
-    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md"
+    "source": "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md"
   },
   {
     "status": "todo",

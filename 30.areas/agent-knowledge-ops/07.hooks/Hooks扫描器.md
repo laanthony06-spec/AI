@@ -1,6 +1,6 @@
 ---
 type: hooks-scanner
-updated: 2026-07-29T20:02:24
+updated: 2026-07-30T18:26:35
 tags: [Agent, Hooks, 自动触发]
 ---
 
@@ -24,8 +24,8 @@ tags: [Agent, Hooks, 自动触发]
 
 | 事件 | 文件 | 大小 | 建议动作 |
 |---|---|---:|---|
-| modified | [[00.raw-materials/20.metadata/2026-07-28_内容整合清单.md]] | 1919 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
-| modified | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md]] | 23436 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/ai-agent-intel/inbox/2026-07-29.md]] | 85321 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
+| created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md]] | 28741 | 检查是否需要 OCR / 整理 / 更新 Evidence / 生成 TestCase |
 
 ## 触发规则草案
 

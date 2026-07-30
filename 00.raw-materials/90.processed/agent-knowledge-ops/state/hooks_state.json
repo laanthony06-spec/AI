@@ -951,6 +951,10 @@
     "mtime": 1785150728.2030876,
     "size": 102776
   },
+  "30.areas/ai-agent-intel/inbox/2026-07-29.md": {
+    "mtime": 1785326573.7604413,
+    "size": 85321
+  },
   "30.areas/semiconductor-dispatch-intel/inbox/2026-07-04.md": {
     "mtime": 1783138510.377026,
     "size": 26519
@@ -994,5 +998,9 @@
   "30.areas/semiconductor-dispatch-intel/inbox/2026-07-27.md": {
     "mtime": 1785110426.9552598,
     "size": 28148
+  },
+  "30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md": {
+    "mtime": 1785326566.4777787,
+    "size": 28741
   }
 }
