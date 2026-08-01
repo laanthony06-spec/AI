@@ -1,6 +1,6 @@
 ---
 type: agent-task-queue
-updated: 2026-07-30T18:26:35
+updated: 2026-08-01T17:21:12
 tags: [Agent, Dispatch, 任务队列, 自动化]
 ---
 
@@ -33,8 +33,6 @@ tags: [Agent, Dispatch, 任务队列, 自动化]
 | todo | P1 | MCP / 工具接口 | ### [security: .cursor/ directory not in .gitignore — AI IDE config (including future MCP credentials) can be accidentally committed](https://github.com/nunchi-labs/sdk/issues/810) | Codex（先本地只读） | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-29.md]] | `30.areas/agent-knowledge-ops/05.mcp-server/` | 人工确认后执行 |
 | todo | P1 | MCP / 工具接口 | ### [test(mcp): add tests for MCP server behavior against an empty database](https://github.com/AbdulmalikAlayande/sorokeep/issues/468) | Codex（先本地只读） | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-29.md]] | `30.areas/agent-knowledge-ops/05.mcp-server/` | 人工确认后执行 |
 | todo | P1 | 知识整理 | 需求目标是什么：提升产能、降低 Cycle Time、减少 OverQtime、降低 WPH Loss，还是提升自动化率？ | Codex + 人工复核 | brief_or_note_scan | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md]] | `00.raw-materials/90.processed/agent-knowledge-ops/` | 人工确认后执行 |
-| todo | P2 | Hooks | 处理 Hook 事件：created 30.areas/ai-agent-intel/inbox/2026-07-29.md | Codex | created | [[30.areas/ai-agent-intel/inbox/2026-07-29.md]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
-| todo | P2 | Hooks | 处理 Hook 事件：created 30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md | Codex | created | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md]] | `30.areas/agent-knowledge-ops/07.hooks/` | 判断是否需要 OCR、整理、Evidence 或 TestCase |
 | todo | P2 | Memory | ### [Incoming Work-In-Progress Prediction in Semiconductor Fabrication Foundry Using Long Short-Term Memory.](https://doi.org/10.1155/2019/8729367) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/semiconductor-dispatch-intel/inbox/2026-07-29.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | Memory | ### [UniMem: Complementary Episodic-to-Parametric Memory for Boundary-Agnostic Task Streams](https://arxiv.org/abs/2607.26017v1) | Codex + 人工复核 | brief_or_note_scan | [[30.areas/ai-agent-intel/inbox/2026-07-29.md]] | `30.areas/agent-knowledge-ops/06.memory/` | 人工确认后执行 |
 | todo | P2 | 知识整理 | - 将LithoAutoSplitPinn为由逻辑分批修改为物理分批，并优化Pilot选择逻辑。 | Codex + 人工复核 | brief_or_note_scan | [[00.raw-materials/90.processed/dispatch-requirements-notes/LithoAutoPiRun-需求单整理.md]] | `00.raw-materials/90.processed/agent-knowledge-ops/` | 人工确认后执行 |
